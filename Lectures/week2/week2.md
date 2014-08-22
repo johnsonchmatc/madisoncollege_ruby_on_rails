@@ -15,8 +15,13 @@ $ bundle exec rails generate
   * Controllers
 
 ---
-#Active Record
-* ORM
+#Scaffolding
+
+--
+#Models
+* Active Record
+  * ORM
+  * Relationships
 
 ---
 #What is an ORM?
