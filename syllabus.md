@@ -13,7 +13,8 @@ Catalog #152 10152157 - 0002
 * *Phone:* 608.301.5232
 * *Office Hours:*
 	* Email for an appointment
-	* IRC (todo)
+	* [IRC](irc.md) #johnsonch_office_hours on irc.freenode.net
+
 
 
 ##Class Information
@@ -229,7 +230,7 @@ Revision B 1/29/2014
 | 10  | 11/13 | Chapter 10                         | Project 2 and Lab 8  | 
 | 11  | 11/20 | Chapter 11                         | Lab 9                | 
 | 12  | 11/27 | Open lab                           | |
-| 13  | 12/4  | Open lab                           | 
+| 13  | 12/4  | Open lab                           | | 
 | 14  | 12/11 | Building a virtual server (Lab 10) |                      | 
 | 15  | 12/18 | Exam 2                             | Final Project and Lab 10 | 
  
