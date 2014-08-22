@@ -21,7 +21,7 @@ $ bundle exec rails generate
 #Models
 * Active Record
   * ORM
-  * Relationships
+  * [Relationship Diagram](active_record_relationships.pdf)
 
 ---
 #What is an ORM?
