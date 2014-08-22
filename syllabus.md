@@ -52,16 +52,18 @@ or as a traditional hard copy from book stores and amazon.com .
 
 ####Optional:
 
-*   Programming Ruby 1.9: The Pragmatic Programmers&#8217; Guide by Dave Thomas,
+* Programming Ruby 1.9: The Pragmatic Programmers&#8217; Guide by Dave Thomas,
 with Chad Fowler and Andy Hunt. This is an option if you want to learn Ruby
 deeper than we will be covering in this single class. Available as paperback or PDF at
 [http://www.pragprog.com/titles/ruby3/programming-ruby-1-9](http://www.pragprog.com/titles/ruby3/programming-ruby-1-9)
-.
-*   Agile Web Development with Rails (4th edition) by Sam Ruby, Dave Thomas
+
+* Agile Web Development with Rails (4th edition) by Sam Ruby, Dave Thomas
 and David Heinemeier-Hansson. This is the definitive reference book on version
 3 of Rails. Available as paperback or PDF at
 [http://pragprog.com/book/rails4/agile-web-development-with-rails](http://pragprog.com/book/rails4/agile-web-development-with-rails)
-.
+
+* Cooking with Rails 4, A Ruby on Rails Crash Course by Brian Hogan.  The PDF is available at [https://raw.githubusercontent.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/master/rails4_cookbook.pdf](https://raw.githubusercontent.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/master/rails4_cookbook.pdf)
+
 
 ###Course Competencies:
 During this course students will:
@@ -76,11 +78,10 @@ running on your environment
 *   Complete the design and coding of a significant new web application
 *   Present their new web application to classmates
 
-* * *
 
-**Note on Certification Testing:** Passing any Microsoft certification exam is not a requirement to pass this course. Microsoft and other certifications require study and practice above what is required for this course. While the instructor will make every attempt to provide information necessary for passing the MS Certification tests related to this course, students planning to take the certification test should plan to spend time outside of normal class work to be successful.
 
-**Environment: ** Students will attend lectures, use blackboard and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting, online & in a lab setting.
+##Environment: 
+Students will attend lectures, use blackboard and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting, online & in a lab setting.
 
 # Program Outcomes
 
@@ -92,7 +93,7 @@ Madison College Core Abilities are eight key life and success skills that contri
 
 # Responsibilities and Policies
 
-**Student Responsibilities:** Students are expected to be familiar with Madison College policies and procedures. Many of the important policies and procedures are on the Madison College website, located at [http://madisoncollege.edu/student-rights-responsibilities](http://madisoncollege.edu/student-rights-responsibilities).
+**Student Responsibilities:*ß* Students are expected to be familiar with Madison College policies and procedures. Many of the important policies and procedures are on the Madison College website, located at [http://madisoncollege.edu/student-rights-responsibilities](http://madisoncollege.edu/student-rights-responsibilities).
 
 **Academic Integrity** is an expectation in all Madison College classes. Plagiarism, cheating and collusion are prohibited at Madison College. Plagiarism is defined as passing of another person's work as your own. Students who fail to observe these standards are subject to disciplinary action. Madison College has a strong policy on Academic Misconduct which is published on the Madison College website. Please refer to this page on the Madison College Website to review all Academic Integrity and Misconduct policies located at [http://madisoncollege.edu/academic-integrity](http://madisoncollege.edu/academic-integrity).
 
@@ -102,7 +103,7 @@ Nonattendance does not constitute an official withdrawal and students will be he
 
 Stop payment of a check does not constitute a formal cancellation. Registrants will be held liable for the fee until the date of official cancellation. Allow four weeks from the date of cancellation to receive a full refund of payment.
 
-**Attendance: ** You are expected to attend class. Poor attendance can lead to failure in the class. If you cannot attend a class, it is your responsibility to obtain the material missed. Lecture will not be repeated for individual students. If you withdraw from the class, please notify the instructor, and The Center for Agriscience and Technologies Office, room 173. Non-attendance will not automatically withdraw you from a course. 
+**Attendance:** You are expected to attend class. Poor attendance can lead to failure in the class. If you cannot attend a class, it is your responsibility to obtain the material missed. Lecture will not be repeated for individual students. If you withdraw from the class, please notify the instructor, and The Center for Agriscience and Technologies Office, room 173. Non-attendance will not automatically withdraw you from a course. 
 
 **Submitting Work:** All work must be submitted as directed in the assignment instructions. 
 
@@ -173,32 +174,34 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 **Grades Posted in Blackboard: ** All assignment grades are posted in Blackboard. Your instructor needs to manually grade the assignments. Sometimes this happens very quickly and sometimes it takes a week. When you've posted a quiz or lab answers, it will show up in the gradebook as a green box with a white ! in it. This means that your instructor has received your work, but has not graded it yet. Discussion boards show up in the gradebook as a green box with a white ! in it until your instructor has graded the assignment, then it will have a score in it. 
 
-**Reading Quizzes: ** Reading Quizzes are to test your understanding of the material in the textbook. Reading Quizzes may consist of True/False, Multiple Choice, Fill in the Blank, or Short Answer type questions. Quizzes are open book, open note. You may take them from any computer with an internet connection. Students may re-take quizzes. The most recent grade you receive is the score recorded in the gradebook on blackboard. Students must complete the quiz sometime during the week it is assigned. You will always have at least 1 full week from the time the quiz is posted to have it completed.
-
-NO LATE Quizzes. (You have all week & you can take the quiz on Blackboard from anywhere you have an internet connection, so missing class is not an excuse)
-
 ### **Evaluation**
 
 | **Points Possible** | **Assignment** |
 | --- | --- |
-| 10 | Quiz 1 |
-| 10 | Quiz 2 |
-| 10 | Quiz 3 |
-| 10 | Quiz 4 |
-| 10 | Quiz 5 |
-| 10 | Quiz 6 |
-| 4 | **Lab 1** |
-| 6 | **Lab 2** |
-| 10 | **Lab 3** |
-| 10 | **Lab 4** |
-| 10 | **Lab 5** |
-| 100 | TOTAL POINTS |
+| 10  | Lab 1 |
+| 10  | Lab 2 |
+| 10  | Lab 3 |
+| 10  | Lab 4 |
+| 10  | Lab 5 |
+| 10  | Lab 6 |
+| 10  | Lab 7 |
+| 10  | Lab 8 |
+| 10  | Lab 9 |
+| 10  | Lab 10 |
+| 20  | Project 1 |
+| 20  | Project 2 |
+| 20  | Project 3 |
+| 50  | Exam 1 |
+| 50  | Exam 2 |
+| 50  | Final Project |
+| 40  | Participation |
+| 310 | TOTAL POINTS |
 
 
 
 ### **Grading Scale** 
 
-| **Grade** | **% Attained and points** |
+| *Grade* | *% Attained* |
 | --- | --- |
 | A | 92-100 |
 | AB | 88-91 |
@@ -212,21 +215,21 @@ NO LATE Quizzes. (You have all week & you can take the quiz on Blackboard from a
 
 Revision B 1/29/2014
 
-| **Week** | **Tuesday** | **Required Reading Topics** | **Labs / Projects DUE 11:55pm** | **Quizzes – DUE 11:55pm** |
-| --- | --- | --- | --- | --- |
-| 1 | 1/14 | Course Intro; Blackboard Intro | Due 1/20 |  |
-|  |  | Lab 1 |  |
-| 2 | 1/21 | Ch 1 Intro to Security | Due 1/27 | Due 1/27 |
-|  |  | Lab 2 | Quiz 1 |
-| 3 | 1/28 | Ch 2 Personal Security |  | Due 2/10 |
-|  |  |  | Quiz 2 |
-| 4 | 2/4 | Ch 3 Computer Security | Due 2/17 | Due 2/17 |
-|  |  | Lab 3 | Quiz 3 |
-| 5 | 2/11 | Ch 4 Internet Security |  | Due 2/17 |
-|  |  |  | Quiz 4 |
-| 6 | 2/18 | Ch 5 Mobile Security | Due 2/24 | Due 2/24 |
-|  |  | Lab 4 | Quiz 5 |
-| 7 | 2/25 | Ch 6 Workplace Security |  | Due 3/3 |
-|  |  |  | Quiz 6 |
-| 8 | 3/4 | Lab 5 **DUE**** Tues, March 4 **| Due** Tues **3/4 |  |
-|  |  | Lab 5 |  |
+| **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE 11:55pm** |
+| --- | ---   | ---                                | ---                  |
+| 1   | 9/11  |                                    |                      |
+| 2   | 9/18  | Chapter 1                          | Lab 1                |
+| 3   | 9/25  | Chapter 2 and Chapter 3            | Lab 2                | 
+| 4   | 10/2  | Chapter 4 and Chapter 5            | Lab 3                | 
+| 5   | 10/9  | Chapter 6                          | Project 1 and Lab 4  |
+| 6   | 10/16 | Chapter 7                          | Lab 5                |
+| 7   | 10/23 | Exam 1                             |                      |
+| 8   | 10/30 | Chapter 8                          | Lab 6                |
+| 9   | 11/6  | Chapter 9                          | Lab 7                | 
+| 10  | 11/13 | Chapter 10                         | Project 2 and Lab 8  | 
+| 11  | 11/20 | Chapter 11                         | Lab 9                | 
+| 12  | 11/27 | Open lab                           | |
+| 13  | 12/4  | Open lab                           | 
+| 14  | 12/11 | Building a virtual server (Lab 10) |                      | 
+| 15  | 12/18 | Exam 2                             | Final Project and Lab 10 | 
+ 

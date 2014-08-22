@@ -9,15 +9,17 @@
 ```
 $ bundle exec rails generate
 ```
-* Common uses
+* Common generators
   * Scaffolding
   * Models
   * Controllers
 
 ---
 #Scaffolding
-
---
+```
+$ bundle exec rails generate scaffold Articles title:string body:text author_id:integer
+```
+---
 #Models
 * Active Record
   * ORM
@@ -29,3 +31,17 @@ $ bundle exec rails generate
 An ORM (Object-Relational Mapping) is a tool that lets you query and manipulate data from a database using an object paradigm.
 
 ---
+#Migrations
+
+---
+#Rake
+
+---
+#Controllers
+
+---
+#Routes
+
+---
+#MVC
+![Right](https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial/images/figures/mvc_detailed.png)

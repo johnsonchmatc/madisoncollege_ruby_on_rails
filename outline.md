@@ -52,8 +52,7 @@
 # Week 12
 # Week 13
 # Week 14
-# Week 15
   * Building a Virtual Server & Deploying to it
-# Week 16
+# Week 15
   * Project 3 due
   * Exam 2
