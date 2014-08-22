@@ -1,4 +1,4 @@
-#150-160 IT Security Awareness
+#152 10152157 - 0002 Ruby on Rails Development 
 ##Introduction Letter
 Hello all of you Ruby on Rails Developers!!
 
@@ -19,54 +19,43 @@ When the Blackboard screen comes up, click login
 
 You will see a number of headings including: 
   * "My Courses," "Today's Announcements", etc.
-  * Click on the words "IT Security Awareness" right underneath the "My Courses" heading. This will take you to our class web-site.
+  * Click on the words "Ruby on Rails Development" right underneath the "My Courses" heading. This will take you to our class web-site.
   * Your password for Blackboard is the same as the password for your Madison College email.
   * Blackboard requires all students to use their Madison College student email account. However, many students prefer to use a different email address.
-  If you wish to use a different address, go into your student email account (https://mail.madisoncollege.edu/CookieAuth.dll?GetLogon?curl=Z2Fowa&reason=0&formdir=1 )and modify your account so that mail is forwarded to the email address that you want to use.
-  
+  If you wish to use a different address, go into your [student email account](https://mail.madisoncollege.edu/CookieAuth.dll?GetLogon?curl=Z2Fowa&reason=0&formdir=1)and modify your account so that mail is forwarded to the email address that you want to use.
   
   
 Send me email ASAP if you have difficulty signing on to our Blackboard course cgjohnson1@madisoncollege.edu
   
 ###Necessities
-  Please note that you MUST have an email address to use this course. Remember that Madison College offers all students a free email address that you can now access email from Madison College’s homepage.
-  You should use Firefox as your browser for Blackboard (other browsers do not work as well).
-  There are video clips available online. The videos are stored on Youtube.  The videos are linked from blackboard, under Assignments.
-  Depending on the speed of your connection, you may get choppy sound or video.
-  This class does require a textbook, Security Awareness: Applying Practical Security in Your World, 4th Edition; Mark Ciampa; ISBN 10: 1111644187; Publish date: 2013; published by Cengage Learning;
-  When appropriate, the textbook will be supplemented by web based or instructor supplied materials.  
+* Please note that you MUST have an email address to use this course. Remember that Madison College offers all students a free email address that you can now access email from Madison College’s homepage.
+* Access to a computer with a web browser and internet access.
+* A Heroku.com account.
+* A Github.com account.
+* A Nitrous.io account use this link [https://www.nitrous.io/join/xAc6XsTB2BA](https://www.nitrous.io/join/xAc6XsTB2BA) to get extra N2O.
 
 ###Assignments
-  The format of the course is broken down into “weeks”. The course will last for 8 weeks and each of these weeks there are various assignments. You will find the outline for the weeks of the  course under the “Classes” section in Blackboard. Weekly assignments include readings, videos, labs, projects and discussions. Please look at the "Classes" section in Blackboard for more detail on the actual assignments.  Due Dates for all assignments are listed in the syllabus.
+The format of the course is broken down into “weeks”. The course will last for 8 weeks and each of these weeks there are various assignments. You will find the outline for the weeks of the  course under the “Classes” section in Blackboard. Weekly assignments include readings, videos, labs, projects and discussions. Please look at the "Classes" section in Blackboard for more detail on the actual assignments.  Due Dates for all assignments are listed in the syllabus.
 
-###READINGS & QUIZZES
-  Because students have such a wide background coming into this course, the text selected for the course is a "concepts" text. We cover all chapters in the textbook. 
-  Each chapter also has PowerPoint slides associated for the assigned and optional chapter readings. All required readings have a quiz that is associated with it. When you feel that you understand the concepts covered in the chapter, click on the Quiz link in Blackboard, under Quizzes. 
-  You may retake the quizzes any number of times that you want, but the most recent score is the one that will remain in Blackboard.  For example if you take the quiz 3 times and score a 8, 10, and a 6.  The score that will be in the gradebook is a 6.
+###Readings & Labs 
+On the syllabus you will find the schedule for readings an labs. Please come to class having read the chapter and attemted the lab, we will discuss the reading and lab activities.
   
-###Assignments (LABS)
-  There are 5 labs for this class.  You will need to turn in these assignments on Blackboard under Assignments by the due date listed in the syllabus to get credit for the assignment for class. I will review your assignments and give you feedback regarding your assignment. Feel free to talk to your instructor at anytime throughout the course regarding any questions that you have regarding this course. Your document is to be submitted via Blackboard. Once you submit your assignment, you will see a "!" for the grade. This indicates that it has been submitted and I have not reviewed it yet. Once it is graded, you will see a number in the column for the assignment. To view my comments, go to the Tools section and select "My Grades" and click on the number for the assignment. 
-  When you have completed your assignment, Click in Blackboard under Assignments, there is a link for submitting your project.  Click on this link. You have a section to put comments and to attach your files.
+###Projects
+####Project 1
+Creating a task manager.
+####Project 2
+Adding functionality to the task manager.
+####Final Project
+Your own project, we will pitch our ideas to the rest of the class around week 5.
 
-###LAB VIDEOS
-  Associated with some of your assignments above, are some video demos. These short video clips will step you through the lab activities that you will need to complete on your own.  You will then be asked questions that you need to type into your Lab file and submit.
-  To view the video, click on the link and it will automatically direct you to Youtube and then start. After watching the video, answer the questions in your assignment.
-  * NOTE: there is NO sound for the videos. 
+###Exams
+There will be two 'Exams' which will actually be presentations. The requirements for each of these will be distributed via BlackBoard.
 
-###ETHICS & ISSUES DISCUSSIONS
-  There are Ethic & Issues discussions you must complete as part of your assignments. You will need to read the Ethics & Issues section regarding a particular topic or ethics situation. After reviewing the situation, post your response to all of the questions posed regarding the Ethics & Issues topic. The questions are found in your assignment, and are reprinted in the discussions. Read and respond to other students responses to the Ethics & Issues topic. Opinions expressed in the discussions are subject to my review. Net etiquette guidelines must be followed (see Information section for listing of guidelines). Opinions and viewpoints will vary and do not always agree. Spirited debates are allowed. No flaming, inappropriate language, or disrespect to another posting’s opinions will NOT be tolerated. Any such posts shall be removed at the discretion of the instructor and the student contacted.
-
-###REVIEW QUESTIONS (AT THE END OF THE CHAPTER)
-  Many students ask whether or not the review questions at the end of the chapters are required. They are not.. The review questions allow students to test their base knowledge to self-determine if they may want to do some additional reading or studying of material before taking a quiz. However, you are not required to turn in any of the review questions. 
-
-###POWER POINT PRESENTATIONS
-  PowerPoint Presentations are provided to students as another method for studying concepts covered in a required reading assignment. You are not required to watch these presentations. I have provided them to students who find these presentations useful in helping to understand readings from the textbook. They are not a substitute for completing the readings. Quizzes are based off of the readings.
-  
 ###Socrative
 At the end of every class I’ll have you fill out an exit ticket.  The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day.  You can login to the site at http://beta.socrative.com using the room code of “d2cf0208”
 
 ##Ways to Get Help
-  * DISCUSSIONS: You can leave messages or discuss problems with other students. To get to the Discussions, simply click on the Discussions button.
+  * IRC: [Tutorial](https://github.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/blob/master/irc.md)
   * EMAIL: You can contact me via email at cgjohnson1@madisoncollege.edu and I will do my very best to get back to you within 24-48 hours. I will do my best to check my email Monday morning through Friday at 4:30pm.
   * PHONE: You can contact me via telephone at 608-301-5232. This is usually not a very efficient method as we will probably end up playing "telephone tag."
   * BLACKBOARD ASSISTANCE: If you experience problems with Blackboard, help is available at the Madison College Library Student Helpdesk. To get help, you can visit room 230 in the library, call 243-4444, or send email to student-help@madisoncollege.edu If you find that Blackboard is "down" and the Student Helpdesk is closed (after hours, weekends, and holidays), you may call 246-6666 to leave a message so it can be addressed as soon as staff is available.

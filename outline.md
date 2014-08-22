@@ -24,6 +24,7 @@
   * Routes
   * Controllers
 # Week 5
+* Pitch your final project (1 minute presentation and write up)
 * Project
   * Project 1 due
 * Lab
@@ -45,14 +46,14 @@
 # Week 9
   * Updating, showing and deleting users (ch9)
 # Week 10
-  * Project 2 due
   * User microposts (ch10)
 # Week 11
   * Following users (ch11)
 # Week 12
+  * Project 2 due
 # Week 13
 # Week 14
   * Building a Virtual Server & Deploying to it
 # Week 15
-  * Project 3 due
+  * Final Project 
   * Exam 2
