@@ -51,6 +51,7 @@
   * Following users (ch11)
 # Week 12
   * Project 2 due
+  * Thanksgiving - No Class
 # Week 13
 # Week 14
   * Building a Virtual Server & Deploying to it

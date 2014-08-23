@@ -75,15 +75,10 @@ During this course students will:
 ##Environment 
 Students will attend lectures, use blackboard and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting.
 
-#Program Outcomes
-The program outcomes identified for development and assessment in this course are: Install and configure Microsoft Windows client operating systems.  Determine the role of security in a business. Recognize ethical responsibilities. 
-
 #Core Abilities
-
 Madison College Core Abilities are eight key life and success skills that contribute to the development ofstudents as life-long learners on the job, at home, and in the community. The Core Abilities are skills and abilities taught and assessed in classes, labs, and field experiences at Madison College. For more information on Core Abilities, please visit [http://madisoncollege.edu/core-abilities](http://madisoncollege.edu/core-abilities). This class addresses the following core abilities: Ethics
 
 #Responsibilities and Policies
-
 **Student Responsibilities:*ß* Students are expected to be familiar with Madison College policies and procedures. Many of the important policies and procedures are on the Madison College website, located at [http://madisoncollege.edu/student-rights-responsibilities](http://madisoncollege.edu/student-rights-responsibilities).
 
 **Academic Integrity** is an expectation in all Madison College classes. Plagiarism, cheating and collusion are prohibited at Madison College. Plagiarism is defined as passing of another person's work as your own. Students who fail to observe these standards are subject to disciplinary action. Madison College has a strong policy on Academic Misconduct which is published on the Madison College website. Please refer to this page on the Madison College Website to review all Academic Integrity and Misconduct policies located at [http://madisoncollege.edu/academic-integrity](http://madisoncollege.edu/academic-integrity).
@@ -118,16 +113,16 @@ If you have an accommodation card from their office indicating that you have a d
 
 **Learner Responsibilities:** As a student in this class, I expect you to:
 
-- Take responsibility for your own learning. 
-- Be prepared for class and be an enthusiastic participant during class.
-- Treat others with tolerance and respect.
-- Act responsibly and reliably in group work.
-- Set high standards for your work.
-- Attend all classes, participate in discussions, and complete lab exercises.
-- Read the chapters and other reading assignments.
-- Check Blackboard on a regular basis.
-- Complete assignments/labs/tests/quizzes/exams before due date.
-- Ask questions.
+* Take responsibility for your own learning. 
+* Be prepared for class and be an enthusiastic participant during class.
+* Treat others with tolerance and respect.
+* Act responsibly and reliably in group work.
+* Set high standards for your work.
+* Attend all classes, participate in discussions, and complete lab exercises.
+* Read the chapters and other reading assignments.
+* Check Blackboard on a regular basis.
+* Complete assignments/labs/tests/quizzes/exams before due date.
+* Ask questions.
 
 **Instructor Responsibilities:** As your instructor, I commit to communicating openly and frequently with you about this class. I will maintain a professional, safe learning environment adhering to the policies of the college. You can expect a reply to communication, be it via e-mail, voicemail or in person, within 24-48 business hours.
 
@@ -143,25 +138,24 @@ Computer difficulties are not a long-term excuse for non-participation. If you e
 
 Phone the student help desk: (608) 243-4444; toll-free at (866) 277-4445. They can often resolve your problem over the phone.
 
-# Other Resources
+#Other Resources
 
-- Peer to Peer Tutoring Services at Madison College: http://madisoncollege.edu/tutoring
-- Counseling Services at Madison College: http://madisoncollege.edu/counseling.
-- Career Resources at Madison College: http://madisoncollege.edu/sdc
-- Student Writing Center Assistance: http://madisoncollege.edu/plus/writing-center
+* Peer to Peer Tutoring Services at Madison College: http://madisoncollege.edu/tutoring
+* Counseling Services at Madison College: http://madisoncollege.edu/counseling.
+* Career Resources at Madison College: http://madisoncollege.edu/sdc
+* Student Writing Center Assistance: http://madisoncollege.edu/plus/writing-center
 
 Syllabus Changes: As your instructor, I retain the right to make changes based on the timeline of the class, feedback from learners and/or logistical issues and will inform you as soon as a change is made.
 
-# Grading Policy
-
-- All work that is to be graded must be accomplished by your own effort. Points will be deducted for not submitting assigned work by the due date. Projects to be graded may be submitted only once. 
-- Ten percent of the points will be taken off for each day that the assignment is late.
-- Assignments will NOT be accepted if they are more than 10 DAYS late.
-- Assignments will NOT be accepted after the START of the class period in which the final exam is administered.
-- Assignments are NOT accepted after the instructor goes over the answers to the assignment in class.
-- There is no make-up of tests or other scheduled, graded classroom activities.
-- It is the responsibility of the student to make up any missed work and/or pick up any missed materials. Missing a class is NOT an excuse for failure to hand in work due.
-- There is no extension of assignment due dates without prior notification of circumstance. All work that is to be graded must be accomplished by your own effort.
+#Grading Policy
+* All work that is to be graded must be accomplished by your own effort. Points will be deducted for not submitting assigned work by the due date. Projects to be graded may be submitted only once. 
+* Ten percent of the points will be taken off for each day that the assignment is late.
+* Assignments will NOT be accepted if they are more than 10 DAYS late.
+* Assignments will NOT be accepted after the START of the class period in which the final exam is administered.
+* Assignments are NOT accepted after the instructor goes over the answers to the assignment in class.
+* There is no make-up of tests or other scheduled, graded classroom activities.
+* It is the responsibility of the student to make up any missed work and/or pick up any missed materials. Missing a class is NOT an excuse for failure to hand in work due.
+* There is no extension of assignment due dates without prior notification of circumstance. All work that is to be graded must be accomplished by your own effort.
 
 **Grades Posted in Blackboard: ** All assignment grades are posted in Blackboard. Your instructor needs to manually grade the assignments. Sometimes this happens very quickly and sometimes it takes a week. When you've posted a quiz or lab answers, it will show up in the gradebook as a green box with a white ! in it. This means that your instructor has received your work, but has not graded it yet. Discussion boards show up in the gradebook as a green box with a white ! in it until your instructor has graded the assignment, then it will have a score in it. 
 
@@ -201,25 +195,25 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 | D | 60-69 |
 | F | 0-59 |
 
-# Course Calendar 
+#Course Calendar 
 
-Revision B 1/29/2014
+Revision A 8/21/2014
 
 | **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Wednesdays at 11:55pm** |
-| --- | ---   | ---                                | ---                  |
-| 1   | 9/11  |                                    |                      |
-| 2   | 9/18  | Chapter 1                          |
-| 3   | 9/25  | Chapter 2 and Chapter 3            | Lab 1                 | 
-| 4   | 10/2  | Chapter 4 and Chapter 5            | Lab 2               |
-| 5   | 10/9  | Chapter 6                          | Lab 3                |
-| 6   | 10/16 | Chapter 7                          | Project 1, Lab 4 and Final Project Idea  | 
-| 7   | 10/23 | Exam 1                             | Lab 5                |
-| 8   | 10/30 | Chapter 8                          |                     |
-| 9   | 11/6  | Chapter 9                          | Lab 6                |  
-| 10  | 11/13 | Chapter 10                         | Lab 7                |
-| 11  | 11/20 | Chapter 11                         | Lab 8  |
-| 12  | 11/27 | Open lab                           | Project 2 and Lab 9                |  
-| 13  | 12/4  | Open lab                           |
-| 14  | 12/11 | Building a virtual server (Lab 10) |
-| 15  | 12/18 | Exam 2                             | Final Project and Lab 10 | 
+| --- | ---   | ---                                | ---                                                |
+| 1   | 9/11  |                                    |                                                    |
+| 2   | 9/18  | Chapter 1                          |                                                    |
+| 3   | 9/25  | Chapter 2 and Chapter 3            | Lab 1                                              | 
+| 4   | 10/2  | Chapter 4 and Chapter 5            | Lab 2                                              |
+| 5   | 10/9  | Chapter 6                          | Lab 3                                              |
+| 6   | 10/16 | Chapter 7                          | Project 1, Lab 4 and Final Project Idea            | 
+| 7   | 10/23 | Exam 1                             | Lab 5                                              |
+| 8   | 10/30 | Chapter 8                          |                                                    |
+| 9   | 11/6  | Chapter 9                          | Lab 6                                              |  
+| 10  | 11/13 | Chapter 10                         | Lab 7                                              |
+| 11  | 11/20 | Chapter 11                         | Lab 8                                              |
+| 12  | 11/27 | Thanksgiving - No Class            | Project 2 and Lab 9                                |  
+| 13  | 12/4  | Open lab                           |                                                    |
+| 14  | 12/11 | Building a virtual server (Lab 10) |                                                    |
+| 15  | 12/18 | Exam 2                             | Final Project and Lab 10                           | 
  
