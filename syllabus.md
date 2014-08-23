@@ -13,7 +13,7 @@ Catalog #152 10152157 - 0002
 * *Phone:* 608.301.5232
 * *Office Hours:*
 	* Email for an appointment
-	* [IRC](irc.md) #johnsonch_office_hours on irc.freenode.net
+	* IRC #johnsonch_office_hours on irc.freenode.net
   * [IRC Tutorial](https://github.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/blob/master/irc.md)
 
 
@@ -37,7 +37,7 @@ that can be adapted to many professional web development needs.
 * or consent of instructor
 
 ###Textbook
-We will be using the following books for the course. These are available in both paper and PDF formats.
+We will be using the following books for the course. These are available in both paper and/or PDF formats.
 
 ####Required
 
