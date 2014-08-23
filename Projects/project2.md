@@ -9,3 +9,12 @@
 * Code pushed to github (2.5pts)
 * Passing tests (5pts)
 * Meets requirements (10pts) 
+
+##Submission directions
+* Push code to github
+* Turn in a document in BlackBoard under Assignments with the following:
+  * Name
+  * Date
+  * Assignment github url
+  * Tag for submisison 
+  * Heroku url

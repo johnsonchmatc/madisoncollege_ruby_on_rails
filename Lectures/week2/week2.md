@@ -33,6 +33,8 @@ An ORM (Object-Relational Mapping) is a tool that lets you query and manipulate 
 ---
 #Migrations
 
+Simply a way to version your database structure.
+
 ---
 #Rake
 

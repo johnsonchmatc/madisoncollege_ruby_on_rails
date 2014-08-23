@@ -1,8 +1,8 @@
-# Ruby on Rails Development
+#Ruby on Rails Development
 
 Catalog #152 10152157 - 0002
 
-## General Information
+##General Information
 
 * *Credits:* 3
 * *Course Format:* face to face
@@ -14,18 +14,16 @@ Catalog #152 10152157 - 0002
 * *Office Hours:*
 	* Email for an appointment
 	* [IRC](irc.md) #johnsonch_office_hours on irc.freenode.net
-
+  * [IRC Tutorial](https://github.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/blob/master/irc.md)
 
 
 ##Class Information
-
-
-
-###Course Description:
+###Course Description
 
 This course provides the opportunity for the learner to develop the knowledge
 skills process and understanding of Ruby the programming language,
 and Ruby on Rails the web development framework.
+
 The course will also use the popular git revision control system, as well as
 open source database management systems. Topics will include installing Ruby,
 and Ruby on Rails, an extended tutorial, deployment, an overview of the
@@ -33,37 +31,33 @@ components of the Rails framework, ActiveRecord basics, ActionController coding,
 Action view, REST, AJAX, Web 2.0. Students will develop very modern web applications 
 that can be adapted to many professional web development needs.
 
-
-
 ###Pre-requisites:
 * Grade of C or better in Advanced PHP and MySQL Web Development, 10-152-167,
 * or grade of C or better in Advanced Java Programming, 10-152-112,
 * or consent of instructor
 
-###Textbook:
-We will be using the following books for the course. These are available
-in both paper and <span class="caps">PDF</span> formats.
+###Textbook
+We will be using the following books for the course. These are available in both paper and PDF formats.
 
-####Required:
+####Required
 
-* **Ruby on Rails Tutorial** by Michael Hartl. The book is available online at
+* *Ruby on Rails Tutorial* by Michael Hartl. The book is available online at
 [http://railstutorial.org/ruby-on-rails-tutorial-book](http://railstutorial.org/ruby-on-rails-tutorial-book)
 , as a PDF from [http://railstutorial.org/](http://railstutorial.org/) ,
 or as a traditional hard copy from book stores and amazon.com .
 
-####Optional:
+####Optional
 
-* Programming Ruby 1.9: The Pragmatic Programmers&#8217; Guide by Dave Thomas,
-with Chad Fowler and Andy Hunt. This is an option if you want to learn Ruby
-deeper than we will be covering in this single class. Available as paperback or PDF at
-[http://www.pragprog.com/titles/ruby3/programming-ruby-1-9](http://www.pragprog.com/titles/ruby3/programming-ruby-1-9)
+* *Programming Ruby 1.9 & 2.0 (4th edition): The Pragmatic Programmers' Guide* by Dave Thomas, with Chad Fowler and Andy Hunt
+[http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0](http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0)
 
-* Agile Web Development with Rails (4th edition) by Sam Ruby, Dave Thomas
-and David Heinemeier-Hansson. This is the definitive reference book on version
-3 of Rails. Available as paperback or PDF at
+* *Agile Web Development with Rails (4th edition)* 
+by Sam Ruby
+This is the definitive reference book on version 4 of Rails. Available as paperback or PDF at
 [http://pragprog.com/book/rails4/agile-web-development-with-rails](http://pragprog.com/book/rails4/agile-web-development-with-rails)
 
-* Cooking with Rails 4, A Ruby on Rails Crash Course by Brian Hogan.  The PDF is available at [https://raw.githubusercontent.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/master/rails4_cookbook.pdf](https://raw.githubusercontent.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/master/rails4_cookbook.pdf)
+* *Cooking with Rails 4, A Ruby on Rails Crash Course* by Brian Hogan.  
+The PDF is available at [https://raw.githubusercontent.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/master/rails4_cookbook.pdf](https://raw.githubusercontent.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/master/rails4_cookbook.pdf)
 
 
 ###Course Competencies:
@@ -74,25 +68,21 @@ During this course students will:
 *   Create a rich web-application database schema
 *   Adapt a web design to a Rails web application
 *   Download and analyze a significant Ruby on Rails application
-*   Keep an application being developed by another team updated and
-running on your environment
+*   Keep an application being developed by another team updated and running on your environment
 *   Complete the design and coding of a significant new web application
 *   Present their new web application to classmates
 
+##Environment 
+Students will attend lectures, use blackboard and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting.
 
-
-##Environment: 
-Students will attend lectures, use blackboard and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting, online & in a lab setting.
-
-# Program Outcomes
-
+#Program Outcomes
 The program outcomes identified for development and assessment in this course are: Install and configure Microsoft Windows client operating systems.  Determine the role of security in a business. Recognize ethical responsibilities. 
 
-# Core Abilities
+#Core Abilities
 
 Madison College Core Abilities are eight key life and success skills that contribute to the development ofstudents as life-long learners on the job, at home, and in the community. The Core Abilities are skills and abilities taught and assessed in classes, labs, and field experiences at Madison College. For more information on Core Abilities, please visit [http://madisoncollege.edu/core-abilities](http://madisoncollege.edu/core-abilities). This class addresses the following core abilities: Ethics
 
-# Responsibilities and Policies
+#Responsibilities and Policies
 
 **Student Responsibilities:*ß* Students are expected to be familiar with Madison College policies and procedures. Many of the important policies and procedures are on the Madison College website, located at [http://madisoncollege.edu/student-rights-responsibilities](http://madisoncollege.edu/student-rights-responsibilities).
 
