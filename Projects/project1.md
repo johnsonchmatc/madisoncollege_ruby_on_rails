@@ -28,6 +28,12 @@ This project is our first step in applying what we are learning from the RailsTu
 1. Login to your Nitrous.io account and start up your box.
 1. Open the IDE
 1. In the console section create a new rails project with ```$ rails new taskinator --skip-test-unit --skip-bundle```
+1. Intialize the project as a git repo and ignore the  /vendor/bundle by modifying the .gitignore file to have the following:
+```
+/vendor/bundle
+```
+1. Go to github and create a repository for your application.
+1. Follow their directions on how to add that remote respository to your codebase.
 1. Modify the gemfile to add rspec and the specific version of rails we have been using
 ```
 gem 'rails', '4.0.8'
@@ -35,10 +41,8 @@ gem 'rspec-rails', '2.13.1'
 ```
 
 1. Change directories into your application, and install related gems ```$ bundle install --without production --path vendor/bundle```
-1. Go to github and create a repository for your application.
-1. Follow their directions on how to add that remote respository to your codebase.
-1. Next scaffold the Category resource ```$ bundle exec rails generate scaffold Category name:string```
-1. Then scaffold the Task resource ```$ bundle exec rails generate scaffold Task description:string cateogry_id:integer```
+1. Next scaffold the Category resource ```$ bundle exec rails generate scaffold Category name:string --skip-test-unit```
+1. Then scaffold the Task resource ```$ bundle exec rails generate scaffold Task description:string cateogry_id:integer --skip-test-unit```
 1. After we have both resources scaffolded we have to add the activer record relationship to our models. A category can have many tasks and a task belongs to a category.  Here is what our two models should end up looking like.
 ```
 class Category < ActiveRecord::Base
