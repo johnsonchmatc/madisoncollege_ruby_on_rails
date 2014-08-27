@@ -45,5 +45,9 @@ Simply a way to version your database structure.
 #Routes
 
 ---
-#MVC
+#Rails MVC
 ![Right](https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial/images/figures/mvc_detailed.png)
+
+---
+#Git
+* git tag

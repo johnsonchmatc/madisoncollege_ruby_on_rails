@@ -37,7 +37,7 @@
 
 ---
 #What I expect from you
-* Come to clas
+* Come to class
 * Participate
 * Turn in assignments and labs on time
 * A positive and pleasant attitude
@@ -50,9 +50,25 @@
 
 ---
 #Activity
-* Standup
+## Standup
 
 ---
+#Projects, Labs and Exams
+* Labs
+* Projects (1,2 and Final)
+* Exams 
+
+---
+#Activity
+##First Job
+* What is your name?
+* What was your first job?
+* What was your first day like?
+* What was your favorite thing about that job?
+* What was the worst thing about that job?
+
+---
+
 #Preparing our shop
 * Nitrious.io
 * Heroku

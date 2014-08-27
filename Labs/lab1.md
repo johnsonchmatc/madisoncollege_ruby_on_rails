@@ -1,14 +1,14 @@
 #Lab 1
 * Points 10
-* Date due: 
+* Date due: 10/2/2014
 
 ##Assignment
-* Read and follow chapter 1 from the Rails Tutorial book.
+* Read and follow Chapter 1 from the Rails Tutorial book.
 * Commit a working application
 * Deploy to Heroku
 
 ##Turn in instructions
-* on Blackboard under Assignments find Lab1 submit a word document with the following information:
+* on Blackboard under Assignments find Lab1 submit a word/text document with the following information:
   * Name
   * Date
   * Github Url of the project

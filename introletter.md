@@ -30,9 +30,10 @@ Send me email ASAP if you have difficulty signing on to our Blackboard course cg
 ###Necessities
 * Please note that you MUST have an email address to use this course. Remember that Madison College offers all students a free email address that you can now access email from Madison College’s homepage.
 * Access to a computer with a web browser and internet access.
-* A Heroku.com account.
-* A Github.com account.
-* A Nitrous.io account use this link [https://www.nitrous.io/join/xAc6XsTB2BA](https://www.nitrous.io/join/xAc6XsTB2BA) to get extra N2O.
+* A Heroku.com account, which we will setup in class.
+* A Github.com account, which we will setup in class.
+* A DigitalOcean.com account, which we will setup in class.
+* A Nitrous.io account use this link [https://www.nitrous.io/join/xAc6XsTB2BA](https://www.nitrous.io/join/xAc6XsTB2BA) to get extra N2O, which we will setup in class.
 
 ###Assignments
 The format of the course is broken down into “weeks”. The course will last for 8 weeks and each of these weeks there are various assignments. You will find the outline for the weeks of the  course under the “Classes” section in Blackboard. Weekly assignments include readings, videos, labs, projects and discussions. Please look at the "Classes" section in Blackboard for more detail on the actual assignments.  Due Dates for all assignments are listed in the syllabus.
@@ -42,9 +43,9 @@ On the syllabus you will find the schedule for readings an labs. Please come to 
   
 ###Projects
 ####Project 1
-Creating a task manager.
+Taskinator Part 1
 ####Project 2
-Adding functionality to the task manager.
+Taskinator Part 2
 ####Final Project
 Your own project, we will pitch our ideas to the rest of the class around week 5.
 
@@ -70,11 +71,11 @@ I look forward to working and learning with you this semester.  The security lan
   
 2.	Check your email often.  Your instructor will send you messages on a regular basis.
   
-3.	Access to an internet connection will be needed to turn in assignments. You will also connect to YouTube to watch videos for the assignments. 
+3.	Access to an internet connection will be needed to turn in assignments, work on labs, and for assignments.
   
-4.	There is an Classes section on our Blackboard site. This contains a folder for each class where I'll post the powerpoint, assignments, quizzes and related links.
+4.	There is an Classes section on our Blackboard site. This contains a folder for each class where I'll post the powerpoint, assignments, labs and related links.
   
-5.	Turning in Assignments: You must Type in the answers to your assignments via Blackboard under Classes. Do not email your assignments. Assignments are usually stacked up to be evaluated and are graded a few days after they are submitted. If there is other information that is missing please send an email, and I will respond.
+5.	Turning in Assignments: Each lab, project or exam will have specific directions on how to turn that work in. 
   
   
 Looking forward to the semester, Chris Johnson
