@@ -70,9 +70,9 @@
 ---
 
 #Preparing our shop
-* Nitrious.io
-* Heroku
 * Github
+* Heroku
+* Nitrious.io (add public key to Github and Heroku)
 * IRC
 
 ---

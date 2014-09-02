@@ -6,7 +6,7 @@ Catalog #152 10152157 - 0002
 
 * *Credits:* 3
 * *Course Format:* face to face
-* *Class Schedule:* TM 5:30 – 9:20 PM 09/08/2014 - 12/22/2014
+* *Class Schedule:* TM 5:30 – 9:20 PM 09/04/2014 - 12/22/2014
 * *Location:* Truax-Health Building Rm 335
 * *Instructor:* Chris Johnson
 * *Email:* cgjohnson1@madisoncollege.edu
@@ -178,8 +178,8 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 | 50  | Exam 1 |
 | 50  | Exam 2 |
 | 50  | Final Project |
-| 40  | Participation |
-| 310 | TOTAL POINTS |
+| 10  | Participation |
+| 300 | TOTAL POINTS |
 
 
 
@@ -197,23 +197,23 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar 
 
-Revision A 8/21/2014
+Revision B 09/01/2014
 
 | **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Wednesdays at 11:55pm** |
 | --- | ---   | ---                                | ---                                                |
-| 1   | 9/11  |                                    |                                                    |
-| 2   | 9/18  | Chapter 1                          |                                                    |
-| 3   | 9/25  | Chapter 2 and Chapter 3            | Lab 1                                              | 
-| 4   | 10/2  | Chapter 4 and Chapter 5            | Lab 2                                              |
-| 5   | 10/9  | Chapter 6                          | Lab 3                                              |
-| 6   | 10/16 | Chapter 7                          | Project 1, Lab 4 and Final Project Idea            | 
-| 7   | 10/23 | Exam 1                             | Lab 5                                              |
-| 8   | 10/30 | Chapter 8                          |                                                    |
-| 9   | 11/6  | Chapter 9                          | Lab 6                                              |  
-| 10  | 11/13 | Chapter 10                         | Lab 7                                              |
-| 11  | 11/20 | Chapter 11                         | Lab 8                                              |
-| 12  | 11/27 | Thanksgiving - No Class            | Project 2 and Lab 9                                |  
-| 13  | 12/4  | Open lab                           |                                                    |
-| 14  | 12/11 | Building a virtual server (Lab 10) |                                                    |
-| 15  | 12/18 | Exam 2                             | Final Project and Lab 10                           | 
- 
+| 1   |  9/4  | Introduction                       |                                                    |
+| 2   |  9/11 | Chapter 1                          |                                                    |
+| 3   |  9/18 | Chapter 2 and Chapter 3            | Lab 1                                              | 
+| 4   |  9/25 | Chapter 4 and Chapter 5            | Lab 2                                              |
+| 5   |  10/2 | Chapter 6                          | Lab 3                                              |
+| 6   |  10/9 | Chapter 7                          | Project 1, Lab 4 and Final Project Idea            | 
+| 7   |  10/16| Exam 1                             | Lab 5                                              |
+| 8   |  10/23| Chapter 8                          |                                                    |
+| 9   |  10/30| Chapter 9                          | Lab 6                                              |  
+| 10  |  11/6 | Chapter 10                         | Lab 7                                              |
+| 11  |  11/13| Chapter 11                         | Lab 8                                              |
+| 12  |  11/20| Thanksgiving - No Class            |                                                    |  
+| 13  |  11/27| Open lab (Final Project)           | Project 2 and Lab 9                                |
+| 14  |  12/4 | Open lab (Final Project)           |                                                    | 
+| 15  |  12/11| Building a virtual server (Lab 10) |                                                    | 
+| 16  |  12/18| Exam 2                             | Final Project and Lab 10                           |

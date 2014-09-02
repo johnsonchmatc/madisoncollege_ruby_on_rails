@@ -40,8 +40,9 @@ gem 'rspec-rails', '2.13.1'
 ```
 
 1. Change directories into your application, and install related gems ```$ bundle install --without production --path vendor/bundle```
-1. Next scaffold the Category resource ```$ bundle exec rails generate scaffold Category name:string --skip-test-unit```
-1. Then scaffold the Task resource ```$ bundle exec rails generate scaffold Task description:string category_id:integer --skip-test-unit```
+1. Next install rspec dependencies ```$ bundle exec rails generate rspec:install```
+1. Next scaffold the Category resource ```$ bundle exec rails generate scaffold Category name:string```
+1. Then scaffold the Task resource ```$ bundle exec rails generate scaffold Task description:string category_id:integer```
 1. After we have both resources scaffolded we have to add the active record relationship to our models. A category can have many tasks and a task belongs to a category.  
 1. Let's test drive this relationship, to do that we'll need to add model specs for both our Category and Task.
 1. Here is an example of what one of the test files should look like:

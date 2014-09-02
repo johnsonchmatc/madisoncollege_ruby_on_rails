@@ -39,7 +39,7 @@ Send me email ASAP if you have difficulty signing on to our Blackboard course cg
 The format of the course is broken down into “weeks”. The course will last for 8 weeks and each of these weeks there are various assignments. You will find the outline for the weeks of the  course under the “Classes” section in Blackboard. Weekly assignments include readings, videos, labs, projects and discussions. Please look at the "Classes" section in Blackboard for more detail on the actual assignments.  Due Dates for all assignments are listed in the syllabus.
 
 ###Readings & Labs 
-On the syllabus you will find the schedule for readings an labs. Please come to class having read the chapter and attemted the lab, we will discuss the reading and lab activities.
+On the syllabus you will find the schedule for readings and labs. Please come to class having read the chapter and attemted the lab, we will discuss the reading and lab activities.
   
 ###Projects
 ####Project 1
@@ -47,7 +47,7 @@ Taskinator Part 1
 ####Project 2
 Taskinator Part 2
 ####Final Project
-Your own project, we will pitch our ideas to the rest of the class around week 5.
+Your own project, we will pitch our ideas to the rest of the class around week 6.
 
 ###Exams
 There will be two 'Exams' which will actually be presentations. The requirements for each of these will be distributed via BlackBoard.
@@ -78,4 +78,7 @@ I look forward to working and learning with you this semester.  The security lan
 5.	Turning in Assignments: Each lab, project or exam will have specific directions on how to turn that work in. 
   
   
-Looking forward to the semester, Chris Johnson
+Looking forward to the semester, 
+
+
+Chris Johnson
