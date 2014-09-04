@@ -70,6 +70,5 @@ class Task < ActiveRecord::Base
   belongs_to :category
 end
 ```
-1. To get our models looking like that we'll need to use tests to guide our development.
-1. Next you'll need to clean up our views a little bit. Rather than displaying the category_id for a task show the category name.
-1. Test your application using the build in server, when you are satisfied it works, commit your code and push it to get hub. Then deploy it to Heroku.
+1. Next you'll need to clean up our views a little bit. Rather than displaying the category_id for a task show the category name (hint use the active record relationship).
+1. Test your application using the built in server (```bundle exec rails server```), when you are satisfied it works, commit your code, tag the commit 'project-1-to-grade', push it all to github. Then deploy it to Heroku.

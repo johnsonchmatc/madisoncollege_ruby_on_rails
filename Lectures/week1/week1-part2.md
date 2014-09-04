@@ -41,5 +41,8 @@
 
 ---
 #What is Git?
+* Distributed Source Control
+* Focused on branches
 
+[https://try.github.io/levels/1/challenges/1](https://try.github.io/levels/1/challenges/1)
 ---
