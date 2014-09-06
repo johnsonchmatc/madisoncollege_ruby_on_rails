@@ -1,4 +1,6 @@
 #Project 2
+###Revision 9-6-2014
+
 The goal of Project 2 is to apply what you have learned so far from the RailsTutorial.  In this project we'll extend and build on Project 1.  We'll add a user login similar to that in our Micro Posts and protect tasks so they can only be seen by the user who created them. We'll also add some styling to give our application a bit more of a polished look.
 
 ##Done whens
@@ -16,7 +18,7 @@ The goal of Project 2 is to apply what you have learned so far from the RailsTut
 
 ##Submission directions
 * Push code to a private Github repository
-* Use a Git tag to 
+* Use a Git tag to indicate at what point to grade
 * Turn in a document in BlackBoard under Assignments with the following:
   * Name
   * Date

@@ -1,4 +1,5 @@
 #Project 1
+###Revision 9-6-2014
 This project is our first step in applying what we are learning from the RailsTutorial and inclass lectures. We'll create a new application, a github repository for it and scaffold a couple resources.  
 
 ## Done whens
@@ -18,7 +19,7 @@ This project is our first step in applying what we are learning from the RailsTu
 ##Submission directions
 * Push code to a private Github repository
 * Add the instructor (johnsonch) as a collaborator to the project
-* Use a Git tag to 
+* Use a Git tag to indicate at what point to grade
 * Turn in a document in BlackBoard under Assignments with the following:
   * Name
   * Date
