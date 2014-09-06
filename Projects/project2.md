@@ -15,7 +15,8 @@ The goal of Project 2 is to apply what you have learned so far from the RailsTut
 * Meets done whens (10pts) 
 
 ##Submission directions
-* Push code to github
+* Push code to a private Github repository
+* Use a Git tag to 
 * Turn in a document in BlackBoard under Assignments with the following:
   * Name
   * Date
