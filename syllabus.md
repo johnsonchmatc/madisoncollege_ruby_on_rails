@@ -197,7 +197,7 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar 
 
-Revision B 09/01/2014
+Revision B 09/06/2014
 
 | **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Wednesdays at 11:55pm** |
 | --- | ---   | ---                                | ---                                                |
@@ -212,8 +212,8 @@ Revision B 09/01/2014
 | 9   |  10/30| Chapter 9                          | Lab 6                                              |  
 | 10  |  11/6 | Chapter 10                         | Lab 7                                              |
 | 11  |  11/13| Chapter 11                         | Lab 8                                              |
-| 12  |  11/20| Thanksgiving - No Class            |                                                    |  
-| 13  |  11/27| Open lab (Final Project)           | Project 2 and Lab 9                                |
-| 14  |  12/4 | Open lab (Final Project)           |                                                    | 
+| 13  |  11/20| Open lab (Final Project)           | Lab 9				                                |
+| 12  |  11/27| Thanksgiving - No Class            |                                                    |  
+| 14  |  12/4 | Open lab (Final Project)           | Project 2                                          | 
 | 15  |  12/11| Building a virtual server (Lab 10) |                                                    | 
 | 16  |  12/18| Exam 2                             | Final Project and Lab 10                           |
