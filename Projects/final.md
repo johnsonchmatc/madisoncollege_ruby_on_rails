@@ -21,7 +21,7 @@ You have two options for turning this assignment in, you can either publish the 
 ##Submission directions
 * Push code to a private or public Github repository
 * Add the instructor (johnsonch) as a collaborator to the project
-* Use a Git tag to 
+* Use a Git tag to indicate at what point to grade
 * Turn in a document in BlackBoard under Assignments with the following:
   * Name
   * Date

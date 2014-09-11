@@ -229,8 +229,10 @@ $ git tag
 ---
 ##Heroku
 * Managed
-* ```git push``` to deploy
 * $$
+* Step 1: ```$ heroku create my-sweet-app```
+* Step 2: ```$ git push heroku master```
+* Step 3: Profit!
 
 ---
 ##VPS
@@ -239,3 +241,7 @@ $ git tag
 * $
 
 ---
+##Next Week
+* Chapter 2 and Chapter 3
+* Attempt Lab 2
+* Lab 1 due by Wednesday night at 11:55pm
