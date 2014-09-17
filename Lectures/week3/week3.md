@@ -5,7 +5,7 @@
 #Standup
 
 ---
-#Chapter 2
+#Chapter 2 and 3
 
 ---
 ##Modeling demo users
@@ -57,3 +57,101 @@ end
 
 ---
 ##Validations
+* Rules to prevent invalid data from being saved
+* Can be conditional
+* Provides error messages back to the controller
+* [http://guides.rubyonrails.org/active_record_validations.html#validation-helpers](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers)
+
+---
+##Rails Console
+* Let's you try out code against 
+* ```$ bundle exec rails console```
+
+---
+#Rails Class Inheritance Hierarchies
+
+[https://www.railstutorial.org/book/demo_app#sec-inheritance_hierarchies](https://www.railstutorial.org/book/demo_app#sec-inheritance_hierarchies)
+
+---
+#Break
+
+---
+#Chapter 3
+
+---
+#Rspec
+##Behavior Driven Development
+
+---
+#BDD vs TDD
+
+---
+##BDD vs TDD
+* Both describe an approach to development that focus on testing driving your development
+* BDD focuses on testing the Behavior of an application
+* BDD in Rails land tends to be RSpec
+* TDD focuses on asserting method output 
+* TDD in Rails land tends to be Test Unit or MiniTest
+* When interviewing for a job talk about the testing framework you used
+
+---
+#Example
+
+---
+##Code to test
+
+```
+def is_palindrome?(word)
+  word == word.reverse
+end
+```
+
+---
+##MiniTest
+```
+test "otto is a palindrome" do
+  assert is_palindrome?('otto')
+exit
+
+test "stuff is not a palindrome" do
+  assert_not is_palindrome?('stuff')
+exit
+```
+
+---
+##RSpec
+```
+describe '#is_palindrome?' do
+  it 'returns true for the word otto' do
+    expect(is_palindrome?('otto').to eql true 
+  end
+
+  it 'does not return true for the word stuff' do
+    expect(is_palindrome?('stuff').to_not eql true 
+  end
+end
+```
+
+---
+#Exercise
+##BDD Fizzbuzz
+
+---
+##Fizzbuzz
+* Loop from 1 to 100
+* If the number is divisible by 3 output Fizz
+* If the number is divisible by 5 output Buzz
+* If the number is divisible by 3 and 5 output FizzBuzz
+
+---
+#Mostly Static pages, with some Ruby
+
+---
+##ERB
+* Templating DSL
+* Can be used for a variety of things, anything you would want to interpolate with ruby
+
+---
+#ERB Demo
+
+---

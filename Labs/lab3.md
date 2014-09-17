@@ -3,8 +3,8 @@
 * Date due: 10/01/2014 at 11:55pm CST
 
 ##Assignment
-* Read and follow Chapter 3 from the Rails Tutorial book.
-* Commit a working application, including passing unit tests.
+* Read and follow Chapter 4 and 5 from the Rails Tutorial book.
+* Commit a working application, including passing unit tests (Rails only code).
 * Deploy to Heroku
 
 ##Turn in instructions
