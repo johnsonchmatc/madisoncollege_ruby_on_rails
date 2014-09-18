@@ -206,13 +206,13 @@ Revision B 09/06/2014
 | 3   |  9/18 | Chapter 2 and Chapter 3            | Lab 1                                              | 
 | 4   |  9/25 | Chapter 4 and Chapter 5            | Lab 2                                              |
 | 5   |  10/2 | Chapter 6                          | Lab 3                                              |
-| 6   |  10/9 | Chapter 7                          | Project 1, Lab 4 and Final Project Idea            | 
-| 7   |  10/16| Exam 1                             | Lab 5                                              |
-| 8   |  10/23| Chapter 8                          |                                                    |
+| 6   |  10/9 | Chapter 7                          | Lab 4 and Final Project Idea                       | 
+| 7   |  10/16| Chapter 8                          | Project 1                                          |
+| 8   |  10/23| Exam 1                             | Lab 5                                              |
 | 9   |  10/30| Chapter 9                          | Lab 6                                              |  
 | 10  |  11/6 | Chapter 10                         | Lab 7                                              |
 | 11  |  11/13| Chapter 11                         | Lab 8                                              |
-| 13  |  11/20| Open lab (Final Project)           | Lab 9				                                |
+| 13  |  11/20| Open lab (Final Project)           | Lab 9				                                      |
 | 12  |  11/27| Thanksgiving - No Class            |                                                    |  
 | 14  |  12/4 | Open lab (Final Project)           | Project 2                                          | 
 | 15  |  12/11| Building a virtual server (Lab 10) |                                                    | 

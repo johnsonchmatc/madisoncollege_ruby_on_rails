@@ -79,6 +79,17 @@ end
 #Chapter 3
 
 ---
+#Mostly Static pages, with some Ruby
+
+---
+##ERB
+* Templating DSL
+* Can be used for a variety of things, anything you would want to interpolate with ruby
+
+---
+#ERB Demo
+
+---
 #Rspec
 ##Behavior Driven Development
 
@@ -142,16 +153,5 @@ end
 * If the number is divisible by 3 output Fizz
 * If the number is divisible by 5 output Buzz
 * If the number is divisible by 3 and 5 output FizzBuzz
-
----
-#Mostly Static pages, with some Ruby
-
----
-##ERB
-* Templating DSL
-* Can be used for a variety of things, anything you would want to interpolate with ruby
-
----
-#ERB Demo
 
 ---
