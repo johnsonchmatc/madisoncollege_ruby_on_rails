@@ -5,6 +5,11 @@
 #Standup
 
 ---
+##Announcements
+* Updated Syllabus
+* Exam descriptions
+
+---
 #Chapter 2 and 3
 
 ---

@@ -4,7 +4,7 @@
 * Length: 3-5 minutes
 
 ##Description
-For exam 1 you will choose a topic to present to teh class.  You will choose a random number to determine the order in which you pick a topic.
+For exam 1 you will choose a topic to present to the class.  You will choose a random number to determine the order in which you pick a topic.
 
 Once a topic has been picked it will no longer be available.  
 
@@ -14,6 +14,7 @@ Your presentation will need to at least 3 minutes long and not exceeding 5 minut
 
 The goal of this exam is to put you in the situation of sharing some information with your co-learners as you would on the job.
 
+You will also be required to formulate a response for each of your classmate's presentation.  This will consist of a paraphrase of the 'What is' portion of the presentation along with one intersting point from the second part. 
 
 ##Grading Scale
 * Presentation: 41 points
