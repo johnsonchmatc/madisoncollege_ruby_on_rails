@@ -46,6 +46,7 @@ bank.balance #=> 50
 ---
 ##Classes
 * 'blueprint' for creating objects
+
 ```
 class BankAccount
 
@@ -65,6 +66,7 @@ account = BankAccount.new
 ```
 account.to_s #=> #<BankAccount:0x007fb66b04c1c0>
 ```
+
 ---
 ##Classes
 * We can add methods to classes, even override existing ones
@@ -94,4 +96,47 @@ end
 ```
 
 ---
+#Pragmatic Video
+
+---
 #Data Structures 
+
+---
+##Data Structures
+* integer
+* string
+* array
+* hash
+
+---
+##Integer
+
+---
+##String
+
+---
+##Array
+
+---
+##Hash
+
+```
+> a = {key: 'value', 'other_key' => 'other_value'} #=> {:key=>"value", "other_key"=>"other_value"}
+> a #=> {:key=>"value", "other_key"=>"other_value"}
+> a[:key] #=> "value"
+> a['other_key'] #=> "other_value"
+> a.keys #=> [:key, "other_key"]
+> a.keys.each { |x| puts a[x] }
+value
+other_value
+ => [:key, "other_key"]
+```
+
+
+---
+#Asset Pipeline
+
+---
+[http://railscasts.com/episodes/279-understanding-the-asset-pipeline](http://railscasts.com/episodes/279-understanding-the-asset-pipeline)
+
+---

@@ -2,12 +2,12 @@
 ##Week 3
 
 ---
-#Standup
-
----
 ##Announcements
 * Updated Syllabus
 * Exam descriptions
+
+---
+#Standup
 
 ---
 #Chapter 2 and 3
@@ -139,11 +139,11 @@ exit
 ```
 describe '#is_palindrome?' do
   it 'returns true for the word otto' do
-    expect(is_palindrome?('otto').to eql true 
+    expect(is_palindrome?('otto')).to be_truthy 
   end
 
   it 'does not return true for the word stuff' do
-    expect(is_palindrome?('stuff').to_not eql true 
+    expect(is_palindrome?('stuff')).to_not eql be_falsy 
   end
 end
 ```
