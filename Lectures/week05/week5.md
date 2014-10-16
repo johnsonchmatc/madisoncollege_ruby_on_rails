@@ -71,9 +71,9 @@
 ##Selecting
 * ```users = User.all```
 * ```user = User.first```
-* ```david = User.find_by(name: 'David')```
+* ```david = User.find_by(:all, name: 'David')```
 * ```users = User.where(name: 'David', occupation: 'Code Artist').order('created_at DESC')```
-* ```users = User.where("age >= ?", 21)```
+* ```users = User.where("age >= ? and birth_month = ?", 21, 'March')```
 
 ---
 #Callbacks
