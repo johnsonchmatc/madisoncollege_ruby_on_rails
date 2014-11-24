@@ -1,8 +1,10 @@
 #Lab 10 
 * Points 10
-* Date due: 11/12/2014 at 11:55pm CST
+* Date due: 12/18/2014 at 5:00pm CST
 
 ##Assignment
+
+![Choose a location](./images/choosing_a_location.png)
 
 ##Turn in instructions
 * on Blackboard under Labs find Lab 8 submit a word/text document with the following information:
