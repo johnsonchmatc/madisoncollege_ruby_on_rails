@@ -198,10 +198,46 @@ set :ssh<your server ip>
     user: 'deploy'
   }
 ```
+Then change your config/deploy.rb to the following:
+```
+# config valid only for Capistrano 3.1
+lock '3.2.1'
+
+set :application, 'your_application_name'
+set :repo_url, 'git@github.com:your_git_url'
+set :rbenv_ruby, '2.0.0-p481'
+
+# Default branch is :master
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+
+# Default deploy_to directory is /var/www/my_app
+set :deploy_to, '/var/www'
+
+# Default value for :pty is false
+set :pty, true
+
+# Default value for :linked_files is []
+set :linked_files, %w{config/database.yml}
+
+namespace :deploy do
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+       execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
+
+  after :publishing, :restart
+
+end
+```
 
 ```
 $ bundle exec cap production deploy:check 
 ```
+
+We'll need to create a database.yml file in var/www/shared/config with the correct values for your application.
 
 ##Turn in instructions
 * on Blackboard under Labs find Lab 8 submit a word/text document with the following information:
