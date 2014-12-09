@@ -65,9 +65,143 @@ Next we'll add our deploy user to the wheel group.
 ```
 /usr/sbin/usermod -a -G wheel deploy
 ```
+Once we have the deploy user added to the group, we can logout and login as the deploy user.
+
+###SSH Keys
+```
+$ ssh-keygen -t rsa -C "admin@myserver.com"
+$ cat .ssh/id_rsa.pub
+```
+
+With our SSH key created we need to add it to our GitHub account so the server can clone our repository.
 
 ###Installing software
+```
+$ sudo apt-get -y install curl git-core build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev node sqlite3 nodejs npm
+```
 
+####Rbenv
+
+Let's install Rbenv to manage our Rubies.
+
+```
+$ curl https://raw.githubusercontent.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
+```
+
+```
+$ vim ~/.bashrc
+```
+
+```
+export RBENV_ROOT="${HOME}/.rbenv"
+
+if [ -d "${RBENV_ROOT}" ]; then
+  export PATH="${RBENV_ROOT}/bin:${PATH}"
+  eval "$(rbenv init -)"
+fi
+```
+
+```
+$ source ~/.bashrc
+```
+
+```
+$ rbenv install 2.0.0-p481
+$ rbenv global 2.0.0-p481
+```
+####MySQL
+Installing mysql:
+
+```
+$ sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+```
+I chose for this demo a username: root and password: root.  After your server is setup, create a database for your applicaiton.
+
+```
+$ mysql -u root -proot
+mysql > create database <application>_production
+```
+
+
+####Passenger and Nginx
+```
+$ gem install passenger
+$ rbenv rehash
+```
+
+```
+$ sudo passenger-install-nginx-module
+```
+
+```
+$ curl https://raw.githubusercontent.com/johnsonch/nginx-init-ubuntu/master/nginx | cat nginx
+$ sudo mv nginx /etc/init.d/nginx
+$ sudo chmod a+x /etc/init.d/nginx
+$ sudo chown root /etc/init.d/nginx
+```
+
+```
+$ sudo vim /opt/nginx/conf/nginx.conf
+```
+
+```
+server {
+    listen       80;
+
+    root /var/www
+    passenger_enabled on;
+    #charset koi8-r;
+
+    #access_log  logs/host.access.log  main;
+
+    #error_page  404              /404.html;
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   html;
+    }
+
+}
+```
+
+```
+$ sudo mkdir -p /var/www
+$ sudo chown deploy /var/www/
+```
+
+###Setting up our app
+
+```
+gem 'capistrano'
+```
+
+```
+$ bundle
+```
+
+```
+$ bundle exec cap install
+```
+Add the following to your config/deploy/production.rb
+```
+role :app, %w{deploy@<your server ip>}
+role :web, %w{deploy@<your server ip>}
+role :db,  %w{deploy@<your server ip>}
+
+server '<your server ip>', user: 'deploy', roles: %w{web app}
+
+set :ssh<your server ip>
+    keys: %w(/home/action/.ssh/id_rsa),
+    forward_agent: true,
+    user: 'deploy'
+  }
+```
+
+```
+$ bundle exec cap production deploy:check 
+```
 
 ##Turn in instructions
 * on Blackboard under Labs find Lab 8 submit a word/text document with the following information:
