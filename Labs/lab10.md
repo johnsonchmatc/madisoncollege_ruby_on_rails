@@ -243,8 +243,8 @@ We'll need to create a database.yml file in var/www/shared/config with the corre
 * on Blackboard under Labs find Lab 8 submit a word/text document with the following information:
   * Name
   * Date
-  * Github Url of the project (can be a public repository)
-  * Tag to grade
+  * Linode IP
+  * Region of Linode
 
 ###Notes:
 * If you make your github repository for labs private, you'll need to add "johnsonch" as a contributor to the repository so I can access it.
