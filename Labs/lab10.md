@@ -239,6 +239,15 @@ $ bundle exec cap production deploy:check
 
 We'll need to create a database.yml file in var/www/shared/config with the correct values for your application.
 
+```
+production:
+  adapter: mysql2
+  database: <application>_production  
+  host: localhost
+  username: root
+  password: root
+```
+
 ##Turn in instructions
 * on Blackboard under Labs find Lab 8 submit a word/text document with the following information:
   * Name
