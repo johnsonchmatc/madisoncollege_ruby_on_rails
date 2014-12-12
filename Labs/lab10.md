@@ -134,7 +134,7 @@ $ sudo /home/deploy/.rbenv/shims/passenger-install-nginx-module
 ```
 
 ```
-$ curl https://raw.githubusercontent.com/johnsonch/nginx-init-ubuntu/master/nginx | cat nginx
+$ wget https://raw.githubusercontent.com/johnsonch/nginx-init-ubuntu/master/nginx -O nginx
 $ sudo mv nginx /etc/init.d/nginx
 $ sudo chmod a+x /etc/init.d/nginx
 $ sudo chown root /etc/init.d/nginx
@@ -145,24 +145,17 @@ $ sudo vim /opt/nginx/conf/nginx.conf
 ```
 
 ```
-server {
-    listen       80;
-
-    root /var/www
-    passenger_enabled on;
-    #charset koi8-r;
-
-    #access_log  logs/host.access.log  main;
-
-    #error_page  404              /404.html;
-
-    # redirect server error pages to the static page /50x.html
-    #
-    error_page   500 502 503 504  /50x.html;
-    location = /50x.html {
-        root   html;
-    }
-
+server {                                                                                          
+    listen       80;                                                                              
+                                                                                                  
+    root /var/www/current/public;                                                                 
+    passenger_enabled on;                                                                         
+                                                                                           
+    error_page   500 502 503 504  /50x.html;                                                      
+    location = /50x.html {                                                                        
+        root   html;                                                                              
+    }                                                                                             
+                                                                                                  
 }
 ```
 
@@ -174,7 +167,9 @@ $ sudo chown deploy /var/www/
 ###Setting up our app
 
 ```
-gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv', '~> 2.0', require: false
 ```
 
 ```
@@ -231,6 +226,20 @@ namespace :deploy do
   after :publishing, :restart
 
 end
+```
+Then modify the capfile in the root of your application to look like the following:
+```
+# Load DSL and Setup Up Stages
+require 'capistrano/setup'
+
+require 'capistrano/deploy'
+require 'capistrano/rbenv'
+require 'capistrano/bundler'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
+
+# Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
+Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 ```
 
 ```
