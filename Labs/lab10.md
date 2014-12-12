@@ -130,7 +130,7 @@ $ rbenv rehash
 ```
 
 ```
-$ sudo passenger-install-nginx-module
+$ sudo /home/deploy/.rbenv/shims/passenger-install-nginx-module
 ```
 
 ```
