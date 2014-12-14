@@ -75,6 +75,11 @@ $ cat .ssh/id_rsa.pub
 
 With our SSH key created we need to add it to our GitHub account so the server can clone our repository.
 
+Next we'll want to upload our development machine (nitrous.io) ssh key so we don't need to keep typing the following command:
+```
+$ ssh-copy-id -i ~/.ssh/id_rsa.pub deploy@<your servers ip>
+```
+
 ###Installing software
 ```
 $ sudo apt-get -y install curl git-core build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev node sqlite3 nodejs npm
@@ -255,6 +260,11 @@ production:
   host: localhost
   username: root
   password: root
+```
+
+Now we should be able to deploy our site.
+```
+$ bundle exec cap production deploy 
 ```
 
 ##Turn in instructions
