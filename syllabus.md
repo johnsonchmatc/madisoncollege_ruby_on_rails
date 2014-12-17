@@ -197,23 +197,25 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar 
 
-Revision B 09/06/2014
+Revision A 12/13/2014
 
 | **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Wednesdays at 11:55pm** |
 | --- | ---   | ---                                | ---                                                |
-| 1   |  9/4  | Introduction                       |                                                    |
-| 2   |  9/11 | Chapter 1                          |                                                    |
-| 3   |  9/18 | Chapter 2 and Chapter 3            | Lab 1                                              | 
-| 4   |  9/25 | Chapter 4 and Chapter 5            | Lab 2                                              |
-| 5   |  10/2 | Chapter 6                          | Lab 3                                              |
-| 6   |  10/9 | Chapter 7                          | Lab 4 and Final Project Idea                       | 
-| 7   |  10/16| Chapter 8                          | Project 1                                          |
-| 8   |  10/23| Exam 1                             | Lab 5                                              |
-| 9   |  10/30| Chapter 9                          | Lab 6                                              |  
-| 10  |  11/6 | Chapter 10                         | Lab 7                                              |
-| 11  |  11/13| Chapter 11                         | Lab 8                                              |
-| 12  |  11/20| Open lab (Final Project)           | Lab 9				                                      |
-| 13  |  11/27| Thanksgiving - No Class            |                                                    |  
-| 14  |  12/4 | Open lab (Final Project)           | Project 2                                          | 
-| 15  |  12/11| Building a virtual server (Lab 10) |                                                    | 
-| 16  |  12/18| Exam 2                             | Final Project and Lab 10                           |
+| 1   |  1/22 | Introduction                       |                                                    |
+| 2   |  1/29 | Chapter 1                          |                                                    |
+| 3   |  2/5  | Chapter 2 and Chapter 3            | Lab 1                                              | 
+| 4   |  2/12 | Chapter 4 and Chapter 5            | Lab 2                                              |
+| 5   |  2/19 | Chapter 6                          | Lab 3                                              |
+| 6   |  2/26 | Chapter 7                          | Lab 4 and Final Project Idea                       | 
+| 7   |  3/5  | Chapter 8                          | Project 1                                          |
+| 8   |  3/12 | Exam 1                             | Lab 5                                              |
+|     |  3/16 | Spring Break                       |                                                    |  
+| 9   |  3/26 | Chapter 9                          |                                                    |  
+| 10  |  4/2  | Chapter 10                         |  Lab 6                                             |
+| 11  |  4/9  | Chapter 11                         |  Lab 7                                             |
+| 12  |  4/16 | Open lab (Final Project)           |  Lab 8                                             |
+| 13  |  4/23 | Open lab (Final Project)           |  Lab 9				                                      |  
+| 14  |  4/30 | Building a virtual server (Lab 10) |                                                    | 
+| 15  |  5/7  | Exam 2                             |  Project 2                                         | 
+| 16  |   |  | Final Project and Lab 10                           |
+                 

@@ -49,13 +49,9 @@
 #Questions?
 
 ---
-#Activity
-## Standup
-
----
 #Projects, Labs and Exams
 * Labs
-* Projects (1,2 and Final)
+* Course Project
 * Exams 
 
 ---
@@ -73,9 +69,11 @@
 * Github
 * Heroku
 * Nitrious.io (add public key to Github and Heroku)
-* IRC
+  * Ruby Version 2.1.5
+  * Rails Version 4.2.0
+* IRC http://officehours.johnsonch.com/
 
 ---
 #Socrative
 * http://beta.socrative.com
-* Room ID: d2cf0208
+* Room ID: johnsonchmatc
