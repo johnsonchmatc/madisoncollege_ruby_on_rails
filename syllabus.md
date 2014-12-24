@@ -1,12 +1,12 @@
 #Ruby on Rails Development
 
-Catalog #152 10152157 - 0002
+Catalog #152 10152157-0002
 
 ##General Information
 
 * *Credits:* 3
 * *Course Format:* face to face
-* *Class Schedule:* TM 5:30 – 9:20 PM 09/04/2014 - 12/22/2014
+* *Class Schedule:* TM 5:30 – 9:20 PM 01/22/2015 - 05/14/2015
 * *Location:* Truax-Health Building Rm 335
 * *Instructor:* Chris Johnson
 * *Email:* cgjohnson1@madisoncollege.edu
@@ -14,7 +14,7 @@ Catalog #152 10152157 - 0002
 * *Office Hours:*
 	* Email for an appointment
 	* IRC #johnsonch_office_hours on irc.freenode.net
-  * [IRC Tutorial](https://github.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/blob/master/irc.md)
+  * [IRC Tutorial](https://github.com/johnsonch/madisoncollege_ruby_on_rails/blob/master/irc.md)
 
 
 ##Class Information
@@ -41,7 +41,7 @@ We will be using the following books for the course. These are available in both
 
 ####Required
 
-* *Ruby on Rails Tutorial* by Michael Hartl. The book is available online at
+* *Ruby on Rails Tutorial* by Michael Hartl (3rd ED.). The book is available online at
 [http://railstutorial.org/ruby-on-rails-tutorial-book](http://railstutorial.org/ruby-on-rails-tutorial-book)
 , as a PDF from [http://railstutorial.org/](http://railstutorial.org/) ,
 or as a traditional hard copy from book stores and amazon.com .
@@ -57,7 +57,7 @@ This is the definitive reference book on version 4 of Rails. Available as paperb
 [http://pragprog.com/book/rails4/agile-web-development-with-rails](http://pragprog.com/book/rails4/agile-web-development-with-rails)
 
 * *Cooking with Rails 4, A Ruby on Rails Crash Course* by Brian Hogan.  
-The PDF is available at [https://raw.githubusercontent.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/master/rails4_cookbook.pdf](https://raw.githubusercontent.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/master/rails4_cookbook.pdf)
+The PDF is available at [http://napcs.com/resources/rails/cookbook/](http://napcs.com/resources/rails/cookbook/)
 
 
 ###Course Competencies:
@@ -68,7 +68,6 @@ During this course students will:
 *   Create a rich web-application database schema
 *   Adapt a web design to a Rails web application
 *   Download and analyze a significant Ruby on Rails application
-*   Keep an application being developed by another team updated and running on your environment
 *   Complete the design and coding of a significant new web application
 *   Present their new web application to classmates
 
@@ -76,7 +75,7 @@ During this course students will:
 Students will attend lectures, use blackboard and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting.
 
 #Core Abilities
-Madison College Core Abilities are eight key life and success skills that contribute to the development ofstudents as life-long learners on the job, at home, and in the community. The Core Abilities are skills and abilities taught and assessed in classes, labs, and field experiences at Madison College. For more information on Core Abilities, please visit [http://madisoncollege.edu/core-abilities](http://madisoncollege.edu/core-abilities). This class addresses the following core abilities: Ethics
+Madison College Core Abilities are eight key life and success skills that contribute to the development of students as life-long learners on the job, at home, and in the community. The Core Abilities are skills and abilities taught and assessed in classes, labs, and field experiences at Madison College. For more information on Core Abilities, please visit [http://madisoncollege.edu/core-abilities](http://madisoncollege.edu/core-abilities). This class addresses the following core abilities: Ethics
 
 #Responsibilities and Policies
 **Student Responsibilities:*ß* Students are expected to be familiar with Madison College policies and procedures. Many of the important policies and procedures are on the Madison College website, located at [http://madisoncollege.edu/student-rights-responsibilities](http://madisoncollege.edu/student-rights-responsibilities).
@@ -126,7 +125,7 @@ If you have an accommodation card from their office indicating that you have a d
 
 **Instructor Responsibilities:** As your instructor, I commit to communicating openly and frequently with you about this class. I will maintain a professional, safe learning environment adhering to the policies of the college. You can expect a reply to communication, be it via e-mail, voicemail or in person, within 24-48 business hours.
 
-**Socrative:** At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You can login to the site at [http://beta.socrative.com](http://beta.socrative.com) using the room code of "d2cf0208"
+**Socrative:** At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You can login to the site at [http://beta.socrative.com](http://beta.socrative.com) using the room code of "johnsonchmatc"
 
 **Blackboard:** A Blackboard course site has been created for this class. You can access this course by logging in to the following page:  [https://blackboard.madisoncollege.edu/](https://blackboard.madisoncollege.edu/)
 
@@ -173,11 +172,11 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 | 10  | Lab 8 |
 | 10  | Lab 9 |
 | 10  | Lab 10 |
-| 20  | Project 1 |
-| 20  | Project 2 |
+| 20  | Project Check-in 1 |
+| 20  | Project Check-in 2 |
 | 50  | Exam 1 |
 | 50  | Exam 2 |
-| 50  | Final Project |
+| 50  | Courxe Project |
 | 10  | Participation |
 | 300 | TOTAL POINTS |
 
@@ -197,25 +196,24 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar 
 
-Revision A 12/13/2014
+Revision B 12/23/2014
 
 | **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Wednesdays at 11:55pm** |
 | --- | ---   | ---                                | ---                                                |
-| 1   |  1/22 | Introduction                       |                                                    |
-| 2   |  1/29 | Chapter 1                          |                                                    |
-| 3   |  2/5  | Chapter 2 and Chapter 3            | Lab 1                                              | 
-| 4   |  2/12 | Chapter 4 and Chapter 5            | Lab 2                                              |
-| 5   |  2/19 | Chapter 6                          | Lab 3                                              |
-| 6   |  2/26 | Chapter 7                          | Lab 4 and Final Project Idea                       | 
-| 7   |  3/5  | Chapter 8                          | Project 1                                          |
-| 8   |  3/12 | Exam 1                             | Lab 5                                              |
-|     |  3/16 | Spring Break                       |                                                    |  
-| 9   |  3/26 | Chapter 9                          |                                                    |  
-| 10  |  4/2  | Chapter 10                         |  Lab 6                                             |
-| 11  |  4/9  | Chapter 11                         |  Lab 7                                             |
-| 12  |  4/16 | Open lab (Final Project)           |  Lab 8                                             |
-| 13  |  4/23 | Open lab (Final Project)           |  Lab 9				                                      |  
-| 14  |  4/30 | Building a virtual server (Lab 10) |                                                    | 
-| 15  |  5/7  | Exam 2                             |  Project 2                                         | 
-| 16  |   |  | Final Project and Lab 10                           |
-                 
+| 1   |  1/22 | Introduction                       |                       |
+| 2   |  1/29 | Chapter 1 and Github Reading       | Course Project Idea   |
+| 3   |  2/5  | Chapter 2                          | Lab 1                 | 
+| 4   |  2/12 | Chapter 4                          | |
+| 5   |  2/19 | Chapter 3 and Chapter 5            | |
+| 6   |  2/26 | Chapter 6                          | | 
+| 7   |  3/5  | Chapter 7                          | |
+| 8   |  3/12 | Open lab (Project work time)       | |
+|     |  3/16 | Spring Break                       | |  
+| 9   |  3/26 | Exam 1                             | Project check-in 1    |  
+| 10  |  4/2  | Chapter 8                          | |
+| 11  |  4/9  | Chapter 9 and Chapter 10           | |
+| 12  |  4/16 | Chapter 11                         | |
+| 13  |  4/23 | Chapter 12                         | Project check-in 2    |  
+| 14  |  4/30 | Open lab (Final Project)           | | 
+| 15  |  5/7  | Building a virtual server (Lab 10) | | 
+| 16  |  5/14 | Exam 2                             | Project and Lab 10    |

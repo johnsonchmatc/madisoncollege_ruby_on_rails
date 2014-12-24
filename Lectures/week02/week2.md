@@ -2,7 +2,16 @@
 ##Week 2
 
 ----
-#Standup
+#Agenda 
+* Nitrous.io
+* Managing Ruby Versions
+* Generating a new Rails application
+  * Gems
+  * Bundler
+
+* Git
+* Heroku
+
 
 ---
 #Chapter 1
@@ -121,7 +130,7 @@ Makes use of two files:
 
 ---
 ##Rails server
-* ```$ bundle exec rails server```
+* ```$ bundle exec rails server -b 0.0.0.0```
 
 ---
 #MVC

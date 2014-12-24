@@ -1,3 +1,4 @@
 *.gdoc
 *.pdf
 /ExitTickets/
+.DS_Store
