@@ -12,7 +12,6 @@
 * Git
 * Heroku
 
-
 ---
 #Chapter 1
 
@@ -251,6 +250,6 @@ $ git tag
 
 ---
 ##Next Week
-* Chapter 2 and Chapter 3
+* Chapter 2 
 * Attempt Lab 2
 * Lab 1 due by Wednesday night at 11:55pm

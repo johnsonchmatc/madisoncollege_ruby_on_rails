@@ -203,8 +203,8 @@ Revision B 12/23/2014
 | 1   |  1/22 | Introduction                       |                       |
 | 2   |  1/29 | Chapter 1 and Github Reading       | Course Project Idea   |
 | 3   |  2/5  | Chapter 2                          | Lab 1                 | 
-| 4   |  2/12 | Chapter 4                          | |
-| 5   |  2/19 | Chapter 3 and Chapter 5            | |
+| 4   |  2/12 | Chapter 4                          | Lab 2                 |
+| 5   |  2/19 | Chapter 3 and Chapter 5            | Lab 3                 |
 | 6   |  2/26 | Chapter 6                          | | 
 | 7   |  3/5  | Chapter 7                          | |
 | 8   |  3/12 | Open lab (Project work time)       | |

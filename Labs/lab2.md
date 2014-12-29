@@ -1,11 +1,22 @@
 #Lab 2
 * Points 10
-* Date due: 09/24/2014 at 11:55pm CST
+* Date due: 02/11/2014 at 11:55pm CST
 
 ##Assignment
-* Read and follow Chapter 2 and Chapter 3 from the Rails Tutorial book.
-* Commit a working application (Rails only code)
-* Deploy to Heroku
+Read and use Chapter 2 from the Rails Tutorial book as a guide.
+
+Generate a new Rails application 'todo-list'
+```
+$ rails new todo-list
+```
+
+Scaffold a User resoruce ``` $ bundle exec rails generate scaffold User name:string email:string ```
+
+Then scaffold a Todo resource ```$ bundle exec rails generate scaffold Todo user_id:integer title:string description:text```
+
+
+
+Deploy to Heroku
 
 ##Turn in instructions
 * on Blackboard under Labs find Lab 2 submit a word/text document with the following information:
