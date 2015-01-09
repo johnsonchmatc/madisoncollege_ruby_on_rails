@@ -67,7 +67,6 @@ During this course students will:
 *   Create a new Ruby on Rails project
 *   Create a rich web-application database schema
 *   Adapt a web design to a Rails web application
-*   Download and analyze a significant Ruby on Rails application
 *   Complete the design and coding of a significant new web application
 *   Present their new web application to classmates
 
@@ -176,7 +175,7 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 | 20  | Project Check-in 2 |
 | 50  | Exam 1 |
 | 50  | Exam 2 |
-| 50  | Courxe Project |
+| 50  | Course Project |
 | 10  | Participation |
 | 300 | TOTAL POINTS |
 

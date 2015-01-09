@@ -41,22 +41,17 @@ The format of the course is broken down into “weeks”. The course will last f
 ###Readings & Labs 
 On the syllabus you will find the schedule for readings and labs. Please come to class having read the chapter and attemted the lab, we will discuss the reading and lab activities.
   
-###Projects
-####Project 1
-Taskinator Part 1
-####Project 2
-Taskinator Part 2
-####Final Project
-Your own project, we will pitch our ideas to the rest of the class around week 6.
+###Course Project
+You will be working on a project during the semester, this project will be something you come up with on your own.  You will need to show your progress three times during the semester, which will give you the ability to get feedback from your instructor and improve your project.
 
 ###Exams
 There will be two 'Exams' which will actually be presentations. The requirements for each of these will be distributed via BlackBoard.
 
 ###Socrative
-At the end of every class I’ll have you fill out an exit ticket.  The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day.  You can login to the site at http://beta.socrative.com using the room code of “d2cf0208”
+At the end of every class I’ll have you fill out an exit ticket.  The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day.  You can login to the site at http://beta.socrative.com using the room code of "johnsonchmatc" 
 
 ##Ways to Get Help
-  * IRC: [Tutorial](https://github.com/johnsonch/madisoncollege_2014_fall_ruby_on_rails/blob/master/irc.md)
+  * IRC: [Tutorial](https://github.com/johnsonch/madisoncollege_ruby_on_rails/blob/master/irc.md)
   * EMAIL: You can contact me via email at cgjohnson1@madisoncollege.edu and I will do my very best to get back to you within 24-48 hours. I will do my best to check my email Monday morning through Friday at 4:30pm.
   * PHONE: You can contact me via telephone at 608-301-5232. This is usually not a very efficient method as we will probably end up playing "telephone tag."
   * BLACKBOARD ASSISTANCE: If you experience problems with Blackboard, help is available at the Madison College Library Student Helpdesk. To get help, you can visit room 230 in the library, call 243-4444, or send email to student-help@madisoncollege.edu If you find that Blackboard is "down" and the Student Helpdesk is closed (after hours, weekends, and holidays), you may call 246-6666 to leave a message so it can be addressed as soon as staff is available.

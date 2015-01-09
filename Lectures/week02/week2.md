@@ -8,15 +8,20 @@
 * Generating a new Rails application
   * Gems
   * Bundler
-
 * Git
 * Heroku
 
 ---
 #Chapter 1
 
-----
-#Up and running
+---
+#What is Ruby?
+
+> A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
+
+---
+#What is Rails
+> Ruby on Rails is an open-source web framework that's optimized for programmer happiness and sustainable productivity.
 
 ---
 ##What is RVM?
@@ -43,7 +48,8 @@ https://rvm.io
 * ```$ rvm implode```
 
 ---
-#Ruby Gems
+#What are Gems (RubyGems)?
+>RubyGems is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries (in a self-contained format called a "gem"), a tool designed to easily manage the installation of gems, and a server for distributing them.
 
 ---
 ##Gem
@@ -101,6 +107,7 @@ Add the ```--skip-bundle``` flag at the end of your generation command.  It allo
 
 ---
 #Bundler
+>Bundler is an exit from dependency hell, and ensures that the gems you need are present in development, staging, and production. Starting work on a project is as simple as ```bundle install```.
 
 ---
 ##Bundler

@@ -1,60 +1,69 @@
 # Week 1 
-  * Nitrious.io
-  * Heroku
-  * Github
-* Topics
-  * Rails Ecosystem overview (ruby, rails, gems, bundler, MVC, TDD)
+  Course introduction
+  Nitrious.io
+  Heroku
+  Github
+  Generate first app
 # Week 2
-* Lab
-  * Setup (ch1)
+  Chapter 1
+  Ruby
+  Rails
+  Gems
+  Bundler
+  Intro to git
 # Week 3
-* Lab
-  * Scaffolding (ch2)
-  * Static Content (ch3)
-* Topics
-  * Rails Generators
-  * Test Driven Development
+  Chapter 2
+  Scaffolding
+  Models, Views and Controllers
+  Intro to Active Record
 # Week 4 
-* Lab
-  * Rails-flavored Ruby (ch4)
-  * Adding a layout (ch5)
-* Topic
-  * Ruby language
-  * Asset pipeline
-  * Routes
-  * Controllers
+  Chapter 4
+  The Ruby Language
+    Classes
+    Objects
+    Methods
+    Strings
+    Arrays
+    Hashes
 # Week 5
-* Pitch your final project (1 minute presentation and write up)
-* Project
-  * Project 1 due
-* Lab
-  * Modeling users (ch6)
-* Topics
-  * Models
-  * Validations
-  * Security
+  Chapter 3 and 5
+  Intro to TDD
+  ERB
+  Bootstrap
+  SCSS
+  Assetpipeling
+  Rails Routing
 # Week 6
-* Lab
-  * Sign up (ch7)
-* Topics
-  * What is a REPEL?
-  * Deployment
+  Chapter 6
+  Models
+  Migrations
+  Validations
 # Week 7
-  * Exam 1 - Presentations?
+  Chapter 7
+  Debugging
+  Forms
 # Week 8
-  * Sign in, sign out (ch8)
+  Open Lab
 # Week 9
-  * Updating, showing and deleting users (ch9)
+  Exam 1
 # Week 10
-  * User microposts (ch10)
+  Chapter 8
+  Sessions
+  Cookies
 # Week 11
-  * Following users (ch11)
+  Chapter 9 and 10
+  Rake Tasks
+  Mailers
 # Week 12
-  * Project 2 due
-  * Thanksgiving - No Class
+  Chapter 11
+  Managing Active Record associations 
+  Image uploading
 # Week 13
+  Chapter 12
+  Ajax
 # Week 14
-  * Building a Virtual Server & Deploying to it
+  Open Lab
 # Week 15
-  * Final Project 
-  * Exam 2
+  Building a virtual server
+# Week 16
+  Exam 2
