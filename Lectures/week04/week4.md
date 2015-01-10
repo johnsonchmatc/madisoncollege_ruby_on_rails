@@ -4,7 +4,7 @@
 #Standup
 
 ---
-#Chapters 4 and 5
+#Chapters 4 
 
 ---
 #Objects
@@ -18,7 +18,7 @@
 ##Objects
 ```
 bank = BankAccount.new(:balance => 40)
-bank.balance #=> 40
+
 bank.withdraw(10)
 bank.deposit(20)
 bank.balance #=> 50
@@ -131,12 +131,5 @@ value
 other_value
  => [:key, "other_key"]
 ```
-
-
----
-#Asset Pipeline
-
----
-[http://railscasts.com/episodes/279-understanding-the-asset-pipeline](http://railscasts.com/episodes/279-understanding-the-asset-pipeline)
 
 ---

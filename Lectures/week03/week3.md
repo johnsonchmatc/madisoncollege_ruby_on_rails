@@ -121,4 +121,4 @@ Completed 302 Found in 36ms (ActiveRecord: 29.8ms)
 ---
 ##For next week
 ### Ruby Koans(lab 3)
-Let's take a look
+Let's take a look at them

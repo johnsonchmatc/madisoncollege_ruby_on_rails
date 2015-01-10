@@ -14,6 +14,7 @@
 * Start your journey ```$ ruby path_to_enlightenment.rb```
 * After finishing each file create a git commit and move on to the next.
 * Create a public repository on Github called matc-lab03
+* Push the finished Koans to github
 
 ##Turn in instructions
 * on Blackboard under Labs find Lab 3 submit a word/text document with the following information:

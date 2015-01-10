@@ -14,8 +14,6 @@ Scaffold a User resoruce ``` $ bundle exec rails generate scaffold User name:str
 
 Then scaffold a Todo resource ```$ bundle exec rails generate scaffold Todo user_id:integer title:string description:text```
 
-
-
 Deploy to Heroku
 
 ##Turn in instructions

@@ -32,11 +32,10 @@ Send me email ASAP if you have difficulty signing on to our Blackboard course cg
 * Access to a computer with a web browser and internet access.
 * A Heroku.com account, which we will setup in class.
 * A Github.com account, which we will setup in class.
-* A DigitalOcean.com account, which we will setup in class.
 * A Nitrous.io account use this link [https://www.nitrous.io/join/xAc6XsTB2BA](https://www.nitrous.io/join/xAc6XsTB2BA) to get extra N2O, which we will setup in class.
 
 ###Assignments
-The format of the course is broken down into “weeks”. The course will last for 8 weeks and each of these weeks there are various assignments. You will find the outline for the weeks of the  course under the “Classes” section in Blackboard. Weekly assignments include readings, videos, labs, projects and discussions. Please look at the "Classes" section in Blackboard for more detail on the actual assignments.  Due Dates for all assignments are listed in the syllabus.
+The format of the course is broken down into "weeks". The course will last for 16 weeks and each of these weeks there are various assignments. You will find the outline for the weeks of the  course under the "Classes" section in Blackboard. Weekly assignments include readings, videos, labs, projects and discussions. Please look at the "Classes" section in Blackboard for more detail on the actual assignments.  Due Dates for all assignments are listed in the syllabus.
 
 ###Readings & Labs 
 On the syllabus you will find the schedule for readings and labs. Please come to class having read the chapter and attemted the lab, we will discuss the reading and lab activities.
@@ -58,7 +57,7 @@ At the end of every class I’ll have you fill out an exit ticket.  The exit tic
   * TO USE THE BLACKBOARD TO SEND AN EMAIL, choose Communication from the main set of buttons along the left side of the course page. Choose Send email then choose Select Users. Select your instructor's name from the list of users. Follow directions given for subject line and message. Choose Send Copy of Message to self. Attach the required file by clicking the Add button in Section 4 of the screen; choose Browse to find the attachment, double click on the desired filename, click Submit to add the attachment (repeat this step for each attachment). Click Submit to send the email to your instructor.
   
 ##Final Thoughts
-I look forward to working and learning with you this semester.  The security landscape is changing all the time which will give us a chance to talk about recent events and how they relate to the materials in this course.  To get off to a good start make sure to complete the steps below.
+I look forward to working and learning with you this semester.  To get off to a good start make sure to complete the steps below.
   
 ####STEPS TO COMPLETE:
   
