@@ -14,6 +14,7 @@ First, you will need a client. Below is a short list of common clients.
 * [Kiwi IRC](https://kiwiirc.com/)
 * [IRC Cloud](https://www.irccloud.com/) - Free with sign up.
 * [Mibbit](http://mibbit.com/)
+* [My Website](http://officehours.johnsonch.com/)
 
 ### Desktop Clients
 

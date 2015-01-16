@@ -1,11 +1,8 @@
 #Lab 6
 * Points 10
-* Date due: 10/29/2014 at 11:55pm CST
+* Date due:  at 11:55pm CST
 
 ##Assignment
-* Read and follow Chapter 8 from the Rails Tutorial book.
-* Commit a working application (Rails only code)
-* Deploy to Heroku
 
 ##Turn in instructions
 * on Blackboard under Labs find Lab 6 submit a word/text document with the following information:

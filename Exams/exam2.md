@@ -6,7 +6,5 @@
 ##Description
 For exam 2 you will present your final project.  You will need to give a demo of your application, show the code and explain how you met required criteria.
 
-You will also be required to formulate a response for each of your classmate's presentation.  This will consist of a short description of the application and how they met the final project goals.
-
 ##Grading Scale
 * Presentation: 50 points

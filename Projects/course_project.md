@@ -22,6 +22,7 @@ The goal of the final project is to demonstrate the competencies covered in this
   * Name
   * Date
   * github url
+
 ###Check-in 2
 * Has at least 2 models
 * Models have at least 1 relationship
@@ -33,6 +34,7 @@ The goal of the final project is to demonstrate the competencies covered in this
   * Name
   * Date
   * github url
+
 ###Final Submission
 * Account activation
 * Password reset

@@ -41,7 +41,7 @@ The format of the course is broken down into "weeks". The course will last for 1
 On the syllabus you will find the schedule for readings and labs. Please come to class having read the chapter and attemted the lab, we will discuss the reading and lab activities.
   
 ###Course Project
-You will be working on a project during the semester, this project will be something you come up with on your own.  You will need to show your progress three times during the semester, which will give you the ability to get feedback from your instructor and improve your project.
+You will be working on a project during the semester, this project will be something you come up with on your own.  You will need to show your progress three times during the semester, which will give you the ability to get feedback from your me and improve your project.
 
 ###Exams
 There will be two 'Exams' which will actually be presentations. The requirements for each of these will be distributed via BlackBoard.
@@ -54,16 +54,16 @@ At the end of every class I’ll have you fill out an exit ticket.  The exit tic
   * EMAIL: You can contact me via email at cgjohnson1@madisoncollege.edu and I will do my very best to get back to you within 24-48 hours. I will do my best to check my email Monday morning through Friday at 4:30pm.
   * PHONE: You can contact me via telephone at 608-301-5232. This is usually not a very efficient method as we will probably end up playing "telephone tag."
   * BLACKBOARD ASSISTANCE: If you experience problems with Blackboard, help is available at the Madison College Library Student Helpdesk. To get help, you can visit room 230 in the library, call 243-4444, or send email to student-help@madisoncollege.edu If you find that Blackboard is "down" and the Student Helpdesk is closed (after hours, weekends, and holidays), you may call 246-6666 to leave a message so it can be addressed as soon as staff is available.
-  * TO USE THE BLACKBOARD TO SEND AN EMAIL, choose Communication from the main set of buttons along the left side of the course page. Choose Send email then choose Select Users. Select your instructor's name from the list of users. Follow directions given for subject line and message. Choose Send Copy of Message to self. Attach the required file by clicking the Add button in Section 4 of the screen; choose Browse to find the attachment, double click on the desired filename, click Submit to add the attachment (repeat this step for each attachment). Click Submit to send the email to your instructor.
+  * TO USE THE BLACKBOARD TO SEND AN EMAIL, choose Communication from the main set of buttons along the left side of the course page. Choose Send email then choose Select Users. Select my name from the list of users. Follow directions given for subject line and message. Choose Send Copy of Message to self. Attach the required file by clicking the Add button in Section 4 of the screen; choose Browse to find the attachment, double click on the desired filename, click Submit to add the attachment (repeat this step for each attachment). Click Submit to send the email to me.
   
 ##Final Thoughts
-I look forward to working and learning with you this semester.  To get off to a good start make sure to complete the steps below.
+I look forward to working and learning with you this semester. This is the second semester I have taught this course, so things are subject to change.  Always look to the GitHub site for up to date information, and if you find any errors or something doesn't make sense let me know ASAP so I can fix that.  To get off to a good start make sure to complete the steps below.
   
 ####STEPS TO COMPLETE:
   
 1.	You need to go to our Blackboard site to get a copy of the syllabus which is the place to start so we all have the same expectations.
   
-2.	Check your email often.  Your instructor will send you messages on a regular basis.
+2.	Check your email often.  I will send you messages on a regular basis.
   
 3.	Access to an internet connection will be needed to turn in assignments, work on labs, and for assignments.
   

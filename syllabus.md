@@ -87,7 +87,7 @@ Nonattendance does not constitute an official withdrawal and students will be he
 
 Stop payment of a check does not constitute a formal cancellation. Registrants will be held liable for the fee until the date of official cancellation. Allow four weeks from the date of cancellation to receive a full refund of payment.
 
-**Attendance:** You are expected to attend class. Poor attendance can lead to failure in the class. If you cannot attend a class, it is your responsibility to obtain the material missed. Lecture will not be repeated for individual students. If you withdraw from the class, please notify the instructor, and The Center for Agriscience and Technologies Office, room 173. Non-attendance will not automatically withdraw you from a course. 
+**Attendance:** You are expected to attend class. Poor attendance can lead to failure in the class. If you cannot attend a class, it is your responsibility to obtain the material missed. Lecture will not be repeated for individual students. If you withdraw from the class, please notify me, and The Center for Agriscience and Technologies Office, room 173. Non-attendance will not automatically withdraw you from a course. 
 
 **Submitting Work:** All work must be submitted as directed in the assignment instructions. 
 
@@ -95,11 +95,11 @@ Stop payment of a check does not constitute a formal cancellation. Registrants w
 
 **Student Email:** Madison College offers a student e-mail account for all students. You are responsible for monitoring your student e-mail account. Student e-mail can be accessed at: [https://mail.madisoncollege.edu/owa](https://mail.madisoncollege.edu/owa%20) .
 
-**Use of Electronic Devices:** Silence cell phones, mobile devices, etc during class sessions. Students must avoid non course related activities such as checking email or social networking sites, web surfing, or playing games because these diminish their—and their classmates'—engagement with instructional activities. Exceptions to this policy may be granted at the discretion of the instructor.
+**Use of Electronic Devices:** Silence cell phones, mobile devices, etc during class sessions. Students must avoid non course related activities such as checking email or social networking sites, web surfing, or playing games because these diminish their—and their classmates'—engagement with instructional activities. Exceptions to this policy may be granted at my discretion.
 
 Mobile devices, (including cell phones) must be stowed in an out of sight location during quizzes and exams and are not permitted to be on the desktop, handled, nor answered during testing periods. Students who disregard this policy will receive a grade of zero for the quiz or test taken during the offense.
 
-**Technical Assistance:** You are encouraged to seek assistance from your instructor well before the date that an assignment is due. This class is a troubleshooting type class, and the normal debugging assistance is available from your instructor.
+**Technical Assistance:** You are encouraged to seek assistance from me well before the date that an assignment is due. This class is a troubleshooting type class, and the normal debugging assistance is available from me.
 
 Student Computer Help Desk is located in the Truax Campus Library Room 230. Student lab assistants are available in person, and by phone, (608) 243-4444; toll-free at (866) 277-4445; by email at [http://madisoncollege.edu/help-desks](http://madisoncollege.edu/help-desks) to provide computer support to fellow students. These services are available Monday - Thursday: 7:30 a.m. - 9:00 p.m., Friday: 7:30 a.m. - 4:30 p.m., and Saturday: 9:00 a.m. - 1:00 p.m. In addition, students can call an afterhours help desk until 10pm most days, by calling (608) 246-6666.
 
@@ -128,7 +128,7 @@ If you have an accommodation card from their office indicating that you have a d
 
 **Blackboard:** A Blackboard course site has been created for this class. You can access this course by logging in to the following page:  [https://blackboard.madisoncollege.edu/](https://blackboard.madisoncollege.edu/)
 
-Madison College Blackboard Student Support information: [http://madisoncollege.edu/blackboard-help](http://madisoncollege.edu/blackboard-help). Consult your instructor for support with Blackboard problems
+Madison College Blackboard Student Support information: [http://madisoncollege.edu/blackboard-help](http://madisoncollege.edu/blackboard-help). Consult me for support with Blackboard problems
 
 Computer difficulties are not a long-term excuse for non-participation. If you experience problems with your computer, call the computer help desk at (608) 243-4444 or toll-free at (866) 277-4445. They can talk you through fixing many, many problems.
 
@@ -150,12 +150,12 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 * Ten percent of the points will be taken off for each day that the assignment is late.
 * Assignments will NOT be accepted if they are more than 10 DAYS late.
 * Assignments will NOT be accepted after the START of the class period in which the final exam is administered.
-* Assignments are NOT accepted after the instructor goes over the answers to the assignment in class.
+* Assignments are NOT accepted after I go over the answers to the assignment in class.
 * There is no make-up of tests or other scheduled, graded classroom activities.
 * It is the responsibility of the student to make up any missed work and/or pick up any missed materials. Missing a class is NOT an excuse for failure to hand in work due.
 * There is no extension of assignment due dates without prior notification of circumstance. All work that is to be graded must be accomplished by your own effort.
 
-**Grades Posted in Blackboard: ** All assignment grades are posted in Blackboard. Your instructor needs to manually grade the assignments. Sometimes this happens very quickly and sometimes it takes a week. When you've posted a quiz or lab answers, it will show up in the gradebook as a green box with a white ! in it. This means that your instructor has received your work, but has not graded it yet. Discussion boards show up in the gradebook as a green box with a white ! in it until your instructor has graded the assignment, then it will have a score in it. 
+**Grades Posted in Blackboard: ** All assignment grades are posted in Blackboard. I need to manually grade the assignments. Sometimes this happens very quickly and sometimes it takes a week. When you've posted a quiz or lab answers, it will show up in the gradebook as a green box with a white ! in it. This means that I have received your work, but has not graded it yet. Discussion boards show up in the gradebook as a green box with a white ! in it until I have graded the assignment, then it will have a score in it. 
 
 ### **Evaluation**
 
@@ -204,15 +204,15 @@ Revision B 12/23/2014
 | 3   |  2/5  | Chapter 2                          | Lab 1                 | 
 | 4   |  2/12 | Chapter 4                          | Lab 2                 |
 | 5   |  2/19 | Chapter 3 and Chapter 5            | Lab 3                 |
-| 6   |  2/26 | Chapter 6                          | | 
-| 7   |  3/5  | Chapter 7                          | |
-| 8   |  3/12 | Open lab (Project work time)       | |
-|     |  3/16 | Spring Break                       | |  
+| 6   |  2/26 | Chapter 6                          | Lab 4                 | 
+| 7   |  3/5  | Chapter 7                          | Lab 5                 |
+| 8   |  3/12 | Open lab (Project work time)       | Lab 6                 |
+|     |  3/16 | Spring Break                       |                       |  
 | 9   |  3/26 | Exam 1                             | Project check-in 1    |  
-| 10  |  4/2  | Chapter 8                          | |
-| 11  |  4/9  | Chapter 9 and Chapter 10           | |
-| 12  |  4/16 | Chapter 11                         | |
+| 10  |  4/2  | Chapter 8                          | Lab 7                 |
+| 11  |  4/9  | Chapter 9 and Chapter 10           | Lab 8                 |
+| 12  |  4/16 | Chapter 11                         |                       |
 | 13  |  4/23 | Chapter 12                         | Project check-in 2    |  
-| 14  |  4/30 | Open lab (Final Project)           | | 
-| 15  |  5/7  | Building a virtual server (Lab 10) | | 
+| 14  |  4/30 | Open lab (Final Project)           | Lab 9                 | 
+| 15  |  5/7  | Building a virtual server (Lab 10) |                       | 
 | 16  |  5/14 | Exam 2                             | Project and Lab 10    |

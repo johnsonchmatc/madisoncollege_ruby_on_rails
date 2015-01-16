@@ -17,8 +17,7 @@ The goal of this exam is to put you in the situation of sharing some information
 You will also be required to formulate a response for each of your classmate's presentation.  This will consist of a paraphrase of the 'What is' portion of the presentation along with one intersting point from the second part. 
 
 ##Grading Scale
-* Presentation: 41 points
-* Response to each presentation: 1 point each
+* Presentation: 50 points
 
 ##Topics
 * What is TDD and what are some recent Rails community thoughts about it? (DHH vs Uncle Bob)
