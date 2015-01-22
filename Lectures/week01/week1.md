@@ -23,6 +23,8 @@
 * Daughter: Kenzie
 * Dogs: Scooter and Miley
 
+![right](https://dl.dropboxusercontent.com/s/6qz5d4284xv041d/2015-01-22%20at%205.06%20PM%202x.png?dl=0)
+
 ---
 #About you
 * Name
