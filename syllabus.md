@@ -126,6 +126,12 @@ If you have an accommodation card from their office indicating that you have a d
 
 **Socrative:** At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You can login to the site at [http://beta.socrative.com](http://beta.socrative.com) using the room code of "johnsonchmatc"
 
+**Nitrous.io** We'll be using Nitrous.io as our development server for this class. You can signup for a free account with extra 'N2O' by going to [https://www.nitrous.io/join/xAc6XsTB2BA](https://www.nitrous.io/join/xAc6XsTB2BA).
+
+**Github** We'll use Github to keep track of our code for the semester, you'll want to sign up for an education account at [https://education.github.com/](https://education.github.com/). This will give you a few private repositories.
+
+**Heroku** We'll use Heroku to deploy our apps to for projects and labs that require a deployment.  Signup for a free account from them.
+
 **Blackboard:** A Blackboard course site has been created for this class. You can access this course by logging in to the following page:  [https://blackboard.madisoncollege.edu/](https://blackboard.madisoncollege.edu/)
 
 Madison College Blackboard Student Support information: [http://madisoncollege.edu/blackboard-help](http://madisoncollege.edu/blackboard-help). Consult me for support with Blackboard problems
