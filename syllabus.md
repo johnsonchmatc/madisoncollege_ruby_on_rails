@@ -201,12 +201,12 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar 
 
-Revision B 12/23/2014
+Revision C 01/25/2015
 
 | **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Wednesdays at 11:55pm** |
 | --- | ---   | ---                                | ---                                                |
 | 1   |  1/22 | Introduction                       |                       |
-| 2   |  1/29 | Chapter 1 and Github Reading       | Course Project Idea   |
+| 2   |  1/29 | Chapter 1                          | Course Project Idea (Atually in class on 1/29)   |
 | 3   |  2/5  | Chapter 2                          | Lab 1                 | 
 | 4   |  2/12 | Chapter 4                          | Lab 2                 |
 | 5   |  2/19 | Chapter 3 and Chapter 5            | Lab 3                 |
@@ -221,4 +221,4 @@ Revision B 12/23/2014
 | 13  |  4/23 | Chapter 12                         | Project check-in 2    |  
 | 14  |  4/30 | Open lab (Final Project)           | Lab 9                 | 
 | 15  |  5/7  | Building a virtual server (Lab 10) |                       | 
-| 16  |  5/14 | Exam 2                             | Project and Lab 10    |
+| 16  |  5/14 | Exam 2                             | Project (5pm on 5/14 and Lab 10    |

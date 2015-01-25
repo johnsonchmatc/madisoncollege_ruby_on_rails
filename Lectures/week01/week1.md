@@ -11,11 +11,16 @@
 * Owner at JohnsonCH, LLC
 	
 ---
+#Internships
+^ Ask me about them if you are interested.
+
+---
 #Hobbies
 * Software development
 * Networking
 * Photography
 * Hockey
+* Watching Racing
 	
 ---
 #Personal

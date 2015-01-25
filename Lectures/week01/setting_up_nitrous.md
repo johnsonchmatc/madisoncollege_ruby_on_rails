@@ -27,6 +27,8 @@ $ gem install rails -v=4.2.0
 ```bash
 $ rails new demo
 ```
+
+```
   create  README.rdoc
   create  Rakefile
   create  config.ru
@@ -39,13 +41,14 @@ $ rails new demo
   * bin/rake: spring inserted
   * bin/rails: spring inserted
 ```
+
 ```
 $ cd demo
 $ bundle exec rails s -b 0.0.0.0
 ```
 
 ---
-##View your app in a browser
+##Use the preview menu to view your app in a browser
 
 ![inline fit](https://dl.dropboxusercontent.com/s/3csfpr53sw156fd/2015-01-21%20at%209.28%20PM%202x.png?dl=0)
 

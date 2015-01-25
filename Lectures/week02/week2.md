@@ -24,35 +24,16 @@
 > Ruby on Rails is an open-source web framework that's optimized for programmer happiness and sustainable productivity.
 
 ---
-##What is RVM?
-> RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.
-
-https://rvm.io
-
----
-##Installing RVM
-* ``` $ curl -sSL https://get.rvm.io | bash -s stable ```
-* Curl is a command line tool for downloading things
-* The | lets you take the output of the program on the left and use it as an input for the program on the right.
-
----
-##Installing RVM
-* In the future you can run ```$ rvm get stable``` to update your rvm installation
-
----
-##Working with RVM
-* ```$ man rvm```
-* ```$ rvm install <ruby>```
-* ```$ rvm list```
-* ```$ rvm use <ruby>```
-* ```$ rvm implode```
+#Ruby version Managers
+* Tools to allow you to install several versions of Ruby side by side
+* Popular ones are: RVM, rbenv and chruby.
 
 ---
 #What are Gems (RubyGems)?
 >RubyGems is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries (in a self-contained format called a "gem"), a tool designed to easily manage the installation of gems, and a server for distributing them.
 
 ---
-##Gem
+#The Gem command
 * ```$ man gem```
 * ```$ gem install <gem name> -v=<gem version>```
 * ```$ gem list````
@@ -63,12 +44,12 @@ https://rvm.io
 ##AKA 'Dot' files
 
 ---
-##Dot Files
+#Dot Files
 * Start with a ```.``` so they are 'hidden'
 * Can be used to configure many applications
 
 ---
-##.gemrc
+#.gemrc
 ```
 install: --no-rdoc --no-ri
 update:  --no-rdoc --no-ri
@@ -100,9 +81,9 @@ $ rails new first_app
 ```
 
 ---
-##Let's explore what files are generated
+#Let's explore what files are generated
 ---
-###Instructor opinion
+#Instructor opinion
 Add the ```--skip-bundle``` flag at the end of your generation command.  It allows your app to be generated and you to make changes before installing gems.
 
 ---
@@ -110,32 +91,32 @@ Add the ```--skip-bundle``` flag at the end of your generation command.  It allo
 >Bundler is an exit from dependency hell, and ensures that the gems you need are present in development, staging, and production. Starting work on a project is as simple as ```bundle install```.
 
 ---
-##Bundler
+#Bundler
 Makes use of two files:
 * Gemfile
 * Gemfile.lock
 
 ---
-##Gemfile
+#Gemfile
 * A list of all your application's required Gems
 * Bundler uses this to manage which Gems to load
 * [http://bundler.io/v1.2/man/gemfile.5.html](http://bundler.io/v1.2/man/gemfile.5.html)
 * Allows you to group gems for what they are used for ie. Test, Development, Production
 
 ---
-###Gemfile.lock
+##Gemfile.lock
 * A snapshot from when you run bundle install.  
 * Not the best idea to modify by hand!
 
 ---
-##Bundler
+#Bundler
 * ```$ bundle help```
 * ```$ bundle install``` installs gems
 * ```$ bundle check``` checks to see if Gemfile is satisfied
 * [http://bundler.io/v1.7/commands.html](http://bundler.io/v1.7/commands.html)
 
 ---
-##Rails server
+#Rails server
 * ```$ bundle exec rails server -b 0.0.0.0```
 
 ---
@@ -143,8 +124,6 @@ Makes use of two files:
 
 ---
 ![fit](https://dl.dropboxusercontent.com/s/gkvmxepquu061xc/2014-09-06%20at%2012.48%20PM.png?dl=0)
-
-<!--Image Credit: Agile Web Development with Rails 4th edition, Pragmatic Bookshelf-->
 
 ---
 ##Model
@@ -172,6 +151,7 @@ $ git config --global user.email your.email@example.com
 
 ---
 #Git Demo
+^
 ```
 $ mkdir class_git_demo
 $ cd class_git_demo
