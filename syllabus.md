@@ -206,7 +206,7 @@ Revision C 01/25/2015
 | **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Wednesdays at 11:55pm** |
 | --- | ---   | ---                                | ---                                                |
 | 1   |  1/22 | Introduction                       |                       |
-| 2   |  1/29 | Chapter 1                          | Course Project Idea (Atually in class on 1/29)   |
+| 2   |  1/29 | Chapter 1                          | Course Project Idea (Actually in class on 1/29)   |
 | 3   |  2/5  | Chapter 2                          | Lab 1                 | 
 | 4   |  2/12 | Chapter 4                          | Lab 2                 |
 | 5   |  2/19 | Chapter 3 and Chapter 5            | Lab 3                 |
