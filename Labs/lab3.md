@@ -24,3 +24,4 @@
 
 ###Notes:
 * If you make your github repository for labs private, you'll need to add "johnsonch" as a contributor to the repository so I can access it.
+* After you have received a grade you may delete this from Heroku/Github if you want

@@ -3,6 +3,7 @@
 * Date due:  at 11:55pm CST
 
 ##Assignment
+Create a rails app with a static page and a theme applied from http://bootswatch.com/
 
 ##Turn in instructions
 * on Blackboard under Labs find Lab 4 submit a word/text document with the following information:

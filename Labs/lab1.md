@@ -7,7 +7,7 @@ Read and follow Chapter 1 from the Rails Tutorial book.
 
 Generate a new rails application ```$ bundle exec rails _4.2.0.rc3_ new lab01```
 
-Intialize it as a new git repository ```$ git init .```
+Initialize it as a new git repository ```$ git init .```
 
 Add and commit all the files 
 ```
@@ -15,7 +15,7 @@ $ git add .
 $ git commit -am 'intial commit'
 ```
 
-Next add 2 methods to the application controller, one called ```hello``` and another called ```good_bye``. Then add routes to both of the acttions. Follow section 1.3.4 in the RailsTutorial book.
+Next add 2 methods to the application controller, one called ```hello``` and another called ```good_bye``. Then add routes to both of the actions. Follow section 1.3.4 in the RailsTutorial book.
 
 You should now see 2 changed files after adding the methods and routes. Use the following command to stage both files and add a commit message.
 
@@ -23,7 +23,7 @@ You should now see 2 changed files after adding the methods and routes. Use the 
 $ git commit -a -m 'commiting new routes for lab 1"
 ```
 
-Create a Github.com public repository for this under your account calle matc-lab01, and follow their instructions on how to push it up.
+Create a Github.com public repository for this under your account called matc-lab01, and follow their instructions on how to push it up.
 
 Create a Heroku Application (follow book example)
 
@@ -34,6 +34,8 @@ $ git tag -a to-grade-lab01 -m '<insert a commit message>'
 ```
 
 View that your tag exists: ``` $ git tag``` 
+
+Then push your repository to Github ```$ git push```
 
 Then push your tag upto Github ```$ git push --tags ```
 
@@ -50,3 +52,4 @@ After your code is pushed to github follow section 1.5 from the RailsTutorial bo
   
 ###Notes:
 * If you make your github repository for labs private, you'll need to add "johnsonch" as a contributor to the repository so I can access it.
+* After you have received a grade you may delete this from Heroku/Github if you want
