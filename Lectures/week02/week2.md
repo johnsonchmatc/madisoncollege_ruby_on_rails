@@ -3,8 +3,8 @@
 
 ----
 #Agenda 
+* Terminology
 * Nitrous.io
-* Managing Ruby Versions
 * Generating a new Rails application
   * Gems
   * Bundler
@@ -155,6 +155,7 @@ $ git config --global user.email your.email@example.com
 ```
 $ mkdir class_git_demo
 $ cd class_git_demo
+$ git init
 $ touch file-a.txt
 $ git status
 $ git add file-a.txt
@@ -170,7 +171,7 @@ $ git commit -am 'branch-a file added'
 $ git log
 $ git checkout master
 $ git merge branch-a
-$ git branch --contains branch-a
+$ git branch --contains <sha>
 $ git branch -d branch-a
 $ git checkout -b branch-b
 $ touch file-branch-b.txt
@@ -182,10 +183,8 @@ $ git diff
 $ git add .
 $ git commit -am 'added Hello World to file-branch-b'
 $ git log
-$ git checkout master
-$ git log
 $ git checkout -b branch-c
-$ touch file file-branch-c.txt
+$ touch file-branch-c.txt
 $ git add .
 $ git commit -am 'added file-branch-c.txt'
 $ vim file-branch-c.txt
@@ -199,7 +198,6 @@ $ git add .
 $ git commit -am 'edits to both a and c'
 $ git tree
 $ gco master
-$ git merge branch-b
 $ git merge branch-c
 $ git status
 $ git tree

@@ -17,6 +17,12 @@ $ git commit -am 'intial commit'
 
 Next add 2 methods to the application controller, one called ```hello``` and another called ```good_bye``. Then add routes to both of the actions. Follow section 1.3.4 in the RailsTutorial book.
 
+An example additional route would look similar to this:
+
+```
+get '/good_bye', to: 'application#good_bye'
+```
+
 You should now see 2 changed files after adding the methods and routes. Use the following command to stage both files and add a commit message.
 
 ```
