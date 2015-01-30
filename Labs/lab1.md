@@ -5,7 +5,9 @@
 ##Assignment
 Read and follow Chapter 1 from the Rails Tutorial book.
 
-Generate a new rails application ```$ bundle exec rails _4.2.0.rc3_ new lab01```
+Generate a new rails application ```$ rails _4.2.0.rc3_ new lab01```
+
+* If you get an error about rails versions do a ```$ gem install rails -v=4.2.0.rc3```
 
 Initialize it as a new git repository ```$ git init .```
 
