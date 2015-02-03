@@ -16,6 +16,11 @@ $ rails new todo-list
 
 * Make Git repository and push to Github
 
+  * When you are satisfied with your application and it works add a tag ``` $ git tag -a to-grade-lab02 -m '<insert a commit message>' ```
+  * View that your tag exists: ``` $ git tag``` 
+  * Then push your repository to Github ```$ git push```
+  * Then push your tag upto Github ```$ git push --tags ```
+
 * Deploy to Heroku
 
 
