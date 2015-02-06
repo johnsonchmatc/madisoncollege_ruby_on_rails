@@ -7,12 +7,13 @@
 * Complete the Ruby Koans
 * Go to http://rubykoans.com/ and download the Koans
 * Upload the zip file to your Nitrous box
-* Unzip the file
+* Unzip the file ```$ unzip rubykoans.zip```
 * cd into koans directory
 * Initialize the directory as a new git repository ```$ git init .```
 * Create an initial commit ```$ git add . && git commit -a -m 'initial commit```
 * Start your journey ```$ ruby path_to_enlightenment.rb```
-* After finishing each file create a git commit and move on to the next.
+* After finishing each file create a git commit and move on to the next. 
+  * Tip think about ```git commit``` all and then a message
 * Create a public repository on Github called matc-lab03
 * Push the finished Koans to github
 
