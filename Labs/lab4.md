@@ -24,7 +24,8 @@ Create a rails app with a static page and a theme applied from http://bootswatch
    
 Notes:
 * Generate a controller and an action that you can reference from the routes file
-* For help and as a guide reference Chapter 5 from the book.
+* For help and as a guide reference Chapter 5 from the book for adding bootstrap.
+* Also use the YouTube video [https://www.youtube.com/watch?v=VPC4db13nt8](https://www.youtube.com/watch?v=VPC4db13nt8) as help/reference, it shows making a welcome controller and index action. About 12:45 into the video.
 * Hint you will need to either download or reference a stylesheet from http://bootswatch.com
 
 * Tag what you would like graded with ```to-grade-lab02```
