@@ -1,7 +1,5 @@
 #Ruby on Rails Development
 ##Week 4
----
-#Standup
 
 ---
 #Chapters 4 
