@@ -28,7 +28,7 @@ Notes:
 * Also use the YouTube video [https://www.youtube.com/watch?v=VPC4db13nt8](https://www.youtube.com/watch?v=VPC4db13nt8) as help/reference, it shows making a welcome controller and index action. About 12:45 into the video.
 * Hint you will need to either download or reference a stylesheet from http://bootswatch.com
 
-* Tag what you would like graded with ```to-grade-lab02```
+* Tag what you would like graded with ```to-grade-lab04```
 
 ##Turn in instructions
 * on Blackboard under Labs find Lab 4 submit a word/text document with the following information:

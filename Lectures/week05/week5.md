@@ -28,7 +28,7 @@
 * ```$ git commit -am 'commiting files from in class'```
 * ```$ git fetch```
 * ```$ git pull ```
-* ```$ git checkout week05_start```
+* ```$ git checkout -b week05_start```
 
 ^
 ``` 
