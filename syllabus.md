@@ -217,8 +217,8 @@ Revision C 01/25/2015
 | 9   |  3/26 | Exam 1                             | Project check-in 1    |  
 | 10  |  4/2  | Chapter 8                          | Lab 7                 |
 | 11  |  4/9  | Chapter 9 and Chapter 10           | Lab 8                 |
-| 12  |  4/16 | Chapter 11                         |                       |
-| 13  |  4/23 | Chapter 12                         | Project check-in 2    |  
+| 12  |  4/16 | Chapter 11 (adding gems)           |                       |
+| 13  |  4/23 | Chapter 12 (ajax)                  | Project check-in 2    |  
 | 14  |  4/30 | Open lab (Final Project)           | Lab 9                 | 
 | 15  |  5/7  | Building a virtual server (Lab 10) |                       | 
 | 16  |  5/14 | Exam 2                             | Project (5pm on 5/14 and Lab 10    |
