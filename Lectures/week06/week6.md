@@ -27,44 +27,6 @@
 * Perform database operations in an object-oriented fashion.
 
 ---
-##Conventions
-* Naming
-  * *Database Table* - Plural with underscores separating words (e.g., book\_clubs).
-  * *Model Class* - Singular with the first letter of each word capitalized (e.g., BookClub).
-
----
-##Conventions
-* Schema
-  * *Foreign keys* - These fields should be named following the pattern singularized\_table\_name\_id (e.g., item\_id, order\_id). These are the fields that Active Record will look for when you create associations between your models.
-
----
-##Conventions
-* Schema
-  * *Primary keys* - By default, Active Record will use an integer column named id as the table's primary key. When using Active Record Migrations to create your tables, this column will be automatically created.
-
----
-##Conventions
-* Schema - optional
-  * *created\_at* - Automatically gets set to the current date and time when the record is first created.
-  * *updated\_at* - Automatically gets set to the current date and time whenever the record is updated.
-
----
-##Conventions
-* Schema - optional
-  * *lock\_version* - Adds optimistic locking to a model.
-  * *type* - Specifies that the model uses Single Table Inheritance.
-
----
-##Conventions
-* Schema - optional
-  * *(association\_name)\_type* - Stores the type for polymorphic associations.
-  * *(table\_name)\_count* - Used to cache the number of belonging objects on associations. For example, a comments\_count column in a Post class that has many instances of Comment will cache the number of existent comments for each post.
-
----
-#Validations
-##More discussion?
-
----
 ##Selecting
 * ```users = User.all```
 * ```user = User.first```
@@ -95,23 +57,65 @@
 * after_commit
 
 ---
-##Migrations
-```
-class CreatePublications < ActiveRecord::Migration
-  def change
-    create_table :publications do |t|
-      t.string :title
-      t.text :description
-      t.references :publication_type
-      t.integer :publisher_id
-      t.string :publisher_type
-      t.boolean :single_issue
- 
-      t.timestamps
-    end
-    add_index :publications, :publication_type_id
+#Demo
+* cd into ```wolfies_list```
+* ```$ git add . ```
+* ```$ git commit -am 'commiting files from in class'```
+* ```$ git fetch```
+* ```$ git pull ```
+* ```$ git checkout -b week06_start```
+
+^```
+$ rails generate model User name:string email:string
+
+### Test setup
+ def setup
+    @user = User.new(name: "Example User", email: "user@example.com")
+  end
+
+  test "should be valid" do
+    assert @user.valid?
+  end
+
+$ rake test:models
+
+test "name should be present" do
+    @user.name = nil 
+    assert_not @user.valid?
+end
+
+validates :name, presence: true
+
+#Repeat for email
+#Length of username => 50
+#Length of email => 255
+
+Rubular
+
+VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+validates :email, presence: true, length: { maximum: 255 },
+                  format: { with: VALID_EMAIL_REGEX }
+
+#Simple email tests then refactor to 
+test "email validation should reject invalid addresses" do
+  invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
+                         foo@bar_baz.com foo@bar+baz.com]
+  invalid_addresses.each do |invalid_address|
+    @user.email = invalid_address
+    assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
   end
 end
-```
 
----
+#Add password
+has_secure_password
+$ rails generate migration add_password_digest_to_users password_digest:string
+
+gem 'rails',                '4.2.0'
+gem 'bcrypt',               '3.1.7'
+
+be rake db:migrate
+
+bundle exec rake test ##Should fail because of secure password
+
+Add password and password_confirmation to test setup
+```
