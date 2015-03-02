@@ -65,7 +65,7 @@
 * ```$ git pull ```
 * ```$ git checkout -b week06_start```
 
-^```
+^ ```
 $ rails generate model User name:string email:string
 
 ### Test setup

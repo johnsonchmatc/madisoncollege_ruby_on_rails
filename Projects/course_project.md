@@ -16,6 +16,7 @@ The goal of the final project is to demonstrate the competencies covered in this
 * User signup
 * At least 1 test
 * A private github repo created, and instructor added
+
 ####Submission directions
 * Use a Git tag to create a tag called ```check-in-1``` 
 * Turn in a document in BlackBoard under Assignments with the following:
@@ -28,6 +29,7 @@ The goal of the final project is to demonstrate the competencies covered in this
 * Models have at least 1 relationship
 * User login and logout
 * At least 2 tests
+
 ####Submission directions
 * Use a Git tag to create a tag called ```check-in-2``` 
 * Turn in a document in BlackBoard under Assignments with the following:
