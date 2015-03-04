@@ -201,7 +201,7 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar 
 
-Revision C 01/25/2015
+Revision D 03/03/2015
 
 | **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Wednesdays at 11:55pm** |
 | --- | ---   | ---                                | ---                                                |
@@ -215,9 +215,9 @@ Revision C 01/25/2015
 | 8   |  3/12 | Open lab (Project work time)       | Lab 6                 |
 |     |  3/16 | Spring Break                       |                       |  
 | 9   |  3/26 | Exam 1                             | Project check-in 1    |  
-| 10  |  4/2  | Chapter 8                          | Lab 7                 |
-| 11  |  4/9  | Chapter 9 and Chapter 10           | Lab 8                 |
-| 12  |  4/16 | Chapter 11 (adding gems)           |                       |
+| 10  |  4/2  | Chapter 8                          |                       |
+| 11  |  4/9  | Chapter 9 and Chapter 10           | Lab 7                 |
+| 12  |  4/16 | Chapter 11 (adding gems)           | Lab 8                 |
 | 13  |  4/23 | Chapter 12 (ajax)                  | Project check-in 2    |  
 | 14  |  4/30 | Open lab (Final Project)           | Lab 9                 | 
 | 15  |  5/7  | Building a virtual server (Lab 10) |                       | 
