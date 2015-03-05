@@ -9,7 +9,8 @@
 * ```$ git pull ```
 * ```$ git checkout week07_start```
 
-^ ```
+^ 
+```
 # Add some debug params
 <%= debug(params) if Rails.env.development? %>
 
