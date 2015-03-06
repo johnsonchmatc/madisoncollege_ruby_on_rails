@@ -1,16 +1,23 @@
 #Ruby on Rails Development
 ##Week 7
 ---
+#Building a user signup form
+
+---
 #Demo
 * cd into ```wolfies_list```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
+* ```$ git checkout master ```
 * ```$ git fetch```
-* ```$ git pull ```
+* ```$ git pull origin master```
 * ```$ git checkout week07_start```
+* ```$ bundle install --path=vendor/bundle```
+* ```$ bundle exec rake db:migrate```
 
-^ 
-```
+---
+
+```ruby
 # Add some debug params
 <%= debug(params) if Rails.env.development? %>
 
