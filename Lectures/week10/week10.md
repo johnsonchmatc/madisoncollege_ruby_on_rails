@@ -1,10 +1,23 @@
 #Ruby on Rails Development
 ##Week 10 
----
-#Standup
 
 ---
-#Chapter 8
+#Logging users in and out
+
+---
+#Demo
+* cd into ```wolfies_list```
+
+```
+$ git add . 
+$ git commit -am 'commiting files from in class'
+$ git checkout master 
+$ git fetch
+$ git pull origin master
+$ git checkout week08_start
+$ bundle install --path=vendor/bundle
+$ bundle exec rake db:migrate
+```
 
 ---
 
@@ -15,6 +28,7 @@ $ bundle exec rails generate controller Sessions new
 ```
 
 * Add routes, because we want to have only named routes
+
 ```ruby
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
@@ -22,33 +36,35 @@ $ bundle exec rails generate controller Sessions new
 ```
 
 * Create our login form
+
 ```ruby
 <h1>Log in</h1>
-  <div class="form_group">
-    <fieldset>
-      <legend></legend>
-    <%= form_for(:session, url: login_path, :html => {class: 'form-horizontal'}) do |f| %>
-      <fieldset>
-        <legend></legend>
-        <div class='form_group'>
-          <%= f.label :email, class: 'col-lg-2 control-label' %>
-          <div class='col-lg-5'>
-            <%= f.email_field :email, class: 'form-control' %>
-          </div>
-        </div>
-        <div class='form_group'>
-          <%= f.label :password, class: 'col-lg-2 control-label' %>
-          <div class='col-lg-5'>
-            <%= f.password_field :password, class: 'form-control' %>
-          </div>
-        </div>
-        <div class='form_group'>
-          <p>
-            <%= f.submit "Log in", class: "btn btn-primary" %>
-          </p>
-        </div>
-      </fieldset>
-    <% end %>
+<%= form_for(:session, url: login_path, html: {class: 'form-horizontal'}) do |f| %>
+  <fieldset>
+    <legend></legend>
+
+    <div class='form_group row'>
+      <%= f.label :email, class: 'col-lg-2 control-label' %>
+      <div class='col-lg-5'>
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class='form_group row'>
+      <%= f.label :password, class: 'col-lg-2 control-label' %>
+      <div class='col-lg-5'>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class='form_group row'>
+      <p class='col-lg-5'>
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+      </p>
+    </div>
+  </fieldset>
+<% end %>
+
 <p>New user? <%= link_to "Sign up now!", signup_path %></p>
 ```
 
@@ -136,3 +152,37 @@ for the session user\_id
  end
 ```
 
+* Add logging in at sign up
+```
+log_in @user
+```
+
+* Add the logout feature
+
+```
+def log_out
+  session.delete(:user_id)
+  @current_user = nil
+end
+```
+
+```
+def destroy
+  log_out
+  redirect_to root_url
+end
+```
+
+* Now that we have all the wiring in place let's adjust our headers
+```
+<ul class="nav navbar-nav navbar-right">
+  <% if logged_in? %>
+    <li>Welcome <%=current_user.name %></li>
+    <li><%= link_to 'Logout', logout_path, method: "delete" %></li>
+  <% else %>
+    <li><%= link_to 'Login', login_path %></li>
+  <% end %>
+</ul>
+```
+
+---
