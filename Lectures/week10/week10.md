@@ -76,3 +76,63 @@ def create
   end
 end
 ```
+
+* Let's write a test for this flash message
+
+```
+$ bundle exec rails generate integration_test users_login
+```
+
+```
+test "login with invalid information" do
+  get login_path
+  assert_template 'sessions/new'
+  post login_path, session: { email: "", password: "" }
+  assert_template 'sessions/new'
+  assert_not flash.empty?
+  get root_path
+  assert flash.empty?
+end
+```
+
+* To make the test pass we can change our flash to use ```flash.now```
+
+* We'll need some help for authentication so we'll include SessionsHelper in our
+application controller which gives us a place to put our authentication code
+
+```
+include SessionsHelper
+```
+
+* Inside of sessions_helper.rb we'll create a login method, this will take
+advantage of Rails' ```session()``` method for us to assign our user id to that
+will persist throughout the session
+
+```
+def log_in(user)
+  session[:user_id] = user.id
+end
+```
+
+* Back in our sessions_controller we can use this login method and set the user
+
+```
+log_in user
+redirect_to user
+```
+
+* Let's create a method for accessing a current user and one to see if a user
+is logged in.
+* We'll use a hack in active record that will allow us to search with a nil value
+for the session user\_id
+
+```
+ def current_user
+   @current_user ||= User.find_by(:id => session[:user_id])
+ end
+
+ def logged_in?
+   !current_user.nil?
+ end
+```
+

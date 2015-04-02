@@ -1,8 +1,8 @@
 #Course Project
 ###Revision 01-07-2015 
 * 150 Total Points
-* Project check-in 1 3/25 (20pts)
-* Project check-in 2 4/22 (20pts)
+* Project check-in 1 3/25 (50pts)
+* Project check-in 2 4/22 (50pts)
 * Final Submission 5/14 (50pts)
 
 ##Description
