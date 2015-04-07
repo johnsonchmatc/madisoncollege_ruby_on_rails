@@ -177,13 +177,13 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 | 10  | Lab 8 |
 | 10  | Lab 9 |
 | 10  | Lab 10 |
-| 20  | Project Check-in 1 |
-| 20  | Project Check-in 2 |
+| 50  | Project Check-in 1 |
+| 50  | Project Check-in 2 |
 | 50  | Exam 1 |
 | 50  | Exam 2 |
 | 50  | Course Project |
 | 10  | Participation |
-| 300 | TOTAL POINTS |
+| 360 | TOTAL POINTS |
 
 
 
@@ -201,7 +201,7 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar 
 
-Revision E 03/30/2015
+Revision F 04/06/2015
 
 | **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Wednesdays at 11:55pm** |
 | --- | ---   | ---                                | ---                                                |
