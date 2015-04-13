@@ -16,12 +16,12 @@ $ git fetch
 $ git pull origin master
 $ git checkout week11_start
 $ bundle install --path=vendor/bundle
- * may need to update rails version
+ * may need to update rails version ```$ bundle update rails```
 $ bundle exec rake db:migrate
 ```
 
 ---
-#Account activation and password reset
+#Account activation
 ##Activation
 
 * Generate AccountActivations controller
@@ -125,6 +125,13 @@ config.action_mailer.default_url_options = { host: host }
     end
   end
 ```
+* Let's send out an email to the user when they are created
+```
+  if @user.save && UserMailer.account_activation(@user).deliver_now
+    flash[:info] = "Please check your email to activate your account."
+    redirect_to root_url
+  ....
+```
 
 * Don't let users who haven't activated login
 ```
@@ -168,6 +175,12 @@ before_action :user_logged_in, except: [:index, :show]
 * Refactor up the method and including of SessionHelper to application controller
 
 * Now let's track what user created the ad
+* First generate a migration
+```
+$ bundle exec rails g migration add_user_id_to_ads
+```
+
+* Then update the migration to modify the ads table
 
 ```
 class AddUserIdToAds < ActiveRecord::Migration
