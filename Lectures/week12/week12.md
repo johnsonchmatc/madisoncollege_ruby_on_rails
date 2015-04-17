@@ -18,6 +18,11 @@ $ git checkout week12_start
 $ bundle install --path=vendor/bundle
  * may need to update rails version ```$ bundle update rails```
 $ bundle exec rake db:migrate
+## if you get a database error
+$ bundle exec rake db:drop
+$ bundle exec rake db:create
+$ bundle exec rake db:migrate
+
 ```
 
 ---

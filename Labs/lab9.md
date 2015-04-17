@@ -5,6 +5,7 @@
 ##Assignment
 Find a gem (on GitHub) that you think would be useful for your project and answer the following questions:
 * What is the name of the gem?
+* What about this gem seems like it would be helpful for your project?
 * Where is it's source code located (specific url)?
 * How many forks are there of it
 * Find the last commit and answer the following:
