@@ -40,7 +40,7 @@ self.per_page = 10
 ```
 * add the pagination helper to the view
 ```
-<%= will_paginate @posts %>
+<%= will_paginate @ads %>
 ````
 
 

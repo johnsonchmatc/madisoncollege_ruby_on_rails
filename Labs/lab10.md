@@ -111,8 +111,8 @@ $ source ~/.bashrc
 ```
 
 ```
-$ rbenv install 2.0.0-p481
-$ rbenv global 2.0.0-p481
+$ rbenv install 2.2.2
+$ rbenv global 2.2.2
 ```
 ####MySQL
 Installing mysql:
@@ -130,7 +130,7 @@ mysql > create database <application>_production
 
 ####Passenger and Nginx
 ```
-$ gem install passenger
+$ gem install passenger bundler
 $ rbenv rehash
 ```
 
@@ -175,10 +175,13 @@ $ sudo chown deploy /var/www/
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
 gem 'capistrano-rbenv', '~> 2.0', require: false
+gem 'mysql2'
 ```
 
+And remove the Postgres gem if you are following along with this tutorial
+
 ```
-$ bundle
+$ bundle install --without production
 ```
 
 ```
@@ -192,7 +195,7 @@ role :db,  %w{deploy@<your server ip>}
 
 server '<your server ip>', user: 'deploy', roles: %w{web app}
 
-set :ssh<your server ip>
+set :ssh_options, {
     keys: %w(/home/action/.ssh/id_rsa),
     forward_agent: true,
     user: 'deploy'
@@ -205,7 +208,7 @@ lock '3.2.1'
 
 set :application, 'your_application_name'
 set :repo_url, 'git@github.com:your_git_url'
-set :rbenv_ruby, '2.0.0-p481'
+set :rbenv_ruby, '2.2.2'
 
 # Default branch is :master
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -262,9 +265,11 @@ production:
   password: root
 ```
 
+We'll also need to add secret to our config/secrets.yml, you can do the not best practice and use the develop one.
+
 Now we should be able to deploy our site.
 ```
-$ bundle exec cap production deploy 
+$ bundle exec cap production deploy deploy:migration
 ```
 
 ##Turn in instructions
