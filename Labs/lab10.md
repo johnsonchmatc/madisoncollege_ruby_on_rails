@@ -82,7 +82,7 @@ $ ssh-copy-id -i ~/.ssh/id_rsa.pub deploy@<your servers ip>
 
 ###Installing software
 ```
-$ sudo apt-get -y install curl git-core build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev node sqlite3 nodejs npm
+$ sudo apt-get -y install curl git-core build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev node sqlite3 nodejs npm sendmail
 ```
 
 ####Rbenv
@@ -201,7 +201,9 @@ set :ssh_options, {
     user: 'deploy'
   }
 ```
+
 Then change your config/deploy.rb to the following:
+
 ```
 # config valid only for Capistrano 3.1
 lock '3.2.1'
@@ -235,7 +237,9 @@ namespace :deploy do
 
 end
 ```
+
 Then modify the capfile in the root of your application to look like the following:
+
 ```
 # Load DSL and Setup Up Stages
 require 'capistrano/setup'
@@ -280,4 +284,4 @@ $ bundle exec cap production deploy deploy:migration
   * Region of Linode
 
 ###Notes:
-* If you make your github repository for labs private, you'll need to add "johnsonch" as a contributor to the repository so I can access it.
+* If you are sending emails, make sure that you configure the host in your production.rb file to have a config action mailer default url.
