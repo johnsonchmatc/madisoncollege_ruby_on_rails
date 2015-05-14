@@ -269,7 +269,10 @@ production:
   password: root
 ```
 
+
 We'll also need to add secret to our config/secrets.yml, you can do the not best practice and use the develop one.
+
+We'll need to commit some of our code
 
 Now we should be able to deploy our site.
 ```
