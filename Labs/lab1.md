@@ -1,13 +1,13 @@
 #Lab 1
 * Points 10
-* Date due: 02/04/2015 at 11:55pm CST
+* Date due: 09/10/2015 at 11:55pm CST
 
 ##Assignment
-Read and follow Chapter 1 from the Rails Tutorial book.
+* Read and follow Chapter 1 examples from the Rails Tutorial book.
+* Complete the exercises for Chapter 1 as well.
 
-Generate a new rails application ```$ rails _4.2.0.rc3_ new lab01```
 
-* If you get an error about rails versions do a ```$ gem install rails -v=4.2.0.rc3```
+* If you get an error about rails versions do a ```$ gem install rails -v=4.2.0```
 
 Initialize it as a new git repository ```$ git init .```
 
@@ -31,7 +31,7 @@ You should now see 2 changed files after adding the methods and routes. Use the 
 $ git commit -a -m 'commiting new routes for lab 1"
 ```
 
-Create a Github.com public repository for this under your account called matc-lab01, and follow their instructions on how to push it up.
+Create a Github.com public repository for this under your account called matc-rails-lab01, and follow their instructions on how to push it up.
 
 Create a Heroku Application (follow book example)
 

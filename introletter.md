@@ -32,13 +32,12 @@ Send me email ASAP if you have difficulty signing on to our Blackboard course cg
 * Access to a computer with a web browser and internet access.
 * A Heroku.com account, which we will setup in class.
 * A Github.com account, which we will setup in class.
-* A Nitrous.io account use this link [https://www.nitrous.io/join/xAc6XsTB2BA](https://www.nitrous.io/join/xAc6XsTB2BA) to get extra N2O, which we will setup in class.
 
 ###Assignments
 The format of the course is broken down into "weeks". The course will last for 16 weeks and each of these weeks there are various assignments. You will find the outline for the weeks of the  course under the "Classes" section in Blackboard. Weekly assignments include readings, videos, labs, projects and discussions. Please look at the "Classes" section in Blackboard for more detail on the actual assignments.  Due Dates for all assignments are listed in the syllabus.
 
 ###Readings & Labs 
-On the syllabus you will find the schedule for readings and labs. Please come to class having read the chapter and attemted the lab, we will discuss the reading and lab activities.
+On the syllabus you will find the schedule for readings and labs. Please come to class having read the chapter and attempted the lab, we will discuss the reading and lab activities.
   
 ###Course Project
 You will be working on a project during the semester, this project will be something you come up with on your own.  You will need to show your progress three times during the semester, which will give you the ability to get feedback from your me and improve your project.

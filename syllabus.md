@@ -6,7 +6,7 @@ Catalog #152 10152157-0002
 
 * *Credits:* 3
 * *Course Format:* face to face
-* *Class Schedule:* TM 5:30 – 9:20 PM 01/22/2015 - 05/14/2015
+* *Class Schedule:* TM 5:30 – 9:20 PM 09/03/2015 - 17/17/2015
 * *Location:* Truax-Health Building Rm 335
 * *Instructor:* Chris Johnson
 * *Email:* cgjohnson1@madisoncollege.edu
@@ -126,8 +126,6 @@ If you have an accommodation card from their office indicating that you have a d
 
 **Socrative:** At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You can login to the site at [http://beta.socrative.com](http://beta.socrative.com) using the room code of "johnsonchmatc"
 
-**Nitrous.io** We'll be using Nitrous.io as our development server for this class. You can signup for a free account with extra 'N2O' by going to [https://www.nitrous.io/join/xAc6XsTB2BA](https://www.nitrous.io/join/xAc6XsTB2BA).
-
 **Github** We'll use Github to keep track of our code for the semester, you'll want to sign up for an education account at [https://education.github.com/](https://education.github.com/). This will give you a few private repositories.
 
 **Heroku** We'll use Heroku to deploy our apps to for projects and labs that require a deployment.  Signup for a free account from them.
@@ -152,16 +150,16 @@ Phone the student help desk: (608) 243-4444; toll-free at (866) 277-4445. They c
 Syllabus Changes: As your instructor, I retain the right to make changes based on the timeline of the class, feedback from learners and/or logistical issues and will inform you as soon as a change is made.
 
 #Grading Policy
-* All work that is to be graded must be accomplished by your own effort. Points will be deducted for not submitting assigned work by the due date. Projects to be graded may be submitted only once. 
-* Ten percent of the points will be taken off for each day that the assignment is late.
-* Assignments will NOT be accepted if they are more than 10 DAYS late.
-* Assignments will NOT be accepted after the START of the class period in which the final exam is administered.
-* Assignments are NOT accepted after I go over the answers to the assignment in class.
+* All work that is to be graded must be accomplished by your own effort. 
+* No points will be given for late assignments/labs/exams.
+* All assignments/labs/exams must meet the [course style guide](https://github.com/johnsonchmatc/ruby-style-guide)
+* All assignments/labs must run (no errors, and must produce output). If there are compilation errors or no output, the most the assignment can receive is 50% of the points. 
+* If there is output, but not all objectives are met from the assignment/lab's rubric points will be removed for each item missing or incorrect.
 * There is no make-up of tests or other scheduled, graded classroom activities.
 * It is the responsibility of the student to make up any missed work and/or pick up any missed materials. Missing a class is NOT an excuse for failure to hand in work due.
 * There is no extension of assignment due dates without prior notification of circumstance. All work that is to be graded must be accomplished by your own effort.
 
-**Grades Posted in Blackboard: ** All assignment grades are posted in Blackboard. I need to manually grade the assignments. Sometimes this happens very quickly and sometimes it takes a week. When you've posted a quiz or lab answers, it will show up in the gradebook as a green box with a white ! in it. This means that I have received your work, but has not graded it yet. Discussion boards show up in the gradebook as a green box with a white ! in it until I have graded the assignment, then it will have a score in it. 
+**Grades Posted in Blackboard:** All assignment grades are posted in Blackboard. I need to manually grade the assignments. Sometimes this happens very quickly and sometimes it takes a week. When you've posted a quiz or lab answers, it will show up in the gradebook as a green box with a white ! in it. This means that I have received your work, but has not graded it yet. Discussion boards show up in the gradebook as a green box with a white ! in it until I have graded the assignment, then it will have a score in it. 
 
 ### **Evaluation**
 
@@ -182,8 +180,8 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 | 50  | Exam 1 |
 | 50  | Exam 2 |
 | 50  | Course Project |
-| 10  | Participation |
-| 360 | TOTAL POINTS |
+| 50  | Participation |
+| 400 | TOTAL POINTS |
 
 
 
@@ -201,24 +199,23 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar 
 
-Revision F 04/06/2015
+Revision A 08/18/2015
 
-| **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Wednesdays at 11:55pm** |
-| --- | ---   | ---                                | ---                                                |
-| 1   |  1/22 | Introduction                       |                       |
-| 2   |  1/29 | Chapter 1                          | Course Project Idea (Actually in class on 1/29)   |
-| 3   |  2/5  | Chapter 2                          | Lab 1                 | 
-| 4   |  2/12 | Chapter 4                          | Lab 2                 |
-| 5   |  2/19 | Chapter 3 and Chapter 5            | Lab 3                 |
-| 6   |  2/26 | Chapter 6                          | Lab 4                 | 
-| 7   |  3/5  | Chapter 7                          | Lab 5                 |
-| 8   |  3/12 | Open lab (Project work time)       | Lab 6                 |
-|     |  3/16 | Spring Break                       |                       |  
-| 9   |  3/26 | Exam 1                             |                       |  
-| 10  |  4/2  | Chapter 8                          | Project check-in 1    |
-| 11  |  4/9  | Chapter 9 and Chapter 10           | Lab 7                 |
-| 12  |  4/16 | Chapter 11 (adding gems)           | Lab 8                 |
-| 13  |  4/23 | Chapter 12 (ajax)                  | Project check-in 2    |  
-| 14  |  4/30 | Open lab (Final Project)           | Lab 9                 | 
-| 15  |  5/7  | Building a virtual server (Lab 10) |                       | 
-| 16  |  5/14 | Exam 2                             | Project (5pm on 5/14 and Lab 10    |
+| **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Thursdays at 11:55pm**  |
+| --- | ---   | ---                                 | ---                                               |
+| 1   |  09/03 | Introduction                       |                                                   |
+| 2   |  09/10 | Chapter 1 and Chapter 2            | Course Project Idea (Actually in class on 1/29)   |
+| 3   |  09/17 | Chapter 4                          | Lab 1, Lab 2                                      | 
+| 4   |  09/24 | Chapter 3 and Chapter 5            |                                                   |
+| 5   |  10/01 | Chapter 6                          | Lab 3 (Project wireframes)                        |
+| 6   |  10/08 | Chapter 7                          | Lab 4                                             | 
+| 7   |  10/15 | Chapter 8                          | Lab 5                                             |
+| 8   |  10/22 | Open lab (Project work time)       | Lab 6                                             |
+| 9   |  10/29 | Exam 1                             | Lab 7                                             |  
+| 10  |  11/05 | Chapter 9 and Chapter 10           | Project check-in 1                                |  
+| 11  |  11/12 | Chapter 11 (adding gems)           | Lab 8                                             |
+| 12  |  11/19 | Chapter 12 (ajax)                  | Lab 9                                             |
+|     |  11/26 | Thanksgiving (no class)            |                                                   |
+| 13  |  12/03 | Building a virtual server          | Lab 10 (in class) Project check-in 2              |  
+| 14  |  12/10 | Open lab (Final Project)           |                                                   | 
+| 15  |  12/17 | Exam 2                             | Project (5pm on 12/17/2015)                       |

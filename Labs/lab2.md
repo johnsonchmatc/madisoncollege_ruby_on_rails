@@ -1,27 +1,12 @@
 #Lab 2
 * Points 10
-* Date due: 02/11/2014 at 11:55pm CST
+* Date due: 09/10/2014 at 11:55pm CST
 
 ##Assignment
-* Read and use Chapter 2 from the Rails Tutorial book as a guide.
+* Read and follow the Chapter 2 examples from the Rails Tutorial book.
+* Complete the Chapter 2 exercises as well.
+* When completed tag the commit you would like graded with ```to-grade-lab02```
 
-* Generate a new Rails application 'todo-list'
-```
-$ rails new todo-list
-```
-
-* Scaffold a User resource ``` $ bundle exec rails generate scaffold User name:string email:string ```
-
-* Then scaffold a Todo resource ```$ bundle exec rails generate scaffold Todo user_id:integer title:string description:text```
-
-* Make Git repository and push to Github
-
-  * When you are satisfied with your application and it works add a tag ``` $ git tag -a to-grade-lab02 -m '<insert a commit message>' ```
-  * View that your tag exists: ``` $ git tag``` 
-  * Then push your repository to Github ```$ git push```
-  * Then push your tag upto Github ```$ git push --tags ```
-
-* Deploy to Heroku
 
 
 ##Turn in instructions
