@@ -1,6 +1,6 @@
 #Lab 3
 * Points 10
-* Date due: 02/18/2015 at 11:55pm CST
+* Date due: 10/01/2015 at 11:55pm CST
 
 ##Assignment
 * Read and follow Chapter 4
