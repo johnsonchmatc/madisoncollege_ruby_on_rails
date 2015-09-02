@@ -6,7 +6,7 @@ Catalog #152 10152157-0002
 
 * *Credits:* 3
 * *Course Format:* face to face
-* *Class Schedule:* TM 5:30 – 9:20 PM 09/03/2015 - 17/17/2015
+* *Class Schedule:* TM 5:30 – 9:20 PM 09/03/2015 - 12/17/2015
 * *Location:* Truax-Health Building Rm 335
 * *Instructor:* Chris Johnson
 * *Email:* cgjohnson1@madisoncollege.edu
@@ -14,6 +14,7 @@ Catalog #152 10152157-0002
 * *Office Hours:*
 	* Email for an appointment
 	* IRC #johnsonch_office_hours on irc.freenode.net
+  * [http://officehours.johnsonch.com/](http://officehours.johnsonch.com/)
   * [IRC Tutorial](https://github.com/johnsonch/madisoncollege_ruby_on_rails/blob/master/irc.md)
 
 
