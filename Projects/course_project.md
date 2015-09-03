@@ -42,6 +42,7 @@ The goal of the final project is to demonstrate the competencies covered in this
 * Password reset
 * At least 3 tests
 * Deployed
+
 ####Submission directions
 * Use a Git tag to create a tag called ```final``` 
 * Turn in a document in BlackBoard under Assignments with the following:

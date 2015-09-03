@@ -6,14 +6,10 @@
 
 ---
 #Work
-* Software Engineer and Scrum Master at Getty Images
+* Senior Software Engineer and Scrum Master at Getty Images
 * Author at Pragmatic Bookshelf
 * Owner at JohnsonCH, LLC
 	
----
-#Internships
-^ Ask me about them if you are interested.
-
 ---
 #Hobbies
 * Software development
@@ -28,7 +24,7 @@
 * Daughter: Kenzie
 * Dogs: Scooter and Miley
 
-![right](https://dl.dropboxusercontent.com/s/6qz5d4284xv041d/2015-01-22%20at%205.06%20PM%202x.png?dl=0)
+![fit right](https://dl.dropboxusercontent.com/s/j163v0j78anj18d/2015-08-31%20at%205.17%20PM.png)
 
 ---
 #About you
@@ -75,7 +71,7 @@
 #Preparing our shop
 * Github
 * Heroku
-* Nitrious.io (add public key to Github and Heroku)
+* Cloud9/Ubuntu VM 
   * Ruby Version 2.1.5
   * Rails Version 4.2.0
 * IRC http://officehours.johnsonch.com/
