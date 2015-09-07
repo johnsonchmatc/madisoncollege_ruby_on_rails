@@ -4,6 +4,7 @@
 
 ##Assignment
 * Read and follow the Chapter 2 examples from the Rails Tutorial book.
+> If you get an error about rails versions do a ```$ gem install rails -v=4.2.1```
 * Complete the Chapter 2 exercises as well.
 * When completed tag the commit you would like graded with ```to-grade-lab02```
 

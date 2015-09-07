@@ -5,7 +5,7 @@
 ##Assignment
 * Read and follow Chapter 1 examples from the Rails Tutorial book.
 * Complete the exercises for Chapter 1 as well.
-> If you get an error about rails versions do a ```$ gem install rails -v=4.2.0```
+> If you get an error about rails versions do a ```$ gem install rails -v=4.2.1```
 * When you are satisfied with your application and it works add a tag 
 
 ```
