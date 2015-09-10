@@ -1,6 +1,6 @@
 #Lab 1
 * Points 10
-* Date due: 09/10/2015 at 11:55pm CST
+* Date due: 09/17/2015 at 11:55pm CST
 
 ##Assignment
 * Read and follow Chapter 1 examples from the Rails Tutorial book.
