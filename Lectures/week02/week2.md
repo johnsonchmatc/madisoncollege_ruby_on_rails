@@ -117,6 +117,7 @@ Makes use of two files:
 ---
 #Rails server
 * ```$ bundle exec rails server ```
+
 > on cloud 9 add ```-b $IP -p $PORT```
 
 ---
@@ -347,6 +348,8 @@ $ gco master
 $ git merge branch-c
 $ git status
 $ git tree
+$ vim ~/.gitconfig
+  add ```  tree = log --graph --decorate --oneline --all --color ```
 $ git tag
 $ git status
 $ git tag -a project-1 -m 'my code for project 1'
