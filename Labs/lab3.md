@@ -10,7 +10,7 @@
 * Unzip the file ```$ unzip rubykoans.zip```
 * cd into koans directory
 * Initialize the directory as a new git repository ```$ git init .```
-* Create an initial commit ```$ git add . && git commit -a -m 'initial commit```
+* Create an initial commit ```$ git add . && git commit -a -m 'initial commit'```
 * Start your journey ```$ ruby path_to_enlightenment.rb```
 * After finishing each file create a git commit and move on to the next. 
   * Tip think about ```git commit``` all and then a message
