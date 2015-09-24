@@ -2,132 +2,103 @@
 ##Week 4
 
 ---
-#Chapter 4 
+#Chapters 3,4,5
 
 ---
-#Objects
+#Generate App
 
----
-##Objects
-* Has attributes, or data, and associated methods (procedures) 
-* Everything in ruby is an object and can be sent messages
+- Scaffold based on wire frames
 
----
-##Objects
-```ruby
-bank = BankAccount.new(:balance => 40)
+```bash
+$ rails g scaffold Project title:string description:text start_date:date end_date:date client_id:integer
 
-bank.withdraw(10)
-bank.deposit(20)
-bank.balance #=> 50
+$ rails g scaffold Client name:string contact_name:string phone:string contact_email:string street:string city:string state:string postal_code:string
+
+$ rails g scaffold Task employee_name:string  time:integer date:date description:text
 ```
 
 ---
-#Methods
+#Adding relationships
 
 ---
-##Methods
-* In Ruby methods are actually messages
-* We define the messages that our objects can respond to, those are our methods
-```ruby
-"Badgers".send :length
-```
-* This sends the length message to the object
-```ruby
-"Badgers".length
-```
-* The dot notation provides an interface similar to other OOP languages
-
----
-#Classes
-
----
-##Classes
-* 'blueprint' for creating objects
+##Client has many Projects
+* Test first
 
 ```ruby
-class BankAccount
+require 'test_helper'
 
-end
-```
-* Starts uppercase and then CamelCase the rest of the class name
-
----
-##Classes
-* We can use a class to create an instance of an object
-```ruby
-account = BankAccount.new
-```
-* Each instance is unique
-* Each has it's own spot in memory
-* Inherits behavior from basic object
-```ruby
-account.to_s #=> #<BankAccount:0x007fb66b04c1c0>
-```
-
----
-##Classes
-* We can add methods to classes, even override existing ones
-```ruby
-class BankAccount
-  def to_s
-    "$0.00"
+class ClientTest < ActiveSupport::TestCase
+  test "project relationship" do
+    assert_respond_to( Client.new, :projects)
   end
 end
 ```
-* Now we can pass the ```to_s``` message to our account object which we have defined a method to respond to
-```ruby
-account.to_s #=> "$0.00
-```
 
----
-##Classes
-* Attributes can be created on a class
-* Just a variable 'inside' the object that holds data
+* Make it pass
+
 ```ruby
-class BankAccount
-  attr_accesor :balance
-  .
-  .
-  .
+class Client < ActiveRecord::Base
+  has_many :projects
 end
 ```
 
 ---
-#Pragmatic Video
-
----
-#Data Structures 
-
----
-##Data Structures
-* integer
-* string
-* array
-* hash
-
----
-##Integer
-
----
-##String
-
----
-##Array
-
----
-##Hash
+##Project belongs to Client
+* Test first
 
 ```ruby
-> a = {key: 'value', 'other_key' => 'other_value'} #=> {:key=>"value", "other_key"=>"other_value"}
-> a #=> {:key=>"value", "other_key"=>"other_value"}
-> a[:key] #=> "value"
-> a['other_key'] #=> "other_value"
-> a.keys #=> [:key, "other_key"]
-> a.keys.each { |x| puts a[x] }
-value
-other_value
- => [:key, "other_key"]
+require 'test_helper'
+
+class ProjectTest < ActiveSupport::TestCase
+  test "client relationship" do
+    assert_respond_to( Project.new, :client)
+  end
+end
+```
+
+* Make it pass
+
+```ruby
+class Project < ActiveRecord::Base
+  belongs_to :client
+end
 ```
 
 ---
+##Task belongs to Project
+* Test first
+
+```ruby
+require 'test_helper'
+
+class TaskTest < ActiveSupport::TestCase
+  test "project relationship" do
+    assert_respond_to(Task.new, :project)
+  end
+end
+```
+
+* Make it pass
+
+```ruby
+class Task < ActiveRecord::Base
+  belongs_to :project
+end
+```
+
+---
+#Styling
+
+---
+#Asset pipeline
+
+---
+![full](http://media.railscasts.com/assets/episodes/videos/279-understanding-the-asset-pipeline.mp4)
+
+---
+![full](http://media.railscasts.com/assets/subscriptions/ywfAHv9Jp7nypbOyVi4ISg/videos/341-asset-pipeline-in-production.mp4)
+
+---
+#Getting Styles
+* [http://startbootstrap.com/](http://startbootstrap.com/)
+* [http://bootswatch.com/](http://bootswatch.com/)

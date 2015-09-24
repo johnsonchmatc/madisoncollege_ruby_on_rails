@@ -77,12 +77,14 @@ end
 ---
 ##Classes
 * We can use a class to create an instance of an object
+
 ```ruby
 account = BankAccount.new
 ```
 * Each instance is unique
 * Each has it's own spot in memory
 * Inherits behavior from basic object
+
 ```ruby
 account.to_s #=> #<BankAccount:0x007fb66b04c1c0>
 ```
@@ -90,6 +92,7 @@ account.to_s #=> #<BankAccount:0x007fb66b04c1c0>
 ---
 ##Classes
 * We can add methods to classes, even override existing ones
+
 ```ruby
 class BankAccount
   def to_s
@@ -97,7 +100,12 @@ class BankAccount
   end
 end
 ```
+
+---
+##Classes
+
 * Now we can pass the ```to_s``` message to our account object which we have defined a method to respond to
+
 ```ruby
 account.to_s #=> "$0.00
 ```
