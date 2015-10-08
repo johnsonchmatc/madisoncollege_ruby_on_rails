@@ -10,7 +10,11 @@
 * ```$ git checkout master```
 * ```$ git fetch```
 * ```$ git pull ```
-* ```$ git checkout  week06_start```
+* ```$ git checkout week06_start```
+* ```$ rm -f db/*.sqlite3```
+* ```$ bundle```
+* ```$ rake db:migrate```
+* ```$ rake test``` We have a  couple failing tests from last week
 
 
 * Gemfile
