@@ -1,121 +1,233 @@
 #Ruby on Rails Development
-##Week 6
----
-#Chapter 6 
-##Modeling Users
-
----
-#Models
-##Active Record
-
----
-##Active Record
-
-* Coined by Martin Fowler as:
-
-> An object that wraps a row in a database table or view, encapsulates the database access, and adds domain logic on that data.
-
-* Is an ORM
-
----
-##Perks of Active Record
-
-* Represent models and their data.
-* Represent associations between these models.
-* Represent inheritance hierarchies through related models.
-* Validate models before they get persisted to the database.
-* Perform database operations in an object-oriented fashion.
-
----
-##Selecting
-* ```users = User.all```
-* ```user = User.first```
-* ```david = User.find_by(:all, name: 'David')```
-* ```users = User.where(name: 'David', occupation: 'Code Artist').order('created_at DESC')```
-* ```users = User.where("age >= ? and birth_month = ?", 21, 'March')```
-
----
-#Callbacks
-##Don't use them
-###Unless you really have to
-
----
-##Callbacks
-* save
-* valid
-* before_validation
-* validate
-* after_validation
-
----
-##Callbacks
-* before_save
-* before_create
-* create
-* after_create
-* after_save
-* after_commit
+##Chapter 7 
+###Week 6
 
 ---
 #Demo
-* cd into ```wolfies_list```
+* cd into ```wolfie_books```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
+* ```$ git checkout master```
 * ```$ git fetch```
 * ```$ git pull ```
-* ```$ git checkout -b week06_start```
+* ```$ git checkout  week06_start```
 
-^ ```
-$ rails generate model User name:string email:string
 
-### Test setup
- def setup
-    @user = User.new(name: "Example User", email: "user@example.com")
-  end
+* Gemfile
 
-  test "should be valid" do
-    assert @user.valid?
-  end
+```ruby
+gem 'bcrypt'
+```
 
-$ rake test:models
+* migration
 
-test "name should be present" do
-    @user.name = nil 
-    assert_not @user.valid?
-end
+```bash
+$ be rails g migration add_password_digest_to_users
+```
 
-validates :name, presence: true
-
-#Repeat for email
-#Length of username => 50
-#Length of email => 255
-
-Rubular
-
-VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-validates :email, presence: true, length: { maximum: 255 },
-                  format: { with: VALID_EMAIL_REGEX }
-
-#Simple email tests then refactor to 
-test "email validation should reject invalid addresses" do
-  invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
-                         foo@bar_baz.com foo@bar+baz.com]
-  invalid_addresses.each do |invalid_address|
-    @user.email = invalid_address
-    assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
+```ruby
+class AddPasswordDigestToUsers < ActiveRecord::Migration
+  def change
+    add_column :users, :password_digest, :string
   end
 end
+```
 
-#Add password
+* user.rb
+
+```ruby
 has_secure_password
-$ rails generate migration add_password_digest_to_users password_digest:string
+```
 
-gem 'rails',                '4.2.0'
-gem 'bcrypt',               '3.1.7'
+* user_test.rb
 
-be rake db:migrate
+```ruby
+@user = User.new(name: "Example User", 
+                 email: "user@example.com",
+                 password: "foobar",
+                 password_confirmation: "foobar")
+```
 
-bundle exec rake test ##Should fail because of secure password
+* Make password have a minimum lenght
 
-Add password and password_confirmation to test setup
+```
+test "password should have a minimum length" do
+ @user.password = @user.password_confirmation = "a" * 5
+ assert_not @user.valid?
+end
+```
+
+```
+validates :password, length: { minimum: 6 }
+```
+
+* The Debug method
+
+```ruby
+debug(params) if Rails.env.development?
+```
+
+* Create user show page: ```app/views/users/show.html.erb```
+
+```ruby
+<%= @user.name %>, <%= @user.email %>
+```
+
+* Add show action to user controller
+
+```ruby
+def show
+  @user = User.find(params[:id])
+end
+```
+
+* Byebug debugger
+  * add ```debugger``` where you want to start the debugger
+
+* Let's add a gravatar
+* Users helper
+
+```ruby
+def gravatar_for(user)
+  gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
+  gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}"
+  image_tag(gravatar_url, alt: user.name, class: "gravatar")
+end
+```
+
+* Show view
+
+```ruby
+<%= gravatar_for @user %>
+```
+
+###Signing up users
+* Update new action in users controller
+
+```ruby
+@user = User.new
+```
+
+* Update users/new.html.erb file
+
+```ruby
+<h1>Sign up</h1>
+<%= form_for(@user, html: {class: 'form-horizontal'}) do |f| %>
+  <fieldset>
+    <legend>Enter your information</legend>
+    <div class="form-group">
+      <%= f.label :name, class: "col-lg-2 control-label" %><br>
+      <div class="col-lg-10">
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :email, class: "col-lg-2 control-label" %><br>
+      <div class="col-lg-10">
+        <%= f.text_field :email, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password, class: "col-lg-2 control-label" %><br>
+      <div class="col-lg-10">
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password_confirmation, class: "col-lg-2 control-label" %><br>
+      <div class="col-lg-10">
+        <%= f.password_field :password_confirmation, class: "form-control" %>
+      </div>
+    </div>
+
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </fieldset>
+<% end %>
+```
+
+* Now we need to make the controller handle this post
+
+```ruby
+def create
+  @user = User.new(params[:user])
+  if @user.save
+  else
+    render 'new'
+  end
+end
+```
+
+* Let's choose what we allow into our object creation
+
+```ruby
+private
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+```
+
+* Now we can redirect on a success
+
+```ruby
+flash[:success] = "Welcome to Wolfie Books"
+redirect_to @user
+```
+
+* Let's change our notice to be more general purpose and use the flash functionality in the application layout
+
+```ruby
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-dismissible alert-<%= message_type %>">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <%= message %>
+  </div>
+<% end %>
+```
+
+* Then we'll need to make flash be smarter in the application controller
+```ruby
+add_flash_types :success, :warning, :danger, :info
+```
+
+* Now was can do some more styling
+* Let's remove the scaffold.css
+* Add errors.scss with the following code
+
+```scss
+.field_with_errors .help-block,
+.field_with_errors .control-label,
+.field_with_errors .radio,
+.field_with_errors .checkbox,
+.field_with_errors .radio-inline,
+.field_with_errors .checkbox-inline,
+.field_with_errors.radio label,
+.field_with_errors.checkbox label,
+.field_with_errors.radio-inline label,
+.field_with_errors.checkbox-inline label {
+  color: #f04124;
+}
+.field_with_errors .form-control {
+  border-color: #f04124;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.field_with_errors .form-control:focus {
+  border-color: #d32a0e;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f79483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f79483;
+}
+.field_with_errors .input-group-addon {
+  color: #f04124;
+  border-color: #f04124;
+  background-color: #f2dede;
+}
+.field_with_errors .form-control-feedback {
+  color: #f04124;
+}
 ```
