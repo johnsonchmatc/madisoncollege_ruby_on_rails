@@ -4,6 +4,7 @@
 
 ##Assignment
 * Read and follow the Chapter 9 and 10 examples from the Rails Tutorial book.
+* When you have finished the chapter merge your chapter branch into master, push to github and deploy to heroku.
 * When completed tag the commit you would like graded with ```to-grade-lab08```
 
 
