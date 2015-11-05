@@ -1,188 +1,203 @@
+footer:@johnsonch :: Chris Johnson :: Ruby on Rails Development :: Week 10
+autoscale: true
+
 #Ruby on Rails Development
 ##Week 10 
 
 ---
-#Logging users in and out
 
----
 #Demo
-* cd into ```wolfies_list```
-
-```
-$ git add . 
-$ git commit -am 'commiting files from in class'
-$ git checkout master 
-$ git fetch
-$ git pull origin master
-$ git checkout week08_start
-$ bundle install --path=vendor/bundle
-$ bundle exec rake db:migrate
-```
+* cd into ```wolfie_books```
+* ```$ git add . ```
+* ```$ git commit -am 'commiting files from in class'```
+* ```$ git checkout master```
+* ```$ git fetch```
+* ```$ git pull ```
+* ```$ git checkout week10_start```
+* ```$ rm -f db/*.sqlite3```
+* ```$ bundle```
+* ```$ rake db:migrate```
+* ```$ rake test``` We have a  couple failing tests from last week
 
 ---
+#Authorization
+* In Wolfie Books we'll want to lock down the application to only allow logged
+in users to be able to modify things.  In practice we probably wouldn't want an
+open sign up for our app. Or we would we may want to limit the accessing of things
+on a per user basis.
 
-* Generate a sessions controller
-
-```bash
-$ bundle exec rails generate controller Sessions new
-```
-
-* Add routes, because we want to have only named routes
-
-```ruby
-  get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
-```
-
-* Create our login form
+* Let's add the following to our ```app/controllers/application_controller.rb```
 
 ```ruby
-<h1>Log in</h1>
-<%= form_for(:session, url: login_path, html: {class: 'form-horizontal'}) do |f| %>
-  <fieldset>
-    <legend></legend>
+def logged_in_user
+  unless logged_in?
+    flash[:danger] = "Please log in."
+    redirect_to login_url
+  end 
+end
+```
 
-    <div class='form_group row'>
-      <%= f.label :email, class: 'col-lg-2 control-label' %>
-      <div class='col-lg-5'>
-        <%= f.email_field :email, class: 'form-control' %>
-      </div>
-    </div>
+* Now whenever we want to limit a controller action to require the user be logged
+in we can add the following:
 
-    <div class='form_group row'>
-      <%= f.label :password, class: 'col-lg-2 control-label' %>
-      <div class='col-lg-5'>
-        <%= f.password_field :password, class: 'form-control' %>
-      </div>
-    </div>
+```ruby
+before_action :logged_in_user
+```
 
-    <div class='form_group row'>
-      <p class='col-lg-5'>
-        <%= f.submit "Log in", class: "btn btn-primary" %>
-      </p>
-    </div>
-  </fieldset>
+* Next let's change our task entry screen to have a dropdown list of users, but
+first we'll style up the existing form.
+
+
+```erb
+
+<% if @task.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+    <ul>
+    <% @task.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
 <% end %>
 
-<p>New user? <%= link_to "Sign up now!", signup_path %></p>
+<%= form_for([@project, @task], html: {class: 'form-horizontal'}) do |f| %>
+  <fieldset>
+    <div class="form-group">
+      <%= f.label :employee_name, class: "col-lg-2 control-label" %><br>
+      <div class="col-lg-10">
+        <%= collection_select(:task, :employee_name, User.all, :name, :name, prompt: true) %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :time, class: "col-lg-2 control-label" %><br>
+      <div class="col-lg-10">
+        <%= f.number_field :time, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :date, class: "col-lg-2 control-label" %><br>
+      <div class="col-lg-10">
+        <%= f.date_select :date, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description, class: "col-lg-2 control-label" %><br>
+      <div class="col-lg-10">
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+
+  </fieldset>
+
+<% end %>
+
 ```
 
-* Next create our 'create' action in the session controller
+* With that our app is feature complete, now we'll start working on adding some fun features.
+
+* First let's create a rake task to populate our database with realistic fake data using a gem called Faker.
+  * [https://github.com/stympy/faker](https://github.com/stympy/faker)
 
 ```ruby
-def create
-  render 'new'
+group :development, :test do
+  ...
+  gem 'faker'
+end
+
+```
+
+* Then we'll add file called populate.rake in lib/tasks and first define our
+namespace
+
+```ruby
+namespace :fake do  
 end
 ```
 
-* Try posting the form there, let's see what we get for information
-
-* Then update the create method to find the user and then authenticate them,
-with the method ```authenticate``` provided by ```has_secure_password```
+* Next we'll add a task for generating users
 
 ```ruby
-def create
-  user = User.find_by(email: params[:session][:email].downcase)
-  if user && user.authenticate(params[:session][:password])
-    # Log the user in and redirect to the user's show page.
-  else
-    flash[:danger] = 'Invalid email/password combination'
-    render 'new'
+  desc "generating fake users"
+  task :users => [:environment] do
+    50.times do
+      User.create(name: Faker::Name.name,
+                  email: Faker::Internet.email,
+                  password: 'test123456',
+                  password_confirmation: 'test123456')
+    end
   end
-end
 ```
 
-* Let's write a test for this flash message
+* Then a task for generating clients
 
-```
-$ bundle exec rails generate integration_test users_login
-```
-
-```
-test "login with invalid information" do
-  get login_path
-  assert_template 'sessions/new'
-  post login_path, session: { email: "", password: "" }
-  assert_template 'sessions/new'
-  assert_not flash.empty?
-  get root_path
-  assert flash.empty?
-end
-```
-
-* To make the test pass we can change our flash to use ```flash.now```
-
-* We'll need some help for authentication so we'll include SessionsHelper in our
-application controller which gives us a place to put our authentication code
-
-```
-include SessionsHelper
+```ruby
+  desc "generating fake clients"
+  task :clients => [:environment] do
+    50.times do
+      Client.create(name: Faker::Company.name,
+                    contact_name: Faker::Name.name,
+                    phone: Faker::PhoneNumber.phone_number,
+                    contact_email: Faker::Internet.email,
+                    street: Faker::Address.street_address,
+                    city: Faker::Address.city,
+                    state: Faker::Address.state,
+                    postal_code: Faker::Address.postcode)
+    end
+  end
 ```
 
-* Inside of sessions_helper.rb we'll create a login method, this will take
-advantage of Rails' ```session()``` method for us to assign our user id to that
-will persist throughout the session
+* Then projects
 
-```
-def log_in(user)
-  session[:user_id] = user.id
-end
-```
-
-* Back in our sessions_controller we can use this login method and set the user
-
-```
-log_in user
-redirect_to user
-```
-
-* Let's create a method for accessing a current user and one to see if a user
-is logged in.
-* We'll use a hack in active record that will allow us to search with a nil value
-for the session user\_id
-
-```
- def current_user
-   @current_user ||= User.find_by(:id => session[:user_id])
- end
-
- def logged_in?
-   !current_user.nil?
- end
+```ruby
+  desc "generating fake projects"
+  task :projects => [:environment, :clients] do
+    100.times do
+      client_ids = Client.all.collect { |c| c.id }
+      Project.create(title: Faker::App.name,
+                     description: Faker::Lorem.paragraph,
+                     start_date: rand(1..20).days.ago,
+                     end_date: rand(1..20).days.from_now,
+                     client_id: client_ids.shuffle.first)
+    end
+  end
 ```
 
-* Add logging in at sign up
-```
-log_in @user
+* Then tasks
+
+```ruby
+  desc "generating fake tasks"
+  task :tasks => [:environment, :users, :projects] do
+    project_ids = Project.all.collect { |p| p.id }
+
+    100.times.each_with_index do |index|
+      project = Project.find(project_ids[index])
+      rand(1..20).times do
+        user_names = User.all.collect { |u| u.name }
+        Task.create(employee_name: user_names.shuffle.first,
+                    time: rand(1..24),
+                    date: Faker::Time.between(project.start_date, project.end_date, :all),
+                    project: project,
+                    description: Faker::Lorem.sentences )
+
+      end
+    end
+  end
 ```
 
-* Add the logout feature
+* Finally why not have one task that does everything?
 
+```ruby
+  desc "generating fake data"
+  task :all_data => [:environment, :users, :clients, :projects, :tasks] do
+  end
 ```
-def log_out
-  session.delete(:user_id)
-  @current_user = nil
-end
-```
-
-```
-def destroy
-  log_out
-  redirect_to root_url
-end
-```
-
-* Now that we have all the wiring in place let's adjust our headers
-```
-<ul class="nav navbar-nav navbar-right">
-  <% if logged_in? %>
-    <li>Welcome <%=current_user.name %></li>
-    <li><%= link_to 'Logout', logout_path, method: "delete" %></li>
-  <% else %>
-    <li><%= link_to 'Login', login_path %></li>
-  <% end %>
-</ul>
-```
-
----
