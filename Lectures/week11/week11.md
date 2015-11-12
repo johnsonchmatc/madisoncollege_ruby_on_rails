@@ -2,7 +2,7 @@ footer:@johnsonch :: Chris Johnson :: Ruby on Rails Development :: Week 11
 autoscale: true
 
 #Ruby on Rails Development
-##Week 11 
+##Week 11
 
 * https://codecaster.io room: johnsonch
 
@@ -14,7 +14,7 @@ autoscale: true
 * ```$ git checkout master```
 * ```$ git fetch```
 * ```$ git pull ```
-* ```$ git checkout week10_start```
+* ```$ git checkout week11_start```
 * ```$ rm -f db/*.sqlite3```
 * ```$ bundle```
 * ```$ bundle exec rake db:migrate```
@@ -129,9 +129,9 @@ $ bundle exec figaro install
 
 ```yaml
 development:
-  smtp_server: 
-  smtp_user: 
-  smtp_password: 
+  smtp_server:
+  smtp_user:
+  smtp_password:
 ```
 
 * Next we'll add an initializer to setup our email settings
