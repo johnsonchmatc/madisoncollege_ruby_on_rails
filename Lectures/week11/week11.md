@@ -1,46 +1,51 @@
-#Ruby on Rails Development
-##Week 11
+footer:@johnsonch :: Chris Johnson :: Ruby on Rails Development :: Week 11
+autoscale: true
 
----
-#Logging users in and out
+#Ruby on Rails Development
+##Week 11 
+
+* https://codecaster.io room: johnsonch
 
 ---
 #Demo
-* cd into ```wolfies_list```
-
-```
-$ git add . 
-$ git commit -am 'commiting files from in class'
-$ git checkout master 
-$ git fetch
-$ git pull origin master
-$ git checkout week11_start
-$ bundle install --path=vendor/bundle
- * may need to update rails version ```$ bundle update rails```
-$ bundle exec rake db:migrate
-```
+* cd into ```wolfie_books```
+* ```$ git add . ```
+* ```$ git commit -am 'commiting files from in class'```
+* ```$ git checkout master```
+* ```$ git fetch```
+* ```$ git pull ```
+* ```$ git checkout week10_start```
+* ```$ rm -f db/*.sqlite3```
+* ```$ bundle```
+* ```$ bundle exec rake db:migrate```
+* ```$ bundle exec rake test``` We have a  couple failing tests from last week
+* ```$ bundle exec rake fake:all_data```
 
 ---
 #Account activation
 ##Activation
 
 * Generate AccountActivations controller
-```
+
+```bash
 $ be rails generate controller AccountActivations
 ```
 
 * Add a route for our controller
-```
+
+```ruby
 resources :account_activations, only: [:edit]
 ```
 
-* Add our model additions for activiations
-```
+* Add our model additions for activation
+
+```bash
 $ be rails generate migration add_activation_to_users activation_digest:string activated:boolean activated_at:datetime
 ```
 
 * Create a new activation token for each user creation
-```
+
+```ruby
   before_create :create_activation_token
 
   private
@@ -53,17 +58,20 @@ $ be rails generate migration add_activation_to_users activation_digest:string a
 ```
 
 * We'll need to be able to access our activation_token
-```
+
+```ruby
 attr_accessor :activation_token
 ```
 
 * Let's keep working through the process and send out an email
-```
+
+```bash
 $ be rails generate mailer UserMailer account_activation password_reset
 ```
 
 * Next make the activation mailer take a user object
-```
+
+```ruby
   def account_activation(user)
     @user = user
     mail to: user.email, subject: "Account activation"
@@ -71,46 +79,80 @@ $ be rails generate mailer UserMailer account_activation password_reset
 ```
 
 * Update the 'views' for account activation
-```
-#app/views/user_mailer/account_activation.text.erb
+###```app/views/user_mailer/account_activation.text.erb```
+
+
+```erb
 Hi <%= @user.name %>,
 
-Welcome to the Wolfie's List! Click on the link below to activate your account:
+Welcome to the Wolfie Books! Click on the link below to activate your account:
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
 ```
+
+###```app/views/user_mailer/account_activation.htm.erb ```
+
 ```
-#app/views/user_mailer/account_activation.htm.erb
 <h1>Wolfie's List</h1>
 
 <p>Hi <%= @user.name %>,</p>
 
 <p>
-Welcome to the Wolfie's List! Click on the link below to activate your account:
+Welcome to the Wolfie Books! Click on the link below to activate your account:
 </p>
 
 <%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
 ```
 
 * Next to test our emailing we'll need to configure our development.rb file
+
 ```
-config.action_mailer.raise_delivery_errors = true
-config.action_mailer.delivery_method = :test
-host = 'pink-bolt-13-187611.use1-2.nitrousbox.com'
-config.action_mailer.default_url_options = { host: host }
+  config.action_mailer.default_url_options = { :host => 'https://matc-rails-fall-2015-johnsonch.c9.io' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
 ```
 
-* Then we'll add a method to authenticate our users
+* We need to get our SMTP settings in place, we're going to use a gem called [figaro](https://github.com/laserlemon/figaro), we'll add it to our gemfile:
+
+```ruby
+gem "figaro"
 ```
-  def authenticated?(attribute, token)
-    digest = send("#{attribute}_digest")
-    return false if digest.nil?
-    BCrypt::Password.new(digest).is_password?(token)
-  end
+
+* Then we'll use the follwing command to get a generated application.yml file:
+
+```bash
+$ bundle exec figaro install
+```
+
+* We'll add the following snippet to your application.yml, your instructor will use codecaster to send you the senstivie information. Also to note this application.yml file should never be commited, you don't want this sensitive informatin published out to sources other people can look at.
+
+```yaml
+development:
+  smtp_server: 
+  smtp_user: 
+  smtp_password: 
+```
+
+* For this to work on Heroku we'll need to set environment variables, this is something to note for your own environment.
+
+```bash
+$ heroku config:set SMTP_SERVER=my.mail.server
+```
+
+
+* Then we'll add a method to authenticate our users
+
+```ruby
+def authenticated?(attribute, token)
+  digest = send("#{attribute}_digest")
+  return false if digest.nil?
+  BCrypt::Password.new(digest).is_password?(token)
+end
 ```
 
 * Now we can add the edit action to our activation controller
-```
+
+```ruby
   def edit
     user = User.find_by(email: params[:email])
     if user && !user.activated? && user.authenticated?(:activation, params[:id])
@@ -126,7 +168,8 @@ config.action_mailer.default_url_options = { host: host }
   end
 ```
 * Let's send out an email to the user when they are created
-```
+
+```ruby
   if @user.save && UserMailer.account_activation(@user).deliver_now
     flash[:info] = "Please check your email to activate your account."
     redirect_to root_url
@@ -134,76 +177,45 @@ config.action_mailer.default_url_options = { host: host }
 ```
 
 * Don't let users who haven't activated login
-```
+
+```ruby
 if user.activated?
   login(user)
   redirect_to(user)
 else
-  message  = "Account not activated. "
-  message += "Check your email for the activation link."
+  message  = "Account not activated. Check your email for the activation link."
   flash[:warning] = message
   redirect_to root_url
 end
 ```
 
-
 ---
-#Locking down ads
-* Include sessions helper in ads controller
+## Next we'll add WillPaginate
 
-```
-include SessionsHelper
+```ruby
+gem 'will_paginate', '~> 3.0.6'
 ```
 
-* Add method to check to see if the user is logged in
+* Then we'll need to install the gem
 
+```bash
+$ bundle install
 ```
-def user_logged_in
-  unless logged_in?
-    flash[:danger] = "Please log in."
-    redirect_to login_url
+
+* Simply adjust the index action you want to paginate
+
+```ruby
+  def index
+    @projects = Project.paginate(:page => params[:page], :per_page => 10)
   end
-end
 ```
 
-* Add before filter to require login on everything but show and index
+* Then add the page picker helper to your index page
 
+```erb
+<div class="row">
+  <div class="col-md-12">
+    <%= will_paginate @projects %>
+  </div>
+</div>
 ```
-before_action :user_logged_in, except: [:index, :show]
-```
-
-* Refactor up the method and including of SessionHelper to application controller
-
-* Now let's track what user created the ad
-* First generate a migration
-```
-$ bundle exec rails g migration add_user_id_to_ads
-```
-
-* Then update the migration to modify the ads table
-
-```
-class AddUserIdToAds < ActiveRecord::Migration
-  def change
-    add_column :ads, :user_id, :integer
-  end
-end
-```
-
-* Setup relationships
-```
-#user.rb
-has_many :ads
-#ads.rb
-belongs_to :user
-```
-
-* Upadte routes
-```
-  resources :users do
-    resources :ads
-  end
-  resources :ads, only: [:index, :show]
-```
-
----
