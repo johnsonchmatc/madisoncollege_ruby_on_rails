@@ -2,6 +2,8 @@
 * Points 10
 * Date due: 11/19/2015 at 11:55pm CST
 
+**Note** You do not have to do the production section, 11.4.4
+
 ##Assignment
 * Read and follow the Chapter 11 examples from the Rails Tutorial book.
 * Complete the Chapter 11 exercises as well.
