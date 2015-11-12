@@ -28,7 +28,7 @@ autoscale: true
 * Generate AccountActivations controller
 
 ```bash
-$ be rails generate controller AccountActivations
+$ bundle exec rails generate controller AccountActivations
 ```
 
 * Add a route for our controller
@@ -40,7 +40,7 @@ resources :account_activations, only: [:edit]
 * Add our model additions for activation
 
 ```bash
-$ be rails generate migration add_activation_to_users activation_digest:string activated:boolean activated_at:datetime
+$ bundle exec rails generate migration add_activation_to_users activation_digest:string activated:boolean activated_at:datetime
 ```
 
 * Create a new activation token for each user creation
@@ -66,7 +66,7 @@ attr_accessor :activation_token
 * Let's keep working through the process and send out an email
 
 ```bash
-$ be rails generate mailer UserMailer account_activation password_reset
+$ bundle exec rails generate mailer UserMailer account_activation password_reset
 ```
 
 * Next make the activation mailer take a user object
@@ -79,6 +79,7 @@ $ be rails generate mailer UserMailer account_activation password_reset
 ```
 
 * Update the 'views' for account activation
+
 ###```app/views/user_mailer/account_activation.text.erb```
 
 
@@ -133,6 +134,22 @@ development:
   smtp_password: 
 ```
 
+* Next we'll add an initializer to setup our email settings
+
+###```config/initializers/smtp.rb````
+
+```ruby
+ActionMailer::Base.smtp_settings = {
+      :address              => ENV['smtp_server'],
+      :port                 => 587,
+      :user_name            => ENV['smtp_user'],
+      :password             => ENV['smtp_password'],
+      :authentication       => 'login',
+      :enable_starttls_auto => true,
+      :openssl_verify_mode => 'none'
+}
+```
+
 * For this to work on Heroku we'll need to set environment variables, this is something to note for your own environment.
 
 ```bash
@@ -156,9 +173,9 @@ end
   def edit
     user = User.find_by(email: params[:email])
     if user && !user.activated? && user.authenticated?(:activation, params[:id])
-      user.update_attribute(:activated,    true)
+      user.update_attribute(:activated, true)
       user.update_attribute(:activated_at, Time.zone.now)
-      login user
+      log_in user
       flash[:success] = "Account activated!"
       redirect_to user
     else
@@ -180,7 +197,7 @@ end
 
 ```ruby
 if user.activated?
-  login(user)
+  log_in(user)
   redirect_to(user)
 else
   message  = "Account not activated. Check your email for the activation link."
