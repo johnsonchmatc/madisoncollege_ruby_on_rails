@@ -272,8 +272,8 @@ $ bundle exec cap production deploy deploy:migration
 * on Blackboard under Labs find Lab 8 submit a word/text document with the following information:
   * Name
   * Date
-  * Linode IP
-  * Region of Linode
+  * IP address of server
+  * VPS Provider Name
 
 ###Notes:
 * If you are sending emails, make sure that you configure the host in your production.rb file to have a config action mailer default url.
