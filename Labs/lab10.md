@@ -1,30 +1,12 @@
-#Lab 10 
+#Lab 10
 * Points 10
 * Date due: 12/10/2015 at 5:00pm CST
 
 ##Assignment
 
 ###Getting setup
-* Go to www.linode.com/trial
-* Use promotion code given in class (or email instructor for it)
 
-Once your account is activated you'll need to choose a virtual machine (VM) size and location.  My suggestion for a location is Dallas and the 1024 size, we should see something similar to the following figure:
-
-![Choose a location](./images/choosing_a_location.png)
-
-Once we have a location chose we'll be directed over to a screen which lists all our VMs like the following figure:
-
-![Choose a location](./images/linode_listing.png)
-
-Once our VM has finished being created we can click on it and get it setup! Inside of the VM configuration we can choose to 'Deploy a Linux Distribution'. For class we'll choose Ubuntu 14.04 LTS, this is the newest long term supported distribution.  Ubuntu is a common linux distribution for Rails applications. We'll also need to enter a password for the root user, choose something fairly complex but easy enough to remember.
-
-After configuring the VM it's dashboard screen shows us a lot of information, let's explore the following figure:
-
-![Instance dashboard](./images/dashboard.png)
-
-On the right side of the screen we see the current status of our VM and it's usage stats. On the left top we find the control button for the VM. Let's click on 'Boot' and start the VM up.
-
-While that is booting up, let's hop over to our Nitrous.io box and get ready to connect to our Linode VM. Rather than launching the IDE we'll just use the console.  Back in the Linode VM configuration dashbord we can go on the 'Remote Access' tab and get the information to SSH to our Linode VM.  We'll copy the SSH comand and paste it into the Nitrous.io terminal as seen in the following figure:
+While the vm that is booting up, let's hop over to our c9.io box and get ready to connect to our Linode VM. Rather than launching the IDE we'll just use the console.  Back in the Linode VM configuration dashbord we can go on the 'Remote Access' tab and get the information to SSH to our Linode VM.  We'll copy the SSH comand and paste it into the c9.io terminal as seen in the following figure:
 
 ![Instance dashboard](./images/ssh_to_linode.png)
 
@@ -58,7 +40,7 @@ With the sudoers file open we'll add the following lines to it:
 Then use ctrl-o to save the file followed by ctrl-x to exit the editor. With that file saved we can add our deploy user with the following command, and answer all the questions it prompts us for.
 
 ```
-/usr/sbin/adduser deploy 
+/usr/sbin/adduser deploy
 ```
 
 Next we'll add our deploy user to the wheel group.
@@ -68,6 +50,9 @@ Next we'll add our deploy user to the wheel group.
 Once we have the deploy user added to the group, we can logout and login as the deploy user.
 
 ###SSH Keys
+
+We'll start out on our VPS and generate a key out there with the following command, and copy it so we can add it to Github.
+
 ```
 $ ssh-keygen -t rsa -C "admin@myserver.com"
 $ cat .ssh/id_rsa.pub
@@ -75,14 +60,14 @@ $ cat .ssh/id_rsa.pub
 
 With our SSH key created we need to add it to our GitHub account so the server can clone our repository.
 
-Next we'll want to upload our development machine (nitrous.io) ssh key so we don't need to keep typing the following command:
+Next we'll want to upload our development machine (c9.io) ssh key so we don't need to keep typing the following command:
 ```
 $ ssh-copy-id -i ~/.ssh/id_rsa.pub deploy@<your servers ip>
 ```
 
 ###Installing software
 ```
-$ sudo apt-get -y install curl git-core build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev node sqlite3 nodejs npm sendmail
+$ sudo apt-get -y install curl git-core build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev node sqlite3 nodejs npm sendmail vim libsqlite3-dev
 ```
 
 ####Rbenv
@@ -111,7 +96,7 @@ $ source ~/.bashrc
 ```
 
 ```
-$ rbenv install 2.2.2
+$ rbenv install --verbose 2.2.2
 $ rbenv global 2.2.2
 ```
 ####MySQL
@@ -150,17 +135,17 @@ $ sudo vim /opt/nginx/conf/nginx.conf
 ```
 
 ```
-server {                                                                                          
-    listen       80;                                                                              
-                                                                                                  
-    root /var/www/current/public;                                                                 
-    passenger_enabled on;                                                                         
-                                                                                           
-    error_page   500 502 503 504  /50x.html;                                                      
-    location = /50x.html {                                                                        
-        root   html;                                                                              
-    }                                                                                             
-                                                                                                  
+server {
+    listen       80;
+
+    root /var/www/current/public;
+    passenger_enabled on;
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   html;
+    }
+
 }
 ```
 
@@ -206,11 +191,15 @@ Then change your config/deploy.rb to the following:
 
 ```
 # config valid only for Capistrano 3.1
-lock '3.2.1'
+lock '3.4.0'
 
 set :application, 'your_application_name'
 set :repo_url, 'git@github.com:your_git_url'
+set :rbenv_type, :user
 set :rbenv_ruby, '2.2.2'
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+set :rbenv_roles, :all # default value
 
 # Default branch is :master
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -255,7 +244,7 @@ Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 ```
 
 ```
-$ bundle exec cap production deploy:check 
+$ bundle exec cap production deploy:check
 ```
 
 We'll need to create a database.yml file in var/www/shared/config with the correct values for your application.
@@ -263,7 +252,7 @@ We'll need to create a database.yml file in var/www/shared/config with the corre
 ```
 production:
   adapter: mysql2
-  database: <application>_production  
+  database: <application>_production
   host: localhost
   username: root
   password: root
