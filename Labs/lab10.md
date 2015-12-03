@@ -136,7 +136,7 @@ $ sudo vim /opt/nginx/conf/nginx.conf
 
 ```
 server {
-    listen       80;
+    listen       *:80;
 
     root /var/www/current/public;
     passenger_enabled on;
@@ -211,7 +211,7 @@ set :deploy_to, '/var/www'
 set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml config/application.yml}
 
 namespace :deploy do
 
@@ -256,6 +256,13 @@ production:
   host: localhost
   username: root
   password: root
+```
+
+We'll need to create a application.yml file in var/www/shared/config with the correct values for your application.
+
+```
+production:
+  secret_key_base: somereallylongstring
 ```
 
 
