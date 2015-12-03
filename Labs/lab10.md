@@ -262,7 +262,7 @@ We'll need to create a application.yml file in var/www/shared/config with the co
 
 ```
 production:
-  secret_key_base: somereallylongstring
+  SECRET_KEY_BASE: somereallylongstring
 ```
 
 
