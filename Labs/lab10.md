@@ -109,7 +109,7 @@ I chose for this demo a username: root and password: root.  After your server is
 
 ```
 $ mysql -u root -proot
-mysql > create database <application>_production
+mysql > create database <application>_production;
 ```
 
 
