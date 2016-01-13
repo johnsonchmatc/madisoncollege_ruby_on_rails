@@ -1,14 +1,20 @@
 #Course Project
-###Revision 01-07-2015 
+###Revision 01-07-2015
 * 150 Total Points
+* Project Pitch (10pts)
 * Project check-in 1 3/25 (50pts)
 * Project check-in 2 4/22 (50pts)
 * Final Submission 5/14 (50pts)
 
 ##Description
-The goal of the final project is to demonstrate the competencies covered in this course.  You will need to develop an application of your choosing using the Ruby on Rails framework.  In the grading criteria you will find the points you need to hit for a successful project.
+The goal of the final project is to demonstrate the competencies covered in this course.  You will need to develop an application of your choosing using the Ruby on Rails framework.  In the grading criteria you will find the points you need to hit for a successful project. You are encouraged to use the book and any resources you find on line to help you build your application, but the code turned in must be your own.  Simply copying the code from the book directly is grounds for failure.
 
 ##Grading Criteria
+###Project Pitch
+* Description
+* Project "done whens" 2 for each check in (must be above the requirements)
+
+
 ###Check-in 1
 * A design
 * A static home page describing the site
@@ -18,7 +24,7 @@ The goal of the final project is to demonstrate the competencies covered in this
 * A private github repo created, and instructor added
 
 ####Submission directions
-* Use a Git tag to create a tag called ```check-in-1``` 
+* Use a Git tag to create a tag called ```check-in-1```
 * Turn in a document in BlackBoard under Assignments with the following:
   * Name
   * Date
@@ -31,7 +37,7 @@ The goal of the final project is to demonstrate the competencies covered in this
 * At least 2 tests
 
 ####Submission directions
-* Use a Git tag to create a tag called ```check-in-2``` 
+* Use a Git tag to create a tag called ```check-in-2```
 * Turn in a document in BlackBoard under Assignments with the following:
   * Name
   * Date
@@ -44,8 +50,9 @@ The goal of the final project is to demonstrate the competencies covered in this
 * Deployed
 
 ####Submission directions
-* Use a Git tag to create a tag called ```final``` 
+* Use a Git tag to create a tag called ```final```
 * Turn in a document in BlackBoard under Assignments with the following:
   * Name
   * Date
   * github url
+  * Gems you used on your project
