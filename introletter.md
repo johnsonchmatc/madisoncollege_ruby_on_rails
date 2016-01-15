@@ -7,7 +7,8 @@ I am sending you a brief letter to get you going with the Ruby on Rails Developm
 My name is Chris Johnson and I will be your teacher for this face to face learning experience. I am a part-time Information Technology Instructor at Madison College. You can reach me via email at cgjohnson1@madisoncollege.edu. Please read through the following information which clarifies the details of the class.
 
 ##Class Structure
-Thiw will be a face to face class with a combinations of discussions, lectures and labs. 
+This will be a face to face class with a combinations of discussions, lectures, readings and labs. There will be a large amount of work as you will be learning a new language, framework and development methodology. Make sure you come to class prepared each week, doing the readings will prepare  you for the lecture and in class labs.
+
 
 ##Accessing the Class
 In order to get started in this class, you need to get to the Blackboard site, which is where our class is located, and log on.
@@ -29,9 +30,9 @@ Send me email ASAP if you have difficulty signing on to our Blackboard course cg
   
 ###Necessities
 * Please note that you MUST have an email address to use this course. Remember that Madison College offers all students a free email address that you can now access email from Madison College’s homepage.
-* Access to a computer with a web browser and internet access.
+* Access to a computer with a web browser and internet access and the ability to either run a virtual machine or a Ruby on Rails development environment.
 * A Heroku.com account, which we will setup in class.
-* A Github.com account, which we will setup in class.
+* A Bitbucket.com account, which we will setup in class.
 
 ###Assignments
 The format of the course is broken down into "weeks". The course will last for 16 weeks and each of these weeks there are various assignments. You will find the outline for the weeks of the  course under the "Classes" section in Blackboard. Weekly assignments include readings, videos, labs, projects and discussions. Please look at the "Classes" section in Blackboard for more detail on the actual assignments.  Due Dates for all assignments are listed in the syllabus.
@@ -46,17 +47,25 @@ You will be working on a project during the semester, this project will be somet
 There will be two 'Exams' which will actually be presentations. The requirements for each of these will be distributed via BlackBoard.
 
 ###Socrative
-At the end of every class I’ll have you fill out an exit ticket.  The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day.  You can login to the site at http://beta.socrative.com using the room code of "johnsonchmatc" 
+At the end of every class I’ll have you fill out an exit ticket.  The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day.  You can login to the site at [http://beta.socrative.com](http://beta.socrative.com) using the room code of "johnsonchmatc" 
+
+###Codecaster.io
+We'll use [https://codecaster.io/](https://codecaster.io/) in class as a way for you to ask questions or notify me to slowdown with out needing to raise your hand, though the old fashion hand raising still works!
+
+###Development Environment
+You will be responsible for your own development environment, we'll set this up during the first class session.  We'll use [http://docs.railsbridge.org/installfest/](http://docs.railsbridge.org/installfest/) as the guide.  I suggest either working in Linux or OS X.  If you are a Windows user I would suggest using a Linux virtual machine, however the choice is yours.
 
 ##Ways to Get Help
-  * IRC: [Tutorial](https://github.com/johnsonch/madisoncollege_ruby_on_rails/blob/master/irc.md)
+  * IRC: [Tutorial](https://github.com/johnsonchmatc/madisoncollege_ruby_on_rails/blob/master/irc.md)
   * EMAIL: You can contact me via email at cgjohnson1@madisoncollege.edu and I will do my very best to get back to you within 24-48 hours. I will do my best to check my email Monday morning through Friday at 4:30pm.
   * PHONE: You can contact me via telephone at 608-301-5232. This is usually not a very efficient method as we will probably end up playing "telephone tag."
   * BLACKBOARD ASSISTANCE: If you experience problems with Blackboard, help is available at the Madison College Library Student Helpdesk. To get help, you can visit room 230 in the library, call 243-4444, or send email to student-help@madisoncollege.edu If you find that Blackboard is "down" and the Student Helpdesk is closed (after hours, weekends, and holidays), you may call 246-6666 to leave a message so it can be addressed as soon as staff is available.
   * TO USE THE BLACKBOARD TO SEND AN EMAIL, choose Communication from the main set of buttons along the left side of the course page. Choose Send email then choose Select Users. Select my name from the list of users. Follow directions given for subject line and message. Choose Send Copy of Message to self. Attach the required file by clicking the Add button in Section 4 of the screen; choose Browse to find the attachment, double click on the desired filename, click Submit to add the attachment (repeat this step for each attachment). Click Submit to send the email to me.
   
 ##Final Thoughts
-I look forward to working and learning with you this semester. This is the second semester I have taught this course, so things are subject to change.  Always look to the GitHub site for up to date information, and if you find any errors or something doesn't make sense let me know ASAP so I can fix that.  To get off to a good start make sure to complete the steps below.
+I look forward to working and learning with you this semester. This is the second semester I have taught this course, so things are subject to change.  Always look to the [GitHub](https://github.com/johnsonchmatc/madisoncollege_ruby_on_rails) site for up to date information, and if you find any errors or something doesn't make sense let me know ASAP so I can fix that.  
+
+To get off to a good start make sure to complete the steps below.
   
 ####STEPS TO COMPLETE:
   

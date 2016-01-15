@@ -6,7 +6,7 @@ Catalog #152 10152157-0002
 
 * *Credits:* 3
 * *Course Format:* face to face
-* *Class Schedule:* TM 5:30 – 9:20 PM 09/03/2015 - 12/17/2015
+* *Class Schedule:* TM 5:30 – 9:20 PM 01/21/2016 - 05/12/2015
 * *Location:* Truax-Health Building Rm 335
 * *Instructor:* Chris Johnson
 * *Email:* cgjohnson1@madisoncollege.edu
@@ -38,7 +38,7 @@ that can be adapted to many professional web development needs.
 * or consent of instructor
 
 ###Textbook
-We will be using the following books for the course. These are available in both paper and/or PDF formats.
+We will be using the following book for the course. It is available in both paper and/or PDF formats.
 
 ####Required
 
@@ -78,7 +78,7 @@ Students will attend lectures, use blackboard and participate in lab exercises t
 Madison College Core Abilities are eight key life and success skills that contribute to the development of students as life-long learners on the job, at home, and in the community. The Core Abilities are skills and abilities taught and assessed in classes, labs, and field experiences at Madison College. For more information on Core Abilities, please visit [http://madisoncollege.edu/core-abilities](http://madisoncollege.edu/core-abilities). This class addresses the following core abilities: Ethics
 
 #Responsibilities and Policies
-**Student Responsibilities:*ß* Students are expected to be familiar with Madison College policies and procedures. Many of the important policies and procedures are on the Madison College website, located at [http://madisoncollege.edu/student-rights-responsibilities](http://madisoncollege.edu/student-rights-responsibilities).
+**Student Responsibilities:** Students are expected to be familiar with Madison College policies and procedures. Many of the important policies and procedures are on the Madison College website, located at [http://madisoncollege.edu/student-rights-responsibilities](http://madisoncollege.edu/student-rights-responsibilities).
 
 **Academic Integrity** is an expectation in all Madison College classes. Plagiarism, cheating and collusion are prohibited at Madison College. Plagiarism is defined as passing of another person's work as your own. Students who fail to observe these standards are subject to disciplinary action. Madison College has a strong policy on Academic Misconduct which is published on the Madison College website. Please refer to this page on the Madison College Website to review all Academic Integrity and Misconduct policies located at [http://madisoncollege.edu/academic-integrity](http://madisoncollege.edu/academic-integrity).
 
@@ -127,7 +127,7 @@ If you have an accommodation card from their office indicating that you have a d
 
 **Socrative:** At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You can login to the site at [http://beta.socrative.com](http://beta.socrative.com) using the room code of "johnsonchmatc"
 
-**Github** We'll use Github to keep track of our code for the semester, you'll want to sign up for an education account at [https://education.github.com/](https://education.github.com/). This will give you a few private repositories.
+**Bitbucket** We'll use Bitbucket to keep track of our code for the semester [https://bitbucket.org/](https://bitbucket.org/). 
 
 **Heroku** We'll use Heroku to deploy our apps to for projects and labs that require a deployment.  Signup for a free account from them.
 
@@ -151,7 +151,7 @@ Phone the student help desk: (608) 243-4444; toll-free at (866) 277-4445. They c
 Syllabus Changes: As your instructor, I retain the right to make changes based on the timeline of the class, feedback from learners and/or logistical issues and will inform you as soon as a change is made.
 
 #Grading Policy
-* All work that is to be graded must be accomplished by your own effort. 
+* All work that is to be graded must be accomplished by your **own effort**. 
 * No points will be given for late assignments/labs/exams.
 * All assignments/labs/exams must meet the [course style guide](https://github.com/johnsonchmatc/ruby-style-guide)
 * All assignments/labs must run (no errors, and must produce output). If there are compilation errors or no output, the most the assignment can receive is 50% of the points. 
@@ -166,23 +166,15 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 | **Points Possible** | **Assignment** |
 | --- | --- |
-| 10  | Lab 1 |
-| 10  | Lab 2 |
-| 10  | Lab 3 |
-| 10  | Lab 4 |
-| 10  | Lab 5 |
-| 10  | Lab 6 |
-| 10  | Lab 7 |
-| 10  | Lab 8 |
-| 10  | Lab 9 |
-| 10  | Lab 10 |
-| 50  | Project Check-in 1 |
-| 50  | Project Check-in 2 |
-| 50  | Exam 1 |
-| 50  | Exam 2 |
-| 50  | Course Project |
-| 50  | Participation |
-| 400 | TOTAL POINTS |
+| 120  | [Labs](Labs/) 12 @ 10 points each |
+| 120  | [Readings](Readings/) 12 @ 10 points each |
+| 100  | [Course Project Check-in 1](Projects/course_project.md#check-in-1) |
+| 100  | [Course Project Check-in 2](Projects/course_project.md#check-in-2) |
+| 50   | [Exam 1](Exams/exam1.md) |
+| 50   | [Exam 2](Exams/exam2.md) |
+| 100  | [Course Project Final Submission](Projects/course_project.md#Project Check-in 2) |
+| 50   | [Participation](participation.md) |
+| 690  | TOTAL POINTS |
 
 
 
@@ -200,23 +192,24 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar 
 
-Revision A 08/18/2015
+Revision A 01/12/2015
 
-| **Week** | **Thursday** | **Required Reading Topics** | **Labs / Projects DUE Thursdays at 11:55pm**  |
+| **Week** | **Thursday** | **Required Reading Topics** | **Labs DUE Thursdays by end of class**  |
 | --- | ---   | ---                                 | ---                                               |
-| 1   |  09/03 | Introduction                       |                                                   |
-| 2   |  09/10 | Chapter 1 and Chapter 2            | Course Project Idea (Actually in class on 1/29)   |
-| 3   |  09/17 | Chapter 4                          | Lab 1, Lab 2                                      | 
-| 4   |  09/24 | Chapter 3 and Chapter 5            |                                                   |
-| 5   |  10/01 | Chapter 6                          | Lab 3 (Project wireframes)                        |
-| 6   |  10/08 | Chapter 7                          | Lab 4                                             | 
-| 7   |  10/15 | Chapter 8                          | Lab 5                                             |
-| 8   |  10/22 | Open lab (Project work time)       | Lab 6                                             |
-| 9   |  10/29 | Exam 1                             | Lab 7                                             |  
-| 10  |  11/05 | Chapter 9 and Chapter 10           | Project check-in 1                                |  
-| 11  |  11/12 | Chapter 11 (adding gems)           | Lab 8                                             |
-| 12  |  11/19 | Chapter 12 (ajax)                  | Lab 9                                             |
-|     |  11/26 | Thanksgiving (no class)            |                                                   |
-| 13  |  12/03 | Building a virtual server          | Lab 10 (in class) Project check-in 2              |  
-| 14  |  12/10 | Open lab (Final Project)           |                                                   | 
-| 15  |  12/17 | Exam 2                             | Project (5pm on 12/17/2015)                       |
+| 1   |  01/21 | Introduction                       | Lab 1                                             |
+| 2   |  01/28 | Rails Bridge                       | Lab 2, Course Project Idea (Actually in class on 1/28)   |
+| 3   |  02/04 | Chapter 1 and Chapter 2            | Lab 3                                             | 
+| 4   |  02/11 | Chapter 4                          | Lab 4                                             |
+| 5   |  02/18 | Chapter 3 and Chapter 5            | Lab 5 (Project wireframes/Database)               |
+| 6   |  02/25 | Chapter 6                          | Lab 6                                             | 
+| 7   |  03/03 | Chapter 7                          | Lab 7                                             |
+| 8   |  03/10 | Open lab (Project work time)       |                                                   |
+|     |  03/17 | Spring Break (No Class)            |                                                   |  
+| 9   |  03/24 | Exam 1                             | Project check-in 1 (Due 11:55pm)                  |  
+| 10  |  03/21 | Chapter 8                          | Lab 8                                             |
+| 11  |  04/07 | Chapter 9 and Chapter 10           | Lab 9                                             |
+| 12  |  04/14 | Chapter 11 (adding gems)           | Lab 10, Project check-in 2 (Due 11:55pm)          |
+| 13  |  04/21 | Chapter 12 (ajax)                  | Lab 11                                            |  
+| 14  |  04/28 | Open lab (Final Project)           |                                                   | 
+| 15  |  04/05 | Building a virtual server          | Lab 12 (in class)                                 |
+| 16  |  04/12 | Exam 2                             | Project (5pm on 12/17/2015)                       |
