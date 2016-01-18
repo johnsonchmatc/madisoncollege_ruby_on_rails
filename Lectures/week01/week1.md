@@ -52,7 +52,8 @@
 #Questions?
 
 ---
-#Projects, Labs and Exams
+#Projects, Readings, Labs and Exams
+* Readings
 * Labs
 * Course Project
 * Exams 
@@ -69,11 +70,9 @@
 ---
 
 #Preparing our shop
-* Github
+* Bitbucket
 * Heroku
-* Cloud9/Ubuntu VM 
-  * Ruby Version 2.1.5
-  * Rails Version 4.2.0
+* Development Environment (Lab 1) 
 * IRC http://officehours.johnsonch.com/
 
 ---
