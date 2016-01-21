@@ -21,14 +21,14 @@ The goal of the final project is to demonstrate the competencies covered in this
 * A User model
 * User signup
 * At least 1 test
-* A private github repo created, and instructor added
+* A private bitbucket repo created, and instructor added
 
 ####Submission directions
 * Use a Git tag to create a tag called ```check-in-1```
 * Turn in a document in BlackBoard under Assignments with the following:
   * Name
   * Date
-  * github url
+  * bitbucket url
 
 ###Check-in 2
 * Has at least 2 models
@@ -41,7 +41,7 @@ The goal of the final project is to demonstrate the competencies covered in this
 * Turn in a document in BlackBoard under Assignments with the following:
   * Name
   * Date
-  * github url
+  * bitbucket url
 
 ###Final Submission
 * Account activation
@@ -54,5 +54,5 @@ The goal of the final project is to demonstrate the competencies covered in this
 * Turn in a document in BlackBoard under Assignments with the following:
   * Name
   * Date
-  * github url
+  * bitbucket url
   * Gems you used on your project

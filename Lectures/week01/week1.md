@@ -9,7 +9,7 @@
 * Senior Software Engineer and Scrum Master at Getty Images
 * Author at Pragmatic Bookshelf
 * Owner at JohnsonCH, LLC
-	
+
 ---
 #Hobbies
 * Software development
@@ -17,7 +17,7 @@
 * Photography
 * Hockey
 * Watching Racing
-	
+
 ---
 #Personal
 * Wife: Laura
@@ -56,7 +56,7 @@
 * Readings
 * Labs
 * Course Project
-* Exams 
+* Exams
 
 ---
 #Activity
@@ -70,10 +70,11 @@
 ---
 
 #Preparing our shop
+* Codecaster.io
 * Bitbucket
 * Heroku
-* Development Environment (Lab 1) 
 * IRC http://officehours.johnsonch.com/
+* Development Environment (Lab 1)
 
 ---
 #Socrative
