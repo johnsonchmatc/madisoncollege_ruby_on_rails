@@ -29,7 +29,7 @@ The course will also use the popular git revision control system, as well as
 open source database management systems. Topics will include installing Ruby,
 and Ruby on Rails, an extended tutorial, deployment, an overview of the
 components of the Rails framework, ActiveRecord basics, ActionController coding,
-Action view, REST, AJAX, Web 2.0. Students will develop very modern web applications 
+Action view, REST, AJAX, Web 2.0. Students will develop very modern web applications
 that can be adapted to many professional web development needs.
 
 ###Pre-requisites:
@@ -52,12 +52,12 @@ or as a traditional hard copy from book stores and amazon.com .
 * *Programming Ruby 1.9 & 2.0 (4th edition): The Pragmatic Programmers' Guide* by Dave Thomas, with Chad Fowler and Andy Hunt
 [http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0](http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0)
 
-* *Agile Web Development with Rails (4th edition)* 
+* *Agile Web Development with Rails (4th edition)*
 by Sam Ruby
 This is the definitive reference book on version 4 of Rails. Available as paperback or PDF at
 [http://pragprog.com/book/rails4/agile-web-development-with-rails](http://pragprog.com/book/rails4/agile-web-development-with-rails)
 
-* *Cooking with Rails 4, A Ruby on Rails Crash Course* by Brian Hogan.  
+* *Cooking with Rails 4, A Ruby on Rails Crash Course* by Brian Hogan.
 The PDF is available at [http://napcs.com/resources/rails/cookbook/](http://napcs.com/resources/rails/cookbook/)
 
 
@@ -71,7 +71,7 @@ During this course students will:
 *   Complete the design and coding of a significant new web application
 *   Present their new web application to classmates
 
-##Environment 
+##Environment
 Students will attend lectures, use blackboard and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting.
 
 #Core Abilities
@@ -88,9 +88,9 @@ Nonattendance does not constitute an official withdrawal and students will be he
 
 Stop payment of a check does not constitute a formal cancellation. Registrants will be held liable for the fee until the date of official cancellation. Allow four weeks from the date of cancellation to receive a full refund of payment.
 
-**Attendance:** You are expected to attend class. Poor attendance can lead to failure in the class. If you cannot attend a class, it is your responsibility to obtain the material missed. Lecture will not be repeated for individual students. If you withdraw from the class, please notify me, and The Center for Agriscience and Technologies Office, room 173. Non-attendance will not automatically withdraw you from a course. 
+**Attendance:** You are expected to attend class. Poor attendance can lead to failure in the class. If you cannot attend a class, it is your responsibility to obtain the material missed. Lecture will not be repeated for individual students. If you withdraw from the class, please notify me, and The Center for Agriscience and Technologies Office, room 173. Non-attendance will not automatically withdraw you from a course.
 
-**Submitting Work:** All work must be submitted as directed in the assignment instructions. 
+**Submitting Work:** All work must be submitted as directed in the assignment instructions.
 
 **Backup Data:** You are expected to develop good computer use habits that minimize the impact of failure. I expect that you know to save your work frequently, after every major change, and to back up your work regularly. You should be able to backup your data to a cd or dvd. Remember failure is a matter of when ... not if.
 
@@ -108,11 +108,11 @@ Student Computer Help Desk is located in the Truax Campus Library Room 230. Stud
 
 If you have an accommodation card from their office indicating that you have a disability which requires academic accommodations, please present it to me so we can discuss the accommodations that you might need in this class. It is best to request these accommodations at the beginning if not before class so there is ample time to make the accommodations.
 
-**Class Cancellation:** Besides local radio stations and the Madison College website, students can call the hotline to inquire about weather related school closings. (608) 246-6606. 
+**Class Cancellation:** Besides local radio stations and the Madison College website, students can call the hotline to inquire about weather related school closings. (608) 246-6606.
 
 **Learner Responsibilities:** As a student in this class, I expect you to:
 
-* Take responsibility for your own learning. 
+* Take responsibility for your own learning.
 * Be prepared for class and be an enthusiastic participant during class.
 * Treat others with tolerance and respect.
 * Act responsibly and reliably in group work.
@@ -127,7 +127,7 @@ If you have an accommodation card from their office indicating that you have a d
 
 **Socrative:** At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You can login to the site at [http://beta.socrative.com](http://beta.socrative.com) using the room code of "johnsonchmatc"
 
-**Bitbucket** We'll use Bitbucket to keep track of our code for the semester [https://bitbucket.org/](https://bitbucket.org/). 
+**Bitbucket** We'll use Bitbucket to keep track of our code for the semester [https://bitbucket.org/](https://bitbucket.org/).
 
 **Heroku** We'll use Heroku to deploy our apps to for projects and labs that require a deployment.  Signup for a free account from them.
 
@@ -151,16 +151,16 @@ Phone the student help desk: (608) 243-4444; toll-free at (866) 277-4445. They c
 Syllabus Changes: As your instructor, I retain the right to make changes based on the timeline of the class, feedback from learners and/or logistical issues and will inform you as soon as a change is made.
 
 #Grading Policy
-* All work that is to be graded must be accomplished by your **own effort**. 
+* All work that is to be graded must be accomplished by your **own effort**.
 * No points will be given for late assignments/labs/exams.
 * All assignments/labs/exams must meet the [course style guide](https://github.com/johnsonchmatc/ruby-style-guide)
-* All assignments/labs must run (no errors, and must produce output). If there are compilation errors or no output, the most the assignment can receive is 50% of the points. 
+* All assignments/labs must run (no errors, and must produce output). If there are compilation errors or no output, the most the assignment can receive is 50% of the points.
 * If there is output, but not all objectives are met from the assignment/lab's rubric points will be removed for each item missing or incorrect.
 * There is no make-up of tests or other scheduled, graded classroom activities.
 * It is the responsibility of the student to make up any missed work and/or pick up any missed materials. Missing a class is NOT an excuse for failure to hand in work due.
 * There is no extension of assignment due dates without prior notification of circumstance. All work that is to be graded must be accomplished by your own effort.
 
-**Grades Posted in Blackboard:** All assignment grades are posted in Blackboard. I need to manually grade the assignments. Sometimes this happens very quickly and sometimes it takes a week. When you've posted a quiz or lab answers, it will show up in the gradebook as a green box with a white ! in it. This means that I have received your work, but has not graded it yet. Discussion boards show up in the gradebook as a green box with a white ! in it until I have graded the assignment, then it will have a score in it. 
+**Grades Posted in Blackboard:** All assignment grades are posted in Blackboard. I need to manually grade the assignments. Sometimes this happens very quickly and sometimes it takes a week. When you've posted a quiz or lab answers, it will show up in the gradebook as a green box with a white ! in it. This means that I have received your work, but has not graded it yet. Discussion boards show up in the gradebook as a green box with a white ! in it until I have graded the assignment, then it will have a score in it.
 
 ### **Evaluation**
 
@@ -168,17 +168,18 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 | --- | --- |
 | 120  | [Labs](Labs/) 12 @ 10 points each |
 | 120  | [Readings](Readings/) 12 @ 10 points each |
-| 100  | [Course Project Check-in 1](Projects/course_project.md#check-in-1) |
-| 100  | [Course Project Check-in 2](Projects/course_project.md#check-in-2) |
 | 50   | [Exam 1](Exams/exam1.md) |
 | 50   | [Exam 2](Exams/exam2.md) |
+| 10   | [Course Project Pitch](Projects/course_project.md) |
+| 100  | [Course Project Check-in 1](Projects/course_project.md#check-in-1) |
+| 100  | [Course Project Check-in 2](Projects/course_project.md#check-in-2) |
 | 100  | [Course Project Final Submission](Projects/course_project.md#Project Check-in 2) |
 | 50   | [Participation](participation.md) |
-| 690  | TOTAL POINTS |
+| 700  | TOTAL POINTS |
 
 
 
-### **Grading Scale** 
+### **Grading Scale**
 
 | *Grade* | *% Attained* |
 | --- | --- |
@@ -190,7 +191,7 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 | D | 60-69 |
 | F | 0-59 |
 
-#Course Calendar 
+#Course Calendar
 
 Revision A 01/12/2015
 
@@ -198,18 +199,18 @@ Revision A 01/12/2015
 | --- | ---   | ---                                 | ---                                               |
 | 1   |  01/21 | Introduction                       | Lab 1                                             |
 | 2   |  01/28 | Rails Bridge                       | Lab 2, Course Project Idea (Actually in class on 1/28)   |
-| 3   |  02/04 | Chapter 1 and Chapter 2            | Lab 3                                             | 
+| 3   |  02/04 | Chapter 1 and Chapter 2            | Lab 3                                             |
 | 4   |  02/11 | Chapter 4                          | Lab 4                                             |
 | 5   |  02/18 | Chapter 3 and Chapter 5            | Lab 5 (Project wireframes/Database)               |
-| 6   |  02/25 | Chapter 6                          | Lab 6                                             | 
+| 6   |  02/25 | Chapter 6                          | Lab 6                                             |
 | 7   |  03/03 | Chapter 7                          | Lab 7                                             |
 | 8   |  03/10 | Open lab (Project work time)       |                                                   |
-|     |  03/17 | Spring Break (No Class)            |                                                   |  
-| 9   |  03/24 | Exam 1                             | Project check-in 1 (Due 11:55pm)                  |  
+|     |  03/17 | Spring Break (No Class)            |                                                   |
+| 9   |  03/24 | Exam 1                             | Project check-in 1 (Due 11:55pm)                  |
 | 10  |  03/21 | Chapter 8                          | Lab 8                                             |
 | 11  |  04/07 | Chapter 9 and Chapter 10           | Lab 9                                             |
 | 12  |  04/14 | Chapter 11 (adding gems)           | Lab 10, Project check-in 2 (Due 11:55pm)          |
-| 13  |  04/21 | Chapter 12 (ajax)                  | Lab 11                                            |  
-| 14  |  04/28 | Open lab (Final Project)           |                                                   | 
+| 13  |  04/21 | Chapter 12 (ajax)                  | Lab 11                                            |
+| 14  |  04/28 | Open lab (Final Project)           |                                                   |
 | 15  |  04/05 | Building a virtual server          | Lab 12 (in class)                                 |
 | 16  |  04/12 | Exam 2                             | Project (5pm on 12/17/2015)                       |
