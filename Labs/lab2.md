@@ -1,4 +1,4 @@
-#Lab 2
+#Lab 3
 
 ##Assignment
 * Go to [http://docs.railsbridge.org/intro-to-rails/](http://docs.railsbridge.org/intro-to-rails/)
