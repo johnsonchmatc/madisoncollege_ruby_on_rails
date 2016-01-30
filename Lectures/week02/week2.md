@@ -115,4 +115,3 @@ Makes use of two files:
 #Rails server
 * ```$ bundle exec rails server ```
 
-> on cloud 9 add ```-b $IP -p $PORT```
