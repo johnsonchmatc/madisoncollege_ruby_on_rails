@@ -2,6 +2,53 @@
 ##Week 5
 
 ---
+#Preparing for the demo today
+
+* Note: make sure you have removed 'wolfies_list' if you generated one last week.
+* ```$ git clone git@github.com:johnsonch/wolfies_list.git ```
+* ```$ cd wolfies_list```
+* ```$ bundle install --path=vendor/bundle```
+
+---
+#What are we building?
+
+---
+#Demo
+
+^ Clean up Heroku messes
+- delete from heroko
+- remove from git config
+- ```$ heroku create```
+
+^ Scaffold ads
+```
+$ bundle exec rails g scaffold Ads title:string description:text price:float address:string
+```
+Scaffold categories
+```
+$ bundle exec rails g scaffold Categories name:string
+```
+Add relationship
+- generate migration ```bundle exec rails g migration add_category_id_to_ads```
+- add relationships to models
+
+---
+#Active Record Relationships
+
+---
+##Active Record Relationships
+* belongs_to
+* has_many
+* has_many_through
+
+---
+##Validations
+* Rules to prevent invalid data from being saved
+* Can be conditional
+* Provides error messages back to the controller
+* [http://guides.rubyonrails.org/active_record_validations.html#validation-helpers](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers)
+
+---
 
 
 ---
@@ -67,7 +114,7 @@ end
    invalid_addresses.each do |invalid_address|
      @user.email = invalid_address
      assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
-   end 
+   end
  end
 
  test "email addresses should be unique" do
@@ -85,9 +132,9 @@ VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 before_save { self.email = email.downcase }
 
 validates :name, presence: true, length: { maximum: 50 }
-validates :email, 
-          presence: true, 
-          length: { maximum: 225 }, 
+validates :email,
+          presence: true,
+          length: { maximum: 225 },
           format: { with: VALID_EMAIL_REGEX },
           uniqueness: { case_sensitive: false }
 ```
@@ -123,10 +170,10 @@ bart = User.where('name LIKE ?', '%art%')
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li>
-          <%= link_to 'Projects', projects_path %> 
+          <%= link_to 'Projects', projects_path %>
         </li>
         <li>
-          <%= link_to 'Clients', clients_path %> 
+          <%= link_to 'Clients', clients_path %>
         </li>
           </ul>
         </li>
@@ -238,7 +285,7 @@ class="table table-striped table-hover"
       <%= client.city %>,<%= client.state %> <%= client.postal_code %>
     </div>
     <div class="panel-footer">
-      <%= link_to 'Edit', edit_client_path(client) %> :: 
+      <%= link_to 'Edit', edit_client_path(client) %> ::
       <%= link_to 'Delete', client, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   </div>
@@ -247,7 +294,7 @@ class="table table-striped table-hover"
 
 ###Redirect to clients index on create and update using:
 ```ruby
-clients_url 
+clients_url
 ```
 
 ###Update notice to be much more pretty
