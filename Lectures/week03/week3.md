@@ -1,3 +1,6 @@
+footer:@johnsonch :: Chris Johnson :: Ruby on Rails Development - Week 3
+autoscale: true
+
 #Ruby on Rails Development
 ##Week 3
 
@@ -45,7 +48,9 @@
 ---
 #Scaffolding
 
-```$ bundle exec rails g scaffold title:string body:text author_id:integer viewable:boolean```
+```bash
+$ bundle exec rails g scaffold title:string body:text author_id:integer viewable:boolean
+```
 
 ---
 #Scaffolding - Do I need to use that?
@@ -53,13 +58,19 @@
 generates more than you need most of the time, but it can be a useful learning
 tool.
 
+---
 ##Protip
-```$ bundle exec rails g```
+```bash
+$ bundle exec rails g
+```
+
+---
+#Routes
 
 ---
 #Example Route
 
-```
+```ruby
 DemoApp::Application.routes.draw do
   resources :users
 end
@@ -105,7 +116,7 @@ Completed 302 Found in 36ms (ActiveRecord: 29.8ms)
 ---
 #Turbolinks
 
-TODO
+![fit inline](http://media.railscasts.com/assets/episodes/videos/390-turbolinks.mp4)
 
 ---
 ##Modeling demo users
@@ -120,22 +131,29 @@ TODO
 ---
 #Rake
 * Ruby make
-
-##Protip
-```$ bundle exec rake -vT```
+* Rake is a Make-like program implemented in Ruby. Tasks and dependencies are specified in standard Ruby syntax.
 
 ---
-#Let's take a tour
+##Protip
+```bash
+$ bundle exec rake -vT
+```
 
 ---
 ##IRB
 
-* ```$ irb```
+Interactive Ruby Shell (IRB or irb) is a REPL for ruby. REPL stands for Read–eval–print loop.
+
+```bash
+$ irb
+```
 
 ---
 ##Rails Console
 * Let's you try out code against
-* ```$ bundle exec rails console```
+* ```bash
+$ bundle exec rails console
+```
 
 ---
 #Rails Class Inheritance Hierarchies
@@ -148,7 +166,7 @@ TODO
 ---
 ##Configuring Git
 * See what is in your git config file ```cat ~/.gitconfig```
-```
+```bash
 $ git config --global user.name "Your Name"
 $ git config --global user.email your.email@example.com
 ```
@@ -157,7 +175,7 @@ $ git config --global user.email your.email@example.com
 ---
 #Git Demo
 ^
-```
+```bash
 $ mkdir class_git_demo
 $ cd class_git_demo
 $ git init
@@ -228,11 +246,20 @@ $ git tag
 
 ---
 ##Heroku
-* Managed
-* $$
-* Step 1: ```$ heroku create my-sweet-app```
-* Step 2: ```$ git push heroku master```
-* Step 3: Profit!
+Is managed by Heroku so you don't have to patch or configure, but costs $$.
+
+---
+##Heroku Deployment Process
+
+###Step 1:
+```bash
+$ heroku create my-sweet-app
+```
+###Step 2:
+```bash
+$ git push heroku master
+```
+###Step 3: Profit!
 
 ---
 #Our Application
