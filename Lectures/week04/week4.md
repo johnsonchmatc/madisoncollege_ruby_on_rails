@@ -110,13 +110,14 @@ end
 * Now we can pass the ```to_s``` message to our account object which we have defined a method to respond to
 
 ```ruby
-account.to_s #=> "$0.00
+account.to_s #=> "$0.00"
 ```
 
 ---
 ##Classes
 * Attributes can be created on a class
 * Just a variable 'inside' the object that holds data
+
 ```ruby
 class BankAccount
   attr_accesor :balance
