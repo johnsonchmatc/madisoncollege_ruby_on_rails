@@ -1,6 +1,24 @@
 #Ruby on Rails Development
-##Chapter 7 
+##Chapter 7
 ###Week 6
+
+---
+#Active Record Relationships
+
+---
+##Active Record Relationships
+* belongs_to
+* has_many
+* has_many_through
+
+---
+##Validations
+* Rules to prevent invalid data from being saved
+* Can be conditional
+* Provides error messages back to the controller
+* [http://guides.rubyonrails.org/active_record_validations.html#validation-helpers](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers)
+
+---
 
 ---
 #Demo
@@ -46,7 +64,7 @@ has_secure_password
 * user_test.rb
 
 ```ruby
-@user = User.new(name: "Example User", 
+@user = User.new(name: "Example User",
                  email: "user@example.com",
                  password: "foobar",
                  password_confirmation: "foobar")
