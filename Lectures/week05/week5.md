@@ -15,7 +15,7 @@ autoscale: true
 #Preparing for the demo today
 
 * ```$ git clone git@bitbucket.org:johnsonch/wolfiereader.git```
-* ```$ cd wolfiebooks```
+* ```$ cd wolfiereader``
 * ```$ bundle install --without production```
 
 ---
