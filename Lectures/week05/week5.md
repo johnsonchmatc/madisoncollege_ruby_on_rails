@@ -6,7 +6,7 @@ autoscale: true
 
 * Forking class repo to contribute
 * Asset pipeline
-* Starting WolifeReader
+* Starting WolfieReader
 
 ---
 # Forking class repo to contribute
