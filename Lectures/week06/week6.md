@@ -93,7 +93,12 @@ $ bundle exec rails generate scaffold Feed url:string name:string
 $ bundle exec rails generate model FeedsUsers user_id:integer feed_id:integer --force-plural
 ```
 
+```
 has_and_belongs_to_many :feeds
+```
+
+```
 has_and_belongs_to_many :users
+```
 
 
