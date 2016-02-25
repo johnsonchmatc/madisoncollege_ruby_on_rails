@@ -13,7 +13,7 @@ need to do anything in the browser so long as you can make the tests pass (witho
 $ git clone https://github.com/johnsonchmatc/lab06_start.git
 ```
 
-* Change in to the lab06_start director and run ```$ bundle install --without production```
+* Change in to the lab06_start directory and run ```$ bundle install --without production```
 
 * Then run ```$ bundle exec rake db:migrate``` followed by ```$ bundle exec rake test```
 
