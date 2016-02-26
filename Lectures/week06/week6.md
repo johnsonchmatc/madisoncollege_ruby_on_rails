@@ -22,6 +22,13 @@
 
 ---
 #Demo
+
+###If you need to re-clone
+* ```$ git clone git@bitbucket.org:johnsonch/wolfiereader.git```
+* ```$ cd wolfiereader```
+* ```$ bundle install --without production```
+
+###If you have it already cloned
 * cd into ```wolfiereader```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
