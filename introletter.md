@@ -63,7 +63,7 @@ You will be responsible for your own development environment, we'll set this up 
   * TO USE THE BLACKBOARD TO SEND AN EMAIL, choose Communication from the main set of buttons along the left side of the course page. Choose Send email then choose Select Users. Select my name from the list of users. Follow directions given for subject line and message. Choose Send Copy of Message to self. Attach the required file by clicking the Add button in Section 4 of the screen; choose Browse to find the attachment, double click on the desired filename, click Submit to add the attachment (repeat this step for each attachment). Click Submit to send the email to me.
   
 ##Final Thoughts
-I look forward to working and learning with you this semester. This is the second semester I have taught this course, so things are subject to change.  Always look to the [GitHub](https://github.com/johnsonchmatc/madisoncollege_ruby_on_rails) site for up to date information, and if you find any errors or something doesn't make sense let me know ASAP so I can fix that.  
+I look forward to working and learning with you this semester. This is the second semester I have taught this course, so things are subject to change.  Always look to the [GitHub](https://github.com/johnsonchmatc/madisoncollege_ruby_on_rails) site for up to date information, and if you find any errors or something doesn't make sense let me know ASAP so I can fix that.  All items in the course repository are subject to change, will try and notify you of changes and will talk about next weeks readings/labs at the end of each class lecture. It is however your responsibility to stay up to date with the course repository.
 
 To get off to a good start make sure to complete the steps below.
   

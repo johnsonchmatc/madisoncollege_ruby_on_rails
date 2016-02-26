@@ -1,24 +1,30 @@
 #Lab 6
 * Points 10
-* Date due: 10/22/2015 at 11:55pm CST
 
 ##Assignment
-* Read and follow the Chapter 7 examples from the Rails Tutorial book.
-* Complete the Chapter 7 exercises as well.
-* When you have finished the chapter merge your chapter branch into master, push to github and deploy to heroku.
-* When completed tag the commit you would like graded with ```to-grade-lab06```
 
+The goal of this lab is to learn how to add validations to a model.  I have made
+it easier for your to work on this by creating a series of failing tests. You won't
+need to do anything in the browser so long as you can make the tests pass (without modifying them).
+
+* Find a directory to work, and clone the Lab06 repository with the following command:
+
+```
+$ git clone https://github.com/johnsonchmatc/lab06_start.git
+```
+
+* Change in to the lab06_start directory and run ```$ bundle install --without production```
+
+* Then run ```$ bundle exec rake db:migrate``` followed by ```$ bundle exec rake test```
+
+* Now make the tests pass by adding validations! You will need the following validations:
+    * ```first_name``` must exist and have a length longer than 1
+    * ```last_name``` must exist and have a length longer than 1
+    * ```height_feet``` must be an integer and must be a non negative number not to exceed 11
+    * ```height_inches``` must be an integer and must be a non negative number not to exceed 11 and not to be less than 1, except if it is nil
+    * ```email``` must be unique on create
 
 
 ##Turn in instructions
-* on Blackboard under Labs find Lab 6 submit a word/text document with the following information:
-  * Name
-  * Date
-  * Github Url of the project (can be a public repository)
-  * Tag to grade
-  * Heroku URL of deployed project
-
-###Notes:
-* If you make your github repository for labs private, you'll need to add "johnsonch" as a contributor to the repository so I can access it.
-
-* After you have received a grade you may delete this from Heroku/Github if you want
+* Show your instructor the completed assignment
+* After you have shown your instructor you may delete this from Heroku/Github if you want

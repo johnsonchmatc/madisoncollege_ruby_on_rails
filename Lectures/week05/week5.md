@@ -1,265 +1,285 @@
+footer:@johnsonch :: Chris Johnson :: Ruby on Rails Development - Week 5
+autoscale: true
+
 #Ruby on Rails Development
 ##Week 5
 
+* Forking class repo to contribute
+* Asset pipeline
+* Starting WolfieReader
+
 ---
+# Forking class repo to contribute
+
+---
+#Preparing for the demo today
+
+* ```$ git clone git@bitbucket.org:johnsonch/wolfiereader.git```
+* ```$ cd wolfiereader```
+* ```$ bundle install --without production```
+
+---
+#What are we building?
+##WolifeReader
+
+---
+![fit](https://dl.dropboxusercontent.com/s/3agqlb5ivkemjft/2016-02-17%20at%209.26%20PM.png)
+
+---
+
+![fit](https://dl.dropboxusercontent.com/s/p575kyrsllhn4xf/2016-02-17%20at%209.27%20PM.png)
+
+---
+#Themes
+
+[Bootswatch.com](https://bootswatch.com/)
+
+---
+#Asset Pipeline
+---
+![fit](http://media.railscasts.com/assets/episodes/videos/279-understanding-the-asset-pipeline.mp4)
+
 
 
 ---
 #Demo
-* cd into ```wolfie_books```
+* cd into ```wolfiereader```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
 * ```$ git checkout master```
 * ```$ git fetch```
 * ```$ git pull ```
-* ```$ git checkout  week05_start```
+* ```$ git checkout  week05_in_class```
+* ```$ bundle install --without production```
 
 ---
-
-###Create users controller and model
-```bash
-$ bundle exec rails generate controller Users new
-$ bundle exec rails generate model User name:string email:string
 ```
-
-###Add user model tests
-```ruby
-def setup
-  @user = User.new(name: "Example User", email: "user@example.com")
-end
-
-test "should be valid" do
-  assert @user.valid?
-end
-
-test "name should be present" do
-  @user.name = "          "
-  assert_not @user.valid?
-end
-
-test "email should be present" do
-  @user.email = "          "
-  assert_not @user.valid?
-end
-
-test "name should not be too long" do
-  @user.name = "a" * 51
-  assert_not @user.valid?
-end
-
-test "email should not be too long" do
-  @user.email = "a" * 256
-  assert_not @user.valid?
-end
-
-
-test "email validation should accept valid addresses" do
-  valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org first.last@foo.jp alice+bob@baz.cn]
-  valid_addresses.each do |valid_address|
-    @user.email = valid_address
-    assert @user.valid?, "#{valid_address.inspect} should be valid"
-  end
-end
-
- test "email validation should reject invalid addresses" do
-   invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
-                           foo@bar_baz.com foo@bar+baz.com]
-   invalid_addresses.each do |invalid_address|
-     @user.email = invalid_address
-     assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
-   end 
- end
-
- test "email addresses should be unique" do
-   duplicate_user = @user.dup
-   duplicate_user.email = @user.email.upcase
-   @user.save
-   assert_not duplicate_user.valid?
- end
+$ bundle exec rails g controller static_pages home about opensource
 ```
-
-###Add code to user model
-```ruby
-VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-
-before_save { self.email = email.downcase }
-
-validates :name, presence: true, length: { maximum: 50 }
-validates :email, 
-          presence: true, 
-          length: { maximum: 225 }, 
-          format: { with: VALID_EMAIL_REGEX },
-          uniqueness: { case_sensitive: false }
-```
-###Add some users to our database with Rails console
+Add bootstrap gem
 
 ```ruby
-User.create(name: 'Bart Simpson', email: 'bart@simpsons.com')
-User.create(name: 'Homer Simpson', email: 'homer@simpsons.com')
-User.create(name: 'Lisa Simpson', email: 'lisa@simpsons.com')
+gem 'bootstrap-sass',       '3.2.0.0'
+```
+Then bundle
+
+```$ bundle```
+
+Running just bundle here will take advantage of the setting stored from the first time we used bundler in the .bundle folder
+
+Next create a custom.css.scss file in app/assets/stylesheets
+
+```scss
+@import "bootstrap-sprockets";
+@import "bootstrap";
 ```
 
-###Now find users
-```ruby
-bart = User.find_by(name: 'Bart Simpson')
-bart = User.where('name LIKE ?', '%art%')
+Then modify the application.css to have the correct load order set
+
+```css
+ *= require custom
+ *= require bootswatch
+ *= require_self
 ```
 
-##Cleaning up views
-###app/views/layouts/\_nav.html.erb
+Next create a bootswatch.css file in app/assets/stylesheets also and copy the code
+from bootswatch for this theme.
+
+Next we need to define our layout. There is a great site [http://www.layoutit.com/](http://www.layoutit.com/) which can help you add bootstrap components.
+
+We're going to start by dumping the whole layout in our app/views/layouts/application.html.erb file. Replace the contents of that file with the code below. I'll do it piece by peice but this let's you get the whole file right.
+
 ```erb
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Wolfie Books</a>
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WolfieReader</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li>
-          <%= link_to 'Projects', projects_path %> 
-        </li>
-        <li>
-          <%= link_to 'Clients', clients_path %> 
-        </li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-      </ul>
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="navbar-header">
+
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+    </button> <a class="navbar-brand" href="#">Brand</a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Opensource at WolfieReader</a>
+      </li>
+    </ul>
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-default">
+        Submit
+      </button>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Action</a>
+          </li>
+          <li>
+            <a href="#">Another action</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider">
+          </li>
+          <li>
+            <a href="#">Separated link</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <%= yield %>
+      </div>
     </div>
   </div>
-</nav>
+</body>
+</html>
 ```
 
-##Projects views
-###index.html.erb
-####Table needs classes
-```html
-class="table table-striped table-hover"
-```
+Next we can move that navigation section out into a partial, create a file called _navigation.html.erb in the layouts directory.
 
-####Cleaned up table
+Copy all of the navigation element out of application.html.erb and move it to _navigation.html.erb.  Then add the following code to application.html.erb
+
 ```erb
+<%= render 'layouts/navigation' %>
+```
+
+Next we'll add a jumbotron element to our home page, open up static_pages/home.html.erb and add replace it's content with the following code:
+
+```html
+<div class="jumbotron">
+  <h1>Welcome to WolfieReader</h1>
+  <p>Since they shut down Google Reader we're going to bring it back like the party never left and with more features. Well, maybe.</p>
+  <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+</div>
+```
+
+Now we need to make our application default to this page when someone access our app, let's add a root route in config/routes.rb
+
+```
+root 'static_pages#home'
+```
+
+Next, let's add the gems we are using to our opensource page. We'll start off by adding the markup provided by bootswatch and modifying it
+
+```html
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+    </tr>
+  </thead>
   <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= link_to project.title, project %></td>
-        <td><%= link_to "#{project.start_date}/#{project.end_date}", project %></td>
-        <td><%= link_to project.client.name, project %></td>
-      </tr>
+    <tr>
+      <td>1</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+Now above that we'll add an array of all our gems (this is going to be gross but it's to learn)
+
+```erb
+<%
+    gems = [{name: 'rails', version: '4.2.2'},
+            {name: 'bootstrap-sass', version: '3.2.0.0'},
+            {name: 'sass-rails', version: '5.0.2'},
+            {name: 'uglifier', version: '2.5.3'},
+            {name: 'coffee-rails', version: '4.1.0'},
+            {name: 'jquery-rails', version: '4.0.3'},
+            {name: 'turbolinks', version: '2.3.0'},
+            {name: 'jbuilder', version: '2.2.3'},
+            {name: 'sdoc', version: '0.4.0' },
+            {name: 'sqlite3', version: '1.3.9'},
+            {name: 'byebug', version: '3.4.0'},
+            {name: 'web-console', version: '2.0.0.beta3'},
+            {name: 'spring', version: '1.1.3'},
+            {name: 'minitest-reporters', version: '1.0.5'},
+            {name: 'mini_backtrace', version: '0.1.3'},
+            {name: 'guard-minitest', version: '2.3.1'},
+            {name: 'pg', version: '0.17.1'},
+            {name: 'rails_12factor', version: '0.0.2'}]
+%>
+```
+
+Next we can modify the table to display our data
+
+```erb
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Gem Name</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% gems.each do |gem| %>
+    <tr>
+      <td><%= gem[:name] %></td>
+      <td><%= gem[:version] %></td>
+    </tr>
     <% end %>
   </tbody>
+</table>
 ```
 
-###\_form.html.erb
-```erb
-  <% if @project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+Let's go make the links in our navigation bar work. First we'll want to make our routes a bit more friendly
 
-      <ul>
-      <% @project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-<%= form_for(@project, html: {class: 'form-horizontal'}) do |f| %>
-  <fieldset>
-    <div class="form-group">
-      <%= f.label :title, class: "col-lg-2 control-label" %><br>
-      <div class="col-lg-10">
-        <%= f.text_field :title, class: "form-control" %>
-      </div>
-    </div>
-    <div class="form-group">
-      <%= f.label :description, class: "col-lg-2 control-label" %><br>
-      <div class="col-lg-10">
-      <%= f.text_area :description, class: "form-control" %>
-      </div>
-    </div>
-    <div class="form-group">
-      <%= f.label :start_date, class: "col-lg-2 control-label" %><br>
-      <div class="col-lg-10">
-      <%= f.date_select :start_date, class: "form-control" %>
-      </div>
-    </div>
-    <div class="form-group">
-      <%= f.label :end_date, class: "col-lg-2 control-label" %><br>
-      <div class="col-lg-10">
-      <%= f.date_select :end_date, class: "form-control" %>
-      </div>
-    </div>
-    <div class="form-group">
-      <%= f.label :client_id, class: "col-lg-2 control-label" %><br>
-      <div class="col-lg-10">
-      <%= f.number_field :client_id, class: "form-control" %>
-      </div>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  </fieldset>
-<% end %>
-```
-
-##Clients
-###index.html.erb
-```erb
-<p id="notice"><%= notice %></p>
-
-<h1>Clients</h1>
-<h3><%= link_to '+ New Client', new_client_path %></h3>
-<% @clients.each do |client| %>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title"><%= client.name %></h3>
-    </div>
-    <div class="panel-body">
-      <%= client.contact_name %><br />
-      <a href="mailto:<%= client.contact_email %>"><%= client.contact_email %></a><br />
-      <%= client.phone %><br />
-      <%= client.street %><br />
-      <%= client.city %>,<%= client.state %> <%= client.postal_code %>
-    </div>
-    <div class="panel-footer">
-      <%= link_to 'Edit', edit_client_path(client) %> :: 
-      <%= link_to 'Delete', client, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  </div>
-<% end %>
-```
-
-###Redirect to clients index on create and update using:
 ```ruby
-clients_url 
+Rails.application.routes.draw do
+  get 'about' => 'static_pages#about'
+  get 'opensource' => 'static_pages#opensource'
+  root 'static_pages#home'
+end
 ```
+Then we can use the ```link_to``` helper to generate links for us.
 
-###Update notice to be much more pretty
 ```erb
-<% if notice %>
-<div class="alert alert-dismissible alert-success">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-    <%= notice %>
-</div>
-<% end %>
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <%= link_to 'Home', root_path %>
+      </li>
+      <li>
+        <%= link_to 'About', about_path %>
+      </li>
+      <li>
+        <%= link_to 'Opensource at WolfieReader', opensource_path %>
+      </li>
+    </ul>
 ```
-
-###Then Dry Up notice by moving it to layout
-
-

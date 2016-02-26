@@ -7,3 +7,6 @@
 * Follow the instructions for your choice of operating system
 * If you are choosing Linux the distro of choice is Ubuntu
 * You will need to complete this but can help each other out.
+
+##Turn in instructions
+* Show your instructor the completed assignment

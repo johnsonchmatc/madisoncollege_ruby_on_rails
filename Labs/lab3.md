@@ -1,28 +1,10 @@
 #Lab 3
 * Points 10
-* Date due: 10/01/2015 at 11:55pm CST
 
 ##Assignment
-* Read and follow Chapter 4
-* Complete the Ruby Koans
-* Go to http://rubykoans.com/ and download the Koans
-* Upload the zip file to your Nitrous box
-* Unzip the file ```$ unzip rubykoans.zip```
-* cd into koans directory
-* Initialize the directory as a new git repository ```$ git init .```
-* Create an initial commit ```$ git add . && git commit -a -m 'initial commit'```
-* Start your journey ```$ ruby path_to_enlightenment.rb```
-* After finishing each file create a git commit and move on to the next. 
-  * Tip think about ```git commit``` all and then a message
-* Create a public repository on Github called matc-lab03
-* Push the finished Koans to github
+* Go to [http://docs.railsbridge.org/job-board/](http://docs.railsbridge.org/job-board/) and complete the Job Board application
+* You may work in pairs on this
+* You do not need to worry about the discussion points in the Rails Bridge tutorial working through the deleting jobs section
 
 ##Turn in instructions
-* on Blackboard under Labs find Lab 3 submit a word/text document with the following information:
-  * Name
-  * Date
-  * Github Url of the project (can be a public repository)
-
-###Notes:
-* If you make your github repository for labs private, you'll need to add "johnsonch" as a contributor to the repository so I can access it.
-* After you have received a grade you may delete this from Heroku/Github if you want
+* Show your instructor the completed assignment
