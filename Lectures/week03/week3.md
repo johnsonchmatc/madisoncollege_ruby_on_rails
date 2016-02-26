@@ -219,13 +219,14 @@ $ git status
 $ git diff
 $ git add .
 $ git commit -am 'edits to both a and c'
+$ vim ~/.gitconfig
+  add ``` [alias] ```
+  add ```    tree = log --graph --decorate --oneline --all --color ```
 $ git tree
-$ gco master
+$ git commit master
 $ git merge branch-c
 $ git status
 $ git tree
-$ vim ~/.gitconfig
-  add ```  tree = log --graph --decorate --oneline --all --color ```
 $ git tag
 $ git status
 $ git tag -a project-1 -m 'my code for project 1'

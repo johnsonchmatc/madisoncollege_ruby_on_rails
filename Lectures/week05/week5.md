@@ -6,9 +6,9 @@ autoscale: true
 
 * Forking class repo to contribute
 * Asset pipeline
-* Starting WolifeReader
----
+* Starting WolfieReader
 
+---
 # Forking class repo to contribute
 
 ---
@@ -72,6 +72,14 @@ Next create a custom.css.scss file in app/assets/stylesheets
 ```scss
 @import "bootstrap-sprockets";
 @import "bootstrap";
+```
+
+Then modify the application.css to have the correct load order set
+
+```css
+ *= require custom
+ *= require bootswatch
+ *= require_self
 ```
 
 Next create a bootswatch.css file in app/assets/stylesheets also and copy the code
