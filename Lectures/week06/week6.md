@@ -1,5 +1,5 @@
 #Ruby on Rails Development
-##Chapter 7
+##Chapter 6
 ###Week 6
 
 ---

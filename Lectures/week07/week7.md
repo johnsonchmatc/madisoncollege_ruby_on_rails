@@ -1,9 +1,17 @@
 #Ruby on Rails Development
-##Week 7
+##Chapter 7
+###Week 7
 
 ---
 #Demo
-* cd into ```wolfie_books```
+
+###If you need to re-clone
+* ```$ git clone git@bitbucket.org:johnsonch/wolfiereader.git```
+* ```$ cd wolfiereader```
+* ```$ bundle install --without production```
+
+###If you have it already cloned
+* cd into ```wolfiereader```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
 * ```$ git checkout master```
@@ -13,235 +21,231 @@
 * ```$ rm -f db/*.sqlite3```
 * ```$ bundle```
 * ```$ rake db:migrate```
-* ```$ rake test``` We have a  couple failing tests from last week
 
 ---
-* Generate a new controller for our sessions
 
-```bash
-$ bundle exec rails generate controller Sessions new
+First we'll get all the user routes by updating our routes.rb file
+```ruby
+resources :users
 ```
 
----
-* Add new routes, make sure users resource exists
+Now in the users controller we can add a show method (action)
 
 ```ruby
-  get    'login'   => 'sessions#new'
-  get    'signup'  => 'users#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
-```
-
----
-* Add the methods needed to the sessions controller
-
-```ruby
-class SessionsController < ApplicationController
-  def new
-  end
-
-  def create
-    render 'new'
-  end
-
-  def destroy
-  end
+def show
+  @user = User.find(params[:id])
 end
 ```
 
----
-* Let's add some of the functionality needed to log a user in
-
-```ruby
-def create
-  user = User.find_by(email: params[:session][:email].downcase)
-  if user && user.authenticate(params[:session][:password])
-    # Log the user in and redirect to the user's show page.
-  else
-    flash.now[:danger] = 'Invalid email/password combination'
-    render 'new'
-  end
-end
-```
-
-^ flash.now make sure that it only sticks around for this rendering of a page not one more request
-
-
----
-* Now we'll use the power of Ruby to allow our controllers to have access to methods we define in our Sessions helper.  We'll open up the ApplicationController and add the following:
-
-```ruby
-include SessionsHelper
-```
-
----
-* Then add the following method to the SessionsHelper
-
-```ruby
-def log_in(user)
-  session[:user_id] = user.id
-end
-```
-
-^ session is a hash we can create keys and assign values to, it persists for the session
-
----
-* Now we can use this method in our create action in the sessions controller
-
-```ruby
-log_in(user)
-redirect_to(user)
-```
-
----
-* Next we add a helpers to let us have access to the currently logged in user and if there is a logged in user
-
-```ruby
-def current_user
-  @current_user ||= User.find_by(id: session[:user_id])
-end
-
-def logged_in?
-  !current_user.nil?
-end
-```
-
----
-* Let's add login and log out links to our navigation
+Then we can make our show view actually display some information
 
 ```erb
-<% if logged_in? %>
-  <li>
-    <%= link_to "Log out", logout_path, method: "delete" %>
-  </li>
-<% else %>
-  <li>
-    <%= link_to "Log in", login_path %>
-  </li>
-<% end %>
+<h1>Account</h1>
+<ul>
+  <li><a href="#">My Feeds</a></li>
+  <li><a href="#">Change Password</a></li>
+</ul>
 ```
 
-
----
-* Now we can add a method to help logout a user in our helper
+Our feeds are going to take advantage of nested resources, before we change our
+routes file run a ```$ bundle exec rake routes``` and see what is outputted.
 
 ```ruby
-def log_out
-  session.delete(:user_id)
-  @current_user = nil
-end
+  resources :users do
+    resources :feeds
+  end
 ```
+Then run ```$ rake routes``` again and see the differences.
 
-* Then use it in our controller
+Now we need to change our scaffolded files for feeds to work in the context of a
+user.  We'll start with the feeds controller
 
-```ruby
-def destroy
-  log_out
-  redirect_to root_url
-end
-```
-
----
-#Break
-
----
-##Nested Resources
-
----
-* Let's make it easy to add tasks to a project
+Finding a user for every time the user every time the feeds controller is accessed.
 
 ```ruby
-resources :projects do
-  resources :tasks
-end
-```
+before_action :set_user
 
----
-* Let's get our controller ready to handle this
+....
 
-```ruby
-  before_action :set_project, only: [:new, :show, :edit, :update, :destroy, :create]
-
-...
-
-  def create
-    @task = Task.new(task_params)
-    @task.project = @project
-
-...
 private
-
-    def set_project
-      @project = Project.find(params[:project_id])
+...
+    def set_user
+      @user = User.find(params[:user_id])
     end
 ```
 
-* And we'll also want to update all the ```redirect_to```'s to go to ```@project``` and change notice to success.
+Then modifying the create, update and destroy methods.
 
----
-* Now we can update the project show page 
+```ruby
+def create
+  @feed = @user.feeds.new(feed_params)
+
+  respond_to do |format|
+    if @feed.save
+      format.html { redirect_to user_feed_path(id: @feed), notice: 'Feed was successfully created.' }
+      format.json { render :show, status: :created, location: @feed }
+    else
+      format.html { render :new }
+      format.json { render json: @feed.errors, status: :unprocessable_entity }
+    end
+  end
+end
+
+def update
+  respond_to do |format|
+    if @feed.update(feed_params)
+      format.html { redirect_to user_feed_path(id: @feed), notice: 'Feed was successfully updated.' }
+      format.json { render :show, status: :ok, location: @feed }
+    else
+      format.html { render :edit }
+      format.json { render json: @feed.errors, status: :unprocessable_entity }
+    end
+  end
+end
+
+def destroy
+  @feed.destroy
+  respond_to do |format|
+    format.html { redirect_to user_feeds_url, notice: 'Feed was successfully destroyed.' }
+    format.json { head :no_content }
+  end
+end
+```
+
+Our form needs to know that it requires sending the user.
 
 ```erb
-<div class="row">
-  <h1><%= @project.title %></h1>
-  <h3><%= @project.client.name %></h3>
-</div>
+<%= form_for([@user,@feed]) do |f| %>
+```
+
+The links at the bottom of the edit page need some love too
+
+```erb
+<%= link_to 'Show', user_feed_path %> |
+<%= link_to 'Back', user_feeds_path %>
+```
+
+The table on the index page needs to be update.
+
+```erb
+  <tbody>
+    <% @feeds.each do |feed| %>
+      <tr>
+        <td><%= feed.url %></td>
+        <td><%= feed.name %></td>
+        <td><%= link_to 'Show', user_feed_path(id: feed) %></td>
+        <td><%= link_to 'Edit', edit_user_feed_path(id: feed) %></td>
+        <td><%= link_to 'Destroy', user_feed_path(id: feed), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+```
+
+And on our new page
+
+```erb
+<%= link_to 'Back', user_feeds_path %>
+```
+
+Finally the show page
+
+```erb
+<%= link_to 'Edit', edit_user_feed_path(id: @feed) %> |
+<%= link_to 'Back', user_feeds_path %>
+```
+
+Now we can get users signing up, starting with adding to the users controller a new method.
+
+```ruby
+def new
+  @user = User.new
+end
+```
+
+Let's make the sign up form look really nice.
+
+```erb
+<h1>Sign up</h1>
 
 <div class="row">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Description</h3>
-    </div>
-    <div class="panel-body">
-        <%= @project.description %>
-    </div>
+  <div class="col-md-6 col-md-offset-3 well">
+    <%= form_for(@user, html: {class: "form-horizontal"}) do |f| %>
+      <fieldset>
+        <div class="form-group">
+          <%= f.label :first_name, class: 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.text_field :first_name, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :last_name, class: 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.text_field :last_name, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email, class: 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.email_field :email, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, class: 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password_confirmation, "Confirmation", class: 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-lg-12">
+            <%= f.submit "Create my account", class: "btn btn-primary" %>
+          </div>
+        </div>
+    <% end %>
   </div>
-  <p>
-    <strong>Start date:</strong> <%= @project.start_date %>
-  </br>
-    <strong>End date:</strong> <%= @project.end_date %>
-  </p>
-</div>
-
-<div class="row">
-  <%= link_to 'Edit Project', edit_project_path(@project) %> | <%= link_to 'Back', projects_path %> | <%= link_to 'New Task', new_project_task_path(@project.id) %>
-</div>
-
-<div class="row">
-  <h3>Task log</h3> 
-  <table class="table table-striped table-hover ">
-    <thead>
-      <tr>
-        <th>Employee</th>
-        <th>Hours</th>
-        <th>Date</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @project.tasks.each do |task| %>
-      <tr>
-        <td><%= task.employee_name %></td>
-        <td><%= task.time %></td>
-        <td><%= task.date %></td>
-        <td><%= task.description %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
 </div>
 ```
 
----
-* Our new task form will need some updates
+Then we need a create method to process the form
 
-```erb
-<%= form_for([@project, @task]) do |f| %>
+```ruby
+def create
+  @user = User.new(user_params)
+  if @user.save
+    flash[:success] = "Welcome to Wolfiereader"
+    redirect_to @user
+  else
+    render 'new'
+  end
+end
+
+
+
+  private
+
+    def user_params
+      params.require(:user).permit(:first_name,
+                                   :last_name,
+                                   :email,
+                                   :password,
+                                   :password_confirmation)
+    end
 ```
 
-* Our new task page should have a link updated too
+Then for a little polish we'll make the feeds page only show that user's feeds
 
-```erb
-<%= link_to 'Back', project_path(@project) %>
+```ruby
+  def index
+    @feeds = @user.feeds
+  end
 ```
-
