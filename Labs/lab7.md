@@ -14,7 +14,7 @@ The application should have the following:
 ###Notes:
 * Use validations to validate posts
 * Use associations to tie the post and author together.
-* Use [collection_sellect](http://apidock.com/rails/ActionView/Helpers/FormOptionsHelper/collection_select) in your posts form to create a dropdown.
+* Use [collection_select](http://apidock.com/rails/ActionView/Helpers/FormOptionsHelper/collection_select) in your posts form to create a dropdown.
 
 
 ##Turn in instructions
