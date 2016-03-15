@@ -31,6 +31,10 @@ First, you will need a client. Below is a short list of common clients.
 * /nick nickname	Change your current nickname
 * /quit message	Disconnects you from the current server displaying the message in all connected channels prior to quitting
 
+### Connection Information
+* __server__ - irc.freenode.net
+* __channel__ - ##johnsonch_office_hours
+
 ### Rules of the road
 
 * When talking to someone or you want to get their attention, type their name followed by a colon. Example: Spok: Hello!
