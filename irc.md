@@ -3,7 +3,7 @@ Did you know chat rooms are still a thing? They didn't die with AOL. IRC has bee
 
 ## But what is it?
 
-IRC stands for Internet Relay Chat. IRC is an open standard. No one person or company "owns" it. An IRC network is a decentralised cluster of servers. Servers are typically distributed around the world. IRC clients connects to one of the servers in the cluster and joins channels (chat rooms) to communicate. Users send messages to each other in channels, send private messages to others users, send files, and create new channels.
+IRC stands for Internet Relay Chat. IRC is an open standard. No one person or company "owns" it. An IRC network is a decentralised cluster of servers. Servers are typically distributed around the world. IRC clients connect to one of the servers in the cluster and join channels (chat rooms) to communicate. Users send messages to each other in channels, send private messages to others users, send files, and create new channels.
 
 ## Let's get started
 
