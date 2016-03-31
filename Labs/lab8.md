@@ -16,7 +16,7 @@ $ rails _4.2.2_ new todo
 $ cd todo
 ```
 Edit the gemfile to use the following gems
-[https://gist.github.com/anonymous/f365fb237bb48548502988b18417ee56](https://gist.github.com/anonymous/f365fb237bb48548502988b18417ee560)
+[https://gist.github.com/johnsonch/00fc42717713aa0797ccdec71582476d](https://gist.github.com/johnsonch/00fc42717713aa0797ccdec71582476d)
 
 Then ```$ bundle install --without production``` again.
 
