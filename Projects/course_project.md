@@ -10,6 +10,13 @@
 The goal of the final project is to demonstrate the competencies covered in this course.  You will need to develop an application of your choosing using the Ruby on Rails framework.  In the grading criteria you will find the points you need to hit for a successful project. You are encouraged to use the book and any resources you find on line to help you build your application, but the code turned in must be your own.  Simply copying the code from the book directly is grounds for failure.
 
 ##Grading Criteria
+| Item                          | Points |
+| ----------------------------- | ------ |
+| Repo at correct location      | 10     |
+| All commited tests passing    | 20     |
+| No errors in logs             | 20     |
+| Check in requirements met     | 50     |
+
 ###Project Pitch
 * Description
 * Project "done whens" 2 for each check in (must be above the requirements)
@@ -35,6 +42,7 @@ The goal of the final project is to demonstrate the competencies covered in this
 * Models have at least 1 relationship
 * User login and logout
 * At least 2 tests
+* Responded to all instructor feedback
 
 ####Submission directions
 * Use a Git tag to create a tag called ```check-in-2```
@@ -48,6 +56,7 @@ The goal of the final project is to demonstrate the competencies covered in this
 * Password reset
 * At least 3 tests
 * Deployed
+* Responded to all instructor feedback
 
 ####Submission directions
 * Use a Git tag to create a tag called ```final```
