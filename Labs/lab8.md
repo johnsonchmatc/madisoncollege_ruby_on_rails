@@ -42,7 +42,7 @@ at this point to worry about protecting tasks from different users.
 
 After the time is up or if you finish implementing it reflect on the following
 questions. Type up your response and turn it in on blackboard under
-"Assignments > Lab 10"
+"Assignments > Lab 8"
 
 
 ###Questions for reflection
