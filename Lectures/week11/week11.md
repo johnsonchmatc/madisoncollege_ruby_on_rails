@@ -36,7 +36,7 @@ def logged_in_user
   unless logged_in?
     flash[:danger] = "Please log in."
     redirect_to login_url
-  end 
+  end
 end
 ```
 
@@ -47,68 +47,21 @@ in we can add the following:
 before_action :logged_in_user
 ```
 
-* Next let's change our task entry screen to have a dropdown list of users, but
-first we'll style up the existing form.
+We'll add it to our users and feeds controllers.
 
+On the users controller like so
 
-```erb
-
-<% if @task.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
-
-    <ul>
-    <% @task.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
-
-<%= form_for([@project, @task], html: {class: 'form-horizontal'}) do |f| %>
-  <fieldset>
-    <div class="form-group">
-      <%= f.label :employee_name, class: "col-lg-2 control-label" %><br>
-      <div class="col-lg-10">
-        <%= collection_select(:task, :employee_name, User.all, :name, :name, prompt: true) %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :time, class: "col-lg-2 control-label" %><br>
-      <div class="col-lg-10">
-        <%= f.number_field :time, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :date, class: "col-lg-2 control-label" %><br>
-      <div class="col-lg-10">
-        <%= f.date_select :date, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :description, class: "col-lg-2 control-label" %><br>
-      <div class="col-lg-10">
-        <%= f.text_area :description, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-
-
-  </fieldset>
-
-<% end %>
-
+```ruby
+before_action :logged_in_user, only: [:show]
 ```
 
-* With that our app is feature complete, now we'll start working on adding some fun features.
+And on the feeds controller like
 
-* First let's create a rake task to populate our database with realistic fake data using a gem called Faker.
+```ruby
+before_action :logged_in_user
+```
+
+* Let's create a rake task to populate our database with realistic fake data using a gem called Faker.
   * [https://github.com/stympy/faker](https://github.com/stympy/faker)
 
 ```ruby
@@ -123,7 +76,7 @@ end
 namespace
 
 ```ruby
-namespace :fake do  
+namespace :fake do
 end
 ```
 
@@ -141,58 +94,16 @@ end
   end
 ```
 
-* Then a task for generating clients
+* Then a task for generating feeds
 
 ```ruby
-  desc "generating fake clients"
+  desc "generating fake feeds"
   task :clients => [:environment] do
+    user_ids = User.all.collect { |u| u.id }
     50.times do
-      Client.create(name: Faker::Company.name,
-                    contact_name: Faker::Name.name,
-                    phone: Faker::PhoneNumber.phone_number,
-                    contact_email: Faker::Internet.email,
-                    street: Faker::Address.street_address,
-                    city: Faker::Address.city,
-                    state: Faker::Address.state,
-                    postal_code: Faker::Address.postcode)
-    end
-  end
-```
-
-* Then projects
-
-```ruby
-  desc "generating fake projects"
-  task :projects => [:environment, :clients] do
-    100.times do
-      client_ids = Client.all.collect { |c| c.id }
-      Project.create(title: Faker::App.name,
-                     description: Faker::Lorem.paragraph,
-                     start_date: rand(1..20).days.ago,
-                     end_date: rand(1..20).days.from_now,
-                     client_id: client_ids.shuffle.first)
-    end
-  end
-```
-
-* Then tasks
-
-```ruby
-  desc "generating fake tasks"
-  task :tasks => [:environment, :users, :projects] do
-    project_ids = Project.all.collect { |p| p.id }
-
-    100.times.each_with_index do |index|
-      project = Project.find(project_ids[index])
-      rand(1..20).times do
-        user_names = User.all.collect { |u| u.name }
-        Task.create(employee_name: user_names.shuffle.first,
-                    time: rand(1..24),
-                    date: Faker::Time.between(project.start_date, project.end_date, :all),
-                    project: project,
-                    description: Faker::Lorem.sentences )
-
-      end
+       user = User.find(user_ids.shuffle.first)
+       user.feeds.create(url: Faker::Internet.url,
+                         name: Faker::Company.name)
     end
   end
 ```
@@ -201,7 +112,7 @@ end
 
 ```ruby
   desc "generating fake data"
-  task :all_data => [:environment, :users, :clients, :projects, :tasks] do
+  task :all_data => [:environment, :users, :feeds] do
   end
 ```
 
@@ -270,7 +181,7 @@ $ bundle exec rails generate mailer UserMailer account_activation password_reset
 ```erb
 Hi <%= @user.name %>,
 
-Welcome to the Wolfie Books! Click on the link below to activate your account:
+Welcome to the WolfieReader! Click on the link below to activate your account:
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
 ```
@@ -292,7 +203,7 @@ Welcome to the Wolfie Books! Click on the link below to activate your account:
 * Next to test our emailing we'll need to configure our development.rb file
 
 ```
-  config.action_mailer.default_url_options = { :host => 'https://matc-rails-fall-2015-johnsonch.c9.io' }
+  config.action_mailer.default_url_options = { :host => 'http://localhost' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true
 ```
