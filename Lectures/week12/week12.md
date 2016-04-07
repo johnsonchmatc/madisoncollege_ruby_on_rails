@@ -22,6 +22,35 @@ autoscale: true
 * ```$ bundle exec rake fake:all_data```
 
 ---
+## WillPaginate
+
+```ruby
+gem 'will_paginate', '~> 3.0.6'
+```
+
+* Then we'll need to install the gem
+
+```bash
+$ bundle install
+```
+
+* Simply adjust the index action you want to paginate
+
+```ruby
+  def index
+    @projects = Project.paginate(:page => params[:page], :per_page => 10)
+  end
+```
+
+* Then add the page picker helper to your index page
+
+```erb
+<div class="row">
+  <div class="col-md-12">
+    <%= will_paginate @projects %>
+  </div>
+</div>
+```
 
 #Endless Scrolling
 
