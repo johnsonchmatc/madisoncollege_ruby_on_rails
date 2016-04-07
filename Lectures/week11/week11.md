@@ -80,14 +80,14 @@ namespace :fake do
 end
 ```
 
-* Next we'll add a task for generating users to lib/tasks/data_generation.rake
+* Next we'll add a task for generating users to lib/tasks/populate.rake
 
 ```ruby
   desc "generating fake users"
   task :users => [:environment] do
     50.times do
-      User.create(first_name: Faker::Name.first,
-                  last_name: Faker::Name.last,
+      User.create(first_name: Faker::Name.first_name,
+                  last_name: Faker::Name.last_name,
                   email: Faker::Internet.email,
                   password: 'P@ssw0rd!',
                   password_confirmation: 'P@ssw0rd!')
