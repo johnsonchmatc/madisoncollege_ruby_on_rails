@@ -19,7 +19,7 @@ autoscale: true
 * ```$ git checkout master```
 * ```$ git fetch```
 * ```$ git pull ```
-* ```$ git checkout week10_start```
+* ```$ git checkout week11_start```
 * ```$ rm -f db/*.sqlite3```
 * ```$ bundle```
 * ```$ rake db:migrate```
@@ -202,7 +202,8 @@ $ bundle exec rails generate mailer UserMailer account_activation password_reset
 
 ```ruby
   def account_activation(user)
-    mail to: user.email, subject: "Account activation"
+    @user = user
+    mail to: @user.email, subject: "Account activation"
   end
 ```
 
@@ -212,7 +213,7 @@ $ bundle exec rails generate mailer UserMailer account_activation password_reset
 
 
 ```erb
-Hi <%= @user.name %>,
+Hi <%= @user.firs_name %>,
 
 Welcome to the WolfieReader! Click on the link below to activate your account:
 
@@ -224,7 +225,7 @@ Welcome to the WolfieReader! Click on the link below to activate your account:
 ```
 <h1>Wolfie's List</h1>
 
-<p>Hi <%= @user.name %>,</p>
+<p>Hi <%= @user.first_name %>,</p>
 
 <p>
 Welcome to the Wolfiereader! Click on the link below to activate your account:
