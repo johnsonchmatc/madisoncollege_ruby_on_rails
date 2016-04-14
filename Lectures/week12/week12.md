@@ -8,7 +8,13 @@ autoscale: true
 
 ---
 #Demo
-* cd into ```wolfie_books```
+###If you need to re-clone
+* ```$ git clone git@bitbucket.org:johnsonch/wolfiereader.git```
+* ```$ cd wolfiereader```
+* ```$ bundle install --without production```
+
+###If you have it already cloned
+* cd into ```wolfiereader```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
 * ```$ git checkout master```
@@ -18,10 +24,37 @@ autoscale: true
 * ```$ rm -f db/*.sqlite3```
 * ```$ bundle```
 * ```$ bundle exec rake db:migrate```
-* ```$ bundle exec rake test``` We have a  couple failing tests from last week
 * ```$ bundle exec rake fake:all_data```
 
 ---
+##Style Feeds Index
+
+Let's make our feeds index look a bit better
+
+```erb
+<p id="notice"><%= notice %></p>
+
+<h1>My Feeds</h1>
+
+<p>
+<%= link_to 'New Feed', new_user_feed_path %>
+</p>
+
+<% @feeds.each do |feed| %>
+  <div class="well well-sm">
+    <div class="row">
+      <span class="col-sm-10 feed-name">
+        <%= link_to feed.name, user_feed_path(id: feed) %>
+      </span>
+      <span class="col-sm-2">
+        <%= link_to('Remove', user_feed_path(id: feed), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger") %>
+      </span>
+    </div>
+  </div>
+<% end %>
+```
+
+
 ## WillPaginate
 
 ```ruby
@@ -38,7 +71,7 @@ $ bundle install
 
 ```ruby
   def index
-    @projects = Project.paginate(:page => params[:page], :per_page => 10)
+    @feeds = @user.feeds.paginate(:page => params[:page], :per_page => 10)
   end
 ```
 
@@ -47,7 +80,7 @@ $ bundle install
 ```erb
 <div class="row">
   <div class="col-md-12">
-    <%= will_paginate @projects %>
+    <%= will_paginate @feeds %>
   </div>
 </div>
 ```
@@ -62,10 +95,12 @@ $ bundle install
 * Modify our index.json.jbuilder to support our needed information
 
 ```ruby
-json.array!(@projects) do |project|
-  json.extract! project, :id, :title, :start_date, :end_date, :client_id
-  json.client project.client, :id, :name
-  json.url project_url(project)
+json.array!(@feeds) do |feed|
+  # we don't need the feed's url in this data, we'll keep it small this way
+  json.extract! feed, :id, :name
+  # over the stock generate schema we need to pass in our user instance variable
+  # so we can generate the proper url.
+  json.url user_feed_url(@user, feed, format: :json)
 end
 ```
 
@@ -76,23 +111,27 @@ end
   var currentPage = 0;
 
   function loadData(data) {
-    $('#projects').append(Handlebars.compile("{{#projects}} \
-      <tr class='ad'> \
-        <td><a href='/projects/{{id}}'>{{title}}</a></td> \
-        <td><a href='/projects/{{id}}'>{{start_date}}/{{end_date}}</a></td> \
-        <td><a href='/projects/{{id}}'>{{client.name}}</a></td> \
-        </tr>{{/projects}}")({ projects: data }));
+    $('#feeds').append(Handlebars.compile("{{#feeds}} \
+      <div class='well well-sm'> \
+        <div class='row'> \
+          <span class='col-sm-10 feed-name'><a href='{{url}}'>{{name}}</a></span> \
+          <span class='col-sm-2'>  \
+            <a data-confirm='Are you sure?' class='btn btn-danger' rel='nofollow' data-method='delete' href='{{url}}'>Remove</a> \
+          </span> \
+        </div> \
+      </div> \
+    {{/feeds}}")({ feeds: data }));
     if (data.length == 0) $('#next_page_spinner').hide();
   }
 
   function nextPageWithJSON() {
     currentPage += 1;
-    var newURL = '/projects.json?page=' + currentPage;
+    var newURL = '/users/64/feeds.json?page=' + currentPage;
 
     var splitHref = document.URL.split('?');
     var parameters = splitHref[1];
     if (parameters) {
-      parameters = parameters.replace(/[?&]page=[^&]*/, '');
+      parameters = parameters.replace(/[?&]page=[^&]*/, "");
       newURL += '&' + parameters;
     }
     return newURL;
@@ -122,7 +161,6 @@ end
   }
 
   function observeScroll(event) {
-    console.log("observeScroll");
     if (readyForNextPage()) getNextPage();
   }
 
@@ -141,117 +179,21 @@ Rails.application.config.assets.precompile += %w( pagination.js )
 * Now adjust the index
 
 ```
-<h1>Listing Projects</h1>
+<p id="notice"><%= notice %></p>
 
-<%= link_to 'New Project', new_project_path %>
+<h1>My Feeds</h1>
 
-<table class="table table-striped table-hover">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Start date/End Date</th>
-      <th>Client</th>
-    </tr>
-  </thead>
+<p>
+<%= link_to 'New Feed', new_user_feed_path %>
+</p>
 
-  <tbody id="projects">
-  </tbody>
-</table>
-
-<br>
+<div id="feeds">
+</div>
 
 <img src='http://www.fostersystems.com/ccdata/images/spinner.gif' id='next_page_spinner' />
-
-<%= javascript_include_tag 'pagination' %>
-
-```
-
-# Weather API
-* Go to [http://openweathermap.org/](http://openweathermap.org/) and sign up for a free account
-* Get your API key and add it to your application.yml
-
-```yaml
-  weather_api: <YOUR KEY HERE>
-```
-
-* Add a weather.js.coffee
-
-```
-@convertKToF = (k) ->
-  Math.round((k - 273.15)* 1.8000 + 32.00)
-
-@convertBearing = (bearing) ->
-  points = ["N ","NE","E","SE","S","SW","W","NW"]
-  seg_size = 360 / points.length
-  points[Math.floor(((parseInt(bearing) + (seg_size / 2)) % 360) / seg_size)]
-
-@renderWeather = (data) ->
-  weatherPanel = $("#weather-data")
-  weatherPanel.html ""
-  weatherPanel.append Handlebars.compile(
-    "{{#weather}}
-      <h3>Weather</h3>
- Temperature:
-      <ul>
-        <li>Current Temp {{main.temp}}&degF</li>
-        <li>Wind: {{main.wind_speed}} mph {{main.wind_direction}}</li>
-       </ul>
-    {{/weather}}")(weather: data)
-  return
-
-@renderError = () ->
-  weatherPanel = $("#weather-data")
-  weatherPanel.html ""
-  weatherPanel.append Handlebars.compile(
-    "<h3>Error Retrieving Weather</h3>")
-  return
-
-@populateWeather = (data) ->
-  if data.cod == "404"
-    renderError()
-  else
-    sanitizedData = {
-      main: {
-        temp: convertKToF(data.main.temp),
-        wind_direction: convertBearing(data.wind.deg),
-        wind_speed: data.wind.speed
-      }
-    }
-    renderWeather(sanitizedData)
-
-@getWeather = (url) ->
-  $.ajax
-    method: "get"
-    url: url
-    success: (data) ->
-      populateWeather(data)
-      return
-    error: (data) ->
-      console.log "error", data
-      renderError()
-      return
-```
-
-* Update assets initializer
-
-```
-Rails.application.config.assets.precompile += %w( pagination.js weather.js )
-```
-
-* Add weather to show page
-```
-<!-- inside the left column -->
-  <div class="col-md-2" id="weather-data">
-    <h3>Weather</h3>
-    <%= image_tag("http://www.fostersystems.com/ccdata/images/spinner.gif", :id => 'next_page_spinner') %>
-  </div>
-
-<!-- at the bottom of the page -->
-<%= javascript_include_tag 'weather' %>
-
 <script>
-  var url =<%=raw "'http://api.openweathermap.org/data/2.5/weather?zip=#{@client.postal_code},us&appid=#{ENV['weather_api']}'" %>
-  window.getWeather(url);
+  var userId = <%= @user.id %>;
 </script>
+<%= javascript_include_tag 'pagination' %>
 ```
 
