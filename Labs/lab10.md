@@ -4,14 +4,10 @@
 ##Assignment
 
 Create a simple budgeting application using scaffolding.  You should have the
-ability to create a budget for a month in a given year.  You can try to use dates
-or just simply create models for year and month specifying the relationship
-that a year has many months and a month belongs to a year. For a given month
-you should display all the budgets and their current balance.  Upon viewing a
-budget you should see all the entries for that budget.
+ability to create a budget. Upon viewing a budget you should see all the entries
+for that budget. The budgets index page should show the starting balance and the
+current balance (starting - all amounts).
 
-* Year
-* Month
 * Budget
     * Name
     * Description
