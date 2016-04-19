@@ -10,12 +10,13 @@
 The goal of the final project is to demonstrate the competencies covered in this course.  You will need to develop an application of your choosing using the Ruby on Rails framework.  In the grading criteria you will find the points you need to hit for a successful project. You are encouraged to use the book and any resources you find on line to help you build your application, but the code turned in must be your own.  Simply copying the code from the book directly is grounds for failure.
 
 ##Grading Criteria
-| Item                          | Points |
-| ----------------------------- | ------ |
-| Repo at correct location      | 10     |
-| All commited tests passing    | 20     |
-| No errors in logs             | 20     |
-| Check in requirements met     | 50     |
+| Item                                                 | Points |
+| ---------------------------------------------------- | ------ |
+| Repo at correct location (and git tag in place)      | 10     |
+| All commited tests passing                           | 20     |
+| No errors in logs                                    | 20     |
+| Code style                                           | 20     |
+| Check in requirements met                            | 30     |
 
 ###Project Pitch
 * Description
