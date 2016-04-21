@@ -6,10 +6,12 @@
 * You will need to create a rails application that can search for weather by
 zip/postal code.  The site should display the most recent 10 zip/postal codes
 that were searched and their current weather.  The weather should be cached for
-5 minutes to reduce the number of calls to the weather service.
+5 minutes (save to the database and use ```updated_at```) to reduce the number of calls to the weather service.
 
 * Weather API [http://openweathermap.org/api](http://openweathermap.org/api) -
 you will need a free API key for this assignment
+* A gem I like to use to make API calls is https://github.com/rest-client/rest-client
+* Sample request url: ```http://api.openweathermap.org/data/2.5/weather?zip=SOME_POSTAL_CODE,us&appid=YOUR_API_KEY```
 
 ###Sample UI
 
