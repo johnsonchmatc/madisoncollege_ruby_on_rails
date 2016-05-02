@@ -213,4 +213,4 @@ Revision A 01/12/2015
 | 13  |  04/21 | Chapter 12 (ajax)                  | Lab 11                                            |
 | 14  |  04/28 | Open lab (Final Project)           |                                                   |
 | 15  |  05/05 | Building a virtual server          | Lab 12 (in class)                                 |
-| 16  |  05/12 | Exam 2                             | Project (5pm on 12/17/2015)                       |
+| 16  |  05/12 | Exam 2                             | Project (5pm on 5/12/2016)                       |
