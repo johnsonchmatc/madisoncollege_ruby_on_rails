@@ -159,7 +159,7 @@ $ sudo chown deploy /var/www/
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
 gem 'capistrano-rbenv', '~> 2.0', require: false
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.13'
 ```
 
 And remove the Postgres gem if you are following along with this tutorial
