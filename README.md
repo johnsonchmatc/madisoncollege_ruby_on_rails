@@ -1,4 +1,4 @@
-#Madison College Ruby on Rails Course Fall 2015
+#Madison College Ruby on Rails Course Spring 2016
 * [Syllabus](syllabus.md)
 * [Introduction Letter](introletter.md)
 
