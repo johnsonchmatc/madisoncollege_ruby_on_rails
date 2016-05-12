@@ -206,7 +206,7 @@ Then change your config/deploy.rb to the following:
 
 ```
 # config valid only for Capistrano 3.1
-lock '3.4.0'
+lock '3.5.0'
 
 set :application, 'your_application_name'
 set :repo_url, 'git@github.com:your_git_url'
@@ -287,7 +287,7 @@ We'll need to commit some of our code
 
 Now we should be able to deploy our site.
 ```
-$ bundle exec cap production deploy deploy:migration
+$ bundle exec cap production deploy deploy:migrate
 ```
 
 ##Turn in instructions
