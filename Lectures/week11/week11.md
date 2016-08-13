@@ -7,8 +7,13 @@ autoscale: true
 * https://codecaster.io room: johnsonch
 
 ---
-#Demo
-* cd into ```wolfie_books```
+###If you need to re-clone
+* ```$ git clone git@bitbucket.org:johnsonch/wolfiereader.git```
+* ```$ cd wolfiereader```
+* ```$ bundle install --without production```
+
+###If you have it already cloned
+* cd into ```wolfiereader```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
 * ```$ git checkout master```
@@ -17,18 +22,109 @@ autoscale: true
 * ```$ git checkout week11_start```
 * ```$ rm -f db/*.sqlite3```
 * ```$ bundle```
-* ```$ bundle exec rake db:migrate```
-* ```$ bundle exec rake test``` We have a  couple failing tests from last week
-* ```$ bundle exec rake fake:all_data```
+* ```$ rake db:migrate```
 
 ---
+#Authorization
+* In WolfieReader we'll want to lock down the application to only allow logged
+in users to be able to use our app.
+
+* Let's add the following to our ```app/controllers/application_controller.rb```
+
+```ruby
+def logged_in_user
+  unless logged_in?
+    flash[:danger] = "Please log in."
+    redirect_to login_url
+  end
+end
+```
+
+* Now whenever we want to limit a controller action to require the user be logged
+in we can add the following:
+
+```ruby
+before_action :logged_in_user
+```
+
+We'll add it to our users and feeds controllers.
+
+On the users controller like so
+
+```ruby
+before_action :logged_in_user, only: [:show]
+```
+
+And on the feeds controller like
+
+```ruby
+before_action :logged_in_user
+```
+
+* Let's create a rake task to populate our database with realistic fake data using a gem called Faker.
+  * [https://github.com/stympy/faker](https://github.com/stympy/faker)
+
+```ruby
+group :development, :test do
+  ...
+  gem 'faker'
+end
+
+```
+
+* Then we'll add file called populate.rake in lib/tasks and first define our
+namespace
+
+```ruby
+namespace :fake do
+end
+```
+
+* Next we'll add a task for generating users to lib/tasks/populate.rake
+
+```ruby
+  desc "generating fake users"
+  task :users => [:environment] do
+    50.times do
+      User.create(first_name: Faker::Name.first_name,
+                  last_name: Faker::Name.last_name,
+                  email: Faker::Internet.email,
+                  password: 'P@ssw0rd!',
+                  password_confirmation: 'P@ssw0rd!')
+    end
+  end
+```
+
+* Then a task for generating feeds
+
+```ruby
+  desc "generating fake feeds"
+  task :feeds => [:environment] do
+    user_ids = User.all.collect { |u| u.id }
+    50.times do
+       user = User.find(user_ids.shuffle.first)
+       user.feeds.create(url: Faker::Internet.url,
+                         name: Faker::Company.name)
+    end
+  end
+```
+
+* Finally why not have one task that does everything?
+
+```ruby
+  desc "generating fake data"
+  task :all_data => [:environment, :users, :feeds] do
+  end
+```
+
+
 #Account activation
 ##Activation
 
 * Generate AccountActivations controller
 
 ```bash
-$ bundle exec rails generate controller AccountActivations
+$ bundle exec rails generate controller AccountActivations edit
 ```
 
 * Add a route for our controller
@@ -43,7 +139,7 @@ resources :account_activations, only: [:edit]
 $ bundle exec rails generate migration add_activation_to_users activation_digest:string activated:boolean activated_at:datetime
 ```
 
-* Create a new activation token for each user creation
+* Create a new activation token for each user creation in the user model
 
 ```ruby
   before_create :create_activation_token
@@ -63,18 +159,51 @@ $ bundle exec rails generate migration add_activation_to_users activation_digest
 attr_accessor :activation_token
 ```
 
+* We can test this in the rails console by creating a new user and saving it
+
+```ruby
+@user = User.new(first_name: "Bart",
+                 last_name: "Simpson",
+                 email: "bart@simpsons.com",
+                 password: "P@ssw0rd!",
+                 password_confirmation: "P@ssw0rd!")
+@user.save
+```
+
+* Then we can refactor this code to some smaller methods
+
+```ruby
+    def create_activation_token
+      self.activation_token  = SecureRandom.urlsafe_base64
+      self.activation_digest = create_digest(self.activation_token)
+    end
+
+    def create_digest(token)
+      BCrypt::Password.create(self.activation_token, cost: cost)
+    end
+
+    def cost
+      if ActiveModel::SecurePassword.min_cost
+        return BCrypt::Engine::MIN_COST
+      else
+        return BCrypt::Engine.cost
+      end
+    end
+```
+
+
 * Let's keep working through the process and send out an email
 
 ```bash
 $ bundle exec rails generate mailer UserMailer account_activation password_reset
 ```
 
-* Next make the activation mailer take a user object
+* Next make the user activation mailer take a user object
 
 ```ruby
   def account_activation(user)
     @user = user
-    mail to: user.email, subject: "Account activation"
+    mail to: @user.email, subject: "Account activation"
   end
 ```
 
@@ -84,9 +213,9 @@ $ bundle exec rails generate mailer UserMailer account_activation password_reset
 
 
 ```erb
-Hi <%= @user.name %>,
+Hi <%= @user.firs_name %>,
 
-Welcome to the Wolfie Books! Click on the link below to activate your account:
+Welcome to the WolfieReader! Click on the link below to activate your account:
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
 ```
@@ -96,10 +225,10 @@ Welcome to the Wolfie Books! Click on the link below to activate your account:
 ```
 <h1>Wolfie's List</h1>
 
-<p>Hi <%= @user.name %>,</p>
+<p>Hi <%= @user.first_name %>,</p>
 
 <p>
-Welcome to the Wolfie Books! Click on the link below to activate your account:
+Welcome to the Wolfiereader! Click on the link below to activate your account:
 </p>
 
 <%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
@@ -108,7 +237,7 @@ Welcome to the Wolfie Books! Click on the link below to activate your account:
 * Next to test our emailing we'll need to configure our development.rb file
 
 ```
-  config.action_mailer.default_url_options = { :host => 'https://matc-rails-fall-2015-johnsonch.c9.io' }
+  config.action_mailer.default_url_options = { :host => 'http://localhost:3000' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true
 ```
@@ -146,18 +275,18 @@ ActionMailer::Base.smtp_settings = {
       :password             => ENV['smtp_password'],
       :authentication       => 'login',
       :enable_starttls_auto => true,
-      :openssl_verify_mode => 'none'
+      :openssl_verify_mode  => 'none'
 }
 ```
 
-* For this to work on Heroku we'll need to set environment variables, this is something to note for your own environment.
+* **NOTE** For this to work on Heroku we would need to set environment variables, this is something to note for your own environment.
 
 ```bash
 $ heroku config:set SMTP_SERVER=my.mail.server
 ```
 
 
-* Then we'll add a method to authenticate our users
+* Then we'll add a method to authenticate our users model
 
 ```ruby
 def authenticated?(attribute, token)
@@ -184,7 +313,7 @@ end
     end
   end
 ```
-* Let's send out an email to the user when they are created
+* Let's send out an email to the user when they are created in the user controller
 
 ```ruby
   if @user.save && UserMailer.account_activation(@user).deliver_now
@@ -207,32 +336,3 @@ end
 ```
 
 ---
-## Next we'll add WillPaginate
-
-```ruby
-gem 'will_paginate', '~> 3.0.6'
-```
-
-* Then we'll need to install the gem
-
-```bash
-$ bundle install
-```
-
-* Simply adjust the index action you want to paginate
-
-```ruby
-  def index
-    @projects = Project.paginate(:page => params[:page], :per_page => 10)
-  end
-```
-
-* Then add the page picker helper to your index page
-
-```erb
-<div class="row">
-  <div class="col-md-12">
-    <%= will_paginate @projects %>
-  </div>
-</div>
-```

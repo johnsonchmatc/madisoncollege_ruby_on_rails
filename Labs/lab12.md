@@ -49,6 +49,7 @@ Next we'll add our deploy user to the wheel group.
 Once we have the deploy user added to the group, we can logout and login as the deploy user.
 
 ###SSH Keys
+####On our VPS
 
 We'll start out on our VPS and generate a key out there with the following command, and copy it so we can add it to Github.
 
@@ -59,7 +60,8 @@ $ cat .ssh/id_rsa.pub
 
 With our SSH key created we need to add it to our GitHub account so the server can clone our repository.
 
-Next we'll want to upload our development machine (c9.io) ssh key so we don't need to keep typing the following command:
+####On our development machine
+Next we'll want to upload our development machine ssh key so we don't need to keep typing the following command (if you are on linux or OS X):
 ```
 $ ssh-copy-id -i ~/.ssh/id_rsa.pub deploy@<your servers ip>
 ```
@@ -118,9 +120,19 @@ $ gem install passenger bundler
 $ rbenv rehash
 ```
 
+We need swap for Passenger
+
+```
+$ sudo dd if=/dev/zero of=/swap bs=1M count=1024
+$ sudo mkswap /swap
+$ sudo swapon /swap
+```
+
+
 ```
 $ sudo /home/deploy/.rbenv/shims/passenger-install-nginx-module
 ```
+
 
 ```
 $ wget https://raw.githubusercontent.com/johnsonch/nginx-init-ubuntu/master/nginx -O nginx
@@ -159,7 +171,11 @@ $ sudo chown deploy /var/www/
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
 gem 'capistrano-rbenv', '~> 2.0', require: false
-gem 'mysql2'
+
+group :production do
+  gem 'mysql2', '~> 0.3.13'
+  gem 'rails_12factor', '0.0.2'
+end
 ```
 
 And remove the Postgres gem if you are following along with this tutorial
@@ -190,7 +206,7 @@ Then change your config/deploy.rb to the following:
 
 ```
 # config valid only for Capistrano 3.1
-lock '3.4.0'
+lock '3.5.0'
 
 set :application, 'your_application_name'
 set :repo_url, 'git@github.com:your_git_url'
@@ -257,7 +273,7 @@ production:
   password: root
 ```
 
-We'll need to create a application.yml file in var/www/shared/config with the correct values for your application.
+We'll need to create an application.yml file in var/www/shared/config with the correct values for your application.
 
 ```
 production:
@@ -271,7 +287,7 @@ We'll need to commit some of our code
 
 Now we should be able to deploy our site.
 ```
-$ bundle exec cap production deploy deploy:migration
+$ bundle exec cap production deploy deploy:migrate
 ```
 
 ##Turn in instructions

@@ -3,7 +3,7 @@ Did you know chat rooms are still a thing? They didn't die with AOL. IRC has bee
 
 ## But what is it?
 
-IRC stands for Internet Relay Chat. IRC is an open standard. No one person or company "owns" it. An IRC network is a decentralised cluster of servers. Servers are typically distributed around the world. IRC clients connects to one of the servers in the cluster and joins channels (chat rooms) to communicate. Users send messages to each other in channels, send private messages to others users, send files, and create new channels.
+IRC stands for Internet Relay Chat. IRC is an open standard. No one person or company "owns" it. An IRC network is a decentralised cluster of servers. Servers are typically distributed around the world. IRC clients connect to one of the servers in the cluster and join channels (chat rooms) to communicate. Users send messages to each other in channels, send private messages to others users, send files, and create new channels.
 
 ## Let's get started
 
@@ -30,6 +30,10 @@ First, you will need a client. Below is a short list of common clients.
 * /msg nick message	Sends a private message to the specified user
 * /nick nickname	Change your current nickname
 * /quit message	Disconnects you from the current server displaying the message in all connected channels prior to quitting
+
+### Connection Information
+* __server__ - irc.freenode.net
+* __channel__ - ##johnsonch_office_hours
 
 ### Rules of the road
 
