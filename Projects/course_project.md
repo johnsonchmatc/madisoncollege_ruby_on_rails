@@ -4,19 +4,20 @@
 * Project Pitch (10pts)
 * Project check-in 1 3/25 (100pts)
 * Project check-in 2 4/22 (100pts)
-* Final Submission 5/14 (100pts)
+* Project check-in 3 5/14 (100pts)
 
 ##Description
-The goal of the final project is to demonstrate the competencies covered in this course.  You will need to develop an application of your choosing using the Ruby on Rails framework.  In the grading criteria you will find the points you need to hit for a successful project. You are encouraged to use the book and any resources you find on line to help you build your application, but the code turned in must be your own.  Simply copying the code from the book directly is grounds for failure.
+The goal of the final project is to demonstrate the competencies covered in this course.  You will need to develop an application of your choosing using the Ruby on Rails framework.  In the grading criteria you will find the points you need to hit for a successful project. You are encouraged to use the book and any resources you find on line to help you build your application, but the code turned in must be your own.  Simply copying the code from the book or a tutorial directly is grounds for failure.
 
-##Grading Criteria
+
+##Grading rubric (for each check in)
 | Item                                                 | Points |
 | ---------------------------------------------------- | ------ |
-| Repo at correct location (and git tag in place)      | 10     |
-| All commited tests passing                           | 20     |
-| No errors in logs                                    | 20     |
-| Code style                                           | 20     |
-| Check in requirements met                            | 30     |
+| repositorysitory at correct location (and git tag in place)               | 10     |
+| All committed tests passing                                   | 10     |
+| No errors in logs or error pages visible (unless documented)  | 30     |
+| Code style                                                    | 10     |
+| Check in requirements met                                     | 40     |
 
 ###Project Pitch
 * Description
@@ -29,8 +30,9 @@ The goal of the final project is to demonstrate the competencies covered in this
 * A User model
 * User signup
 * At least 1 test
-* A private bitbucket repo created, and instructor added
+* A private bitbucket repository created, and instructor added
 * Personal "done whens" met
+* README.md contains information for setting up the project from scratch, including any migrations or data that needs to be setup for the project to run without errors.
 
 ####Submission directions
 * Use a Git tag to create a tag called ```check-in-1```
@@ -46,6 +48,7 @@ The goal of the final project is to demonstrate the competencies covered in this
 * At least 2 tests
 * Personal "done whens" met
 * Responded to all instructor feedback
+* README.md contains information for setting up the project from scratch, including any migrations or data that needs to be setup for the project to run without errors.
 
 ####Submission directions
 * Use a Git tag to create a tag called ```check-in-2```
@@ -54,13 +57,14 @@ The goal of the final project is to demonstrate the competencies covered in this
   * Date
   * bitbucket url
 
-###Final Submission
+###Check-in 3
 * Account activation
 * Password reset
 * At least 3 tests
 * Deployed
 * Personal "done whens" met
 * Responded to all instructor feedback
+* README.md contains information for setting up the project from scratch, including any migrations or data that needs to be setup for the project to run without errors.
 
 ####Submission directions
 * Use a Git tag to create a tag called ```final```
@@ -72,4 +76,4 @@ The goal of the final project is to demonstrate the competencies covered in this
 
 
 ###Notes
-* [How to add your instructor and push tags](../how_tos/adding_instructor_to_your_bitbucket_repository.md)
+* [How to add your instructor and push tags](../how_tos/adding_instructor_to_your_bitbucket_repositorysitory.md)

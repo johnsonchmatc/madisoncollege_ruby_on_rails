@@ -6,7 +6,7 @@ Catalog #152 10152157-0002
 
 * *Credits:* 3
 * *Course Format:* face to face
-* *Class Schedule:* TM 5:30 – 9:20 PM 01/21/2016 - 05/12/2015
+* *Class Schedule:* TU 5:30 – 9:20 PM 08/30/2016 - 12/13/2016
 * *Location:* Truax-Health Building Rm 335
 * *Instructor:* Chris Johnson
 * *Email:* cgjohnson1@madisoncollege.edu
@@ -14,6 +14,7 @@ Catalog #152 10152157-0002
 * *Office Hours:*
 	* Email for an appointment
 	* IRC #johnsonch_office_hours on irc.freenode.net
+    * Slack: team-mita.slack.com #ruby-on-rails
   * [http://officehours.johnsonch.com/](http://officehours.johnsonch.com/)
   * [IRC Tutorial](https://github.com/johnsonch/madisoncollege_ruby_on_rails/blob/master/irc.md)
 
@@ -52,13 +53,13 @@ or as a traditional hard copy from book stores and amazon.com .
 * *Programming Ruby 1.9 & 2.0 (4th edition): The Pragmatic Programmers' Guide* by Dave Thomas, with Chad Fowler and Andy Hunt
 [http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0](http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0)
 
-* *Agile Web Development with Rails (4th edition)*
+* *Agile Web Development with Rails (5th edition)*
 by Sam Ruby
-This is the definitive reference book on version 4 of Rails. Available as paperback or PDF at
-[http://pragprog.com/book/rails4/agile-web-development-with-rails](http://pragprog.com/book/rails4/agile-web-development-with-rails)
+This is the definitive reference book on version 5 of Rails. Available as paperback or PDF at
+[http://pragprog.com/book/rails5/agile-web-development-with-rails](http://pragprog.com/book/rails4/agile-web-development-with-rails)
 
-* *Cooking with Rails 4, A Ruby on Rails Crash Course* by Brian Hogan.
-The PDF is available at [http://napcs.com/resources/rails/cookbook/](http://napcs.com/resources/rails/cookbook/)
+* *Cooking with Rails 5, A Ruby on Rails Crash Course* by Brian Hogan.
+The PDF is available at [https://dl.dropboxusercontent.com/u/50783/rails5_cookbook.pdf](https://dl.dropboxusercontent.com/u/50783/rails5_cookbook.pdf)
 
 
 ###Course Competencies:
@@ -72,7 +73,7 @@ During this course students will:
 *   Present their new web application to classmates
 
 ##Environment
-Students will attend lectures, use blackboard and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting.
+Students will complete readings, attend lectures, use blackboard and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting.
 
 #Core Abilities
 Madison College Core Abilities are eight key life and success skills that contribute to the development of students as life-long learners on the job, at home, and in the community. The Core Abilities are skills and abilities taught and assessed in classes, labs, and field experiences at Madison College. For more information on Core Abilities, please visit [http://madisoncollege.edu/core-abilities](http://madisoncollege.edu/core-abilities). This class addresses the following core abilities: Ethics
@@ -92,7 +93,7 @@ Stop payment of a check does not constitute a formal cancellation. Registrants w
 
 **Submitting Work:** All work must be submitted as directed in the assignment instructions.
 
-**Backup Data:** You are expected to develop good computer use habits that minimize the impact of failure. I expect that you know to save your work frequently, after every major change, and to back up your work regularly. You should be able to backup your data to a cd or dvd. Remember failure is a matter of when ... not if.
+**Backup Data:** You are expected to develop good computer use habits that minimize the impact of failure. I expect that you know to save your work frequently, after every major change, and to back up your work regularly. You should be able to backup your data to multiple sources.  I expect you to use Git for your source code management, commit early and often.
 
 **Student Email:** Madison College offers a student e-mail account for all students. You are responsible for monitoring your student e-mail account. Student e-mail can be accessed at: [https://mail.madisoncollege.edu/owa](https://mail.madisoncollege.edu/owa%20) .
 
@@ -123,11 +124,11 @@ If you have an accommodation card from their office indicating that you have a d
 * Complete assignments/labs/tests/quizzes/exams before due date.
 * Ask questions.
 
-**Instructor Responsibilities:** As your instructor, I commit to communicating openly and frequently with you about this class. I will maintain a professional, safe learning environment adhering to the policies of the college. You can expect a reply to communication, be it via e-mail, voicemail or in person, within 24-48 business hours.
+**Instructor Responsibilities:** As your instructor, I commit to communicating openly and frequently with you about this class. I will maintain a professional, safe learning environment adhering to the policies of the college. You can expect a reply to communication, be it via e-mail, voicemail or in person, within 24-48 business hours. I do work outside of teaching so my responses may come during the evening or over lunch hours.
 
 **Socrative:** At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You can login to the site at [http://beta.socrative.com](http://beta.socrative.com) using the room code of "johnsonchmatc"
 
-**Bitbucket** We'll use Bitbucket to keep track of our code for the semester [https://bitbucket.org/](https://bitbucket.org/).
+**Bitbucket** We'll use Bitbucket to keep track of our code for the semester [https://bitbucket.org/](https://bitbucket.org/). You may want to use Github on your own, but for your assignments the code should be on bitbucket as it is recommened by the school and used in the book. I encourage you to use and learn Github outside of class.
 
 **Heroku** We'll use Heroku to deploy our apps to for projects and labs that require a deployment.  Signup for a free account from them.
 
@@ -148,17 +149,20 @@ Phone the student help desk: (608) 243-4444; toll-free at (866) 277-4445. They c
 * Career Resources at Madison College: http://madisoncollege.edu/sdc
 * Student Writing Center Assistance: http://madisoncollege.edu/plus/writing-center
 
-Syllabus Changes: As your instructor, I retain the right to make changes based on the timeline of the class, feedback from learners and/or logistical issues and will inform you as soon as a change is made.
+Syllabus Changes: As your instructor, I retain the right to make changes based on the timeline of the class, feedback from learners and/or logistical issues and will inform you as soon as a change is made. The [course repository on Github](https://github.com/johnsonchmatc/madisoncollege_ruby_on_rails) will be all ways up to date. Refer to that for any changes, you can use the tools provided by Github to see the difference if you are interested in a change.
 
 #Grading Policy
 * All work that is to be graded must be accomplished by your **own effort**.
 * No points will be given for late assignments/labs/exams.
 * All assignments/labs/exams must meet the [course style guide](https://github.com/johnsonchmatc/ruby-style-guide)
-* All assignments/labs must run (no errors, and must produce output). If there are compilation errors or no output, the most the assignment can receive is 50% of the points.
+* All assignments/labs must run (no errors, and must produce output). If there are compilation errors, error screens or no output, the most the assignment can receive is 50% of the points.
 * If there is output, but not all objectives are met from the assignment/lab's rubric points will be removed for each item missing or incorrect.
 * There is no make-up of tests or other scheduled, graded classroom activities.
 * It is the responsibility of the student to make up any missed work and/or pick up any missed materials. Missing a class is NOT an excuse for failure to hand in work due.
 * There is no extension of assignment due dates without prior notification of circumstance. All work that is to be graded must be accomplished by your own effort.
+
+##Extra credit
+* Should you find a mistake or a deviation from the [course style guide](https://github.com/johnsonchmatc/ruby-style-guide) in the [course repository on Github](https://github.com/johnsonchmatc/madisoncollege_ruby_on_rails) you may submit a pull request with changes made and comment describing what was wrong with the course materials.  Each **accepted** pull request will be worth 5 extra credit points.  The change is of my discression to accept.
 
 **Grades Posted in Blackboard:** All assignment grades are posted in Blackboard. I need to manually grade the assignments. Sometimes this happens very quickly and sometimes it takes a week. When you've posted a quiz or lab answers, it will show up in the gradebook as a green box with a white ! in it. This means that I have received your work, but has not graded it yet. Discussion boards show up in the gradebook as a green box with a white ! in it until I have graded the assignment, then it will have a score in it.
 
@@ -173,7 +177,7 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 | 10   | [Course Project Pitch](Projects/course_project.md) |
 | 100  | [Course Project Check-in 1](Projects/course_project.md#check-in-1) |
 | 100  | [Course Project Check-in 2](Projects/course_project.md#check-in-2) |
-| 100  | [Course Project Final Submission](Projects/course_project.md#Project Check-in 2) |
+| 100  | [Course Project Check-in 3](Projects/course_project.md#check-in-3) |
 | 50   | [Participation](participation.md) |
 | 700  | TOTAL POINTS |
 
@@ -181,36 +185,35 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 ### **Grading Scale**
 
-| *Grade* | *% Attained* |
-| --- | --- |
-| A | 92-100 |
-| AB | 88-91 |
-| B | 82-87 |
-| BC | 78-81 |
-| C | 70-77 |
-| D | 60-69 |
-| F | 0-59 |
+| *Grade*   | *% Attained*  |
+| ---       | ---           |
+| A         | 92-100        |
+| AB        | 88-91         |
+| B         | 82-87         |
+| BC        | 78-81         |
+| C         | 70-77         |
+| D         | 60-69         |
+| F         | 0-59          |
 
 #Course Calendar
 
-Revision A 01/12/2015
+Revision A 08/12/2016
 
-| **Week** | **Thursday** | **Required Reading Topics** | **Labs DUE Thursdays by end of class**  |
+| **Week** | **Tuesday** | **Required Reading Topics** | **Labs DUE Tuesdays by end of class**  |
 | --- | ---   | ---                                 | ---                                               |
-| 1   |  01/21 | Introduction                       | Lab 1                                             |
-| 2   |  01/28 | Rails Bridge                       | Lab 2, Course Project Idea (Actually in class on 1/28)   |
-| 3   |  02/04 | Chapter 1 and Chapter 2            | Lab 3                                             |
-| 4   |  02/11 | Chapter 4                          | Lab 4                                             |
-| 5   |  02/18 | Chapter 3 and Chapter 5            | Lab 5 (Project wireframes/Database)               |
-| 6   |  02/25 | Chapter 6                          | Lab 6                                             |
-| 7   |  03/03 | Chapter 7                          | Lab 7                                             |
-| 8   |  03/10 | Open lab (Project work time)       |                                                   |
-|     |  03/17 | Spring Break (No Class)            |                                                   |
-| 9   |  03/24 | Exam 1                             | Project check-in 1 (Due 11:55pm)                  |
-| 10  |  03/31 | Chapter 8                          | Lab 8                                             |
-| 11  |  04/07 | Chapter 9 and Chapter 10           | Lab 9                                             |
-| 12  |  04/14 | Chapter 11 (adding gems)           | Lab 10, Project check-in 2 (Due 11:55pm)          |
-| 13  |  04/21 | Chapter 12 (ajax)                  | Lab 11                                            |
-| 14  |  04/28 | Open lab (Final Project)           |                                                   |
-| 15  |  05/05 | Building a virtual server          | Lab 12 (in class)                                 |
-| 16  |  05/12 | Exam 2                             | Project (5pm on 5/12/2016)                       |
+| 1   |  08/30 | Introduction                       | Lab 1                                             |
+| 2   |  09/06 | Rails Bridge                       | Lab 2                                             |
+| 3   |  09/13 | Chapter 1 and Chapter 2            | Lab 3, Course Project Idea (Actually in class on 09/13) |
+| 4   |  09/20 | Chapter 4                          | Lab 4                                             |
+| 5   |  09/27 | Chapter 3 and Chapter 5            | Lab 5 (Project wireframes/Database)               |
+| 6   |  10/04 | Chapter 6                          | Lab 6                                             |
+| 7   |  10/11 | Chapter 7                          | Lab 7                                             |
+| 8   |  10/18 | Open lab (Project work time)       |                                                   |
+| 9   |  10/25 | Exam 1                             | Project check-in 1 (Due 11:55pm)                  |
+| 10  |  11/01 | Chapter 8                          | Lab 8                                             |
+| 11  |  11/08 | Chapter 9 and Chapter 10           | Lab 9                                             |
+| 12  |  11/15 | Chapter 11 (adding gems)           | Lab 10, Project check-in 2 (Due 11:55pm)          |
+| 13  |  11/22 | Chapter 12 (ajax)                  | Lab 11                                            |
+| 14  |  11/29 | Open lab (Final Project)           |                                                   |
+| 15  |  12/06 | Building a virtual server          | Lab 12 (in class)                                 |
+| 16  |  12/13 | Exam 2                             | Project (5pm on 12/13/2016)                       |

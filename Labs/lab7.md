@@ -10,6 +10,7 @@ The application should have the following:
 * An authors model which contains the author's name and email address (scaffold this)
 * The root path should show all posts from newest to oldest
 * When creating a post the author should be able to be selected from a dropdown
+* You may work in pairs on this
 
 ###Notes:
 * Use validations to validate posts

@@ -1,4 +1,5 @@
-#Lab 3
+#Lab 2
+* Points 10
 
 ##Assignment
 * Go to [http://docs.railsbridge.org/intro-to-rails/](http://docs.railsbridge.org/intro-to-rails/)

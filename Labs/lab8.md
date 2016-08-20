@@ -44,6 +44,7 @@ After the time is up or if you finish implementing it reflect on the following
 questions. Type up your response and turn it in on blackboard under
 "Assignments > Lab 8"
 
+* You may work in pairs on this but both need to turn in your own reflection.
 
 ###Questions for reflection
 

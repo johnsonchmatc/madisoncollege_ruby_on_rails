@@ -12,6 +12,7 @@
 * The About page should say 'About my Lab 05'
 * The Contact page should have a link to your email address
 * The opensource page should use the table element on the boots watch page and should contain 3 columns: gem name, version and group (if any)
+* You may work in pairs on this
 
 
 ##Turn in instructions
