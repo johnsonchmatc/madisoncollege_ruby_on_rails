@@ -46,8 +46,8 @@ You will be working on a project during the semester, this project will be somet
 ###Exams
 There will be two 'Exams' which are oral presentations. The requirements for each of these will be distributed in class on the first day.
 
-###Socrative
-At the end of every class I’ll have you fill out an exit ticket.  The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day.  You can login to the site at [http://beta.socrative.com](http://beta.socrative.com) using the room code of "johnsonchmatc"
+###Exit ticket
+At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You will be directed to fill out the form at [http://bit.ly/2b6u10C](http://bit.ly/2b6u10C).
 
 ###Codecaster.io
 We'll use [https://codecaster.io/](https://codecaster.io/) in class as a way for you to ask questions or notify me to slowdown with out needing to raise your hand, though the old fashion hand raising still works!

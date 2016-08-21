@@ -126,7 +126,7 @@ If you have an accommodation card from their office indicating that you have a d
 
 **Instructor Responsibilities:** As your instructor, I commit to communicating openly and frequently with you about this class. I will maintain a professional, safe learning environment adhering to the policies of the college. You can expect a reply to communication, be it via e-mail, voicemail or in person, within 24-48 business hours. I do work outside of teaching so my responses may come during the evening or over lunch hours.
 
-**Socrative:** At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You can login to the site at [http://beta.socrative.com](http://beta.socrative.com) using the room code of "johnsonchmatc"
+**Exit Ticket:** At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You will be directed to fill out the form at [http://bit.ly/2b6u10C](http://bit.ly/2b6u10C).
 
 **Bitbucket** We'll use Bitbucket to keep track of our code for the semester [https://bitbucket.org/](https://bitbucket.org/). You may want to use Github on your own, but for your assignments the code should be on bitbucket as it is recommened by the school and used in the book. I encourage you to use and learn Github outside of class.
 

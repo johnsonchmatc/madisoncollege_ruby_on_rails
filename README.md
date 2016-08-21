@@ -1,6 +1,8 @@
 #Madison College Ruby on Rails Course Spring 2016
 * [Syllabus](syllabus.md)
 * [Introduction Letter](introletter.md)
+* [Code Caster](https://codecaster.io/) Room: "johnsonch"
+* [Exit Ticket](http://bit.ly/2b6u10C)
 
 [Course Gemfile](https://gist.github.com/johnsonch/00d410c0ae07396f7b0c)
 
@@ -23,7 +25,22 @@
 * [Week 16](Lectures/week16)
 
 ##Labs
+* [Lab 1](Labs/lab1.md)
+* [Lab 2](Labs/lab2.md)
+* [Lab 3](Labs/lab3.md)
+* [Lab 4](Labs/lab4.md)
+* [Lab 5](Labs/lab5.md)
+* [Lab 6](Labs/lab6.md)
+* [Lab 7](Labs/lab7.md)
+* [Lab 8](Labs/lab8.md)
+* [Lab 9](Labs/lab9.md)
+* [Lab 10](Labs/lab10.md)
+* [Lab 11](Labs/lab11.md)
+* [Lab 11](Labs/lab12.md)
 
 ##Projects
+* [Course Project](Projects/course_project.md)
 
 ##Exams
+* [Exam 1](Exams/exam1.md)
+* [Exam 2](Exams/exam2.md)
