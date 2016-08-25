@@ -49,8 +49,8 @@ There will be two 'Exams' which are oral presentations. The requirements for eac
 ###Exit ticket
 At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You will be directed to fill out the form at [http://bit.ly/2b6u10C](http://bit.ly/2b6u10C).
 
-###Codecaster.io
-We'll use [https://codecaster.io/](https://codecaster.io/) in class as a way for you to ask questions or notify me to slowdown with out needing to raise your hand, though the old fashion hand raising still works!
+###Slack
+We'll use [https://team-mita.slack.com](https://team-mita.slack.com) in class as a way for you to ask questions or notify me to slowdown with out needing to raise your hand, though the old fashion hand raising still works!
 
 ###Development Environment
 You will be responsible for your own development environment, we'll set this up during the first class session.  We'll use [http://docs.railsbridge.org/installfest/](http://docs.railsbridge.org/installfest/) as the guide.  I suggest either working in Linux or OS X.  If you are a Windows user I would suggest using a Linux virtual machine, however the choice is yours. You may also use a cloud environment like [https://c9.io](https://c9.io) or [https://www.nitrous.io/](https://www.nitrous.io/).  The first lab will require you to get a local development environment working as an exercise to understand the tools you'll be using.  However during the remainder of the semester use what works for you.

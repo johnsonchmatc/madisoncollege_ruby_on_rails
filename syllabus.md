@@ -205,8 +205,8 @@ Revision A 08/12/2016
 | 2   |  09/06 | Rails Bridge                       | Lab 2                                             |
 | 3   |  09/13 | Chapter 1 and Chapter 2            | Lab 3, Course Project Idea (Actually in class on 09/13) |
 | 4   |  09/20 | Chapter 4                          | Lab 4                                             |
-| 5   |  09/27 | Chapter 3 and Chapter 5            | Lab 5 (Project wireframes/Database)               |
-| 6   |  10/04 | Chapter 6                          | Lab 6                                             |
+| 5   |  09/27 | Chapter 3 and Chapter 5            | Lab 5                                             |
+| 6   |  10/04 | Chapter 6                          | Lab 6  (Project wireframes/Database)              |
 | 7   |  10/11 | Chapter 7                          | Lab 7                                             |
 | 8   |  10/18 | Open lab (Project work time)       |                                                   |
 | 9   |  10/25 | Exam 1                             | Project check-in 1 (Due 11:55pm)                  |
