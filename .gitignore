@@ -1,6 +1,7 @@
 *.gdoc
 *.pdf
 *.log
+.vagrant/
 /ExitTickets/
 .DS_Store
 announcements.md
