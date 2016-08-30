@@ -75,6 +75,9 @@
 * Bitbucket
 * Heroku
 * Development Environment (Lab 1)
+  * Note about Rails versions
+
+^ The first lab uses Rails 5 but the book uses Rails 4.  You will have the option for your projects and labs, unless the directions specify to use the version you want.  We'll be using Rails 4 for the most part in class.  
 
 ---
 #Exit Ticket
