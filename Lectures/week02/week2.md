@@ -115,3 +115,14 @@ Makes use of two files:
 #Rails server
 * ```$ bundle exec rails server ```
 
+---
+#Let's do it again in a different environment
+
+---
+#Lab time
+
+* [Lab 2](../Labs/lab2.md)
+
+---
+#Exit Ticket
+* [http://bit.ly/2b6u10C](http://bit.ly/2b6u10C)
