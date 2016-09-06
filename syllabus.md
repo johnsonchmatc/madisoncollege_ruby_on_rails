@@ -43,8 +43,8 @@ We will be using the following book for the course. It is available in both pape
 
 ####Required
 
-* *Ruby on Rails Tutorial* by Michael Hartl (3rd ED.). The book is available online at
-[http://railstutorial.org/ruby-on-rails-tutorial-book](http://railstutorial.org/ruby-on-rails-tutorial-book)
+* *Ruby on Rails Tutorial* by Michael Hartl (4th ED.). The book is available online at
+[https://www.railstutorial.org/book](https://www.railstutorial.org/book)
 , as a PDF from [http://railstutorial.org/](http://railstutorial.org/) ,
 or as a traditional hard copy from book stores and amazon.com .
 
