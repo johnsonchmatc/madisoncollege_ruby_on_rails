@@ -161,6 +161,10 @@ $ bundle exec rails console
 [https://www.railstutorial.org/book/toy_app#sec-inheritance_hierarchies](https://www.railstutorial.org/book/toy_app#sec-inheritance_hierarchies)
 
 ---
+#Gemfile and Bundler
+<!--TODO-->
+
+---
 #Git
 
 ---
@@ -173,66 +177,69 @@ $ git config --global user.email your.email@example.com
 * ```cat ~/.gitconfig```
 
 ---
-#Git Demo
-^
-```bash
-$ mkdir class_git_demo
-$ cd class_git_demo
-$ git init
-$ touch file-a.txt
-$ git status
-$ git add file-a.txt
-$ git status
-$ git commit -a -m 'our first file'
-$ git status
-$ git log
-$ git checkout -b branch-a
-$ touch file-branch-a.txt
-$ git status
-$ git add .
-$ git commit -am 'branch-a file added'
-$ git log
-$ git checkout master
-$ git merge branch-a
-$ git branch --contains <sha>
-$ git branch -d branch-a
-$ git checkout -b branch-b
-$ touch file-branch-b.txt
-$ git add .
-$ git commit -am 'added file-branch-b'
-$ vim file-branch-b.txt
-$ git status
-$ git diff
-$ git add .
-$ git commit -am 'added Hello World to file-branch-b'
-$ git log
-$ git checkout -b branch-c
-$ touch file-branch-c.txt
-$ git add .
-$ git commit -am 'added file-branch-c.txt'
-$ vim file-branch-c.txt
-$ git add .
-$ git commit -am 'added code to branch-c file'
-$ vim file-branch-c.txt
-$ vim file-branch-a.txt
-$ git status
-$ git diff
-$ git add .
-$ git commit -am 'edits to both a and c'
-$ vim ~/.gitconfig
-  add ``` [alias] ```
-  add ```    tree = log --graph --decorate --oneline --all --color ```
-$ git tree
-$ git commit master
-$ git merge branch-c
-$ git status
-$ git tree
-$ git tag
-$ git status
-$ git tag -a project-1 -m 'my code for project 1'
-$ git tag
-* $ git push --tags
-```
+#Git Activity
+Go to [https://try.github.io/levels/1/challenges/1](https://try.github.io/levels/1/challenges/1) and follow the tutorial
+
+<!--#Git Demo-->
+<!--^-->
+<!--```bash-->
+<!--$ mkdir class_git_demo-->
+<!--$ cd class_git_demo-->
+<!--$ git init-->
+<!--$ touch file-a.txt-->
+<!--$ git status-->
+<!--$ git add file-a.txt-->
+<!--$ git status-->
+<!--$ git commit -a -m 'our first file'-->
+<!--$ git status-->
+<!--$ git log-->
+<!--$ git checkout -b branch-a-->
+<!--$ touch file-branch-a.txt-->
+<!--$ git status-->
+<!--$ git add . ## AKA git add -A-->
+<!--$ git commit -am 'branch-a file added'-->
+<!--$ git log-->
+<!--$ git checkout master-->
+<!--$ git merge branch-a-->
+<!--$ git branch --contains <sha>-->
+<!--$ git branch -d branch-a-->
+<!--$ git checkout -b branch-b-->
+<!--$ touch file-branch-b.txt-->
+<!--$ git add .-->
+<!--$ git commit -am 'added file-branch-b'-->
+<!--$ vim file-branch-b.txt-->
+<!--$ git status-->
+<!--$ git diff-->
+<!--$ git add .-->
+<!--$ git commit -am 'added Hello World to file-branch-b'-->
+<!--$ git log-->
+<!--$ git checkout -b branch-c-->
+<!--$ touch file-branch-c.txt-->
+<!--$ git add .-->
+<!--$ git commit -am 'added file-branch-c.txt'-->
+<!--$ vim file-branch-c.txt-->
+<!--$ git add .-->
+<!--$ git commit -am 'added code to branch-c file'-->
+<!--$ vim file-branch-c.txt-->
+<!--$ vim file-branch-a.txt-->
+<!--$ git status-->
+<!--$ git diff-->
+<!--$ git add .-->
+<!--$ git commit -am 'edits to both a and c'-->
+<!--$ vim ~/.gitconfig-->
+  <!--add ``` [alias] ```-->
+  <!--add ```    tree = log --graph --decorate --oneline --all --color ```-->
+<!--$ git tree-->
+<!--$ git commit master-->
+<!--$ git merge branch-c-->
+<!--$ git status-->
+<!--$ git tree-->
+<!--$ git tag-->
+<!--$ git status-->
+<!--$ git tag -a project-1 -m 'my code for project 1'-->
+<!--$ git tag-->
+<!--* $ git push --tags-->
+<!--```-->
 
 ---
 #Bitbucket
