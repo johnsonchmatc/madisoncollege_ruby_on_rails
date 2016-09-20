@@ -4,8 +4,6 @@
 * [Code Caster](https://codecaster.io/) Room: "johnsonch"
 * [Exit Ticket](http://bit.ly/2b6u10C)
 
-[Course Gemfile](https://gist.github.com/johnsonch/00d410c0ae07396f7b0c)
-
 ##Lectures
 * [Week 1](Lectures/week01)
 * [Week 2](Lectures/week02)

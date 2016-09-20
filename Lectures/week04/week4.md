@@ -131,26 +131,33 @@ end
 #Pragmatic Video
 
 ---
-#Data Structures
+#Data Types
 
 ---
-##Data Structures
-* integer
-* string
-* array
-* hash
+##Data types
+* booleans
+* symbols
+* numbers
+* strings
+* hashs
+* arrays
+
+--
+##Booleans
+
+--
+##Symbols
 
 ---
-##Integer
+##Numbers
+* Fixnum
+* Bignum
 
 ---
-##String
+##Strings
 
 ---
-##Array
-
----
-##Hash
+##Hashs
 
 ```ruby
 > a = {key: 'value', 'other_key' => 'other_value'} #=> {:key=>"value", "other_key"=>"other_value"}
@@ -164,15 +171,40 @@ other_value
  => [:key, "other_key"]
 ```
 
+##Arrays
+
+```ruby
+> a = ["one", 2, "three", :four, "five".length]
+ => ["one", 2, "three", :four, 4]
+> a.last
+ => 4
+> a << "pizza"
+ => ["one", 2, "three", :four, 4, "pizza"]
+> a << {pizza: "cheese"}
+ => ["one", 2, "three", :four, 4, "pizza", {:pizza=>"cheese"}]
+> a.each do |value|
+>     puts value
+>   end
+one
+2
+three
+four
+4
+pizza
+{:pizza=>"cheese"}
+ => ["one", 2, "three", :four, 4, "pizza", {:pizza=>"cheese"}]
+```
+
+---
 
 ---
 ##Next Week
 * Chapter 3 and 5
-* Sketch some wireframes for your app
+* Sketch some wireframes for your app, they'll be due in week 6.
+    * After next week's class you'll have all the knowledge on how to generate static pages and can start on that before showing your wireframes
+    * If you want to start working ahead scan/take pictures of your wireframes and email them to me.  I'll look while traveling.
 
 ---
 
-##Please fillout socrative
-- https://beta.socrative.com
-- johnsonchmatc
-- Instructor question:  Do you have any questions?
+##Please fillout the exit ticket
+* [Exit Ticket](http://bit.ly/2b6u10C)
