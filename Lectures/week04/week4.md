@@ -40,7 +40,8 @@ bus.people #=> "up and down"
 ---
 ##Objects
 ```ruby
-bank = BankAccount.new(:balance => 40)
+bank = BankAccount.new(:balance => 40) ## Old pre 2.0
+bank = BankAccount.new(balance: 40)  ## New > 2.0
 
 bank.withdraw(10)
 bank.deposit(20)
