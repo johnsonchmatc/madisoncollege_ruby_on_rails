@@ -14,7 +14,7 @@ $ git clone https://github.com/johnsonchmatc/lab06_start.git
 ```
 
 * Change in to the lab06_start directory and run ```$ bundle install --without production```
-* Then run ```$ bundle exec rake db:migrate``` followed by ```$ bundle exec rake test```
+* Then run ```$ bundle exec rails db:migrate``` followed by ```$ bundle exec rails test```
 * Now make the tests pass by adding validations! You will need the following validations:
     * ```first_name``` must exist and have a length longer than 1
     * ```last_name``` must exist and have a length longer than 1
