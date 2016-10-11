@@ -19,7 +19,7 @@
 * ```$ git pull ```
 * ```$ git checkout  week07_in_class```
 * ```$ bundle install --without production```
-* ```$ rails rails db:migrate:reset```
+* ```$ rails db:migrate:reset```
 
 ---
 
