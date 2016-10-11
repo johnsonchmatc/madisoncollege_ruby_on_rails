@@ -9,6 +9,7 @@
 * ```$ git clone git@bitbucket.org:johnsonch/wolfie_budget.git```
 * ```$ cd wolfie_budget```
 * ```$ bundle install --without production```
+* ```$ rails rails db:migrate```
 
 ###If you have it already cloned
 * ```$ git add . ```
@@ -18,13 +19,34 @@
 * ```$ git pull ```
 * ```$ git checkout  week07_in_class```
 * ```$ bundle install --without production```
-* ```$ rails db:migrate:reset```
+* ```$ rails rails db:migrate:reset```
 
 ---
+
+Before we get started let's look at our routes
+
+```
+$ bundle exec rails routes
+```
 
 First we'll get all the user routes by updating our routes.rb file
 ```ruby
 resources :users
+```
+
+After making these changes we should probably run our tests
+
+```
+$ bundle exec rails test
+```
+
+Oops we broke a test! We changed our routes, lets fix the test to use the new route
+
+```ruby
+ test "should get new" do                                                      
+   get new_user_path                                                           
+   assert_response :success                                                    
+ end  
 ```
 
 Now in the users controller we can add a show method (action)
@@ -112,7 +134,7 @@ Then we need a create method to process the form
 def create
   @user = User.new(user_params)
   if @user.save
-    flash[:success] = "Welcome to Wolfiereader"
+    flash[:success] = "Welcome to Wolfie Budget"
     redirect_to @user
   else
     render 'new'
@@ -201,37 +223,73 @@ end
 Our form needs to know that it requires sending the user.
 
 ```erb
-<%= form_for([@user,@budget]) do |f| %>
+<%= form_for([user, budget]) do |f| %>
+.
+.
+.
+.
+<% end %>
 ```
 
-The links at the bottom of the edit page need some love too
+In order for the form to work we, need to make a change to the new.html.erb page
+so that it knows how to pass the user to the form and we'll also fix the link
+while were here for going "back"
+
+```
+<h1>New Budget</h1>
+
+<%= render 'form', {budget: @budget, user: @user} %>
+
+<%= link_to 'Back', user_budgets_path %>
+```
+
+The edit page needs the same updating as the new page
 
 ```erb
+<h1>Editing Budget</h1>
+
+<%= render 'form', {budget: @budget, user: @user} %>
+
 <%= link_to 'Show', user_budget_path %> |
 <%= link_to 'Back', user_budgets_path %>
 ```
 
-The table on the index page needs to be update.
+The table on the index page needs to be update. Here is the whole page
 
 ```erb
+<p id="notice"><%= notice %></p>
+
+<h1>Budgets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
   <tbody>
     <% @budgets.each do |budget| %>
       <tr>
-        <td><%= budget.url %></td>
-        <td><%= budget.name %></td>
+        <td><%= budget.year %></td>
+        <td><%= budget.month %></td>
+        <td><%= budget.notes %></td>
         <td><%= link_to 'Show', user_budget_path(id: budget) %></td>
         <td><%= link_to 'Edit', edit_user_budget_path(id: budget) %></td>
         <td><%= link_to 'Destroy', user_budget_path(id: budget), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Budget', new_user_budget_path %>
 ```
 
-And on our new page
-
-```erb
-<%= link_to 'Back', user_budgets_path %>
-```
 
 Finally the show page
 
