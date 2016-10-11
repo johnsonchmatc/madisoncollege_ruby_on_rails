@@ -16,7 +16,7 @@
 * ```$ git checkout master```
 * ```$ git fetch```
 * ```$ git pull ```
-* ```$ git checkout  week06_in_class```
+* ```$ git checkout  week07_in_class```
 * ```$ bundle install --without production```
 * ```$ rails db:migrate:reset```
 
@@ -40,7 +40,98 @@ Then we can make our show view actually display some information
 ```erb
 <h1>My Account</h1>
 
+<a href="#">My Budgets</a>
+
 ```
+
+Now we can get users signing up, starting with adding to the users controller a new method.
+
+```ruby
+def new
+  @user = User.new
+end
+```
+
+Let's make the sign up form look really nice.
+
+```erb
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 well">
+    <%= form_for(@user, html: {class: "form-horizontal"}) do |f| %>
+      <fieldset>
+        <div class="form-group">
+          <%= f.label :first_name, class: 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.text_field :first_name, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :last_name, class: 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.text_field :last_name, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email, class: 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.email_field :email, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, class: 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password_confirmation, "Confirmation", class: 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-lg-12">
+            <%= f.submit "Create my account", class: "btn btn-primary" %>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
+```
+
+Then we need a create method to process the form
+
+```ruby
+def create
+  @user = User.new(user_params)
+  if @user.save
+    flash[:success] = "Welcome to Wolfiereader"
+    redirect_to @user
+  else
+    render 'new'
+  end
+end
+
+
+
+  private
+
+    def user_params
+      params.require(:user).permit(:first_name,
+                                   :last_name,
+                                   :email,
+                                   :password,
+                                   :password_confirmation)
+    end
+```
+
 
 Our budgets are going to take advantage of nested resources, before we change our
 routes file run a ```$ bundle exec rake routes``` and see what is outputted.
@@ -147,94 +238,6 @@ Finally the show page
 ```erb
 <%= link_to 'Edit', edit_user_budget_path(id: @budget) %> |
 <%= link_to 'Back', user_budgets_path %>
-```
-
-Now we can get users signing up, starting with adding to the users controller a new method.
-
-```ruby
-def new
-  @user = User.new
-end
-```
-
-Let's make the sign up form look really nice.
-
-```erb
-<h1>Sign up</h1>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3 well">
-    <%= form_for(@user, html: {class: "form-horizontal"}) do |f| %>
-      <fieldset>
-        <div class="form-group">
-          <%= f.label :first_name, class: 'col-lg-2 control-label' %>
-          <div class="col-lg-10">
-            <%= f.text_field :first_name, class: 'form-control' %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :last_name, class: 'col-lg-2 control-label' %>
-          <div class="col-lg-10">
-            <%= f.text_field :last_name, class: 'form-control' %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :email, class: 'col-lg-2 control-label' %>
-          <div class="col-lg-10">
-            <%= f.email_field :email, class: 'form-control' %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :password, class: 'col-lg-2 control-label' %>
-          <div class="col-lg-10">
-            <%= f.password_field :password, class: 'form-control' %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :password_confirmation, "Confirmation", class: 'col-lg-2 control-label' %>
-          <div class="col-lg-10">
-            <%= f.password_field :password_confirmation, class: 'form-control' %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-lg-12">
-            <%= f.submit "Create my account", class: "btn btn-primary" %>
-          </div>
-        </div>
-    <% end %>
-  </div>
-</div>
-```
-
-Then we need a create method to process the form
-
-```ruby
-def create
-  @user = User.new(user_params)
-  if @user.save
-    flash[:success] = "Welcome to Wolfiereader"
-    redirect_to @user
-  else
-    render 'new'
-  end
-end
-
-
-
-  private
-
-    def user_params
-      params.require(:user).permit(:first_name,
-                                   :last_name,
-                                   :email,
-                                   :password,
-                                   :password_confirmation)
-    end
 ```
 
 Then for a little polish we'll make the budgets page only show that user's budgets
