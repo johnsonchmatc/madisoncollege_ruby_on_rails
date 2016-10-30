@@ -34,7 +34,7 @@
 * [Lab 9](Labs/lab9.md)
 * [Lab 10](Labs/lab10.md)
 * [Lab 11](Labs/lab11.md)
-* [Lab 11](Labs/lab12.md)
+* [Lab 12](Labs/lab12.md)
 
 ##Projects
 * [Course Project](Projects/course_project.md)
