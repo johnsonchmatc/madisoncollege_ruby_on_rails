@@ -9,6 +9,7 @@
 * ```$ git clone git@bitbucket.org:johnsonch/wolfie_budget.git```
 * ```$ cd wolfie_budget```
 * ```$ bundle install --without production```
+* ```$ rails rails db:migrate```
 
 ###If you have it already cloned
 * cd into ```wolfie_budget```
@@ -17,16 +18,36 @@
 * ```$ git checkout master```
 * ```$ git fetch```
 * ```$ git pull ```
-* ```$ git checkout week07_start```
-* ```$ rm -f db/*.sqlite3```
-* ```$ bundle```
-* ```$ rake db:migrate```
+* ```$ git checkout  week07_in_class```
+* ```$ bundle install --without production```
+* ```$ rails db:migrate:reset```
 
 ---
+
+Before we get started let's look at our routes
+
+```
+$ bundle exec rails routes
+```
 
 First we'll get all the user routes by updating our routes.rb file
 ```ruby
 resources :users
+```
+
+After making these changes we should probably run our tests
+
+```
+$ bundle exec rails test
+```
+
+Oops we broke a test! We changed our routes, lets fix the test to use the new route
+
+```ruby
+ test "should get new" do                                                      
+   get new_user_path                                                           
+   assert_response :success                                                    
+ end  
 ```
 
 Now in the users controller we can add a show method (action)
@@ -40,118 +61,10 @@ end
 Then we can make our show view actually display some information
 
 ```erb
-<h1>Account</h1>
-<ul>
-  <li><a href="#">My Feeds</a></li>
-  <li><a href="#">Change Password</a></li>
-</ul>
-```
+<h1>My Account</h1>
 
-Our feeds are going to take advantage of nested resources, before we change our
-routes file run a ```$ bundle exec rake routes``` and see what is outputted.
+<a href="#">My Budgets</a>
 
-```ruby
-  resources :users do
-    resources :feeds
-  end
-```
-Then run ```$ rake routes``` again and see the differences.
-
-Now we need to change our scaffolded files for feeds to work in the context of a
-user.  We'll start with the feeds controller
-
-Finding a user for every time the user every time the feeds controller is accessed.
-
-```ruby
-before_action :set_user
-
-....
-
-private
-...
-    def set_user
-      @user = User.find(params[:user_id])
-    end
-```
-
-Then modifying the create, update and destroy methods.
-
-```ruby
-def create
-  @feed = @user.feeds.new(feed_params)
-
-  respond_to do |format|
-    if @feed.save
-      format.html { redirect_to user_feed_path(id: @feed), notice: 'Feed was successfully created.' }
-      format.json { render :show, status: :created, location: @feed }
-    else
-      format.html { render :new }
-      format.json { render json: @feed.errors, status: :unprocessable_entity }
-    end
-  end
-end
-
-def update
-  respond_to do |format|
-    if @feed.update(feed_params)
-      format.html { redirect_to user_feed_path(id: @feed), notice: 'Feed was successfully updated.' }
-      format.json { render :show, status: :ok, location: @feed }
-    else
-      format.html { render :edit }
-      format.json { render json: @feed.errors, status: :unprocessable_entity }
-    end
-  end
-end
-
-def destroy
-  @feed.destroy
-  respond_to do |format|
-    format.html { redirect_to user_feeds_url, notice: 'Feed was successfully destroyed.' }
-    format.json { head :no_content }
-  end
-end
-```
-
-Our form needs to know that it requires sending the user.
-
-```erb
-<%= form_for([@user,@feed]) do |f| %>
-```
-
-The links at the bottom of the edit page need some love too
-
-```erb
-<%= link_to 'Show', user_feed_path %> |
-<%= link_to 'Back', user_feeds_path %>
-```
-
-The table on the index page needs to be update.
-
-```erb
-  <tbody>
-    <% @feeds.each do |feed| %>
-      <tr>
-        <td><%= feed.url %></td>
-        <td><%= feed.name %></td>
-        <td><%= link_to 'Show', user_feed_path(id: feed) %></td>
-        <td><%= link_to 'Edit', edit_user_feed_path(id: feed) %></td>
-        <td><%= link_to 'Destroy', user_feed_path(id: feed), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-```
-
-And on our new page
-
-```erb
-<%= link_to 'Back', user_feeds_path %>
-```
-
-Finally the show page
-
-```erb
-<%= link_to 'Edit', edit_user_feed_path(id: @feed) %> |
-<%= link_to 'Back', user_feeds_path %>
 ```
 
 Now we can get users signing up, starting with adding to the users controller a new method.
@@ -222,7 +135,7 @@ Then we need a create method to process the form
 def create
   @user = User.new(user_params)
   if @user.save
-    flash[:success] = "Welcome to Wolfiereader"
+    flash[:success] = "Welcome to Wolfie Budget"
     redirect_to @user
   else
     render 'new'
@@ -242,10 +155,154 @@ end
     end
 ```
 
-Then for a little polish we'll make the feeds page only show that user's feeds
+
+Our budgets are going to take advantage of nested resources, before we change our
+routes file run a ```$ bundle exec rake routes``` and see what is outputted.
+
+```ruby
+  resources :users do
+    resources :budgets
+  end
+```
+Then run ```$ rake routes``` again and see the differences.
+
+Now we need to change our scaffolded files for budgets to work in the context of a
+user.  We'll start with the budgets controller
+
+Finding a user for every time the user every time the budgets controller is accessed.
+
+```ruby
+before_action :set_user
+
+....
+
+private
+...
+    def set_user
+      @user = User.find(params[:user_id])
+    end
+```
+
+Then modifying the create, update and destroy methods.
+
+```ruby
+def create
+  @budget = @user.budgets.new(budget_params)
+
+  respond_to do |format|
+    if @budget.save
+      format.html { redirect_to user_budget_path(id: @budget), notice: 'budget was successfully created.' }
+      format.json { render :show, status: :created, location: @budget }
+    else
+      format.html { render :new }
+      format.json { render json: @budget.errors, status: :unprocessable_entity }
+    end
+  end
+end
+
+def update
+  respond_to do |format|
+    if @budget.update(budget_params)
+      format.html { redirect_to user_budget_path(id: @budget), notice: 'budget was successfully updated.' }
+      format.json { render :show, status: :ok, location: @budget }
+    else
+      format.html { render :edit }
+      format.json { render json: @budget.errors, status: :unprocessable_entity }
+    end
+  end
+end
+
+def destroy
+  @budget.destroy
+  respond_to do |format|
+    format.html { redirect_to user_budgets_url, notice: 'budget was successfully destroyed.' }
+    format.json { head :no_content }
+  end
+end
+```
+
+Our form needs to know that it requires sending the user.
+
+```erb
+<%= form_for([user, budget]) do |f| %>
+.
+.
+.
+.
+<% end %>
+```
+
+In order for the form to work we, need to make a change to the new.html.erb page
+so that it knows how to pass the user to the form and we'll also fix the link
+while were here for going "back"
+
+```
+<h1>New Budget</h1>
+
+<%= render 'form', {budget: @budget, user: @user} %>
+
+<%= link_to 'Back', user_budgets_path %>
+```
+
+The edit page needs the same updating as the new page
+
+```erb
+<h1>Editing Budget</h1>
+
+<%= render 'form', {budget: @budget, user: @user} %>
+
+<%= link_to 'Show', user_budget_path %> |
+<%= link_to 'Back', user_budgets_path %>
+```
+
+The table on the index page needs to be update. Here is the whole page
+
+```erb
+<p id="notice"><%= notice %></p>
+
+<h1>Budgets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @budgets.each do |budget| %>
+      <tr>
+        <td><%= budget.year %></td>
+        <td><%= budget.month %></td>
+        <td><%= budget.notes %></td>
+        <td><%= link_to 'Show', user_budget_path(id: budget) %></td>
+        <td><%= link_to 'Edit', edit_user_budget_path(id: budget) %></td>
+        <td><%= link_to 'Destroy', user_budget_path(id: budget), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Budget', new_user_budget_path %>
+```
+
+
+Finally the show page
+
+```erb
+<%= link_to 'Edit', edit_user_budget_path(id: @budget) %> |
+<%= link_to 'Back', user_budgets_path %>
+```
+
+Then for a little polish we'll make the budgets page only show that user's budgets
 
 ```ruby
   def index
-    @feeds = @user.feeds
+    @budgets = @user.budgets
   end
 ```
