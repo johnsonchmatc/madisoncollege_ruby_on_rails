@@ -3,6 +3,12 @@
 ###Week 6
 
 ---
+#Ruby and Rails API Docs
+
+* [http://api.rubyonrails.org/](http://api.rubyonrails.org/)
+* [https://ruby-doc.org/](https://ruby-doc.org/)
+
+---
 #Active Record Relationships
 
 ---
@@ -15,6 +21,14 @@
 ##Validations
 * Rules to prevent invalid data from being saved
 * Can be conditional
+
+```ruby
+class Call < ActiveRecord::Base
+  validates :location_id, presence: true, unless: :location_other
+  validates :location_other, presence: true, unless: :location_id
+end
+```
+
 * Provides error messages back to the controller
 * [http://guides.rubyonrails.org/active_record_validations.html#validation-helpers](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers)
 
@@ -133,8 +147,8 @@ end
 class Category < ApplicationRecord
   belongs_to :user
 end
-   
-   
+
+
 class User < ApplicationRecord
   validates :email, presence: true
   validates :first_name, presence: true
@@ -156,5 +170,6 @@ $ bundle exec rails test
 * Oh no things are broke!  Let's fix them.  We added relationships, now we need to make sure our test setup is right.  Look at each test and figure out why it is failing then try to make it right.
 
 ```
+##Example
 @loaded_fixter.relationship = relationship_fixture(:fixture)
 ```

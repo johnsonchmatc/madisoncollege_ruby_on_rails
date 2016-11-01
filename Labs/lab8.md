@@ -12,12 +12,9 @@ reflection on the task.
 Generate a Todo List with the following commands from a directory of your choosing:
 
 ```bash
-$ rails _4.2.2_ new todo
+$ rails _5.0.0.1_ new todo
 $ cd todo
 ```
-Edit the gemfile to use the following gems
-[https://gist.github.com/johnsonch/00fc42717713aa0797ccdec71582476d](https://gist.github.com/johnsonch/00fc42717713aa0797ccdec71582476d)
-
 Then ```$ bundle install --without production``` again.
 
 Now scaffold the tasks resource.

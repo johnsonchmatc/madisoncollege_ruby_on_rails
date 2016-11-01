@@ -6,12 +6,12 @@
 #Demo
 
 ###If you need to re-clone
-* ```$ git clone git@bitbucket.org:johnsonch/wolfiereader.git```
-* ```$ cd wolfiereader```
+* ```$ git clone git@bitbucket.org:johnsonch/wolfie_budget.git```
+* ```$ cd wolfie_budget```
 * ```$ bundle install --without production```
 
 ###If you have it already cloned
-* cd into ```wolfiereader```
+* cd into ```wolfie_budget```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
 * ```$ git checkout master```
