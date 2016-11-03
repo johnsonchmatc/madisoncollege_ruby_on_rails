@@ -197,7 +197,7 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar
 
-Revision A 08/12/2016
+Revision A 11/02/2016
 
 | **Week** | **Tuesday** | **Required Reading Topics** | **Labs DUE Tuesdays by end of class**  |
 | --- | ---   | ---                                 | ---                                               |
@@ -212,8 +212,8 @@ Revision A 08/12/2016
 | 9   |  10/25 | Exam 1                             | Project check-in 1 (Due 11:55pm)                  |
 | 10  |  11/01 | Chapter 8                          | Lab 8                                             |
 | 11  |  11/08 | Chapter 9 and Chapter 10           | Lab 9                                             |
-| 12  |  11/15 | Chapter 11 (adding gems)           | Lab 10, Project check-in 2 (Due 11:55pm)          |
+| 12  |  11/15 | Chapter 11 (adding gems)           | Lab 10, Optional - Project check-in 2 (Due 11:55pm)          |
 | 13  |  11/22 | Chapter 12 (ajax)                  | Lab 11                                            |
 | 14  |  11/29 | Open lab (Final Project)           |                                                   |
 | 15  |  12/06 | Building a virtual server          | Lab 12 (in class)                                 |
-| 16  |  12/13 | Exam 2                             | Project (5pm on 12/13/2016)                       |
+| 16  |  12/13 | Exam 2                             | Project check-in 2 and 3 (5pm on 12/13/2016)                       |
