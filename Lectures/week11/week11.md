@@ -4,30 +4,31 @@ autoscale: true
 #Ruby on Rails Development
 ##Week 11
 
-* https://codecaster.io room: johnsonch
-
 ---
+
+#Demo
+
 ###If you need to re-clone
-* ```$ git clone git@bitbucket.org:johnsonch/wolfiereader.git```
-* ```$ cd wolfiereader```
+* ```$ git clone git@bitbucket.org:johnsonch/wolfie_budget.git```
+* ```$ cd wolfie_budget```
 * ```$ bundle install --without production```
 
 ###If you have it already cloned
-* cd into ```wolfiereader```
+* cd into ```wolfie_budget```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
 * ```$ git checkout master```
 * ```$ git fetch```
 * ```$ git pull ```
-* ```$ git checkout week11_start```
+* ```$ git checkout week_11_start```
 * ```$ rm -f db/*.sqlite3```
 * ```$ bundle```
 * ```$ rake db:migrate```
 
 ---
 #Authorization
-* In WolfieReader we'll want to lock down the application to only allow logged
-in users to be able to use our app.
+* In Wolfie Budget we'll want to lock down the application to only allow logged
+  in users to be able to use our app.
 
 * Let's add the following to our ```app/controllers/application_controller.rb```
 
@@ -41,24 +42,22 @@ end
 ```
 
 * Now whenever we want to limit a controller action to require the user be logged
-in we can add the following:
+  in we can add the following:
 
 ```ruby
 before_action :logged_in_user
 ```
 
-We'll add it to our users and feeds controllers.
+* If we want to limit what actions we are calling the before action filter on we can scope it like the followign for the sessions controller:
 
-On the users controller like so
+```Ruby
+before_action :logged_in_user, only: [:destroy]
+```
 
-```ruby
+* Or for things like the the user controller
+
+```
 before_action :logged_in_user, only: [:show]
-```
-
-And on the feeds controller like
-
-```ruby
-before_action :logged_in_user
 ```
 
 * Let's create a rake task to populate our database with realistic fake data using a gem called Faker.
@@ -73,7 +72,7 @@ end
 ```
 
 * Then we'll add file called populate.rake in lib/tasks and first define our
-namespace
+  namespace
 
 ```ruby
 namespace :fake do
@@ -95,16 +94,17 @@ end
   end
 ```
 
-* Then a task for generating feeds
+* Then a task for generating budgets
 
 ```ruby
-  desc "generating fake feeds"
-  task :feeds => [:environment] do
+  desc "generating fake budgets"
+  task :budgets => [:environment] do
     user_ids = User.all.collect { |u| u.id }
     50.times do
        user = User.find(user_ids.shuffle.first)
-       user.feeds.create(url: Faker::Internet.url,
-                         name: Faker::Company.name)
+       user.budgets.create(year: Faker::Date.between(100.years.ago, Date.today).year,
+                           month: Faker::Date.between(12.months.ago, Date.today).month,
+                           notes: Faker::Lorem.paragraph)
     end
   end
 ```
@@ -113,7 +113,7 @@ end
 
 ```ruby
   desc "generating fake data"
-  task :all_data => [:environment, :users, :feeds] do
+  task :all_data => [:environment, :users, :budgets] do
   end
 ```
 
@@ -215,7 +215,7 @@ $ bundle exec rails generate mailer UserMailer account_activation password_reset
 ```erb
 Hi <%= @user.firs_name %>,
 
-Welcome to the WolfieReader! Click on the link below to activate your account:
+Welcome to the Wolfie Budget! Click on the link below to activate your account:
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
 ```
@@ -228,7 +228,7 @@ Welcome to the WolfieReader! Click on the link below to activate your account:
 <p>Hi <%= @user.first_name %>,</p>
 
 <p>
-Welcome to the Wolfiereader! Click on the link below to activate your account:
+Welcome to the Wolfie Budget! Click on the link below to activate your account:
 </p>
 
 <%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
@@ -265,7 +265,7 @@ development:
 
 * Next we'll add an initializer to setup our email settings
 
-###```config/initializers/smtp.rb````
+###`config/initializers/smtp.rb`
 
 ```ruby
 ActionMailer::Base.smtp_settings = {
