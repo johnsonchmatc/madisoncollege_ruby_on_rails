@@ -220,7 +220,7 @@ Welcome to the Wolfie Budget! Click on the link below to activate your account:
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
 ```
 
-###```app/views/user_mailer/account_activation.htm.erb ```
+###```app/views/user_mailer/account_activation.html.erb ```
 
 ```
 <h1>Wolfie's List</h1>
