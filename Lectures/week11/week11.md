@@ -213,7 +213,7 @@ $ bundle exec rails generate mailer UserMailer account_activation password_reset
 
 
 ```erb
-Hi <%= @user.firs_name %>,
+Hi <%= @user.first_name %>,
 
 Welcome to the Wolfie Budget! Click on the link below to activate your account:
 
