@@ -58,7 +58,7 @@ Let's make our feeds index look a bit better
 ## WillPaginate
 
 ```ruby
-gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate'
 ```
 
 * Then we'll need to install the gem
@@ -71,7 +71,7 @@ $ bundle install
 
 ```ruby
   def index
-    @feeds = @user.feeds.paginate(:page => params[:page], :per_page => 10)
+    @parcels = Parcel.all.paginate(:page => params[:page], :per_page => 10)
   end
 ```
 
@@ -80,7 +80,7 @@ $ bundle install
 ```erb
 <div class="row">
   <div class="col-md-12">
-    <%= will_paginate @feeds %>
+    <%= will_paginate @parcels %>
   </div>
 </div>
 ```
@@ -88,45 +88,48 @@ $ bundle install
 #Endless Scrolling
 
 * Add support for handlebars to application layout
-```
+```html
 <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"> </script>
 ```
 
 * Modify our index.json.jbuilder to support our needed information
 
 ```ruby
-json.array!(@feeds) do |feed|
-  # we don't need the feed's url in this data, we'll keep it small this way
-  json.extract! feed, :id, :name
-  # over the stock generate schema we need to pass in our user instance variable
-  # so we can generate the proper url.
-  json.url user_feed_url(@user, feed, format: :json)
+json.array!(@parcels) do |parcel|
+  # Extract from the objec the fields we don't need to modify
+  json.extract! parcel, :id, :address, :created_at, :updated_at
+  # Use our helper method to modify the values so that we return the same if the
+  # user has javascript or not
+  json.current_year_value display_us_dollar(parcel.current_year_value)  
+  json.previous_year_value display_us_dollar(parcel.previous_year_value)  
+  json.total_taxes display_us_dollar(parcel.total_taxes)  
+
+  json.url parcel_url(parcel)
 end
 ```
 
 * Create a pagination.js file in your assets/javascripts folder
 
-```
+```js
 (function($) {
   var currentPage = 0;
 
   function loadData(data) {
-    $('#feeds').append(Handlebars.compile("{{#feeds}} \
-      <div class='well well-sm'> \
-        <div class='row'> \
-          <span class='col-sm-10 feed-name'><a href='{{url}}'>{{name}}</a></span> \
-          <span class='col-sm-2'>  \
-            <a data-confirm='Are you sure?' class='btn btn-danger' rel='nofollow' data-method='delete' href='{{url}}'>Remove</a> \
-          </span> \
-        </div> \
-      </div> \
-    {{/feeds}}")({ feeds: data }));
+    $('#parcels').append(Handlebars.compile("{{#parcels}} \
+      <tr> \
+        <td>{{address}}</td> \
+        <td>{{current_year_value}}</td> \
+        <td>{{previous_year_value}}</td> \
+        <td>{{total_taxes}}</td> \
+        <td><a href='{{url}}'>View Parcel</a></td> \
+      </tr> \
+    {{/parcels}}")({ parcels: data }));
     if (data.length == 0) $('#next_page_spinner').hide();
   }
 
   function nextPageWithJSON() {
     currentPage += 1;
-    var newURL = '/users/64/feeds.json?page=' + currentPage;
+    var newURL = '/parcels.json?page=' + currentPage;
 
     var splitHref = document.URL.split('?');
     var parameters = splitHref[1];
@@ -153,7 +156,7 @@ end
   function readyForNextPage() {
     if (!$('#next_page_spinner').is(':visible')) return;
 
-    var threshold = 200;
+    var threshold = 500;
     var bottomPosition = $(window).scrollTop() + $(window).height();
     var distanceFromBottom = $(document).height() - bottomPosition;
 
@@ -170,30 +173,153 @@ end
 })(jQuery);
 ```
 
-* create an assets initializer
+* create an assets initializer confid.initializers/asset.rb
 
-```
+```ruby
 Rails.application.config.assets.precompile += %w( pagination.js )
 ```
 
 * Now adjust the index
 
-```
-<p id="notice"><%= notice %></p>
+```erb
+<div class="row">
+  <div class="col-lg-12">
+    <p id="notice"><%= notice %></p>
+  </div>
+</div>
 
-<h1>My Feeds</h1>
+<div class="row">
+  <div class="col-lg-12">
+  <h1>Parcels</h1>
+  </div>
+</div>
 
-<p>
-<%= link_to 'New Feed', new_user_feed_path %>
-</p>
+<div class="row">
+  <div class="col-lg-12">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Address</th>
+          <th>Current year value</th>
+          <th>Previous year value</th>
+          <th>Total taxes</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<div id="feeds">
+      <tbody id="parcels">
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <img src='http://www.fostersystems.com/ccdata/images/spinner.gif' id='next_page_spinner' />
-<script>
-  var userId = <%= @user.id %>;
-</script>
+
+<br>
+
+<%= link_to 'New Parcel', new_parcel_path %>
+
 <%= javascript_include_tag 'pagination' %>
+```
+
+Next we can add some more information to our parcels show page.  Let's start with
+showing the weather
+
+# Weather API
+* Go to [http://openweathermap.org/](http://openweathermap.org/) and sign up for a free account
+
+![](http://files.johnsonch.com/Members_1DE3E330.png)
+
+* Get your API key and add it to your application.yml (first copy application.yml.example to application.yml)
+
+```yaml
+  weather_api: <YOUR KEY HERE>
+```
+
+* Add a weather.js.coffee
+
+```
+@convertKToF = (k) ->
+  Math.round((k - 273.15)* 1.8000 + 32.00)
+
+@convertBearing = (bearing) ->
+  points = ["N ","NE","E","SE","S","SW","W","NW"]
+  seg_size = 360 / points.length
+  points[Math.floor(((parseInt(bearing) + (seg_size / 2)) % 360) / seg_size)]
+
+@renderWeather = (data) ->
+  weatherPanel = $("#weather-data")
+  weatherPanel.html ""
+  weatherPanel.append Handlebars.compile(
+    "{{#weather}}
+      <h3>Weather</h3>
+ Temperature:
+      <ul>
+        <li>Current Temp {{main.temp}}&degF</li>
+        <li>Wind: {{main.wind_speed}} mph {{main.wind_direction}}</li>
+       </ul>
+    {{/weather}}")(weather: data)
+  return
+
+@renderError = () ->
+  weatherPanel = $("#weather-data")
+  weatherPanel.html ""
+  weatherPanel.append Handlebars.compile(
+    "<h3>Error Retrieving Weather</h3>")
+  return
+
+@populateWeather = (data) ->
+  if data.cod == "404"
+    renderError()
+  else
+    sanitizedData = {
+      main: {
+        temp: convertKToF(data.main.temp),
+        wind_direction: convertBearing(data.wind.deg),
+        wind_speed: data.wind.speed
+      }
+    }
+    renderWeather(sanitizedData)
+
+@getWeather = (url) ->
+  $.ajax
+    method: "get"
+    url: url
+    success: (data) ->
+      populateWeather(data)
+      return
+    error: (data) ->
+      console.log "error", data
+      renderError()
+      return
+```
+
+* Update assets initializer
+
+```
+Rails.application.config.assets.precompile += %w( pagination.js weather.js )
+```
+
+* Add weather to show page
+```
+<!-- inside the right column -->
+  <div class="row">
+    <div class="col-lg-12" id="weather-data">
+      <h3>Weather</h3>
+      <%= image_tag("http://www.fostersystems.com/ccdata/images/spinner.gif", :id => 'next_page_spinner') %>
+    </div>
+  </div>
+
+<!-- at the bottom of the page -->
+<%= javascript_include_tag 'weather' %>
+
+<script>
+  <% if @parcel.latitude && @parcel.longitude %>
+  var url =<%=raw "'http://api.openweathermap.org/data/2.5/weather?lat=#{@parcel.latitude}&lon=#{@parcel.longitude}&appid=#{ENV['weather_api']}'" %>
+  <% else %>
+  var url =<%=raw "'http://api.openweathermap.org/data/2.5/weather?q=madison,wi,us&appid=#{ENV['weather_api']}'" %>
+  <% end %>
+  window.getWeather(url);
+</script>
 ```
 

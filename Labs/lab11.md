@@ -3,19 +3,15 @@
 
 ##Assignment
 
-* You will need to create a rails application that can search for weather by
-zip/postal code.  The site should display the most recent 10 zip/postal codes
-that were searched and their current weather.  The weather should be cached for
-5 minutes (save to the database and use ```updated_at```) to reduce the number of calls to the weather service.
+###Who's in space
 
-* Weather API [http://openweathermap.org/api](http://openweathermap.org/api) -
-you will need a free API key for this assignment
-* A gem I like to use to make API calls is https://github.com/rest-client/rest-client
-* Sample request url: ```http://api.openweathermap.org/data/2.5/weather?zip=SOME_POSTAL_CODE,us&appid=YOUR_API_KEY```
+* Create a Rails application that can dynamically show who is currently in space
+and what space craft they are on using the API http://api.open-notify.org/astros.json
+  * You can either access the API in the javascript layer (if you are using 
+  cloud9 make sure you access your site on http not https) or in the Rails layer 
+  on page load.
+  * If you choose to do it on the server side take a look at [Rest Client](https://github.com/rest-client/rest-client)
 
-###Sample UI
-
-![](https://dl.dropboxusercontent.com/s/g6mkpnpu72obbj6/2016-01-31%20at%208.07%20AM.png)
 
 ##Turn in instructions
 * Show your instructor the completed assignment
