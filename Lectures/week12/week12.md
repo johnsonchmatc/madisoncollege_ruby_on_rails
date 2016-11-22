@@ -1,59 +1,25 @@
-footer:@johnsonch :: Chris Johnson :: Ruby on Rails Development :: Week 11
+footer:@johnsonch :: Chris Johnson :: Ruby on Rails Development :: Week 12
 autoscale: true
 
 #Ruby on Rails Development
 ##Week 12
 
-* https://codecaster.io room: johnsonch
-
 ---
 #Demo
-###If you need to re-clone
-* ```$ git clone git@bitbucket.org:johnsonch/wolfiereader.git```
-* ```$ cd wolfiereader```
-* ```$ bundle install --without production```
+###Clone
+First fork the repository on Github, if you don't have a Github account sign up.
+You can for the repository from [https://github.com/johnsonchmatc/madison_properties](https://github.com/johnsonchmatc/madison_properties)
 
-###If you have it already cloned
-* cd into ```wolfiereader```
-* ```$ git add . ```
-* ```$ git commit -am 'commiting files from in class'```
-* ```$ git checkout master```
-* ```$ git fetch```
-* ```$ git pull ```
-* ```$ git checkout week12_start```
-* ```$ rm -f db/*.sqlite3```
-* ```$ bundle```
-* ```$ bundle exec rake db:migrate```
-* ```$ bundle exec rake fake:all_data```
+
+* ```$ git clone git@github.com:<yourusername>/madison_properties.git```
+* ```$ cd madison_properties```
+* ```$ bundle install --without production```
+* ```$ rails db:migrate```
+
+Then head over to [https://data.cityofmadison.com/Property/Assessor-Property-Information/u7ns-6d4x](https://data.cityofmadison.com/Property/Assessor-Property-Information/u7ns-6d4x) and download the data in CSV format.
+
 
 ---
-##Style Feeds Index
-
-Let's make our feeds index look a bit better
-
-```erb
-<p id="notice"><%= notice %></p>
-
-<h1>My Feeds</h1>
-
-<p>
-<%= link_to 'New Feed', new_user_feed_path %>
-</p>
-
-<% @feeds.each do |feed| %>
-  <div class="well well-sm">
-    <div class="row">
-      <span class="col-sm-10 feed-name">
-        <%= link_to feed.name, user_feed_path(id: feed) %>
-      </span>
-      <span class="col-sm-2">
-        <%= link_to('Remove', user_feed_path(id: feed), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger") %>
-      </span>
-    </div>
-  </div>
-<% end %>
-```
-
 
 ## WillPaginate
 
