@@ -268,13 +268,45 @@ Rails.application.config.assets.precompile += %w( pagination.js weather.js )
 
 * Add weather to show page
 ```
-<!-- inside the right column -->
-  <div class="row">
-    <div class="col-lg-12" id="weather-data">
-      <h3>Weather</h3>
-      <%= image_tag("http://www.fostersystems.com/ccdata/images/spinner.gif", :id => 'next_page_spinner') %>
+<div class="row">
+  <div class="col-lg-12">
+    <p id="notice"><%= notice %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4">
+    <p>
+      <strong>Address:</strong> <%= @parcel.address %>
+    </p>
+
+    <p>
+      <strong>Current year value:</strong> <%= @parcel.current_year_value %>
+    </p>
+
+    <p>
+      <strong>Previous year value:</strong> <%= @parcel.previous_year_value %>
+    </p>
+
+    <p>
+      <strong>Total taxes:</strong> <%= @parcel.total_taxes %>
+    </p>
+  </div>
+
+  <div class="col-lg-8">
+    <!-- inside the right column -->
+    <div class="row">
+      <div class="col-lg-12" id="weather-data">
+        <h3>Weather</h3>
+        <%= image_tag("http://www.fostersystems.com/ccdata/images/spinner.gif", :id => 'next_page_spinner') %>
+      </div>
     </div>
   </div>
+</div>
+
+<%= link_to 'Back', parcels_path %>
+
+
 
 <!-- at the bottom of the page -->
 <%= javascript_include_tag 'weather' %>
