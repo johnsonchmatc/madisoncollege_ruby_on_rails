@@ -64,7 +64,7 @@ $ cat .ssh/id_rsa.pub
 With our SSH key created we need to add it to our GitHub account so the server can clone our repository.
 
 ####On our development machine
-Next we'll want to upload our development machine ssh key so we don't need to keep typing the following command (if you are on linux or OS X):
+Next we'll want to upload our development machine ssh key so we don't need to keep typing the following command (if you are on linux or OS X which you'll need to `brew install ssh-copy-id`):
 ```
 $ ssh-copy-id -i ~/.ssh/id_rsa.pub deploy@<your servers ip>
 ```
@@ -111,7 +111,7 @@ Installing mysql:
 ```
 $ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
 $ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
-$ sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+$ sudo apt-get -y install mysql-server mysql-client libmysqlclient-dev
 ```
 I chose for this demo a username: root and password: root.  After your server is setup, create a database for your applicaiton.
 
@@ -154,11 +154,22 @@ $ sudo /usr/sbin/update-rc.d -f nginx defaults
 $ sudo vim /opt/nginx/conf/nginx.conf
 ```
 
+inside of the `http` block add:
+
+```
+client_body_in_file_only clean;
+client_body_buffer_size 32K;
+
+client_max_body_size 300M;
+```
+
+Then replace the server block with the following code
+
 ```
 server {
     listen       *:80;
 
-    root /var/www/current/public;
+    root /var/www/<application name>/current/public;
     passenger_enabled on;
 
     error_page   500 502 503 504  /50x.html;
@@ -174,6 +185,12 @@ $ sudo mkdir -p /var/www
 $ sudo chown deploy /var/www/
 ```
 
+Then restart nginx for things to take effect:
+
+```
+$ sudo service nginx restart
+```
+
 ###Setting up our app
 
 ```
@@ -183,7 +200,6 @@ gem 'capistrano-rbenv', '~> 2.0', require: false
 
 group :production do
   gem 'mysql2', '~> 0.3.13'
-  gem 'rails_12factor', '0.0.2'
 end
 ```
 
@@ -224,13 +240,13 @@ set :rbenv_roles, :all # default value
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/var/www'
+set :deploy_to, "/var/www/#{fetch(:application)}"
 
 # Default value for :pty is false
 set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml config/application.yml}
+set :linked_files, %w{config/database.yml config/application.yml config/secrets.yml}
 
 namespace :deploy do
 
@@ -258,15 +274,21 @@ require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 
-# Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
+# Loads custom tasks from 'lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
+```
+
+We'll need to configure assets to be compiled, in our config/environments/production.rb
+default is set to false, we'll change it to true
+```
+  config.assets.compile = true
 ```
 
 ```
 $ bundle exec cap production deploy:check
 ```
 
-We'll need to create a database.yml file in var/www/shared/config with the correct values for your application.
+We'll need to create a database.yml file in var/www/<your app name>/shared/config with the correct values for your application.
 
 ```
 production:
@@ -277,7 +299,7 @@ production:
   password: root
 ```
 
-We'll need to create an application.yml file in var/www/shared/config with the correct values for your application.
+We'll need to create an application.yml file in var/www/<your app name>/shared/config with the correct values for your application.
 
 ```
 #Weather is an example from class
