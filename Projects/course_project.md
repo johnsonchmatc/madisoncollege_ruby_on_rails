@@ -77,4 +77,4 @@ The goal of the final project is to demonstrate the competencies covered in this
 
 
 ###Notes
-* [How to add your instructor and push tags](../how_tos/adding_instructor_to_your_bitbucket_repositorysitory.md)
+* [How to add your instructor and push tags](../how_tos/adding_instructor_to_your_bitbucket_repository.md)
