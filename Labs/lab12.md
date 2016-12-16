@@ -288,7 +288,7 @@ default is set to false, we'll change it to true
 $ bundle exec cap production deploy:check
 ```
 
-We'll need to create a database.yml file in var/www/<your app name>/shared/config with the correct values for your application.
+We'll need to create a database.yml file in var/www/\<your app name>/shared/config with the correct values for your application.
 
 ```
 production:
@@ -299,7 +299,7 @@ production:
   password: root
 ```
 
-We'll need to create an application.yml file in var/www/<your app name>/shared/config with the correct values for your application.
+We'll need to create an application.yml file in var/www/\<your app name>/shared/config with the correct values for your application.
 
 ```
 #Weather is an example from class
