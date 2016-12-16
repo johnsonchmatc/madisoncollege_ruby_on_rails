@@ -322,7 +322,7 @@ $ bundle exec cap production deploy deploy:migrate
 ```
 
 ##Turn in instructions
-* on Blackboard under Labs find Lab 8 submit a word/text document with the following information:
+* on Blackboard under Assignments find Lab 12 "Write Submission" with the following information:
   * Name
   * Date
   * IP address of server
