@@ -6,7 +6,7 @@
 
 ---
 #Work
-* Manager of Application Development at GettyImages
+* Senior Development Manager at Rosh Review, LLC
 * Author at Pragmatic Bookshelf
 * Owner at JohnsonCH, LLC
 

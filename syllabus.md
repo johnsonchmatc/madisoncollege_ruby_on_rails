@@ -1,20 +1,20 @@
 #Ruby on Rails Development
 
-Catalog #152 10152157-0002
+Catalog #10152157-1001
 
 ##General Information
 
 * *Credits:* 3
 * *Course Format:* face to face
-* *Class Schedule:* TU 5:30 – 9:20 PM 08/30/2016 - 12/13/2016
+* *Class Schedule:* Th 5:30 – 9:20 PM 01/19/2017 - 05/11/2017
 * *Location:* Truax-Health Building Rm 335
 * *Instructor:* Chris Johnson
 * *Email:* cgjohnson1@madisoncollege.edu
 * *Phone:* 608.301.5232
 * *Office Hours:*
 	* Email for an appointment
+  * Slack: team-mita.slack.com #ruby-on-rails
 	* IRC #johnsonch_office_hours on irc.freenode.net
-    * Slack: team-mita.slack.com #ruby-on-rails
   * [http://officehours.johnsonch.com/](http://officehours.johnsonch.com/)
   * [IRC Tutorial](https://github.com/johnsonch/madisoncollege_ruby_on_rails/blob/master/irc.md)
 
@@ -43,9 +43,9 @@ We will be using the following book for the course. It is available in both pape
 
 ####Required
 
-* *Ruby on Rails Tutorial* by Michael Hartl (4th ED.). The book is available online at
-[http://railstutorial.org/book](https://www.railstutorial.org/book)
-, as a PDF from [http://railstutorial.org/](https://www.railstutorial.org) ,
+* *Ruby on Rails Tutorial (Rails 5)* by Michael Hartl (4th ED.). The book is available online at
+[https://www.railstutorial.org/book](https://www.railstutorial.org/book)
+, as a PDF from [https://www.railstutorial.org/](https://www.railstutorial.org/) ,
 or as a traditional hard copy from book stores and amazon.com .
 
 ####Optional
@@ -73,7 +73,7 @@ During this course students will:
 *   Present their new web application to classmates
 
 ##Environment
-Students will complete readings, attend lectures, use blackboard and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting.
+Students will complete readings, attend lectures, use slack and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting.
 
 #Core Abilities
 Madison College Core Abilities are eight key life and success skills that contribute to the development of students as life-long learners on the job, at home, and in the community. The Core Abilities are skills and abilities taught and assessed in classes, labs, and field experiences at Madison College. For more information on Core Abilities, please visit [http://madisoncollege.edu/core-abilities](http://madisoncollege.edu/core-abilities). This class addresses the following core abilities: Ethics
@@ -120,7 +120,7 @@ If you have an accommodation card from their office indicating that you have a d
 * Set high standards for your work.
 * Attend all classes, participate in discussions, and complete lab exercises.
 * Read the chapters and other reading assignments.
-* Check Blackboard on a regular basis.
+* Check [course repository on Github](https://github.com/johnsonchmatc/madisoncollege_ruby_on_rails) on a regular basis.
 * Complete assignments/labs/tests/quizzes/exams before due date.
 * Ask questions.
 
@@ -132,13 +132,7 @@ If you have an accommodation card from their office indicating that you have a d
 
 **Heroku** We'll use Heroku to deploy our apps to for projects and labs that require a deployment.  Signup for a free account from them.
 
-**Blackboard:** A Blackboard course site has been created for this class. You can access this course by logging in to the following page:  [https://blackboard.madisoncollege.edu/](https://blackboard.madisoncollege.edu/)
-
-Madison College Blackboard Student Support information: [http://madisoncollege.edu/blackboard-help](http://madisoncollege.edu/blackboard-help). Consult me for support with Blackboard problems
-
 Computer difficulties are not a long-term excuse for non-participation. If you experience problems with your computer, call the computer help desk at (608) 243-4444 or toll-free at (866) 277-4445. They can talk you through fixing many, many problems.
-
-**Blackboard Outages:** Madison College does its best to keep our Blackboard classroom up and running. However, despite our best efforts, our virtual classroom may go down unexpectedly. If you cannot access our classroom, here is what you should do:
 
 Phone the student help desk: (608) 243-4444; toll-free at (866) 277-4445. They can often resolve your problem over the phone.
 
@@ -164,21 +158,21 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 ##Extra credit
 * Should you find a mistake or a deviation from the [course style guide](https://github.com/johnsonchmatc/ruby-style-guide) in the [course repository on Github](https://github.com/johnsonchmatc/madisoncollege_ruby_on_rails) you may submit a pull request with changes made and comment describing what was wrong with the course materials.  Each **accepted** pull request will be worth 5 extra credit points.  The change is of my discression to accept.
 
-**Grades Posted in Blackboard:** All assignment grades are posted in Blackboard. I need to manually grade the assignments. Sometimes this happens very quickly and sometimes it takes a week. When you've posted a quiz or lab answers, it will show up in the gradebook as a green box with a white ! in it. This means that I have received your work, but has not graded it yet. Discussion boards show up in the gradebook as a green box with a white ! in it until I have graded the assignment, then it will have a score in it.
+**Grades Shared Upon Request:** I keep a spreadsheet with Grades, please keep track of your own grades.  I will tell you when you get Labs/Readings checked off in class.
 
 ### **Evaluation**
 
 | **Points Possible** | **Assignment** |
 | --- | --- |
 | 120  | [Labs](Labs/) 12 @ 10 points each |
-| 120  | [Readings](Readings/) 12 @ 10 points each |
+| 140  | [Readings](Readings/) 14 @ 10 points each |
 | 50   | [Exam 1](Exams/exam1.md) |
 | 50   | [Exam 2](Exams/exam2.md) |
 | 10   | [Course Project Pitch](Projects/course_project.md) |
 | 100  | [Course Project Check-in 1](Projects/course_project.md#check-in-1) |
 | 100  | [Course Project Check-in 2](Projects/course_project.md#check-in-2) |
 | 100  | [Course Project Check-in 3](Projects/course_project.md#check-in-3) |
-| 50   | [Participation](participation.md) |
+| 30   | [Participation](participation.md) |
 | 700  | TOTAL POINTS |
 
 
@@ -197,23 +191,24 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar
 
-Revision A 11/02/2016
+Revision A 01/11/2017
 
-| **Week** | **Tuesday** | **Required Reading Topics** | **Labs DUE Tuesdays by end of class**  |
-| --- | ---   | ---                                 | ---                                               |
-| 1   |  08/30 | Introduction                       | Lab 1                                             |
-| 2   |  09/06 | Rails Bridge                       | Lab 2                                             |
-| 3   |  09/13 | Chapter 1 and Chapter 2            | Lab 3, Course Project Idea (Actually in class on 09/13) |
-| 4   |  09/20 | Chapter 4                          | Lab 4                                             |
-| 5   |  09/27 | Chapter 3 and Chapter 5            | Lab 5                                             |
-| 6   |  10/04 | Chapter 6                          | Lab 6  (Project wireframes/Database)              |
-| 7   |  10/11 | Chapter 7                          | Lab 7                                             |
-| 8   |  10/18 | Open lab (Project work time)       |                                                   |
-| 9   |  10/25 | Exam 1                             | Project check-in 1 (Due 11:55pm)                  |
-| 10  |  11/01 | Chapter 8                          | Lab 8                                             |
-| 11  |  11/08 | Chapter 9 and Chapter 10           | Lab 9                                             |
-| 12  |  11/15 | Chapter 11 (adding gems)           | Lab 10, Optional - Project check-in 2 (Due 11:55pm)          |
-| 13  |  11/22 | Chapter 12 (ajax)                  | Lab 11                                            |
-| 14  |  11/29 | Open lab (Final Project)           |                                                   |
-| 15  |  12/06 | Building a virtual server          | Lab 12 (in class)                                 |
-| 16  |  12/13 | Exam 2                             | Project check-in 2 and 3 (5pm on 12/13/2016)                       |
+| **Week** | **Thursday** | **Required Reading / Topics** | **Labs DUE Tuesdays by end of class**  |
+| --- | ---   | ---                                       | ---                                                     |
+| 1   |  01/19 | Introduction                             | Lab 1                                                   |
+| 2   |  01/26 | Rails Bridge                             | Lab 2                                                   |
+| 3   |  02/05 | Chapter 1 and Chapter 2                  | Lab 3, Course Project Idea (Actually in class on 09/13) |
+| 4   |  02/12 | Chapter 4                                | Lab 4                                                   |
+| 5   |  02/19 | Chapter 3 and Chapter 5                  | Lab 5                                                   |
+| 6   |  02/26 | Chapter 6                                | Lab 6  (Project wireframes/Database)                    |
+| 7   |  03/02 | Chapter 7                                | Lab 7                                                   |
+| 8   |  03/09 | Open lab (Project work time)             |                                                         |
+|     |  03/16 | Spring Break                             |                                                         |
+| 9   |  03/23 | Exam 1                                   | Project check-in 1 (Due 11:55pm)                        |
+| 10  |  03/30 | Chapter 8                                | Lab 8                                                   |
+| 11  |  04/06 | Chapter 9 and Chapter 10                 | Lab 9                                                   |
+| 12  |  04/13 | Chapter 11 and Chapter 12 (adding gems)  | Lab 10, Project check-in 2 (Due 11:55pm)                |
+| 13  |  04/20 | Chapter 13 and Chapter 14 (ajax)         | Lab 11                                                  |
+| 14  |  04/27 | Open lab (Final Project)                 |                                                         |
+| 15  |  05/04 | Building a virtual server                | Lab 12 (in class)                                       |
+| 16  |  05/11 | Exam 2                                   | Project check-in 2 and 3 (5pm on 05/11/2017)            |
