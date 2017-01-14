@@ -35,7 +35,7 @@ You will be working on a project during the semester, this project will be somet
 There will be two 'Exams' which are oral presentations. The requirements for each of these will be distributed in class on the first day.
 
 ###Exit ticket
-At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You will be directed to fill out the form at [http://bit.ly/2b6u10C](http://bit.ly/2b6u10C).
+At the end of every class I'll have you fill out an exit ticket. The exit ticket is un-graded and my way of taking attendance along with accessing your understanding of the material from the day. You will be directed to fill out the form at [https://goo.gl/forms/XdAxF71bj4cffoAu1](https://goo.gl/forms/XdAxF71bj4cffoAu1).
 
 ###Slack
 We'll use [https://team-mita.slack.com](https://team-mita.slack.com) in class as a way for you to ask questions or notify me to slowdown with out needing to raise your hand, though the old fashion hand raising still works!
