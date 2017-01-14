@@ -12,7 +12,7 @@ reflection on the task.
 Generate a Todo List with the following commands from a directory of your choosing:
 
 ```bash
-$ rails _5.0.0.1_ new todo
+$ rails new todo
 $ cd todo
 ```
 Then ```$ bundle install --without production``` again.
@@ -67,5 +67,5 @@ the pressure of having to turn in a working application?
 
 
 ##Turn in instructions
-* Turn in a text document with answers to the above questions
+* Turn in your write up in the notes section of the assignment turn in form [https://goo.gl/forms/XdAxF71bj4cffoAu1](https://goo.gl/forms/XdAxF71bj4cffoAu1)
 * Make sure to include you and your partner's names (if you worked with one)
