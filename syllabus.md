@@ -197,7 +197,7 @@ Revision A 01/11/2017
 | --- | ---   | ---                                       | ---                                                     |
 | 1   |  01/19 | Introduction                             | Lab 1                                                   |
 | 2   |  01/26 | Rails Bridge                             | Lab 2                                                   |
-| 3   |  02/05 | Chapter 1 and Chapter 2                  | Lab 3, Course Project Idea (Actually in class on 09/13) |
+| 3   |  02/05 | Chapter 1 and Chapter 2                  | Lab 3, Course Project Idea (Actually in class on 09/13)*this looks like a fall semester date. |
 | 4   |  02/12 | Chapter 4                                | Lab 4                                                   |
 | 5   |  02/19 | Chapter 3 and Chapter 5                  | Lab 5                                                   |
 | 6   |  02/26 | Chapter 6                                | Lab 6  (Project wireframes/Database)                    |
