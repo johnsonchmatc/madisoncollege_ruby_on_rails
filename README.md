@@ -4,6 +4,7 @@
 * [Code Caster](https://codecaster.io/) Room: "johnsonch"
 * [Exit Ticket](https://goo.gl/forms/XdAxF71bj4cffoAu1)
 * [Assignment Dropbox](https://goo.gl/forms/pSysUkioLxAffB7g1)
+* [How Tos](how_tos)
 
 ##Lectures
 * [Week 1](Lectures/week01)
