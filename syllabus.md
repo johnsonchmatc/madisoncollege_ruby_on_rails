@@ -191,16 +191,16 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 #Course Calendar
 
-Revision A 01/11/2017
+Revision B 01/23/2017
 
 | **Week** | **Thursday** | **Required Reading / Topics** | **Labs DUE Tuesdays by end of class**  |
 | --- | ---   | ---                                       | ---                                                     |
 | 1   |  01/19 | Introduction                             | Lab 1                                                   |
 | 2   |  01/26 | Rails Bridge                             | Lab 2                                                   |
-| 3   |  02/05 | Chapter 1 and Chapter 2                  | Lab 3, Course Project Idea (Actually in class on 09/13) |
-| 4   |  02/12 | Chapter 4                                | Lab 4                                                   |
-| 5   |  02/19 | Chapter 3 and Chapter 5                  | Lab 5                                                   |
-| 6   |  02/26 | Chapter 6                                | Lab 6  (Project wireframes/Database)                    |
+| 3   |  02/02 | Chapter 1 and Chapter 2                  | Lab 3, Course Project Idea (Actually in class on 02/02) |
+| 4   |  02/09 | Chapter 4                                | Lab 4                                                   |
+| 5   |  02/16 | Chapter 3 and Chapter 5                  | Lab 5                                                   |
+| 6   |  02/23 | Chapter 6                                | Lab 6  (Project wireframes/Database)                    |
 | 7   |  03/02 | Chapter 7                                | Lab 7                                                   |
 | 8   |  03/09 | Open lab (Project work time)             |                                                         |
 |     |  03/16 | Spring Break                             |                                                         |
