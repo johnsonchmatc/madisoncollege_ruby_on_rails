@@ -1,4 +1,4 @@
-#Madison College Ruby on Rails Course Spring 2016
+#Madison College Ruby on Rails Course
 * [Syllabus](syllabus.md)
 * [Introduction Letter](introletter.md)
 * [Code Caster](https://codecaster.io/) Room: "johnsonch"

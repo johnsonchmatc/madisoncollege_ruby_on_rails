@@ -58,7 +58,7 @@ update:  --no-rdoc --no-ri
 
 ---
 ```
-$ rails new first_app
+$ rails new expense-tracker
       create
       create  README.rdoc
       create  Rakefile
@@ -116,6 +116,55 @@ Makes use of two files:
 * ```$ bundle exec rails server ```
 
 ---
+```shell
+$ cd expense-tracker
+$ rails g scaffold Category name:string
+$ rails g scaffold Expense category_id:integer title:string description:text date:date amount:float
+$ rake db:migrate
+$ bundle exec rails server -b $IP -p $PORT
+```
+
+```ruby
+class Category < ApplicationRecord
+  has_many :expenses
+end
+```
+
+```ruby
+class Expense < ApplicationRecord
+  belongs_to :category
+end
+```
+
+```erb
+<td><%= expense.category.name %></td>
+```
+
+```erb
+<div class="field">
+  <%= f.label :category_id %>
+  <%= select(:expense, :category_id, Category.all.map{ |u| [ u.name, u.id ] })%>
+</div>
+```
+
+Then we can refactor our view
+
+```erb
+<%= select(:expense, :category_id, @categories, { include_blank: true })%>
+```
+
+Moving our logic up to the controller
+
+```ruby
+before_action :load_categories, only: [:new, :edit, :create, :update]
+...
+private
+  def load_categories
+    @categories = Category.all.map{ |u| [ u.name, u.id ] }
+  end
+```
+
+---
 #Let's do it again in a different environment
 
 ---
@@ -125,4 +174,4 @@ Makes use of two files:
 
 ---
 #Exit Ticket
-* [http://bit.ly/2b6u10C](http://bit.ly/2b6u10C)
+* [https://goo.gl/forms/XdAxF71bj4cffoAu1](https://goo.gl/forms/XdAxF71bj4cffoAu1)
