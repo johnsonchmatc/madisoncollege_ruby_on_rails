@@ -187,6 +187,60 @@ Go to [https://try.github.io/levels/1/challenges/1](https://try.github.io/levels
 * Inviting contributors
 
 ---
+#Bitbucket
+##Pull Request demo
+
+First make sure you can get to the repository out on bitbucket, I sent everyone
+an email to their school address. That doesn't mean that you need to have signed
+up with your school email it just means that's where you get the invite link to
+this repository.
+
+The web address should be: [https://bitbucket.org/johnsonch/hello_app_spring_2017](https://bitbucket.org/johnsonch/hello_app_spring_2017)
+
+You'll want to open up your development environment of choice then and clone the
+repository with:
+
+```
+$ git clone git@bitbucket.org:johnsonch/hello_app_spring_2017.git
+```
+
+Then create a branch for yourself:
+
+```
+$ git checkout -b <USERNAME>
+```
+
+Modify `README.md` to include your name
+
+`$ git status`
+`$ git add -A` <!-- Tell story about the git add . fiasco of 2012 -->
+`$ git commit -m 'insert your commit message here'`
+`$ git push`
+
+Then go out to bitbucket and find the [repository](https://bitbucket.org/johnsonch/hello_app_spring_2017) again and find your branch
+
+![](https://dl.dropboxusercontent.com/s/9ffivhdacqc8hjk/2017-01-31%20at%2010.00%20PM.png)
+
+![](https://dl.dropboxusercontent.com/s/9zm06luulwluiz9/2017-01-31%20at%2010.01%20PM.png)
+
+For most projects you'll want to merge your branch into master, some teams do it
+differently but a common practice is to branch off of and merge into master:
+
+![](https://dl.dropboxusercontent.com/s/ydap4t275gl6y1c/2017-01-31%20at%2010.01%20PM%20%281%29.png)
+
+
+Fill out all the information for the pull request, it will populate some of the
+boxes for you based on your commits. However you can modify the title and description
+to be more accurate. If you are working on an Open Source project you will probably
+need to be more specific than in class or in an work setting.
+
+![](https://dl.dropboxusercontent.com/s/ia0roooyhfh6xlu/2017-01-31%20at%2010.02%20PM.png)
+
+Next go to the Pull Requests page [https://bitbucket.org/johnsonch/hello_app_spring_2017/pull-requests/](https://bitbucket.org/johnsonch/hello_app_spring_2017/pull-requests/)
+
+We'll walk over this UI in class, I can't do much outside of class by myself.
+
+---
 #Deploying
 
 ---
