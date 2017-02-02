@@ -2,9 +2,9 @@
 ###Revision 11-02-2015
 * 310 Total Points
 * Project Pitch (10pts)
-* Project check-in 1 10/25 (100pts)
-* Project check-in 2 12/13 (100pts)
-* Project check-in 3 12/13 (100pts)
+* Project check-in 1 03/23 (100pts)
+* Project check-in 2 04/13 (100pts)
+* Project check-in 3 05/11 (100pts)
 
 ##Description
 The goal of the final project is to demonstrate the competencies covered in this course.  You will need to develop an application of your choosing using the Ruby on Rails framework.  In the grading criteria you will find the points you need to hit for a successful project. You are encouraged to use the book and any resources you find on line to help you build your application, but the code turned in must be your own.  Simply copying the code from the book or a tutorial directly is grounds for failure.
