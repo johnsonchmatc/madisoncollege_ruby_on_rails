@@ -23,7 +23,7 @@ This projecdt may be completed in pairs.  If you are going to work on this in a 
 
 ###Project Pitch
 * Description
-* Project "done whens" 2 for each check in (must be above the requirements)
+* Project "done whens" at least 1 for each check in (must be above the requirements)
 * Fill out the form at [https://goo.gl/forms/rBrBbRrr5EjIl1j43](https://goo.gl/forms/rBrBbRrr5EjIl1j43)
 
 
