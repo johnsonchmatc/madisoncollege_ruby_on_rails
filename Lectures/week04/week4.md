@@ -39,6 +39,7 @@ bus.people #=> "up and down"
 
 ---
 ##Objects
+
 ```ruby
 bank = BankAccount.new(:balance => 40) ## Old pre 2.0
 bank = BankAccount.new(balance: 40)  ## New > 2.0
@@ -55,13 +56,16 @@ bank.balance #=> 50
 ##Methods
 * In Ruby methods are actually messages
 * We define the messages that our objects can respond to, those are our methods
+
 ```ruby
 "Badgers".send :length
 ```
 * This sends the length message to the object
+
 ```ruby
 "Badgers".length
 ```
+
 * The dot notation provides an interface similar to other OOP languages
 
 ---
@@ -76,6 +80,7 @@ class BankAccount
 
 end
 ```
+
 * Starts uppercase and then CamelCase the rest of the class name
 
 ---
@@ -85,6 +90,7 @@ end
 ```ruby
 account = BankAccount.new
 ```
+
 * Each instance is unique
 * Each has it's own spot in memory
 * Inherits behavior from basic object
@@ -209,6 +215,3 @@ pizza
     * If you want to start working ahead scan/take pictures of your wireframes and email them to me.  I'll look while traveling.
 
 ---
-
-##Please fillout the exit ticket
-* [Exit Ticket](http://bit.ly/2b6u10C)
