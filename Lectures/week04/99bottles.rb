@@ -16,7 +16,7 @@ class Bottles
 
   def self.pluralized_bottles(number)
     return "bottles" if number != 1
-    "bottel"
+    "bottle"
   end
 
 end

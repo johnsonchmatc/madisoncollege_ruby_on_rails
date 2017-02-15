@@ -6,7 +6,7 @@ autoscale: true
 
 * Forking class repo to contribute
 * Asset pipeline
-* Starting Wolfie Budget
+* Starting Wolfie Eats
 
 ---
 # Forking class repo to contribute
@@ -14,21 +14,21 @@ autoscale: true
 ---
 #Preparing for the demo today
 
-* ```$ git clone git@bitbucket.org:johnsonch/wolfie_budget.git```
-* ```$ cd wolfie_budget```
+* ```$ git clone git@bitbucket.org:johnsonch/wolfie_eats.git```
+* ```$ cd wolfie_eats```
 * ```$ bundle install --without production```
 
 ^ NOTE: If you are having trouble cloning the repository you will need to make sure your SSH keys are on bitbucket
 
 ---
 #What are we building?
-##Wolfie Budget
+##Wolfie Eats
 
-> An online budget tracker for all your financial transactions
+> An online Eats tracker for all your financial transactions
 
 ###Here is our rough database/model design
 
-![](https://dl.dropboxusercontent.com/s/p16brmdvet6weso/2016-09-21%20at%2010.07%20PM.png)
+![](https://dl.dropboxusercontent.com/s/9alljepitwzip0p/2017-02-13%20at%2011.28%20PM.png)
 
 
 ---
@@ -50,7 +50,7 @@ autoscale: true
 
 Start with our reset steps
 
-* cd into ```wolfie_budget```
+* cd into ```wolfie_eats```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
 * ```$ git checkout master```
@@ -63,12 +63,8 @@ Start with our reset steps
 ```
 $ bundle exec rails g controller StaticPages home about opensource
 ```
-Add bootstrap gem
 
-```ruby
-gem 'bootstrap-sass', '3.3.6'
-```
-Then bundle
+A bit more about bundler
 
 ```$ bundle```
 
@@ -76,7 +72,7 @@ Running just bundle here will take advantage of the setting stored from the firs
 
 # Adding a layout
 Next create a bootswatch.css file in app/assets/stylesheets also and copy the code
-from bootswatch for this theme.
+from bootswatch for this theme. Let's use [https://bootswatch.com/yeti/](https://bootswatch.com/yeti/)
 
 Next we need to define our layout. There is a great site [http://www.layoutit.com/](http://www.layoutit.com/) which can help you add bootstrap components.
 
@@ -86,7 +82,7 @@ We're going to start by dumping the whole layout in our app/views/layouts/applic
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WolfieBudget</title>
+    <title>WolfieEats</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -111,7 +107,7 @@ We're going to start by dumping the whole layout in our app/views/layouts/applic
             <a href="#">About</a>
           </li>
           <li>
-            <a href="#">Opensource at Wolfie Budget</a>
+            <a href="#">Opensource at Wolfie Eats</a>
           </li>
         </ul>
         <form class="navbar-form navbar-left" role="search">
@@ -166,9 +162,9 @@ Now we need to make our application default to this page when someone access our
 Run your tests with ```$ rails test``` and you should get some output similar to below, if you don't alert your instructor.
 
 ```
-(ruby-2.3.1) workspace/wolfie_budget ‹week05_prep*› » rails test
+workspace/wolfie_eats ‹week05_prep*› » rails test
 Running via Spring preloader in process 43013
-/Users/cjohnson/School/Rails/rails_vagrant/workspace/wolfie_budget/db/schema.rb doesn't exist yet. Run `rails db:migrate` to create it, then try again. If you do not intend to use a database, you should instead alter /Users/cjohnson/School/Rails/rails_vagrant/workspace/wolfie_budget/config/application.rb to limit the frameworks that will be loaded.
+/Users/cjohnson/School/Rails/rails_vagrant/workspace/wolfie_eats/db/schema.rb doesn't exist yet. Run `rails db:migrate` to create it, then try again. If you do not intend to use a database, you should instead alter /Users/cjohnson/School/Rails/rails_vagrant/workspace/wolfie_eats/config/application.rb to limit the frameworks that will be loaded.
 Run options: --seed 36118
 
 # Running:
@@ -238,7 +234,7 @@ Copy all of the navigation element out of ```application.html.erb``` and move it
         <a href="#">About</a>
       </li>
       <li>
-        <a href="#">Opensource at Wolfie Budget</a>
+        <a href="#">Opensource at Wolfie Eats</a>
       </li>
     </ul>
     <form class="navbar-form navbar-left" role="search">
@@ -294,7 +290,7 @@ so that your ```application.html.erb``` looks like:
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WolfieBudget</title>
+    <title>WolfieEats</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -324,8 +320,8 @@ Next we'll add a jumbotron element to our home page, open up ```static_pages/hom
 
 ```html
 <div class="jumbotron">
-  <h1>Welcome to Wolfie Budget</h1>
-  <p>Track your stuff and save your money.</p>
+  <h1>Welcome to Wolfie Eats</h1>
+  <p>Let's Eat.</p>
   <p><a class="btn btn-primary btn-lg">Learn more</a></p>
 </div>
 ```
@@ -355,11 +351,10 @@ Next, let's add the gems we are using to our ```opensource page```. We'll start 
 </table>
 ```
 
-Now above that we'll add an array of all our gems (this is going to be gross but it's to learn)
+Now in our controllerf we'll add an array of all our gems (this is going to be gross but it's to learn)
 
-```erb
-<%
-gems = [{name: 'rails', version: '5.0.0.1'},
+```ruby
+@gems = [{name: 'rails', version: '5.0.0.1'},
         {name: 'puma', version: '3.4.0'},
         {name: 'sass-rails', version: '5.0.6'},
         {name: 'uglifier', version: '3.0.0'},
@@ -379,7 +374,7 @@ gems = [{name: 'rails', version: '5.0.0.1'},
         {name: 'guard', version: '2.13.0'},
         {name: 'guard-minitest', version: '2.4.4'},
         {name: 'pg', version: '0.18.4'}]
-%>
+
 
 ```
 
@@ -394,7 +389,7 @@ Next we can modify the table to display our data
     </tr>
   </thead>
   <tbody>
-    <% gems.each do |gem| %>
+    <% @gems.each do |gem| %>
     <tr>
       <td><%= gem[:name] %></td>
       <td><%= gem[:version] %></td>
@@ -413,6 +408,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 end
 ```
+
 Then we can use the ```link_to``` helper to generate links for us.
 
 ```erb
@@ -424,7 +420,83 @@ Then we can use the ```link_to``` helper to generate links for us.
         <%= link_to 'About', about_path %>
       </li>
       <li>
-        <%= link_to 'Opensource at Wolfie Budget', opensource_path %>
+        <%= link_to 'Opensource at Wolfie Eats', opensource_path %>
       </li>
     </ul>
 ```
+
+Let's run our tests again before we finish up.
+
+```
+johnsonch:~/workspace/wolfie_eats (week05_prep) $ bundle exec rails test
+Running via Spring preloader in process 2205
+/home/ubuntu/workspace/wolfie_eats/db/schema.rb doesn't exist yet. Run `rails db:migrate` to create it, then try again. If you do not intend to use a database, you should instead alter /home/ubuntu/workspace/wolfie_eats/config/application.rb to limit the frameworks that will be loaded.
+Run options: --seed 1779
+
+# Running:
+
+.E
+
+Error:
+StaticPagesControllerTest#test_should_get_home:
+NameError: undefined local variable or method `static_pages_home_url' for #<StaticPagesControllerTest:0x00000004b7e4c8>
+    test/controllers/static_pages_controller_test.rb:5:in `block in <class:StaticPagesControllerTest>'
+
+
+bin/rails test test/controllers/static_pages_controller_test.rb:4
+
+E
+
+Error:
+StaticPagesControllerTest#test_should_get_opensource:
+NameError: undefined local variable or method `static_pages_opensource_url' for #<StaticPagesControllerTest:0x00000004b6da60>
+    test/controllers/static_pages_controller_test.rb:15:in `block in <class:StaticPagesControllerTest>'
+
+
+bin/rails test test/controllers/static_pages_controller_test.rb:14
+
+E
+
+Error:
+StaticPagesControllerTest#test_should_get_about:
+NameError: undefined local variable or method `static_pages_about_url' for #<StaticPagesControllerTest:0x0000000689c730>
+    test/controllers/static_pages_controller_test.rb:10:in `block in <class:StaticPagesControllerTest>'
+
+
+bin/rails test test/controllers/static_pages_controller_test.rb:9
+
+
+
+Finished in 2.141450s, 1.8679 runs/s, 0.4670 assertions/s.
+
+4 runs, 1 assertions, 0 failures, 3 errors, 0 skips
+```
+
+We broke something!  Let's fix it!
+
+```shell
+$ bundle exec rails routes
+```
+
+```ruby
+class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+  test "should get about" do
+    get about_url
+    assert_response :success
+  end
+
+  test "should get opensource" do
+    get opensource_url
+    assert_response :success
+  end
+
+  test "should have a root url" do
+    get root_path
+    assert_response :success
+  end
+end
+```
+
+# Circle CI
+
+Looking at seting up continious testing with Circle CI [https://circleci.com](https://circleci.com)
