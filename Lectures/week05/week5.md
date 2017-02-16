@@ -24,7 +24,7 @@ autoscale: true
 #What are we building?
 ##Wolfie Eats
 
-> An online Eats tracker for all your financial transactions
+> An online Eats tracker for all your tasty dishes
 
 ###Here is our rough database/model design
 
@@ -34,7 +34,8 @@ autoscale: true
 ---
 #Themes
 
-[Bootswatch.com](https://bootswatch.com/)
+* [Bootswatch.com](https://bootswatch.com/)
+* [https://bootswatch.com/yeti/](https://bootswatch.com/yeti/)
 
 ---
 #Asset Pipeline
