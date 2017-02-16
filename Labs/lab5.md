@@ -3,7 +3,7 @@
 
 ##Assignment
 * Create a new rails app ```$ rails new lab_05```
-* Add a static pages controller with the following pages: home, about, contact, opensource
+* Add a static pages controller with the following pages(actions): home, about, contact, opensource
 * Add a theme from [https://bootswatch.com](https://bootswatch.com)
     * Start by creating a bootswatch.css file in app/assets/stylesheets
     * Add the contents of the style sheet from bootswatch.com to that file and save it.
