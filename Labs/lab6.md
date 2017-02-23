@@ -5,7 +5,7 @@
 
 The goal of this lab is to learn how to add validations to a model.  I have made
 it easier for your to work on this by creating a series of failing tests. You won't
-need to do anything in the browser so long as you can make the tests pass (without modifying them).
+need to do anything in the browser so long as you can make the tests pass (without modifying the tests).
 
 * Find a directory to work, and clone the Lab06 repository with the following command:
 

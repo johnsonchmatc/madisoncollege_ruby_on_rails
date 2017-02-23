@@ -37,9 +37,9 @@ end
 ---
 #Demo
 
-###If you need to re-clone
-* ```$ git clone git@bitbucket.org:johnsonch/wolfie_budget.git```
-* ```$ cd wolfie_budget```
+###If you need to re-clone (need to start from scratch)
+* ```$ git clone git@bitbucket.org:johnsonch/wolfie_eats.git```
+* ```$ cd wolfie_eats```
 * ```$ bundle install --without production```
 
 ###If you have it already cloned
@@ -57,25 +57,28 @@ $ bundle exec rails generate model User first_name:string last_name:string email
 $ bundle exec rails db:migrate
 ```
 
+Let's itterate on a test, starting simple and refactoring it to be useful for
+more tests.
+
 ```ruby
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
 
   def setup
-    @user = User.new(first_name: "Bart",
-                     last_name: "Simpson",
-                     email: "bart@simpsons.com")
+    @valid_user = User.new(first_name: "Bart",
+                           last_name: "Simpson",
+                           email: "bart@simpsons.com")
   end
 
   test "should be valid" do
-    assert @user.valid?
+    assert @valid_user.valid?
   end
 end
 ```
 
 ```
-$ bundle exec rake test
+$ bundle exec rails test
 ```
 
 ```ruby
@@ -84,6 +87,25 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 end
+```
+
+Adding tests for these validations
+
+```
+test "first name needs to be present" do
+  @valid_user.first_name = nil
+  assert_equal @valid_user.valid?, false
+end
+
+test "last name needs to be present" do
+  @valid_user.last_name = nil
+  assert_equal @valid_user.valid?, false
+end
+
+test "email to be present" do
+  @valid_user.email = nil
+  assert_equal @valid_user.valid?, false
+end  
 ```
 
 ```ruby
@@ -95,9 +117,13 @@ $ bundle exec rails generate migration add_password_digest_to_users password_dig
 $ bundle exec rails db:migrate
 ```
 
+The bcrypt Gem should be there and be this version
+
 ```ruby
 gem 'bcrypt',         '3.1.11'
 ```
+
+If you had to add it then you'll need to bundle
 
 ```
 $ bundle
@@ -110,42 +136,58 @@ $ bundle
 ```
 $ bundle exec rails c
 
->> User.create(first_name: "Bart", last_name: "Simpson", email: "bart@simpsons.com", password: "foobar", password_confirmation: "foobar"
+>> User.create(first_name: "Bart", last_name: "Simpson", email: "bart@simpsons.com", password: "foobar", password_confirmation: "foobar")
 >> bart_user = User.find_by(email: "bart@simpsons.com")
 >> users = User.all
 >> users.collect { |u| u.email }
 ```
 
+Lets check our tests again.
+
+```
+$ bundle exec rails test
+```
+
+Oops, lets fix them
+
+```ruby
+def setup
+  @valid_user = User.new(first_name: "Bart",
+                         last_name: "Simpson",
+                         password: 'foobar',
+                         password_confirmation: 'foobar',
+                         email: "bart@simpsons.com")
+end
+```
+
+```
+$ bundle exec rails test
+```
+
 * Get some of the app scaffolded
 
 ```
-$ bundle exec rails generate scaffold Budgets user_id:integer year:integer month:string notes:text
-$ bundle exec rails generate scaffold Categories user_id:integer name:string amount:float
-$ bundle exec rails generate scaffold BudgetCategories budget_id:integer category_name:string category_amount:float
-$ bundle exec rails generate scaffold BudgetEntries budget_category_id:integer amount:float notes:text
+$ bundle exec rails generate scaffold Recipes user_id:integer name:string directions:text
+$ bundle exec rails generate scaffold RecipesIngredients recipe_id:integer ingredient_id:integer quantity:string unit:string
+$ bundle exec rails generate scaffold Ingredients name:string description:text
+$ bundle exec rails db:migrate
 ```
 
 * Adding relationships is fun!
 
 ```ruby
-class Budget < ApplicationRecord
+class Recipe < ApplicationRecord
   belongs_to :user
-  has_many :budget_categories
+  has_many :recipes_ingredients
 end
 
-class BudgetCategory < ApplicationRecord
-  belongs_to :budget
-  has_many :budget_entries
+class RecipesIngredient < ApplicationRecord
+  belongs_to :recipe
+  belogns_to :ingredient
 end
 
-
-class BudgetEntry < ApplicationRecord
-  belongs_to :budget_category
-end
-
-
-class Category < ApplicationRecord
-  belongs_to :user
+class Ingredient < ApplicationRecord
+  has_many :recipes_ingredient
 end
 
 
@@ -153,11 +195,10 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-
+  
   has_secure_password
-
-  has_many :cateories
-  has_many :budgets
+  
+  has_many :recipes
 end
 ```
 
