@@ -6,13 +6,13 @@
 #Demo
 
 ###If you need to re-clone
-* ```$ git clone git@bitbucket.org:johnsonch/wolfie_budget.git```
-* ```$ cd wolfie_budget```
+* ```$ git clone git@bitbucket.org:johnsonch/wolfie_eats.git```
+* ```$ cd wolfie_eats```
 * ```$ bundle install --without production```
 * ```$ rails rails db:migrate```
 
 ###If you have it already cloned
-* cd into ```wolfie_budget```
+* cd into ```wolfie_eats```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
 * ```$ git checkout master```
@@ -63,7 +63,7 @@ Then we can make our show view actually display some information
 ```erb
 <h1>My Account</h1>
 
-<a href="#">My Budgets</a>
+<a href="#">My Recipes</a>
 
 ```
 
@@ -135,7 +135,7 @@ Then we need a create method to process the form
 def create
   @user = User.new(user_params)
   if @user.save
-    flash[:success] = "Welcome to Wolfie Budget"
+    flash[:success] = "Welcome to Wolfie Eats"
     redirect_to @user
   else
     render 'new'
@@ -145,7 +145,7 @@ end
 
 
   private
-
+    # Notice the formatting of the parameters going into the permit method
     def user_params
       params.require(:user).permit(:first_name,
                                    :last_name,
@@ -156,20 +156,20 @@ end
 ```
 
 
-Our budgets are going to take advantage of nested resources, before we change our
+Our recipes are going to take advantage of nested resources, before we change our
 routes file run a ```$ bundle exec rake routes``` and see what is outputted.
 
 ```ruby
   resources :users do
-    resources :budgets
+    resources :recipes
   end
 ```
 Then run ```$ rake routes``` again and see the differences.
 
-Now we need to change our scaffolded files for budgets to work in the context of a
-user.  We'll start with the budgets controller
+Now we need to change our scaffolded files for recipes to work in the context of a
+user.  We'll start with the recipes controller
 
-Finding a user for every time the user every time the budgets controller is accessed.
+Finding a user for every time the user every time the recipes controller is accessed.
 
 ```ruby
 before_action :set_user
@@ -186,45 +186,51 @@ private
 Then modifying the create, update and destroy methods.
 
 ```ruby
-def create
-  @budget = @user.budgets.new(budget_params)
+  # POST /recipes
+  # POST /recipes.json
+  def create
+    @recipe = @user.recipes.new(recipe_params)
 
-  respond_to do |format|
-    if @budget.save
-      format.html { redirect_to user_budget_path(id: @budget), notice: 'budget was successfully created.' }
-      format.json { render :show, status: :created, location: @budget }
-    else
-      format.html { render :new }
-      format.json { render json: @budget.errors, status: :unprocessable_entity }
+    respond_to do |format|
+      if @recipe.save
+        format.html { redirect_to user_recipe_path(id: @recipe), notice: 'Recipe was successfully created.' }
+        format.json { render :show, status: :created, location: @recipe }
+      else
+        format.html { render :new }
+        format.json { render json: @recipe.errors, status: :unprocessable_entity }
+      end
     end
   end
-end
 
-def update
-  respond_to do |format|
-    if @budget.update(budget_params)
-      format.html { redirect_to user_budget_path(id: @budget), notice: 'budget was successfully updated.' }
-      format.json { render :show, status: :ok, location: @budget }
-    else
-      format.html { render :edit }
-      format.json { render json: @budget.errors, status: :unprocessable_entity }
+  # PATCH/PUT /recipes/1
+  # PATCH/PUT /recipes/1.json
+  def update
+    respond_to do |format|
+      if @recipe.update(recipe_params)
+        format.html { redirect_to user_recipe_path(id: @recipe), notice: 'Recipe was successfully updated.' }
+        format.json { render :show, status: :ok, location: @recipe }
+      else
+        format.html { render :edit }
+        format.json { render json: @recipe.errors, status: :unprocessable_entity }
+      end
     end
   end
-end
 
-def destroy
-  @budget.destroy
-  respond_to do |format|
-    format.html { redirect_to user_budgets_url, notice: 'budget was successfully destroyed.' }
-    format.json { head :no_content }
+  # DELETE /recipes/1
+  # DELETE /recipes/1.json
+  def destroy
+    @recipe.destroy
+    respond_to do |format|
+      format.html { redirect_to user_recipes_url, notice: 'Recipe was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
-end
 ```
 
 Our form needs to know that it requires sending the user.
 
 ```erb
-<%= form_for([user, budget]) do |f| %>
+<%= form_for([user, recipe]) do |f| %>
 .
 .
 .
@@ -237,22 +243,22 @@ so that it knows how to pass the user to the form and we'll also fix the link
 while were here for going "back"
 
 ```
-<h1>New Budget</h1>
+<h1>New Recipe</h1>
 
-<%= render 'form', {budget: @budget, user: @user} %>
+<%= render 'form', {recipe: @recipe, user: @user} %>
 
-<%= link_to 'Back', user_budgets_path %>
+<%= link_to 'Back', recipes_path %>
 ```
 
 The edit page needs the same updating as the new page
 
 ```erb
-<h1>Editing Budget</h1>
+<h1>Editing Recipe</h1>
 
-<%= render 'form', {budget: @budget, user: @user} %>
+<%= render 'form', {recipe: @recipe, user: @user} %>
 
-<%= link_to 'Show', user_budget_path %> |
-<%= link_to 'Back', user_budgets_path %>
+<%= link_to 'Show', @recipe %> |
+<%= link_to 'Back', recipes_path %>
 ```
 
 The table on the index page needs to be update. Here is the whole page
@@ -260,7 +266,7 @@ The table on the index page needs to be update. Here is the whole page
 ```erb
 <p id="notice"><%= notice %></p>
 
-<h1>Budgets</h1>
+<h1>recipes</h1>
 
 <table>
   <thead>
@@ -273,14 +279,14 @@ The table on the index page needs to be update. Here is the whole page
   </thead>
 
   <tbody>
-    <% @budgets.each do |budget| %>
+    <% @recipes.each do |recipe| %>
       <tr>
-        <td><%= budget.year %></td>
-        <td><%= budget.month %></td>
-        <td><%= budget.notes %></td>
-        <td><%= link_to 'Show', user_budget_path(id: budget) %></td>
-        <td><%= link_to 'Edit', edit_user_budget_path(id: budget) %></td>
-        <td><%= link_to 'Destroy', user_budget_path(id: budget), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= recipe.year %></td>
+        <td><%= recipe.month %></td>
+        <td><%= recipe.notes %></td>
+        <td><%= link_to 'Show', user_recipe_path(id: recipe) %></td>
+        <td><%= link_to 'Edit', edit_user_recipe_path(id: recipe) %></td>
+        <td><%= link_to 'Destroy', user_recipe_path(id: recipe), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -288,21 +294,21 @@ The table on the index page needs to be update. Here is the whole page
 
 <br>
 
-<%= link_to 'New Budget', new_user_budget_path %>
+<%= link_to 'New recipe', new_user_recipe_path %>
 ```
 
 
 Finally the show page
 
 ```erb
-<%= link_to 'Edit', edit_user_budget_path(id: @budget) %> |
-<%= link_to 'Back', user_budgets_path %>
+<%= link_to 'Edit', edit_user_recipe_path(id: @recipe) %> |
+<%= link_to 'Back', user_recipes_path %>
 ```
 
-Then for a little polish we'll make the budgets page only show that user's budgets
+Then for a little polish we'll make the recipes page only show that user's recipes
 
 ```ruby
   def index
-    @budgets = @user.budgets
+    @recipes = @user.recipes
   end
 ```
