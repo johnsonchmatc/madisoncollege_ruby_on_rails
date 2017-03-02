@@ -40,6 +40,7 @@ end
 ###If you need to re-clone (need to start from scratch)
 * ```$ git clone git@bitbucket.org:johnsonch/wolfie_eats.git```
 * ```$ cd wolfie_eats```
+* ```$ git checkout week06_in_class```
 * ```$ bundle install --without production```
 
 ###If you have it already cloned
