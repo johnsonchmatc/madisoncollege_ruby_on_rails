@@ -20,7 +20,7 @@ autoscale: true
 * ```$ git checkout master```
 * ```$ git fetch```
 * ```$ git pull ```
-* ```$ git checkout  week10_in_class```
+* ```$ git checkout  week10_start```
 * ```$ bundle install --without production```
 * ```$ rails db:migrate:reset``
 
