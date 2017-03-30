@@ -1,19 +1,19 @@
 footer:@johnsonch :: Chris Johnson :: Ruby on Rails Development :: Week 10
 autoscale: true
 
-#Ruby on Rails Development
-##Week 10 
+# Ruby on Rails Development
+## Week 10 
 
 ---
-#Demo
+# Demo
 
-###If you need to re-clone
+### If you need to re-clone
 * ```$ git clone git@bitbucket.org:johnsonch/wolfie_eats.git```
 * ```$ cd wolfie_eats```
 * ```$ bundle install --without production```
 * ```$ rails rails db:migrate```
 
-###If you have it already cloned
+### If you have it already cloned
 * cd into ```wolfie_eats```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
@@ -22,7 +22,7 @@ autoscale: true
 * ```$ git pull ```
 * ```$ git checkout  week10_start```
 * ```$ bundle install --without production```
-* ```$ rails db:migrate:reset``
+* ```$ rails db:migrate:reset```
 
 ---
 
