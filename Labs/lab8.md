@@ -12,7 +12,7 @@ provided by users should be clickable and open in a new browser tab/window.
 * 10 points of extra credit by making the links be accesable via a short url (like how bitly.com works)
     * Where I can go to http://yoursite.com/asdfqm23 where 'asdfqm23' is a uniq short code and it redirects me to the link that was submitted. 
 * 20 points of extra credit if you create a voting system like Reddit, where users can up or down vote a link. From the index page.
-* 100 points of extra credit if this is done behind a login and a user can only vote up or down on each link.
+* 100 points of extra credit if voting can only happen if a user is logged in and users only get one vote per link.
 
 
 ##Turn in instructions
