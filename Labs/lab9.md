@@ -67,5 +67,5 @@ the pressure of having to turn in a working application?
 
 
 ##Turn in instructions
-* Turn in your write up in the notes section of the assignment turn in form [https://goo.gl/forms/XdAxF71bj4cffoAu1](https://goo.gl/forms/XdAxF71bj4cffoAu1)
+* Turn in your write up in the notes section of the assignment turn in form [https://goo.gl/forms/XdAxF71bj4cffoAu1](https://goo.gl/forms/XdAxF71bj4cffoAu1) or email them to your instructor.
 * Make sure to include you and your partner's names (if you worked with one)

@@ -8,32 +8,24 @@ autoscale: true
 #Demo
 
 ###If you need to re-clone
-* ```$ git clone git@bitbucket.org:johnsonch/wolfie_budget.git```
-* ```$ cd wolfie_budget```
+* ```$ git clone git@bitbucket.org:johnsonch/wolfie_eats.git```
+* ```$ cd wolfie_eats```
 * ```$ bundle install --without production```
+* ```$ rails rails db:migrate```
 
 ###If you have it already cloned
-* cd into ```wolfie_budget```
+* cd into ```wolfie_eats```
 * ```$ git add . ```
 * ```$ git commit -am 'commiting files from in class'```
 * ```$ git checkout master```
 * ```$ git fetch```
 * ```$ git pull ```
-* ```$ git checkout week10_start```
-* ```$ rm -f db/*.sqlite3```
-* ```$ bundle```
-* ```$ rake db:migrate```
+* ```$ git checkout  week10_in_class```
+* ```$ bundle install --without production```
+* ```$ rails db:migrate:reset``
 
 ---
 
-#config/database.yml
-* It is now gitignored... why?
-
-#Let's talk about the spring gem
-
-<TODO>
-
----
 
 Now we can start implementing the login and out system.
 
@@ -200,7 +192,7 @@ Here we have a full updated version of the navigation list.
 
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
       <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-    </button> <a class="navbar-brand" href="#">Wolfie Budget</a>
+    </button> <a class="navbar-brand" href="#">Wolfie Eats</a>
   </div>
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -262,9 +254,9 @@ end
 ```
 
 
-# Refactoring our budgets nested routes to use user from session
+# Refactoring our recipes nested routes to use user from session
 
-In our budgets controller we were setting the user by pulling it from the params,
+In our recipes controller we were setting the user by pulling it from the params,
 we can change this behavior and save a database hit by modifying the set_user
 method to be
 
@@ -275,3 +267,25 @@ end
 ```
 
 # Seeding the development database to limit creating users next time
+
+Let's add a rake task to populate users for us. To do this we'll also need to add
+the Faker gem.
+
+```
+gem 'faker'
+```
+
+```
+namespace :fake do
+  desc "generating fake users"
+  task :users => [:environment] do
+      50.times do
+          User.create(first_name: Faker::Name.first_name,
+                      last_name: Faker::Name.last_name,
+                      email: Faker::Internet.email,
+                      password: 'P@ssw0rd!',
+                      password_confirmation: 'P@ssw0rd!')
+      end
+  end
+end
+```
