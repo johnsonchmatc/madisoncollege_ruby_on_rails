@@ -1,7 +1,7 @@
 #Lab 9
 * Points 10
 
-##Assignment
+## Assignment
 
 The goal of this lab is to **try** and implement devise in a simple Rails
 application. You will use a technique called a "Timeboxed Spike". This is a tool
@@ -43,7 +43,7 @@ questions. Type up your response and turn it in on blackboard under
 
 * You may work in pairs on this but both need to turn in your own reflection.
 
-###Questions for reflection
+### Questions for reflection
 
 1) How did you start working on this spike after the initial application generation?
 Did you just read the docs and start? Did you just start hacking away? Did you

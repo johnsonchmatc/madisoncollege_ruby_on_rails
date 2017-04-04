@@ -60,63 +60,6 @@ before_action :logged_in_user, only: [:destroy]
 before_action :logged_in_user, only: [:show]
 ```
 
-* Let's create a rake task to populate our database with realistic fake data using a gem called Faker.
-  * [https://github.com/stympy/faker](https://github.com/stympy/faker)
-
-```ruby
-group :development, :test do
-  ...
-  gem 'faker'
-end
-
-```
-
-* Then we'll add file called populate.rake in lib/tasks and first define our
-  namespace
-
-```ruby
-namespace :fake do
-end
-```
-
-* Next we'll add a task for generating users to lib/tasks/populate.rake
-
-```ruby
-  desc "generating fake users"
-  task :users => [:environment] do
-    50.times do
-      User.create(first_name: Faker::Name.first_name,
-                  last_name: Faker::Name.last_name,
-                  email: Faker::Internet.email,
-                  password: 'P@ssw0rd!',
-                  password_confirmation: 'P@ssw0rd!')
-    end
-  end
-```
-
-* Then a task for generating budgets
-
-```ruby
-  desc "generating fake budgets"
-  task :budgets => [:environment] do
-    user_ids = User.all.collect { |u| u.id }
-    50.times do
-       user = User.find(user_ids.shuffle.first)
-       user.budgets.create(year: Faker::Date.between(100.years.ago, Date.today).year,
-                           month: Faker::Date.between(12.months.ago, Date.today).month,
-                           notes: Faker::Lorem.paragraph)
-    end
-  end
-```
-
-* Finally why not have one task that does everything?
-
-```ruby
-  desc "generating fake data"
-  task :all_data => [:environment, :users, :budgets] do
-  end
-```
-
 
 #Account activation
 ##Activation
