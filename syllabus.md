@@ -1,8 +1,8 @@
-#Ruby on Rails Development
+# Ruby on Rails Development
 
 Catalog #10152157-1001
 
-##General Information
+## General Information
 
 * *Credits:* 3
 * *Course Format:* face to face
@@ -19,8 +19,8 @@ Catalog #10152157-1001
   * [IRC Tutorial](https://github.com/johnsonch/madisoncollege_ruby_on_rails/blob/master/irc.md)
 
 
-##Class Information
-###Course Description
+## Class Information
+### Course Description
 
 This course provides the opportunity for the learner to develop the knowledge
 skills process and understanding of Ruby the programming language,
@@ -33,22 +33,22 @@ components of the Rails framework, ActiveRecord basics, ActionController coding,
 Action view, REST, AJAX, Web 2.0. Students will develop very modern web applications
 that can be adapted to many professional web development needs.
 
-###Pre-requisites:
+### Pre-requisites:
 * Grade of C or better in Advanced PHP and MySQL Web Development, 10-152-167,
 * or grade of C or better in Advanced Java Programming, 10-152-112,
 * or consent of instructor
 
-###Textbook
+### Textbook
 We will be using the following book for the course. It is available in both paper and/or PDF formats.
 
-####Required
+#### Required
 
 * *Ruby on Rails Tutorial (Rails 5)* by Michael Hartl (4th ED.). The book is available online at
 [https://www.railstutorial.org/book](https://www.railstutorial.org/book)
 , as a PDF from [https://www.railstutorial.org/](https://www.railstutorial.org/) ,
 or as a traditional hard copy from book stores and amazon.com .
 
-####Optional
+#### Optional
 
 * *Programming Ruby 1.9 & 2.0 (4th edition): The Pragmatic Programmers' Guide* by Dave Thomas, with Chad Fowler and Andy Hunt
 [http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0](http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0)
@@ -62,7 +62,7 @@ This is the definitive reference book on version 5 of Rails. Available as paperb
 The PDF is available at [https://dl.dropboxusercontent.com/u/50783/rails5_cookbook.pdf](https://dl.dropboxusercontent.com/u/50783/rails5_cookbook.pdf)
 
 
-###Course Competencies:
+### Course Competencies:
 During this course students will:
 
 *   Complete a large Ruby on Rails tutorial application
@@ -72,13 +72,13 @@ During this course students will:
 *   Complete the design and coding of a significant new web application
 *   Present their new web application to classmates
 
-##Environment
+## Environment
 Students will complete readings, attend lectures, use slack and participate in lab exercises to support the lecture material. Students will participate in discussions about lecture material. Exams will be taken in a classroom setting.
 
-#Core Abilities
+# Core Abilities
 Madison College Core Abilities are eight key life and success skills that contribute to the development of students as life-long learners on the job, at home, and in the community. The Core Abilities are skills and abilities taught and assessed in classes, labs, and field experiences at Madison College. For more information on Core Abilities, please visit [http://madisoncollege.edu/core-abilities](http://madisoncollege.edu/core-abilities). This class addresses the following core abilities: Ethics
 
-#Responsibilities and Policies
+# Responsibilities and Policies
 **Student Responsibilities:** Students are expected to be familiar with Madison College policies and procedures. Many of the important policies and procedures are on the Madison College website, located at [http://madisoncollege.edu/student-rights-responsibilities](http://madisoncollege.edu/student-rights-responsibilities).
 
 **Academic Integrity** is an expectation in all Madison College classes. Plagiarism, cheating and collusion are prohibited at Madison College. Plagiarism is defined as passing of another person's work as your own. Students who fail to observe these standards are subject to disciplinary action. Madison College has a strong policy on Academic Misconduct which is published on the Madison College website. Please refer to this page on the Madison College Website to review all Academic Integrity and Misconduct policies located at [http://madisoncollege.edu/academic-integrity](http://madisoncollege.edu/academic-integrity).
@@ -136,7 +136,7 @@ Computer difficulties are not a long-term excuse for non-participation. If you e
 
 Phone the student help desk: (608) 243-4444; toll-free at (866) 277-4445. They can often resolve your problem over the phone.
 
-#Other Resources
+# Other Resources
 
 * Peer to Peer Tutoring Services at Madison College: http://madisoncollege.edu/tutoring
 * Counseling Services at Madison College: http://madisoncollege.edu/counseling.
@@ -145,7 +145,7 @@ Phone the student help desk: (608) 243-4444; toll-free at (866) 277-4445. They c
 
 Syllabus Changes: As your instructor, I retain the right to make changes based on the timeline of the class, feedback from learners and/or logistical issues and will inform you as soon as a change is made. The [course repository on Github](https://github.com/johnsonchmatc/madisoncollege_ruby_on_rails) will be all ways up to date. Refer to that for any changes, you can use the tools provided by Github to see the difference if you are interested in a change.
 
-#Grading Policy
+# Grading Policy
 * All work that is to be graded must be accomplished by your **own effort**.
 * No points will be given for late assignments/labs/exams.
 * All assignments/labs/exams must meet the [course style guide](https://github.com/johnsonchmatc/ruby-style-guide)
@@ -155,7 +155,7 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 * It is the responsibility of the student to make up any missed work and/or pick up any missed materials. Missing a class is NOT an excuse for failure to hand in work due.
 * There is no extension of assignment due dates without prior notification of circumstance. All work that is to be graded must be accomplished by your own effort.
 
-##Extra credit
+## Extra credit
 * Should you find a mistake or a deviation from the [course style guide](https://github.com/johnsonchmatc/ruby-style-guide) in the [course repository on Github](https://github.com/johnsonchmatc/madisoncollege_ruby_on_rails) you may submit a pull request with changes made and comment describing what was wrong with the course materials.  Each **accepted** pull request will be worth 5 extra credit points.  The change is of my discression to accept.
 
 **Grades Shared Upon Request:** I keep a spreadsheet with Grades, please keep track of your own grades.  I will tell you when you get Labs/Readings checked off in class.
@@ -189,9 +189,9 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 | D         | 60-69         |
 | F         | 0-59          |
 
-#Course Calendar
+# Course Calendar
 
-Revision B 01/23/2017
+Revision C 04/04/2017
 
 | **Week** | **Thursday** | **Required Reading / Topics** | **Labs DUE Tuesdays by end of class**  |
 | --- | ---   | ---                                       | ---                                                     |
