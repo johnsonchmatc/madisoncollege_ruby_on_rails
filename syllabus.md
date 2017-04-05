@@ -207,7 +207,7 @@ Revision C 04/04/2017
 | 9   |  03/23 | Exam 1                                   | Project check-in 1 (Due 11:55pm)                        |
 | 10  |  03/30 | Chapter 8                                | Lab 8                                                   |
 | 11  |  04/06 | Chapter 9 and Chapter 10                 | Lab 9                                                   |
-| 12  |  04/13 | Chapter 11 and Chapter 12 (adding gems)  | Lab 10, Project check-in 2 (Due 11:55pm)                |
+| 12  |  04/13 | Chapter 11 and Chapter 12 (adding gems)  | Lab 10, Project check-in 2 *optional, will give feedback to whoever turns it in. Check-in 3 is not going to be due until 05/11/2017.
 | 13  |  04/20 | Chapter 13 and Chapter 14 (ajax)         | Lab 11                                                  |
 | 14  |  04/27 | Open lab (Final Project)                 |                                                         |
 | 15  |  05/04 | Building a virtual server                | Lab 12 (in class)                                       |
