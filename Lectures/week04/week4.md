@@ -152,7 +152,7 @@ end
 * hashs
 * arrays
 
---
+---
 ##Booleans
 
 --
@@ -181,6 +181,7 @@ other_value
  => [:key, "other_key"]
 ```
 
+---
 ##Arrays
 
 ```ruby
@@ -212,6 +213,6 @@ pizza
 * Chapter 3 and 5
 * Sketch some wireframes for your app, they'll be due in week 6.
     * After next week's class you'll have all the knowledge on how to generate static pages and can start on that before showing your wireframes
-    * If you want to start working ahead scan/take pictures of your wireframes and email them to me.  I'll look while traveling.
+    * If you want to start working ahead scan/take picturs of your wireframes and email them to me.  I'll look while traveling.
 
 ---
