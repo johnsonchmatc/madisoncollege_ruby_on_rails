@@ -1,12 +1,20 @@
 footer:@johnsonch :: Chris Johnson :: Ruby on Rails Development :: Week 12
 autoscale: true
 
-#Ruby on Rails Development
-##Week 12
+# Ruby on Rails Development
+## Week 12
 
 ---
-#Demo
-###Clone
+# Demo
+* Cloning someone else's repo and pushing to your own remote.
+* Adding a mailer
+* Configuring SMTP via environment variables
+* Using Mailtrap.io
+* Adding Pagination
+
+
+---
+### Clone
 First fork the repository on Github, if you don't have a Github account sign up.
 You can for the repository from [https://github.com/johnsonchmatc/madison_properties](https://github.com/johnsonchmatc/madison_properties)
 
@@ -18,6 +26,9 @@ You can for the repository from [https://github.com/johnsonchmatc/madison_proper
 
 Then head over to [https://data.cityofmadison.com/Property/Assessor-Property-Information/u7ns-6d4x](https://data.cityofmadison.com/Property/Assessor-Property-Information/u7ns-6d4x) and download the data in CSV format.
 
+---
+### Mailer
+* [Old Lecture notes on email](https://gist.github.com/johnsonch/da2ebfa12dfcc977ade62583a9349426)
 
 ---
 
