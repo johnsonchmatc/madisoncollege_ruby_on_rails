@@ -1,7 +1,13 @@
-#Lab 10
+# Lab 10
 * Points 10
 
-##Assignment
+## Assignment
+
+* Participate in the discussion in class.
+
+## Extra Credit (10 points)
+
+*Due at the start of the following class*
 
 Create a simple budgeting application using scaffolding.  You should have the
 ability to create a budget. Upon viewing a budget you should see all the entries
