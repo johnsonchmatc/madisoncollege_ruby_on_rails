@@ -383,5 +383,7 @@ Now we should be able to deploy our site.
 $ bundle exec cap production deploy deploy:migrate
 ```
 
+If you get an error about bundler try reinstalling the bundler gem on your server.
+
 ###Notes:
 * If you are sending emails, make sure that you configure the host in your production.rb file to have a config action mailer default url.
