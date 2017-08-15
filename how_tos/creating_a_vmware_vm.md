@@ -15,12 +15,15 @@ After clicking continue you'll be taken to a screen where you can choose the dis
 <!--![](https://dl.dropboxusercontent.com/s/ukixleshn6jdqzr/2017-08-14%20at%209.18%20PM.png)-->
 
 Now you can use the "Linux Easy Install" feature. Fill in your name and the username and password you want to use for your virtual machine.
+
 ![](https://dl.dropboxusercontent.com/s/grsurker4q2t6q3/2017-08-14%20at%209.18%20PM%20%281%29.png)
 
 Once you click continue you'll be taken to the finish screen, but we're not done yet! We're going to click "Customize Settings" and get our virtual machine with the proper specs.
+
 ![](https://dl.dropboxusercontent.com/s/7mlcseiqgy1f96i/2017-08-14%20at%209.18%20PM%20%282%29.png)
 
 Before  we can customize the virtual machine we'll need to choose a spot to save the files to. I'm using an external drive. I've navigated there and changed the name to something specific. In this case 'RoR-Fall-2017'
+
 ![](https://dl.dropboxusercontent.com/s/v1aq95j3yduvaru/2017-08-14%20at%209.19%20PM.png)
 
 After clicking save we'll be taken to the settings page where we can give our virtual machine a little more ram. ![](https://dl.dropboxusercontent.com/s/lajafnz285jw6x3/2017-08-14%20at%209.20%20PM.png)
