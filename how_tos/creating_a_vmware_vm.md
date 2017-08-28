@@ -42,11 +42,37 @@ Next we'll start up the vm by clicking the large play button.
 
 ![](https://dl.dropboxusercontent.com/s/qsd9h2gfa6f3rzp/2017-08-14%20at%209.20%20PM%20%282%29.png)
 
-After a few
+After a few minutes we'll be brought to the login screen were we can fill in our username and password that we chose during the easy install screen.
 
 ![](https://dl.dropboxusercontent.com/s/jeddokbdg13xcl9/2017-08-14%20at%209.37%20PM.png)
 
-![](https://www.dropbox.com/s/9di3x7ukutbjj8w/2017-08-14%20at%209.38%20PM.png)
+Once we login we'll start by opening up a terminal. We're going to use the terminal a lot in the Rails Bridge tutorial and in class.
+
+![](https://dl.dropboxusercontent.com/s/9di3x7ukutbjj8w/2017-08-14%20at%209.38%20PM.png)
+
+Once inside the terminal we're going to update our system and make sure any patches are installed. We'll use the following two commands to do that.
+
 * `sudo apt-get update`
 * `sudo apt-get upgrade` press `y` when prompted to continue
 
+Now that our system is up to date we can install a text editor. We're going to walk through installing and using Sublime. However this editor is not required.
+
+To install sublime start by going back to the terminal and add the repository for Sublime.
+
+`
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+`
+
+Then we'll need to update our package manager again.
+
+`
+sudo apt-get update
+`
+
+Lastly we can install Sublime
+
+`
+sudo apt-get install sublime-text-installer
+`
+
+To open code in Sublime we can do it two ways. One we can go to the search bar and search for Sublime and then navigate to the files we want to open. Another is from our terminal, once we are in the directory we want to open we simply type `subl .`

@@ -6,7 +6,7 @@ Catalog #10152157-1001
 
 * *Credits:* 3
 * *Course Format:* face to face
-* *Class Schedule:* Th 5:30 – 9:20 PM 01/19/2017 - 05/11/2017
+* *Class Schedule:* Th 5:30 – 9:20 PM 08/31/2017 - 12/14/2017
 * *Location:* Truax-Health Building Rm 335
 * *Instructor:* Chris Johnson
 * *Email:* cgjohnson1@madisoncollege.edu
@@ -191,24 +191,23 @@ Syllabus Changes: As your instructor, I retain the right to make changes based o
 
 # Course Calendar
 
-Revision C 04/04/2017
+Revision A 08/27/2017
 
-| **Week** | **Thursday** | **Required Reading / Topics** | **Labs DUE Tuesdays by end of class**  |
-| --- | ---   | ---                                       | ---                                                     |
-| 1   |  01/19 | Introduction                             | Lab 1                                                   |
-| 2   |  01/26 | Rails Bridge                             | Lab 2                                                   |
-| 3   |  02/02 | Chapter 1 and Chapter 2                  | Lab 3, Course Project Idea (Actually in class on 02/02) |
-| 4   |  02/09 | Chapter 4                                | Lab 4                                                   |
-| 5   |  02/16 | Chapter 3 and Chapter 5                  | Lab 5                                                   |
-| 6   |  02/23 | Chapter 6                                | Lab 6  (Project wireframes/Database)                    |
-| 7   |  03/02 | Chapter 7                                | Lab 7                                                   |
-| 8   |  03/09 | Open lab (Project work time)             |                                                         |
-|     |  03/16 | Spring Break                             |                                                         |
-| 9   |  03/23 | Exam 1                                   | Project check-in 1 (Due 11:55pm)                        |
-| 10  |  03/30 | Chapter 8                                | Lab 8                                                   |
-| 11  |  04/06 | Chapter 9 and Chapter 10                 | Lab 9                                                   |
-| 12  |  04/13 | Chapter 11 and Chapter 12 (adding gems)  | Lab 10, Project check-in 2 *optional, will give feedback to whoever turns it in. Check-in 3 is not going to be due until 05/11/2017.
-| 13  |  04/20 | Chapter 13 and Chapter 14 (ajax)         | Lab 11                                                  |
-| 14  |  04/27 | Open lab (Final Project)                 |                                                         |
-| 15  |  05/04 | Building a virtual server                | Lab 12 (in class)                                       |
-| 16  |  05/11 | Exam 2                                   | Project check-in 2 and 3 (5pm on 05/11/2017)            |
+| **Week** | **Thursday** | **Required Reading / Topics** | **Labs DUE Thursday by end of class** |
+| --- | ---   | ---                                       | --- |
+| 1   |  08/31 | Introduction                             | Lab 1 |
+| 2   |  09/07 | Rails Bridge (More intro)                | Lab 2 |
+| 3   |  09/14 | Chapter 1 and Chapter 2 (More intro)     | Lab 3, Course Project Idea |
+| 4   |  09/21 | Chapter 4 (Ruby)                         | Lab 4 |
+| 5   |  09/28 | Chapter 3 and Chapter 5 (Bootstrap/UI)   | Lab 5 |
+| 6   |  10/05 | Chapter 6                                | Lab 6  (Project wireframes/Database) |
+| 7   |  10/12 | Chapter 7                                | Lab 7 |
+| 8   |  10/19 | Open lab (Project work time)             |      |
+| 9   |  10/26 | Exam 1                                   | Project check-in 1 (Due 11:55pm)     |
+| 10  |  11/02 | Chapter 8                                | Lab 8 |
+| 11  |  11/09 | Chapter 9 and Chapter 10                 | Lab 9 |
+| 12  |  11/16 | Chapter 11 and Chapter 12 (adding gems)  | Lab 10, Project check-in 2 |
+|     |  11/23 | Thanksgiving - No class                  | |
+| 13  |  11/30 | Chapter 13 and Chapter 14 (ajax)         | Lab 11 |
+| 14  |  12/07 | Open lab (Final Project)                 |      |
+| 15  |  12/14 | Exam 2                                   | Project check-in 3 (5pm)            |
