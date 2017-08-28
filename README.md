@@ -2,7 +2,7 @@
 * [Syllabus](syllabus.md)
 * [Introduction Letter](introletter.md)
 * [Code Caster](https://codecaster.io/) Room: "johnsonch"
-* [Exit Ticket](https://goo.gl/forms/XdAxF71bj4cffoAu1)
+* [Exit Ticket](http://exitticket.johnsonch.com)
 * [Assignment Dropbox](https://goo.gl/forms/pSysUkioLxAffB7g1)
 * [How Tos](how_tos)
 
