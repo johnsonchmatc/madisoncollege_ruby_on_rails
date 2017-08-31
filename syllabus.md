@@ -7,7 +7,7 @@ Catalog #10152157-1001
 * *Credits:* 3
 * *Course Format:* face to face
 * *Class Schedule:* Th 5:30 – 9:20 PM 08/31/2017 - 12/14/2017
-* *Location:* Truax-Health Building Rm 335
+* *Location:* Truax-Health Building Rm 330
 * *Instructor:* Chris Johnson
 * *Email:* cgjohnson1@madisoncollege.edu
 * *Phone:* 608.301.5232
