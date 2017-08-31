@@ -68,10 +68,12 @@
 #Preparing our shop
 * Slack
 * Bitbucket
+* Github
 * Heroku
+* Cloud9
 * Development Environment (Lab 1)
 
 ---
 #Exit Ticket
 * Instructor Question: "How do you learn best? Lectures, independent study, hands on, etc"
-* [http://bit.ly/2b6u10C](http://bit.ly/2b6u10C)
+* [http://exitticket.johnsonch.com](http://exitticket.johnsonch.com)

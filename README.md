@@ -1,4 +1,4 @@
-#Madison College Ruby on Rails Course
+# Madison College Ruby on Rails Course
 * [Syllabus](syllabus.md)
 * [Introduction Letter](introletter.md)
 * [Code Caster](https://codecaster.io/) Room: "johnsonch"
@@ -6,7 +6,7 @@
 * [Assignment Dropbox](https://goo.gl/forms/pSysUkioLxAffB7g1)
 * [How Tos](how_tos)
 
-##Lectures
+## Lectures
 * [Week 1](Lectures/week01)
 * [Week 2](Lectures/week02)
 * [Week 3](Lectures/week03)
@@ -24,7 +24,7 @@
 * [Week 15](Lectures/week15)
 * [Week 16](Lectures/week16)
 
-##Labs
+## Labs
 * [Lab 1](Labs/lab1.md)
 * [Lab 2](Labs/lab2.md)
 * [Lab 3](Labs/lab3.md)
@@ -38,9 +38,9 @@
 * [Lab 11](Labs/lab11.md)
 * [Lab 12](Labs/lab12.md)
 
-##Projects
+## Projects
 * [Course Project](Projects/course_project.md)
 
-##Exams
+## Exams
 * [Exam 1](Exams/exam1.md)
 * [Exam 2](Exams/exam2.md)
