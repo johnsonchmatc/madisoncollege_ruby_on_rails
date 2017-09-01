@@ -24,7 +24,7 @@ This projecdt may be completed in pairs.  If you are going to work on this in a 
 ### Project Pitch
 * Description
 * Project "done whens" at least 1 for each check in (must be above the requirements)
-* Fill out the form at [https://goo.gl/forms/rBrBbRrr5EjIl1j43](https://goo.gl/forms/rBrBbRrr5EjIl1j43)
+* Fill out the form at [https://goo.gl/forms/XqELJU1Q4lN9agV62](https://goo.gl/forms/XqELJU1Q4lN9agV62)
 
 
 ### Check-in 1
@@ -39,7 +39,7 @@ This projecdt may be completed in pairs.  If you are going to work on this in a 
 
 #### Submission directions
 * Use a Git tag to create a tag called ```check-in-1```
-* Fill out the form at [https://goo.gl/forms/txbHU4vg9xNz4Dt02](https://goo.gl/forms/txbHU4vg9xNz4Dt02) before the due time on the syllabus
+* Fill out the form at [http://assignments.johnsonch.com](http://assignments.johnsonch.com)
 
 ### Check-in 2
 * Has at least 2 models
@@ -52,7 +52,7 @@ This projecdt may be completed in pairs.  If you are going to work on this in a 
 
 #### Submission directions
 * Use a Git tag to create a tag called ```check-in-2```
-* Fill out the form at [https://goo.gl/forms/txbHU4vg9xNz4Dt02](https://goo.gl/forms/txbHU4vg9xNz4Dt02) before the due time on the syllabus
+* Fill out the form at [http://assignments.johnsonch.com](http://assignments.johnsonch.com)
 
 ### Check-in 3
 * Account activation
