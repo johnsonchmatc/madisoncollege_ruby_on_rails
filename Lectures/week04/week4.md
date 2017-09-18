@@ -4,11 +4,18 @@ autoscale: true
 #Ruby on Rails Development
 ##Week 4
 
----
-#Chapter 4
+<!--
+skip
+4.1,
+4.3.4,
+4.4.4
+-->
 
 ---
-#What does a Ruby script look like?
+# Chapter 4
+
+---
+# What does a Ruby script look like?
 
 ---
 ```ruby
@@ -30,15 +37,23 @@ bus.people #=> "up and down"
 ```
 
 ---
-#Objects
+# Comments
+
+* They start with `#` and should have a space between the `#` and the first word.
+* Comments should never describe *what* and only should describe *why*
+  * If you need to write a what comment your code is too complicated and doing too much
+  * Writing a why comment is needed to spread triable knowledge
 
 ---
-##Objects
+# Objects
+
+---
+## Objects
 * Has attributes, or data, and associated methods (procedures)
 * Everything in ruby is an object and can be sent messages
 
 ---
-##Objects
+## Objects
 
 ```ruby
 bank = BankAccount.new(:balance => 40) ## Old pre 2.0
@@ -50,10 +65,10 @@ bank.balance #=> 50
 ```
 
 ---
-#Methods
+# Methods
 
 ---
-##Methods
+## Methods
 * In Ruby methods are actually messages
 * We define the messages that our objects can respond to, those are our methods
 
@@ -69,10 +84,10 @@ bank.balance #=> 50
 * The dot notation provides an interface similar to other OOP languages
 
 ---
-#Classes
+# Classes
 
 ---
-##Classes
+## Classes
 * 'blueprint' for creating objects
 
 ```ruby
@@ -84,7 +99,7 @@ end
 * Starts uppercase and then CamelCase the rest of the class name
 
 ---
-##Classes
+## Classes
 * We can use a class to create an instance of an object
 
 ```ruby
@@ -100,7 +115,7 @@ account.to_s #=> #<BankAccount:0x007fb66b04c1c0>
 ```
 
 ---
-##Classes
+## Classes
 * We can add methods to classes, even override existing ones
 
 ```ruby
@@ -112,7 +127,7 @@ end
 ```
 
 ---
-##Classes
+## Classes
 
 * Now we can pass the ```to_s``` message to our account object which we have defined a method to respond to
 
@@ -121,7 +136,7 @@ account.to_s #=> "$0.00"
 ```
 
 ---
-##Classes
+## Classes
 * Attributes can be created on a class
 * Just a variable 'inside' the object that holds data
 
@@ -135,16 +150,16 @@ end
 ```
 
 ---
-#Blocks
+# Blocks
 
 ---
-#Pragmatic Video
+# Pragmatic Video
 
 ---
-#Data Types
+# Data Types
 
 ---
-##Data types
+## Data types
 * booleans
 * symbols
 * numbers
@@ -153,21 +168,23 @@ end
 * arrays
 
 ---
-##Booleans
+## Booleans
 
 --
-##Symbols
+## Symbols
 
 ---
-##Numbers
+## Numbers
 * Fixnum
 * Bignum
 
 ---
-##Strings
+## Strings
+* Concatination `'foo' + ' bar' #=> 'foo bar'`
+* interpolation `"#{Time.now} was a great day" #=> "2017-09-17 20:53:03 -0500 was a great day"`
 
 ---
-##Hashs
+## Hashs
 
 ```ruby
 > a = {key: 'value', 'other_key' => 'other_value'} #=> {:key=>"value", "other_key"=>"other_value"}
@@ -182,7 +199,7 @@ other_value
 ```
 
 ---
-##Arrays
+## Arrays
 
 ```ruby
 > a = ["one", 2, "three", :four, "five".length]
