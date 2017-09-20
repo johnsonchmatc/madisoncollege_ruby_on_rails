@@ -237,6 +237,7 @@ four
 4
 ```
 
+^ http://rubylearning.com/satishtalim/ruby_blocks.html
 
 ---
 ##Next Week
