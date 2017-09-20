@@ -149,10 +149,6 @@ class BankAccount
 end
 ```
 
----
-# Blocks
-
----
 # Pragmatic Video
 
 ---
@@ -182,6 +178,7 @@ end
 ## Strings
 * Concatination `'foo' + ' bar' #=> 'foo bar'`
 * interpolation `"#{Time.now} was a great day" #=> "2017-09-17 20:53:03 -0500 was a great day"`
+* Single vs Double quotes
 
 ---
 ## Hashs
@@ -224,6 +221,22 @@ pizza
 ```
 
 ---
+# Blocks
+* Represented by `{` somecode `}` or `do` and `end`
+* Simply means that it is code which can take code as an argument
+* Typically itterators (blocks) take code to execute on each itteration
+
+```
+> a = ["one", 2, "three", :four, "five".length]
+> a.each { |i| puts i }
+
+one
+2
+three
+four
+4
+```
+
 
 ---
 ##Next Week
