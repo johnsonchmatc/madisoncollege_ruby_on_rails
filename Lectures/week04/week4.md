@@ -4,13 +4,6 @@ autoscale: true
 #Ruby on Rails Development
 ##Week 4
 
-<!--
-skip
-4.1,
-4.3.4,
-4.4.4
--->
-
 ---
 # Chapter 4
 
