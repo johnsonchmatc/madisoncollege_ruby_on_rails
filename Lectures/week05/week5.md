@@ -1,11 +1,11 @@
 footer:@johnsonch :: Chris Johnson :: Ruby on Rails Development - Week 5
 autoscale: true
 
-#Ruby on Rails Development
-##Week 5
+# Ruby on Rails Development
+## Week 5
 
 ---
-#Asset Pipeline
+# Asset Pipeline
 
 ---
 
