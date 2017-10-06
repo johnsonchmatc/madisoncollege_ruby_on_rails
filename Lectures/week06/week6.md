@@ -1,6 +1,15 @@
-#Ruby on Rails Development
-##Chapter 6
-###Week 6
+# Ruby on Rails Development
+## Chapter 6
+### Week 6
+
+---
+# Agenda
+
+* Clean up remainder of UI from last week
+* Add User model (following book example)
+ * Note about devise
+* Link User to Turn
+* Convert Story to Active Model
 
 ---
 #Ruby and Rails API Docs
@@ -32,25 +41,10 @@ end
 * Provides error messages back to the controller
 * [http://guides.rubyonrails.org/active_record_validations.html#validation-helpers](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers)
 
----
 
 ---
-#Demo
+# Demo
 
-###If you need to re-clone (need to start from scratch)
-* ```$ git clone git@bitbucket.org:johnsonch/wolfie_eats.git```
-* ```$ cd wolfie_eats```
-* ```$ git checkout week06_in_class```
-* ```$ bundle install --without production```
-
-###If you have it already cloned
-* ```$ git add . ```
-* ```$ git commit -am 'commiting files from in class'```
-* ```$ git checkout master```
-* ```$ git fetch```
-* ```$ git pull ```
-* ```$ git checkout  week06_in_class```
-* ```$ bundle install --without production```
 
 ```
 $ bundle exec rails generate controller Users new
@@ -106,7 +100,7 @@ end
 test "email to be present" do
   @valid_user.email = nil
   assert_equal @valid_user.valid?, false
-end  
+end
 ```
 
 ```ruby
@@ -165,15 +159,6 @@ end
 $ bundle exec rails test
 ```
 
-* Get some of the app scaffolded
-
-```
-$ bundle exec rails generate scaffold Recipes user_id:integer name:string directions:text
-$ bundle exec rails generate scaffold RecipesIngredients recipe_id:integer ingredient_id:integer quantity:string unit:string
-$ bundle exec rails generate scaffold Ingredients name:string description:text
-$ bundle exec rails db:migrate
-```
-
 * Adding relationships is fun!
 
 ```ruby
@@ -196,9 +181,9 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-  
+
   has_secure_password
-  
+
   has_many :recipes
 end
 ```
@@ -212,6 +197,6 @@ $ bundle exec rails test
 * Oh no things are broke!  Let's fix them.  We added relationships, now we need to make sure our test setup is right.  Look at each test and figure out why it is failing then try to make it right.
 
 ```
-##Example
+## Example
 @loaded_fixter.relationship = relationship_fixture(:fixture)
 ```
