@@ -1,9 +1,6 @@
-#Ruby on Rails Development
-##Week 8
+# Ruby on Rails Development
+## Week 8
 ---
-#Standup
-
----
-#Exam 1
+# Work Week
 
 ---
