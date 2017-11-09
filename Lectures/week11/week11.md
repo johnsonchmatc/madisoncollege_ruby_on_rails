@@ -5,7 +5,16 @@ autoscale: true
 ## Week 11
 
 ---
+# Notes from reading
+* While remember me functionality is great for a good user experience I wanted
+to spend more time tonight talking about relationships and practicing modification
+of code
+
+---
 
 # Demo
 
-Let's build a url shortening service, from scratch with no preperation. I want you to see me fail and how I recover.
+* Convert Story model to store stories in the database
+* Allow for creating, editing and stories
+* Make our own templating subsitutions.
+* Link story to a turn
