@@ -206,8 +206,8 @@ Revision A 08/27/2017
 | 9   |  10/26 | Exam 1                                   | Project check-in 1 (Due 11:55pm)     |
 | 10  |  11/02 | Chapter 8                                | Lab 8 |
 | 11  |  11/09 | Chapter 9 and Chapter 10                 | Lab 9 |
-| 12  |  11/16 | Chapter 11 and Chapter 12 (adding gems)  | Lab 10, Project check-in 2 |
-|     |  11/23 | Thanksgiving - No class                  | |
-| 13  |  11/30 | Chapter 13 and Chapter 14 (ajax)         | Lab 11 |
+| 12  |  11/16 | Chapter 11 and Chapter 12                | Lab 10 |
+|     |  11/23 | Thanksgiving - No class                  | Project check-in 2 |
+| 13  |  11/30 | Chapter 13 and Chapter 14 (adding gems/ajax)         | Lab 11 |
 | 14  |  12/07 | Open lab (Final Project)                 |      |
 | 15  |  12/14 | Exam 2                                   | Project check-in 3 (5pm)            |
