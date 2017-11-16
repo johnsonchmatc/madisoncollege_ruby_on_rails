@@ -24,9 +24,9 @@ current balance (starting - all amounts).
     * Tax Deductible?
 
 
-##Notes
+## Notes
 * You may work on this in pairs
 
-##Turn in instructions
+## Turn in instructions
 * Show your instructor the completed assignment
 * After you have shown your instructor you may delete this from Heroku/Github if you want
