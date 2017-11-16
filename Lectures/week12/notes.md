@@ -1,6 +1,12 @@
 Generate activations controller
 ```
 $ bundle exec rails generate controller AccountActivations
+
+```
+
+We need to story activation information on the user
+```
+$ bundle exec rails generate migration add_activation_to_users activation_digest:string activated:boolean activated_at:datetime
 ```
 
 Update routes to only allow edit for activations,the generation of the controller alone does not update the routes file
