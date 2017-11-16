@@ -1,9 +1,6 @@
-#Ruby on Rails Development
-##Week 15 
----
-#Standup
+# Ruby on Rails Development
+## Week 15
 
 ---
-#Building a Virtual Server
 
 ---

@@ -41,7 +41,6 @@ $ bundle install
 </div>
 ```
 
----
 #Endless Scrolling
 
 * Add support for handlebars to application layout
@@ -177,10 +176,17 @@ Rails.application.config.assets.precompile += %w( pagination.js )
 <%= link_to 'New Parcel', new_parcel_path %>
 
 <%= javascript_include_tag 'pagination' %>
+```
+
+Next we can add some more information to our parcels show page.  Let's start with
+showing the weather
 
 # Weather API
 * Go to [http://openweathermap.org/](http://openweathermap.org/) and sign up for a free account
-* Get your API key and add it to your application.yml
+
+![](http://files.johnsonch.com/Members_1DE3E330.png)
+
+* Get your API key and add it to your application.yml (first copy application.yml.example to application.yml)
 
 ```yaml
   weather_api: <YOUR KEY HERE>

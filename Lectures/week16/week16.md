@@ -1,9 +1,7 @@
-#Ruby on Rails Development
-##Week 16 
----
-#Standup
+# Ruby on Rails Development
+## Week 16
 
 ---
-#Final Exam
+# Nothing missed week because of Thanksgiving
 
 ---
